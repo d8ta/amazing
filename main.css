@@ -1,0 +1,10 @@
+body {
+    background-color: tan;
+}
+
+#testCanvas {
+    width: 200px;
+    height: 200px;
+    border-style: solid;
+    border-color: teal;
+}
