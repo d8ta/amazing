@@ -3,22 +3,27 @@
  */
 $(document).ready(function () {
 
+    // Get the Canvas Elemten by css id
     var canvas = document.getElementById("canvas");
-    var line = canvas.getContext("2d");
+
+    function drawCanvas(canvasX, canvasY, canvasWidth, canvasHeight) {
+        var back = canvas.getContext('2d');
+        back.fillStyle = 'grey';
+        back.fillRect(canvasX, canvasY, canvasWidth, canvasHeight);
+    }
+
 
     /**
      * Setting the Player with x and y
      * @param posX
      * @param posY
      */
-    function drawPlayer(posX, posY) {
+    function drawPlayer(posX, posY, width, heigth) {
         var player = canvas.getContext("2d");
-        player.fillStyle = 'teal';
+        player.fillStyle = 'white';
         // x, y, width, heigth
-        player.fillRect(posX, posY, 5, 5);
+        player.fillRect(posX, posY, width, height);
     }
-
-    drawPlayer(10, 10);
 
     /**
      * Setting up walls with start- and endingpoints
@@ -28,19 +33,42 @@ $(document).ready(function () {
      * @param toY
      */
     function drawWall(startX, startY, toX, toY) {
+        var line = canvas.getContext("2d");
+        line.beginPath();
         line.moveTo(startX, startY);
         line.lineTo(toX, toY);
+        line.lineTo(190, 50);
+        line.lineTo(60, 40);
+        line.lineTo(220, 10);
+        line.closePath();
         line.stroke();
     }
-
-    drawWall(50, 0, 50, 100);
-    drawWall(100, 20, 100, 100);
     // ToDo: Function for Random Linemaking ie Maze
+    /**
+     * HINT: To do that just use random toX, toY or add random and defined
+     * numbers to toX, toY.
+     */
+
+    var posX = 0, posY = 0, width = 5, height = 5;
+    setInterval(function(){
+        drawCanvas(0, 0, 800, 400);
+        drawPlayer(posX, posY, width, height);
+        posX ++;
+        if  (posX > 100) {
+            posY++;
+        }
+    }, 30);
+
+    /**
+     * Player movement via keys:
+     *      setInterval and let paint the canvas with the background
+     *      (every 30 milsec.) use switch statement for movement
+     */
 
 
-    function move(key) {
+    /*function movePlayer(key) {
         var moveX, moveY;
-        move = move || window.event;
+        movePlayer = movePlayer || window.event;
         switch (key.keyCode) {
             case 38: // arrow up
                 moveX = player - 3;
@@ -61,7 +89,7 @@ $(document).ready(function () {
         }
 
 
-    }
+    }*/
 
 
 }); // end of jQuery
