@@ -18,7 +18,7 @@ $(document).ready(function () {
      * @param posX
      * @param posY
      */
-    function drawPlayer(posX, posY, width, heigth) {
+    function drawPlayer(posX, posY, width, height) {
         var player = canvas.getContext("2d");
         player.fillStyle = 'white';
         // x, y, width, heigth
@@ -56,7 +56,13 @@ $(document).ready(function () {
         posX ++;
         if  (posX > 100) {
             posY++;
+            posX --;
+            if (posY > 100) {
+                posY --;
+                posX ++;
+            }
         }
+
     }, 30);
 
     /**
