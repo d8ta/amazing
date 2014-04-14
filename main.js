@@ -9,8 +9,8 @@ $(document).ready(function () {
      */
     var playerX = 10;
     var playerY = 75;
-    var playerW = 5;
-    var playerH = 5;
+    var playerW = 10;
+    var playerH = 10;
 
     var canvasX = 0;
     var canvasY = 0;
@@ -18,16 +18,18 @@ $(document).ready(function () {
     var canvasHeight = 400;
 
 
-    // Get the Canvas Elemten by css id
+    // Get the Canvas Elementen by css id
     var canvas = document.getElementById("canvas");
 
+    // Create the Canvas
     function drawCanvas() {
         var back = canvas.getContext('2d');
         back.fillStyle = 'grey';
         back.fillRect(canvasX, canvasY, canvasWidth, canvasHeight);
     }
 
-    function drawPlayer() {
+    // Create the Player Rectangle
+    function player() {
         var player = canvas.getContext("2d");
         player.fillStyle = 'white';
         // x, y, width, heigth
@@ -41,14 +43,11 @@ $(document).ready(function () {
      * @param toX
      * @param toY
      */
-    function drawWall(startX, startY, toX, toY) {
+    function walls(startX, startY, toX, toY) {
         var line = canvas.getContext("2d");
         line.beginPath();
         line.moveTo(startX, startY);
         line.lineTo(toX, toY);
-        line.lineTo(190, 50);
-        line.lineTo(60, 40);
-        line.lineTo(220, 10);
         line.closePath();
         line.stroke();
     }
@@ -63,29 +62,45 @@ $(document).ready(function () {
 
         /** Player and Canvas is set **/
         drawCanvas();
-        drawPlayer();
+        walls(100, 0, 100, 100);
+        player();
 
         function movePlayer(key) {
             // left
             if (key.keyCode == 39) {
-                playerX += 5;
+                playerX += 10;
             }
             // right
             if (key.keyCode == 37) {
-                playerX -= 5;
+                playerX -= 10;
             }
             // down
             if (key.keyCode == 40) {
-                playerY += 5;
+                playerY += 10;
             }
             // up
             if (key.keyCode == 38) {
-                playerY -= 5;
+                playerY -= 10;
             }
         }
 
+        // Collisiondetection with canvaswalls
+        if (playerX < 0) {
+            playerX = 0;
+        }
+        if (playerY < 0) {
+            playerY = 0;
+        }
+        if (playerX > canvasWidth) {
+            playerX = canvasWidth - playerW;
+        }
+        if (playerY > canvasHeight) {
+            playerY = canvasHeight - playerH;
+        }
+
+
         document.onkeydown = movePlayer;
 
-    }, 30);
+    }, 20);
 
 }); // end of jQuery
