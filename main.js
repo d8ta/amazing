@@ -53,8 +53,8 @@ $(document).ready(function () {
         line.stroke();
     }
 
-    // ToDo: Function for Random Linemaking ie Maze
     /**
+     * ToDo: Function for Random Linemaking ie Maze
      * HINT: To do that just use random toX, toY or add random and defined
      * numbers to toX, toY.
      */
