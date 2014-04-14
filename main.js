@@ -61,7 +61,7 @@ $(document).ready(function () {
 
     setInterval(function () {
 
-        /** Player is set **/
+        /** Player and Canvas is set **/
         drawCanvas();
         drawPlayer();
 
