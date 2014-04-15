@@ -30,7 +30,7 @@ $(document).ready(function () {
     /**
      * Player Object
      */
-    var playerRect = {
+    var player = {
         x: playerX,
         y: playerY,
         width: playerW,
@@ -41,28 +41,36 @@ $(document).ready(function () {
     /**
      * Block Objects
      */
-    var blockRect = {
-        x: 100,
-        y: 75,
-        width: 50,
+    var block1 = {
+        x: 50,
+        y: 50,
+        width: 70,
         height: 50,
         fillColor: 'black'
     };
 
-    var blockRect1 = {
-        x: 250,
-        y: 0,
-        width: 20,
-        height: 100,
-        fillColor: 'blue'
+    var block2 = {
+        x: 650,
+        y: 50,
+        width: 70,
+        height: 50,
+        fillColor: 'black'
     };
 
-    var blockRect2 = {
-        x: 300,
-        y: 200,
-        width: 20,
+    var block3 = {
+        x: 210,
+        y: 250,
+        width: 100,
         height: 100,
-        fillColor: 'green'
+        fillColor: 'red'
+    };
+
+    var block4 = {
+        x: 410,
+        y: 250,
+        width: 100,
+        height: 100,
+        fillColor: 'blue'
     };
 
 
@@ -77,40 +85,69 @@ $(document).ready(function () {
 
 
     /**
+     * Collsion with Objects
+     */
+    function collide(r1, r2) {
+        return !(r1.x > r2.x + r2.width ||
+            r1.x + r1.width < r2.x ||
+            r1.y > r2.y + r2.height ||
+            r1.y + r1.height < r2.y);
+    }
+
+    function shrinkAndGrow() {
+        if (collide(block1, player)) {
+            player.width++;
+            player.height++;
+        } else if (collide(block2, player)) {
+            player.width--;
+            player.height--;
+        } else if (collide(block3, player)) {
+            player.fillColor = block3.fillColor;
+        } else if (collide(block4, player)) {
+            player.fillColor = block4.fillColor;
+        }
+    }
+
+
+    /**
      * Playermovement with arrowkeys
      */
     function game() {
         function movePlayer(key) {
             // left
             if (key.keyCode == 39) {
-                playerRect.x += 10;
+                player.x += 10;
             }
             // right
             if (key.keyCode == 37) {
-                playerRect.x -= 10;
+                player.x -= 10;
             }
             // down
             if (key.keyCode == 40) {
-                playerRect.y += 10;
+                player.y += 10;
             }
             // up
             if (key.keyCode == 38) {
-                playerRect.y -= 10;
+                player.y -= 10;
             }
 
-            // Collisiondetection with canvaswalls
-            if (playerRect.x < 0) {
-                playerRect.x = 0;
+            /**
+             * Wall detection and avoidance
+             */
+
+            if (player.x < 0) {
+                player.x = 0;
             }
-            if (playerRect.y < 0) {
-                playerRect.y = 0;
+            if (player.y < 0) {
+                player.y = 0;
             }
-            if (playerRect.x > canvasWidth - playerW) {
-                playerRect.x = canvasWidth - playerW;
+            if (player.x > canvasWidth - playerW) {
+                player.x = canvasWidth - playerW;
             }
-            if (playerRect.y > canvasHeight - playerH) {
-                playerRect.y = canvasHeight - playerH;
+            if (player.y > canvasHeight - playerH) {
+                player.y = canvasHeight - playerH;
             }
+
         }
 
         document.onkeydown = movePlayer;
@@ -122,12 +159,13 @@ $(document).ready(function () {
 
         /** Set Player, Blocks and Canvas **/
         drawCanvas();
-        drawRectangles(blockRect);
-        drawRectangles(blockRect1);
-        drawRectangles(blockRect2);
-        drawRectangles(playerRect);
+        drawRectangles(block1);
+        drawRectangles(block2);
+        drawRectangles(block3);
+        drawRectangles(block4);
+        drawRectangles(player);
         game();
-
+        shrinkAndGrow();
     }, 20);
 
 }); // end of jQuery
