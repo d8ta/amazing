@@ -10,10 +10,10 @@ $(document).ready(function () {
     var canvasHeight = 400;
 
     // Player variables
-    var playerX = 20;
-    var playerY = 75;
-    var playerW = 10;
-    var playerH = 10;
+    var pPosX = 10;
+    var pPosY = 150;
+    var pW = 10;
+    var pH = 10;
 
 
     // Get canvas and context
@@ -31,10 +31,10 @@ $(document).ready(function () {
      * Player Object
      */
     var player = {
-        x: playerX,
-        y: playerY,
-        width: playerW,
-        height: playerH,
+        x: pPosX,
+        y: pPosY,
+        width: pW,
+        height: pH,
         fillColor: 'white'
     };
 
@@ -73,6 +73,21 @@ $(document).ready(function () {
         fillColor: 'blue'
     };
 
+    var makewhite = {
+        x: 300,
+        y: 50,
+        width: 100,
+        height: 100,
+        fillColor: 'white'
+    };
+
+    var wall1 = {
+        x: 100,
+        y: 150,
+        width: 50,
+        height: 50,
+        fillColor: 'black'
+    };
 
     /**
      * Draw rectangles
@@ -87,14 +102,17 @@ $(document).ready(function () {
     /**
      * Collsion with Objects
      */
-    function collide(r1, r2) {
-        return !(r1.x > r2.x + r2.width ||
+     function collide(r1, r2) {
+        if (r1.x > r2.x + r2.width ||
             r1.x + r1.width < r2.x ||
             r1.y > r2.y + r2.height ||
-            r1.y + r1.height < r2.y);
+            r1.y + r1.height < r2.y) {
+            return false;
+        } return true;
     }
 
-    function shrinkAndGrow() {
+
+    function changeApperance() {
         if (collide(block1, player)) {
             player.width++;
             player.height++;
@@ -105,6 +123,25 @@ $(document).ready(function () {
             player.fillColor = block3.fillColor;
         } else if (collide(block4, player)) {
             player.fillColor = block4.fillColor;
+        } else if (collide(makewhite, player)) {
+            player.fillColor = makewhite.fillColor;
+        }
+    }
+
+
+    /**
+     * Object collision
+     */
+     function objectCollison(p , r) {
+        if (collide(p, r)) {
+            if (p.x + p.width > r.x) {
+                p.fillColor = 'navy';
+                p.x = r.x - p.width;
+            }
+            else if (p.x + p.width > r.x) {
+                p.fillColor = 'green';
+                p.x = r.x - p.width;
+
         }
     }
 
@@ -141,13 +178,12 @@ $(document).ready(function () {
             if (player.y < 0) {
                 player.y = 0;
             }
-            if (player.x > canvasWidth - playerW) {
-                player.x = canvasWidth - playerW;
+            if (player.x > canvasWidth - player.width) {
+                player.x = canvasWidth - player.width;
             }
-            if (player.y > canvasHeight - playerH) {
-                player.y = canvasHeight - playerH;
+            if (player.y > canvasHeight - player.height) {
+                player.y = canvasHeight - player.height;
             }
-
         }
 
         document.onkeydown = movePlayer;
@@ -163,10 +199,13 @@ $(document).ready(function () {
         drawRectangles(block2);
         drawRectangles(block3);
         drawRectangles(block4);
+        drawRectangles(makewhite);
+        drawRectangles(wall1);
         drawRectangles(player);
         game();
-        shrinkAndGrow();
-    }, 20);
+        changeApperance();
+        objectCollison(player, wall1);
+    }, 30);
 
 }); // end of jQuery
 
