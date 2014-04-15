@@ -3,104 +3,132 @@
  */
 $(document).ready(function () {
 
-    /**
-     * basic variables for X, Y, Width and Height
-     * @type {number}
-     */
-    var playerX = 10;
-    var playerY = 75;
-    var playerW = 10;
-    var playerH = 10;
-
+    // Canvas variables
     var canvasX = 0;
     var canvasY = 0;
     var canvasWidth = 800;
     var canvasHeight = 400;
 
+    // Player variables
+    var playerX = 20;
+    var playerY = 75;
+    var playerW = 10;
+    var playerH = 10;
 
-    // Get the Canvas Elementen by css id
+
+    // Get canvas and context
     var canvas = document.getElementById("canvas");
+    var context = canvas.getContext('2d');
 
-    // Create the Canvas
+    // Draw the Canvas
     function drawCanvas() {
         var back = canvas.getContext('2d');
         back.fillStyle = 'grey';
         back.fillRect(canvasX, canvasY, canvasWidth, canvasHeight);
     }
 
-    // Create the Player Rectangle
-    function player() {
-        var player = canvas.getContext("2d");
-        player.fillStyle = 'white';
-        // x, y, width, heigth
-        player.fillRect(playerX, playerY, playerW, playerH);
-    }
+    /**
+     * Player Object
+     */
+    var playerRect = {
+        x: playerX,
+        y: playerY,
+        width: playerW,
+        height: playerH,
+        fillColor: 'white'
+    };
 
     /**
-     * Setting up walls with start- and endingpoints
-     * @param startX
-     * @param startY
-     * @param toX
-     * @param toY
+     * Block Objects
      */
-    function walls(startX, startY, toX, toY) {
-        var line = canvas.getContext("2d");
-        line.beginPath();
-        line.moveTo(startX, startY);
-        line.lineTo(toX, toY);
-        line.closePath();
-        line.stroke();
-    }
+    var blockRect = {
+        x: 100,
+        y: 75,
+        width: 50,
+        height: 50,
+        fillColor: 'black'
+    };
+
+    var blockRect1 = {
+        x: 250,
+        y: 0,
+        width: 20,
+        height: 100,
+        fillColor: 'blue'
+    };
+
+    var blockRect2 = {
+        x: 300,
+        y: 200,
+        width: 20,
+        height: 100,
+        fillColor: 'green'
+    };
+
 
     /**
-     * ToDo: Function for Random Linemaking ie Maze
-     * HINT: To do that just use random toX, toY or add random and defined
-     * numbers to toX, toY.
+     * Draw rectangles
      */
+    function drawRectangles(r, context) {
+        var context = canvas.getContext('2d');
+        context.fillStyle = r.fillColor;
+        context.fillRect(r.x, r.y, r.width, r.height);
+    }
 
-    setInterval(function () {
 
-        /** Player and Canvas is set **/
-        drawCanvas();
-        walls(100, 0, 100, 100);
-        player();
-
+    /**
+     * Playermovement with arrowkeys
+     */
+    function game() {
         function movePlayer(key) {
             // left
             if (key.keyCode == 39) {
-                playerX += 10;
+                playerRect.x += 10;
             }
             // right
             if (key.keyCode == 37) {
-                playerX -= 10;
+                playerRect.x -= 10;
             }
             // down
             if (key.keyCode == 40) {
-                playerY += 10;
+                playerRect.y += 10;
             }
             // up
             if (key.keyCode == 38) {
-                playerY -= 10;
+                playerRect.y -= 10;
+            }
+
+            // Collisiondetection with canvaswalls
+            if (playerRect.x < 0) {
+                playerRect.x = 0;
+            }
+            if (playerRect.y < 0) {
+                playerRect.y = 0;
+            }
+            if (playerRect.x > canvasWidth - playerW) {
+                playerRect.x = canvasWidth - playerW;
+            }
+            if (playerRect.y > canvasHeight - playerH) {
+                playerRect.y = canvasHeight - playerH;
             }
         }
 
-        // Collisiondetection with canvaswalls
-        if (playerX < 0) {
-            playerX = 0;
-        }
-        if (playerY < 0) {
-            playerY = 0;
-        }
-        if (playerX > canvasWidth) {
-            playerX = canvasWidth - playerW;
-        }
-        if (playerY > canvasHeight) {
-            playerY = canvasHeight - playerH;
-        }
-
-
         document.onkeydown = movePlayer;
+    }
+
+
+    // This is where the Game happens
+    setInterval(function () {
+
+        /** Set Player, Blocks and Canvas **/
+        drawCanvas();
+        drawRectangles(blockRect);
+        drawRectangles(blockRect1);
+        drawRectangles(blockRect2);
+        drawRectangles(playerRect);
+        game();
 
     }, 20);
 
 }); // end of jQuery
+
