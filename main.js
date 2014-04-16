@@ -3,18 +3,6 @@
  */
 $(document).ready(function () {
 
-    // Canvas variables
-    var canvasX = 0;
-    var canvasY = 0;
-    var canvasWidth = 800;
-    var canvasHeight = 400;
-
-    // Player variables
-    var pPosX = 10;
-    var pPosY = 150;
-    var pW = 10;
-    var pH = 10;
-
 
     // Get canvas and context
     var canvas = document.getElementById("canvas");
@@ -27,6 +15,21 @@ $(document).ready(function () {
         back.fillRect(canvasX, canvasY, canvasWidth, canvasHeight);
     }
 
+
+    // Canvas variables
+    var canvasX = 0;
+    var canvasY = 0;
+    var canvasWidth = 800;
+    var canvasHeight = 400;
+
+    // Player variables
+    var pPosX = 60;
+    var pPosY = 60;
+    var pW = 10;
+    var pH = 10;
+    var minPlayer = 5;
+    var maxPlayer = 50;
+
     /**
      * Player Object
      */
@@ -38,56 +41,47 @@ $(document).ready(function () {
         fillColor: 'white'
     };
 
+    /** variable for spead in animations
+     *
+     * @type {number}
+     */
+    var speed = 3;
+
     /**
      * Block Objects
      */
-    var block1 = {
-        x: 50,
-        y: 50,
-        width: 70,
-        height: 50,
-        fillColor: 'black'
-    };
-
-    var block2 = {
-        x: 650,
-        y: 50,
-        width: 70,
-        height: 50,
-        fillColor: 'black'
-    };
-
-    var block3 = {
-        x: 210,
-        y: 250,
-        width: 100,
-        height: 100,
-        fillColor: 'red'
-    };
-
-    var block4 = {
-        x: 410,
-        y: 250,
-        width: 100,
-        height: 100,
-        fillColor: 'blue'
-    };
-
-    var makewhite = {
-        x: 300,
-        y: 50,
-        width: 100,
-        height: 100,
-        fillColor: 'white'
-    };
-
-    var wall1 = {
-        x: 100,
-        y: 150,
+    var brick = {
+        x: 0,
+        y: 0,
         width: 50,
         height: 50,
         fillColor: 'black'
     };
+
+    var getSmall = {
+        x: 650,
+        y: 350,
+        width: 25,
+        height: 25,
+        fillColor: 'blue'
+    };
+
+    var getBig = {
+        x: 200,
+        y: 200 ,
+        width: 25,
+        height: 25,
+        fillColor: 'green'
+    };
+
+    var portal = {
+        x: 780,
+        y: 350,
+        width: 50,
+        height: 25,
+        fillColor: 'tan'
+    };
+
 
     /**
      * Draw rectangles
@@ -99,48 +93,117 @@ $(document).ready(function () {
     }
 
 
+    function drawWalls(r, startX, startY, context) {
+        var startX;
+        var startY;
+        r.x = startX;
+        r.y = startY;
+        var context = canvas.getContext('2d');
+        context.fillStyle = r.fillColor;
+        context.fillRect(r.x, r.y, r.width, r.height);
+    }
+
+
+    /**
+     * Block animations
+     * @param r = rect
+     * Todo: needs fixing
+     */
+    function animate(r) {
+        if (r.x < canvas.width) {
+            r.x += speed;
+        }
+        if (r.x > canvas.width) {
+            speed *= -1;
+        }
+    }
+
+
     /**
      * Collsion with Objects
-     */
-     function collide(r1, r2) {
+     **/
+    function collide(r1, r2) {
         if (r1.x > r2.x + r2.width ||
             r1.x + r1.width < r2.x ||
             r1.y > r2.y + r2.height ||
             r1.y + r1.height < r2.y) {
             return false;
-        } return true;
+        }
+        return true;
     }
 
+    /**
+     * Let Player grow till he is maxPlayer
+     * @param p = playerrect.
+     * @param r = rect.
+     */
+    function grow(p, r) {
+        if (collide(p, r)) {
+            if (p.width > maxPlayer) {
+                p.width = maxPlayer;
+                p.height = maxPlayer;
+            }
+            player.width += .5;
+            player.height += .5;
+        }
+    }
 
-    function changeApperance() {
-        if (collide(block1, player)) {
-            player.width++;
-            player.height++;
-        } else if (collide(block2, player)) {
-            player.width--;
-            player.height--;
-        } else if (collide(block3, player)) {
-            player.fillColor = block3.fillColor;
-        } else if (collide(block4, player)) {
-            player.fillColor = block4.fillColor;
-        } else if (collide(makewhite, player)) {
-            player.fillColor = makewhite.fillColor;
+    /**
+     * Let Player shring till he is minPlayer
+     * @param p = playerrect.
+     * @param r = rect.
+     */
+    function shrink(p, r) {
+        if (collide(p, r)) {
+            if (p.width < minPlayer) {
+                p.width = minPlayer;
+                p.height = minPlayer;
+            }
+            player.width -= .5;
+            player.height -= .5;
+        }
+    }
+
+    /**
+     * Set Player back to startpoint
+     * @param p = playerrect.
+     * @param r = rect.
+     */
+    function die(p, r) {
+        if (collide(p, r)) {
+            p.x = pPosX;
+            p.y = pPosY;
+            alert("You Die, stay away from walls and blocks!");
+        }
+    }
+
+    function win(p, r) {
+        if (collide(p, r)) {
+            alert("You Made it, Epic Win!");
         }
     }
 
 
     /**
      * Object collision
+     * Todo: not working right
      */
-     function objectCollison(p , r) {
+    function objectCollison(p, r) {
         if (collide(p, r)) {
+
             if (p.x + p.width > r.x) {
-                p.fillColor = 'navy';
                 p.x = r.x - p.width;
             }
-            else if (p.x + p.width > r.x) {
-                p.fillColor = 'green';
-                p.x = r.x - p.width;
+            else if (p.x < r.x + r.width) {
+                p.x = r.x + r.width;
+            }
+
+            else if (p.y + p.height > r.y) {
+                p.y = r.y - p.height;
+            }
+            else if (p.y < r.y + r.height) {
+                p.y = r.y + r.height;
+            }
 
         }
     }
@@ -149,23 +212,23 @@ $(document).ready(function () {
     /**
      * Playermovement with arrowkeys
      */
-    function game() {
+    function movement() {
         function movePlayer(key) {
             // left
             if (key.keyCode == 39) {
-                player.x += 10;
+                player.x += 5;
             }
             // right
             if (key.keyCode == 37) {
-                player.x -= 10;
+                player.x -= 5;
             }
             // down
             if (key.keyCode == 40) {
-                player.y += 10;
+                player.y += 5;
             }
             // up
             if (key.keyCode == 38) {
-                player.y -= 10;
+                player.y -= 5;
             }
 
             /**
@@ -195,16 +258,21 @@ $(document).ready(function () {
 
         /** Set Player, Blocks and Canvas **/
         drawCanvas();
-        drawRectangles(block1);
-        drawRectangles(block2);
-        drawRectangles(block3);
-        drawRectangles(block4);
-        drawRectangles(makewhite);
-        drawRectangles(wall1);
+        for (var i = 0; i < canvas.width; i += 75) {
+            for (var j = 0; j < canvas.height; j += 75) {
+                drawWalls(brick, i, j);
+                die(player, brick);
+            }
+        }
+        drawRectangles(getBig);
+        drawRectangles(portal);
+        drawRectangles(getSmall);
         drawRectangles(player);
-        game();
-        changeApperance();
-        objectCollison(player, wall1);
+        grow(player,getBig);
+        shrink(player, getSmall);
+        movement();
+        win(player, portal);
+
     }, 30);
 
 }); // end of jQuery
