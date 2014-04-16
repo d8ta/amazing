@@ -45,7 +45,7 @@ $(document).ready(function () {
      *
      * @type {number}
      */
-    var speed = 3;
+    var speed = .5;
 
     /**
      * Block Objects
@@ -71,7 +71,7 @@ $(document).ready(function () {
         y: 200 ,
         width: 25,
         height: 25,
-        fillColor: 'green'
+        fillColor: 'grey'
     };
 
     var portal = {
@@ -80,6 +80,14 @@ $(document).ready(function () {
         width: 50,
         height: 25,
         fillColor: 'tan'
+    };
+
+    var theWave = {
+        x: 0,
+        y: 0,
+        width: 20,
+        height: canvas.height,
+        fillColor: 'blue'
     };
 
 
@@ -109,12 +117,13 @@ $(document).ready(function () {
      * @param r = rect
      * Todo: needs fixing
      */
-    function animate(r) {
-        if (r.x < canvas.width) {
+    function animateX(r) {
+        r.x += speed;
+        if (r.x > canvas.width) {
             r.x += speed;
         }
-        if (r.x > canvas.width) {
-            speed *= -1;
+        if (r.x > canvas.width / 4) {
+            speed += .1;
         }
     }
 
@@ -173,13 +182,19 @@ $(document).ready(function () {
         if (collide(p, r)) {
             p.x = pPosX;
             p.y = pPosY;
-            alert("You Die, stay away from walls and blocks!");
+            if (confirm('You just died! Try again')) {
+                window.location.reload();
+            }
         }
     }
 
     function win(p, r) {
         if (collide(p, r)) {
-            alert("You Made it, Epic Win!");
+            var score = 20000;
+            if (confirm("You Win! Your Score: " + score)) {
+                document.location = "http://m.memegen.com/5vcv9q.jpg";
+                //window.location.reload();
+            }
         }
     }
 
@@ -268,6 +283,9 @@ $(document).ready(function () {
         drawRectangles(portal);
         drawRectangles(getSmall);
         drawRectangles(player);
+        drawRectangles(theWave);
+        die(player,theWave);
+        animateX(theWave);
         grow(player,getBig);
         shrink(player, getSmall);
         movement();
