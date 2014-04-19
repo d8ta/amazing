@@ -1,19 +1,12 @@
 /**
- * Created by danielraudschus on 12.04.14.
+ * Created by danielraudschus on 18.04.14.
  */
+
+
 $(document).ready(function () {
 
 
-        // Get canvas and context
-        var canvas = document.getElementById("canvas");
-        var context = canvas.getContext('2d');
 
-        // Draw the Canvas
-        function drawCanvas() {
-            var back = canvas.getContext('2d');
-            back.fillStyle = 'grey';
-            back.fillRect(0, 0, canvas.width, canvas.height);
-        }
 
         // Player variables
         var pPosX = 55;
@@ -46,12 +39,12 @@ $(document).ready(function () {
         /**
          * Block Objects
          */
+        var back = new rectangle(0, 0, canvas.width, canvas.height, 'grey');
         var player = new rectangle(pPosX, pPosY, pW, pH, 'white');
-        var brick = new rectangle(0, 0, 50, 50, 'black');
+        var brick = new rectangle(0, 0, 10, 10, 'black');
         var getSmall = new rectangle(20, 50, 25, 25, 'teal');
         var getBig = new rectangle(200, 200, 25, 25, 'green');
         var portal = new rectangle(780, 350, 50, 25, 'green');
-        var back = new rectangle(0, 0, canvas.width, canvas.height, 'grey');
 
 
         /**
@@ -253,21 +246,91 @@ $(document).ready(function () {
             }
         }
 
+
+        function maze(x, y) {
+            var n = x * y - 1;
+            if (n < 0) {
+                alert("illegal maze dimensions");
+                return;
+            }
+            var horiz = [];
+            for (var j = 0; j < x + 1; j++) horiz[j] = [],
+                verti = [];
+            for (var j = 0; j < y + 1; j++) verti[j] = [],
+                here = [Math.floor(Math.random() * x), Math.floor(Math.random() * y)],
+                path = [here],
+                unvisited = [];
+            for (var j = 0; j < x + 2; j++) {
+                unvisited[j] = [];
+                for (var k = 0; k < y + 1; k++)
+                    unvisited[j].push(j > 0 && j < x + 1 && k > 0 && (j != here[0] + 1 || k != here[1] + 1));
+            }
+            while (0 < n) {
+                var potential = [
+                    [here[0] + 1, here[1]],
+                    [here[0], here[1] + 1],
+                    [here[0] - 1, here[1]],
+                    [here[0], here[1] - 1]
+                ];
+                var neighbors = [];
+                for (var j = 0; j < 4; j++)
+                    if (unvisited[potential[j][0] + 1][potential[j][1] + 1])
+                        neighbors.push(potential[j]);
+                if (neighbors.length) {
+                    n = n - 1;
+                    next = neighbors[Math.floor(Math.random() * neighbors.length)];
+                    unvisited[next[0] + 1][next[1] + 1] = false;
+                    if (next[0] == here[0])
+                        horiz[next[0]][(next[1] + here[1] - 1) / 2] = true;
+                    else
+                        verti[(next[0] + here[0] - 1) / 2][next[1]] = true;
+                    path.push(here = next);
+                } else
+                    here = path.pop();
+            }
+            return {x: x, y: y, horiz: horiz, verti: verti};
+        }
+
+        function display(m) {
+            var text = [];
+            for (var j = 0; j < m.x * 2 + 1; j++) {
+                var line = [];
+                if (0 == j % 2)
+                    for (var k = 0; k < m.y * 4 + 1; k++)
+                        if (0 == k % 4)
+                            line[k] = '+';
+                        else if (j > 0 && m.verti[j / 2 - 1][Math.floor(k / 4)])
+                            line[k] = ' ';
+                        else
+                            line[k] = '-';
+                else
+                    for (var k = 0; k < m.y * 4 + 1; k++)
+                        if (0 == k % 4)
+                            if (k > 0 && m.horiz[(j - 1) / 2][k / 4 - 1])
+                                line[k] = ' ';
+                            else
+                                line[k] = '|';
+                        else
+                            line[k] = ' ';
+                if (0 == j) line[1] = line[2] = line[3] = ' ';
+                if (m.x * 2 - 1 == j) line[4 * m.y] = ' ';
+                text.push(line.join('') + '\r\n');
+            }
+            return text.join('');
+        }
+
+        document.getElementById('maze').innerHTML = display(maze(8, 11));
+
         // This is where the Game happens
         setInterval(function () {
 
             /** Set Player, Blocks and Canvas **/
-            drawCanvas();
-            blocks();
-            drawRectangles(getBig);
-            drawRectangles(portal);
-            drawRectangles(getSmall);
-            drawRectangles(player);
-            grow(player, getBig);
-            shrink(player, getSmall);
-            movement();
-            win(player, portal);
+            //drawRectangles(back);
+            //drawRectangles(player);
+            //movement();
 
         }, 30);
+
+
     }
-); // end of jQuery
+);
