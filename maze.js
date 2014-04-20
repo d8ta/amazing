@@ -167,7 +167,7 @@ $(document).ready(function () {
         function win(p, r) {
             if (collide(p, r)) {
                 if (confirm("You Win! Your Score: " + (highscore - (keycounter * 5)))) {
-                    document.location = "highscore.html";
+                    document.location = "highscore.php";
 
 //                    TODO: pass Score to DB
 
@@ -325,8 +325,8 @@ $(document).ready(function () {
         setInterval(function () {
 
             /** Set Player, Blocks and Canvas **/
-            //drawRectangles(back);
-            //drawRectangles(player);
+            //drawRectangle(back);
+            //drawRectangle(player);
             //movement();
 
         }, 30);
