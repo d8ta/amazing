@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="12e2583c-76da-4cec-897f-2b40d828b225" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/game.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/index.php" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/highscore.html" afterPath="$PROJECT_DIR$/highscore.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.css" afterPath="$PROJECT_DIR$/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.js" afterPath="$PROJECT_DIR$/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/maze.js" afterPath="$PROJECT_DIR$/maze.js" />
-    </list>
+    <list default="true" id="12e2583c-76da-4cec-897f-2b40d828b225" name="Default" comment="" />
     <ignored path="mmp1.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,10 +25,10 @@
     <splitter split-orientation="horizontal" split-proportion="0.46597221">
       <split-first>
         <leaf>
-          <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="2" column="16" selection-start="39" selection-end="39" vertical-scroll-proportion="0.042613637" vertical-offset="0" max-vertical-offset="704">
+                <state line="17" column="7" selection-start="418" selection-end="418" vertical-scroll-proportion="0.3622159" vertical-offset="0" max-vertical-offset="704">
                   <folding />
                 </state>
               </provider>
@@ -86,10 +79,10 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/main.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="107" column="3" selection-start="2318" selection-end="2318" vertical-scroll-proportion="2.081044" vertical-offset="90" max-vertical-offset="4260">
+                <state line="107" column="3" selection-start="2318" selection-end="2318" vertical-scroll-proportion="2.2046704" vertical-offset="0" max-vertical-offset="4260">
                   <folding />
                 </state>
               </provider>
@@ -321,16 +314,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="16" selection-start="39" selection-end="39" vertical-scroll-proportion="0.042613637" vertical-offset="0" max-vertical-offset="704">
+        <state line="107" column="3" selection-start="2318" selection-end="2318" vertical-scroll-proportion="2.2046704" vertical-offset="0" max-vertical-offset="4260">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.js">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="107" column="3" selection-start="2318" selection-end="2318" vertical-scroll-proportion="2.081044" vertical-offset="90" max-vertical-offset="4260">
+        <state line="17" column="7" selection-start="418" selection-end="418" vertical-scroll-proportion="0.3622159" vertical-offset="0" max-vertical-offset="704">
           <folding />
         </state>
       </provider>

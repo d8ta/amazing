@@ -5,7 +5,7 @@
 
 // Player variables
 var pPosX = 55;
-var pPosY = 10;
+var pPosY = 3;
 var pW = 10;
 var pH = 10;
 var minPlayer = 5;
@@ -33,10 +33,11 @@ window.onload = function () {
     // Draws all elements of the game every 30 milliseconds to the canvas
     setInterval(function () {
         drawBackground();
-        blocks();
+        //blocks();
         drawRectangle(getBig);
         drawRectangle(winstone);
         drawRectangle(getSmall);
+        //lines();
         drawRectangle(player);
         grow(player, getBig);
         shrink(player, getSmall);
@@ -61,7 +62,30 @@ window.onload = function () {
             }
         }
     }
+
+    /**
+     * Drawing some lines on the canvas
+     */
+    function lines() {
+        context.beginPath();
+        context.lineWidth = '10';
+        context.strokeStyle = 'black';
+        context.moveTo(20, 20);
+        context.lineTo(500, 20);
+        context.lineTo(500, 200);
+        context.lineTo(700, 200);
+        context.lineTo(700, 400);
+        context.lineTo(200, 400);
+        context.lineTo(200, 300);
+        context.lineTo(300, 300);
+        context.lineTo(300, 100);
+        context.lineTo(10, 100);
+        context.lineTo(10, 425);
+        context.stroke();
+    }
+
 }; // End of onload
+
 
 /**
  * Rectangle Object constructor
@@ -77,8 +101,9 @@ function rectangle(x, y, width, height, fillColor) {
 /**
  * Rect Objects
  */
-var player = new rectangle(pPosX, pPosY, pW, pH, 'black');
+var player = new rectangle(pPosX, pPosY, pW, pH, 'darkgrey');
 var block = new rectangle(0, 0, 50, 50, 'black');
+var wall = new rectangle(50, 50, 10, 10, 'black');
 var winstone = new rectangle(125, 50, 25, 25, 'grey');
 var getBig = new rectangle(275, 350, 25, 25, 'grey');
 var getSmall = new rectangle(50, 125, 25, 25, 'grey');
