@@ -14,10 +14,14 @@ var maxPlayer = 50;
 
 var playerSpeed = 5;
 var animSpeed = .5;
-var keycounter = 0;
-var score = 10000;
-var highscore;
+var highscore = 100000;
 
+/**
+ * Highscore math
+ */
+setInterval(function () {
+    highscore -= 10;
+}, 10);
 
 /**
  * Gives highscore value to the form in input.html to send it to the
@@ -56,9 +60,9 @@ window.onload = function () {
      */
     function win(p, r) {
         if (collide(p, r)) {
-            highscore = score - (keycounter * 5);
             if (confirm("You Win!")) {
                 document.location = "input.html";
+                myScore();
             }
         }
     }
@@ -260,22 +264,18 @@ function movement() {
         // left
         if (key.keyCode == 39) {
             player.x += playerSpeed;
-            keycounter++;
         }
         // right
         if (key.keyCode == 37) {
             player.x -= playerSpeed;
-            keycounter++;
         }
         // down
         if (key.keyCode == 40) {
             player.y += playerSpeed;
-            keycounter++;
         }
         // up
         if (key.keyCode == 38) {
             player.y -= playerSpeed;
-            keycounter++;
         }
 
         /**
