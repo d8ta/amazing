@@ -36,17 +36,16 @@ window.onload = function () {
 
     // Draws all elements of the game every 30 milliseconds to the canvas
     setInterval(function () {
-        drawBackground();
-        //blocks();
-        drawRectangle(getBig);
-        drawRectangle(winstone);
-        drawRectangle(getSmall);
-        //lines();
+        //drawBackground();
+        drawBlocks();
+        //drawRectangle(getBig);
+        //drawRectangle(winstone);
+        //drawRectangle(getSmall);
         drawRectangle(player);
-        grow(player, getBig);
-        shrink(player, getSmall);
+        //grow(player, getBig);
+        //shrink(player, getSmall);
         movement();
-        win(player, winstone);
+        //win(player, winstone);
     }, 30);
 
     // Get and set canvas and context
@@ -67,26 +66,6 @@ window.onload = function () {
         }
     }
 
-    /**
-     * Drawing some lines on the canvas
-     */
-    function lines() {
-        context.beginPath();
-        context.lineWidth = '10';
-        context.strokeStyle = 'black';
-        context.moveTo(20, 20);
-        context.lineTo(500, 20);
-        context.lineTo(500, 200);
-        context.lineTo(700, 200);
-        context.lineTo(700, 400);
-        context.lineTo(200, 400);
-        context.lineTo(200, 300);
-        context.lineTo(300, 300);
-        context.lineTo(300, 100);
-        context.lineTo(10, 100);
-        context.lineTo(10, 425);
-        context.stroke();
-    }
 
 }; // End of onload
 
@@ -146,9 +125,9 @@ function drawWalls(r, startX, startY, context) {
 }
 
 /**
- * Drawing blocks over the canvas
+ * Drawing drawBlocks over the canvas
  */
-function blocks() {
+function drawBlocks() {
     for (var i = 0; i < canvas.width; i += 75) {
         for (var j = 0; j < canvas.height; j += 75) {
             drawWalls(block, i, j);

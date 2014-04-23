@@ -31,7 +31,7 @@ $player = $_POST['player'];
 mysqli_query($connect, "INSERT INTO Score (playername, highscore) VALUES ('$player', '$highscore')");
 
 
-$result = mysqli_query($connect, "SELECT DISTINCT * FROM Score ORDER BY highscore DESC LIMIT 0, 10");
+$result = mysqli_query($connect, "SELECT DISTINCT * FROM Score ORDER BY highscore DESC LIMIT 0, 100");
 
 
 echo "<table border='1'>
@@ -40,6 +40,7 @@ echo "<table border='1'>
 <th>Score</th>
 </tr>";
 ?>
+
 
 <h1>HIGHSCORE</h1>
 
