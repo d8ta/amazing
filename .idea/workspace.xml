@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="12e2583c-76da-4cec-897f-2b40d828b225" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game.html" afterPath="$PROJECT_DIR$/game.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/highscore.php" afterPath="$PROJECT_DIR$/highscore.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input.html" afterPath="$PROJECT_DIR$/input.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.css" afterPath="$PROJECT_DIR$/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.js" afterPath="$PROJECT_DIR$/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -26,93 +30,67 @@
     <favorites_list name="mmp1" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.47361112">
-      <split-first>
-        <leaf>
-          <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/index.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="17" column="7" selection-start="418" selection-end="418" vertical-scroll-proportion="-10.625" vertical-offset="0" max-vertical-offset="345">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="game.html" pinned="false" current="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/game.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="3" column="26" selection-start="66" selection-end="66" vertical-scroll-proportion="0.066079296" vertical-offset="0" max-vertical-offset="681">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="input.html" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/input.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="7" column="7" selection-start="231" selection-end="231" vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="465">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="config.php" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/config.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="6" column="0" selection-start="112" selection-end="112" vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="180">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="functions.php" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/functions.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="9" column="0" selection-start="123" selection-end="123" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="465">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/main.css">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="8" column="0" selection-start="131" selection-end="131" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="210">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="highscore.php" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/highscore.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="63" column="35" selection-start="1236" selection-end="1236" vertical-scroll-proportion="-39.375" vertical-offset="0" max-vertical-offset="1065">
-                  <folding>
-                    <marker date="1398197149000" expanded="true" signature="622:696" placeholder="INSERT INTO ..." />
-                    <marker date="1398197149000" expanded="true" signature="736:801" placeholder="SELECT DISTI..Score..." />
-                    <marker date="1398197149000" expanded="true" signature="830:876" placeholder="..." />
-                    <marker date="1398197149000" expanded="true" signature="835:876" placeholder="..." />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/main.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="129" column="19" selection-start="2816" selection-end="2826" vertical-scroll-proportion="2.7564104" vertical-offset="0" max-vertical-offset="4320">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="115" column="53" selection-start="2217" selection-end="2217" vertical-scroll-proportion="0.7369942" vertical-offset="1185" max-vertical-offset="4710">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="5" selection-start="332" selection-end="332" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="990">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="highscore.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/highscore.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="49" column="3" selection-start="1103" selection-end="1103" vertical-scroll-proportion="-21.875" vertical-offset="210" max-vertical-offset="1095">
+              <folding>
+                <marker date="1398622287000" expanded="true" signature="811:885" placeholder="INSERT INTO ..." />
+                <marker date="1398622287000" expanded="true" signature="925:989" placeholder="SELECT DISTI..Score..." />
+                <marker date="1398622287000" expanded="true" signature="1007:1071" placeholder="..." />
+                <marker date="1398622287000" expanded="true" signature="1012:1071" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="26" selection-start="66" selection-end="66" vertical-scroll-proportion="-1.875" vertical-offset="0" max-vertical-offset="420">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="game.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/game.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="20" selection-start="460" selection-end="484" vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="345">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="input.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/input.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="8" selection-start="535" selection-end="535" vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="480">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -131,16 +109,19 @@
         <option value="$PROJECT_DIR$/input.php" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/input.html" />
-        <option value="$PROJECT_DIR$/main.css" />
         <option value="$PROJECT_DIR$/highscore.php" />
+        <option value="$PROJECT_DIR$/../maze_testalgo/example.html" />
+        <option value="$PROJECT_DIR$/game.html" />
+        <option value="$PROJECT_DIR$/main.css" />
         <option value="$PROJECT_DIR$/main.js" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="Unnamed" />
   <component name="ProjectFrameBounds">
+    <option name="x" value="-3" />
     <option name="y" value="22" />
-    <option name="width" value="1439" />
+    <option name="width" value="585" />
     <option name="height" value="825" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -219,28 +200,28 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1439" height="825" extended-state="6" />
+    <frame x="-3" y="22" width="585" height="825" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32936507" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32936507" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3994709" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -260,6 +241,74 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="71" selection-start="128" selection-end="128" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4500">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/highscore.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="32" selection-start="956" selection-end="974" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="1065">
+          <folding>
+            <marker date="1398622287000" expanded="true" signature="811:885" placeholder="INSERT INTO ..." />
+            <marker date="1398622287000" expanded="true" signature="925:989" placeholder="SELECT DISTI..Score..." />
+            <marker date="1398622287000" expanded="true" signature="1007:1071" placeholder="..." />
+            <marker date="1398622287000" expanded="true" signature="1012:1071" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="58" selection-start="192" selection-end="192" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="345">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="335" selection-end="335" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="330">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="10" selection-start="678" selection-end="678" vertical-scroll-proportion="0.0" vertical-offset="585" max-vertical-offset="4425">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="26" selection-start="66" selection-end="66" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="345">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="335" selection-end="335" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="330">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="10" selection-start="678" selection-end="678" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4425">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="335" selection-end="335" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="330">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="7" selection-start="418" selection-end="418" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
@@ -283,9 +332,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="112" selection-end="112" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="180">
-          <folding />
-        </state>
+        <state line="6" column="0" selection-start="112" selection-end="112" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="180" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/functions.php">
@@ -297,21 +344,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="131" selection-end="131" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="210">
-          <folding />
-        </state>
+        <state line="8" column="0" selection-start="131" selection-end="131" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="210" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/highscore.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="0" selection-start="943" selection-end="1136" vertical-scroll-proportion="0.0" vertical-offset="735" max-vertical-offset="1065">
-          <folding>
-            <marker date="1398197149000" expanded="true" signature="622:696" placeholder="INSERT INTO ..." />
-            <marker date="1398197149000" expanded="true" signature="736:801" placeholder="SELECT DISTI..Score..." />
-            <marker date="1398197149000" expanded="true" signature="830:876" placeholder="..." />
-            <marker date="1398197149000" expanded="true" signature="835:876" placeholder="..." />
-          </folding>
-        </state>
+        <state line="49" column="0" selection-start="943" selection-end="1136" vertical-scroll-proportion="0.0" vertical-offset="735" max-vertical-offset="1065" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.js">
@@ -344,21 +382,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/highscore.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="0" selection-start="806" selection-end="806" vertical-scroll-proportion="0.0" vertical-offset="179" max-vertical-offset="1065">
-          <folding>
-            <marker date="1398197149000" expanded="true" signature="622:696" placeholder="INSERT INTO ..." />
-            <marker date="1398197149000" expanded="true" signature="736:801" placeholder="SELECT DISTI..Score..." />
-            <marker date="1398197149000" expanded="true" signature="830:876" placeholder="..." />
-            <marker date="1398197149000" expanded="true" signature="835:876" placeholder="..." />
-          </folding>
-        </state>
+        <state line="35" column="0" selection-start="806" selection-end="806" vertical-scroll-proportion="0.0" vertical-offset="179" max-vertical-offset="1065" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="131" selection-end="131" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="210">
-          <folding />
-        </state>
+        <state line="8" column="0" selection-start="131" selection-end="131" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="210" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.js">
@@ -391,21 +420,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/highscore.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="0" selection-start="806" selection-end="806" vertical-scroll-proportion="0.0" vertical-offset="179" max-vertical-offset="1065">
-          <folding>
-            <marker date="1398197149000" expanded="true" signature="622:696" placeholder="INSERT INTO ..." />
-            <marker date="1398197149000" expanded="true" signature="736:801" placeholder="SELECT DISTI..Score..." />
-            <marker date="1398197149000" expanded="true" signature="830:876" placeholder="..." />
-            <marker date="1398197149000" expanded="true" signature="835:876" placeholder="..." />
-          </folding>
-        </state>
+        <state line="35" column="0" selection-start="806" selection-end="806" vertical-scroll-proportion="0.0" vertical-offset="179" max-vertical-offset="1065" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="131" selection-end="131" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="210">
-          <folding />
-        </state>
+        <state line="8" column="0" selection-start="131" selection-end="131" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="210" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.js">
@@ -438,21 +458,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/highscore.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="0" selection-start="806" selection-end="806" vertical-scroll-proportion="0.0" vertical-offset="179" max-vertical-offset="1065">
-          <folding>
-            <marker date="1398197149000" expanded="true" signature="622:696" placeholder="INSERT INTO ..." />
-            <marker date="1398197149000" expanded="true" signature="736:801" placeholder="SELECT DISTI..Score..." />
-            <marker date="1398197149000" expanded="true" signature="830:876" placeholder="..." />
-            <marker date="1398197149000" expanded="true" signature="835:876" placeholder="..." />
-          </folding>
-        </state>
+        <state line="35" column="0" selection-start="806" selection-end="806" vertical-scroll-proportion="0.0" vertical-offset="179" max-vertical-offset="1065" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="131" selection-end="131" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="210">
-          <folding />
-        </state>
+        <state line="8" column="0" selection-start="131" selection-end="131" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="210" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.js">
@@ -477,13 +488,6 @@
         <state line="17" column="29" selection-start="524" selection-end="524" vertical-scroll-proportion="0.3690304" vertical-offset="0" max-vertical-offset="691" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="131" selection-end="131" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/functions.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="0" selection-start="123" selection-end="123" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="465">
@@ -491,49 +495,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/highscore.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="35" selection-start="1236" selection-end="1236" vertical-scroll-proportion="-39.375" vertical-offset="0" max-vertical-offset="1065">
-          <folding>
-            <marker date="1398197149000" expanded="true" signature="622:696" placeholder="INSERT INTO ..." />
-            <marker date="1398197149000" expanded="true" signature="736:801" placeholder="SELECT DISTI..Score..." />
-            <marker date="1398197149000" expanded="true" signature="830:876" placeholder="..." />
-            <marker date="1398197149000" expanded="true" signature="835:876" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="112" selection-end="112" vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="180">
+        <state line="6" column="0" selection-start="112" selection-end="112" vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="180" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../maze_testalgo/example.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="50" selection-start="529" selection-end="529" vertical-scroll-proportion="0.6078148" vertical-offset="0" max-vertical-offset="720">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/input.html">
+    <entry file="file://$PROJECT_DIR$/../maze_testalgo/mazegenerator.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="7" selection-start="231" selection-end="231" vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="465">
+        <state line="25" column="42" selection-start="839" selection-end="839" vertical-scroll-proportion="0.18181819" vertical-offset="245" max-vertical-offset="960">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="7" selection-start="418" selection-end="418" vertical-scroll-proportion="-10.625" vertical-offset="0" max-vertical-offset="345">
+        <state line="3" column="26" selection-start="66" selection-end="66" vertical-scroll-proportion="-1.875" vertical-offset="0" max-vertical-offset="420">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="8" selection-start="535" selection-end="535" vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="480">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/game.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="26" selection-start="66" selection-end="66" vertical-scroll-proportion="0.066079296" vertical-offset="0" max-vertical-offset="681">
+        <state line="14" column="20" selection-start="460" selection-end="484" vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="345">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/highscore.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="3" selection-start="1103" selection-end="1103" vertical-scroll-proportion="-21.875" vertical-offset="210" max-vertical-offset="1095">
+          <folding>
+            <marker date="1398622287000" expanded="true" signature="811:885" placeholder="INSERT INTO ..." />
+            <marker date="1398622287000" expanded="true" signature="925:989" placeholder="SELECT DISTI..Score..." />
+            <marker date="1398622287000" expanded="true" signature="1007:1071" placeholder="..." />
+            <marker date="1398622287000" expanded="true" signature="1012:1071" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="5" selection-start="332" selection-end="332" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="990">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="129" column="19" selection-start="2816" selection-end="2826" vertical-scroll-proportion="2.7564104" vertical-offset="0" max-vertical-offset="4320">
+        <state line="115" column="53" selection-start="2217" selection-end="2217" vertical-scroll-proportion="0.7369942" vertical-offset="1185" max-vertical-offset="4710">
           <folding />
         </state>
       </provider>

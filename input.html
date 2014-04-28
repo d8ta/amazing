@@ -4,21 +4,22 @@
     <meta charset="UTF-8">
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="main.js"></script>
-    <title>Playerinput</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Ceviche+One|Exo+2:400,200,600' rel='stylesheet' type='text/css'>
+    <link type="text/css" rel="stylesheet" href="main.css">
+    <title>Your Name</title>
 </head>
 <body>
 
 <h1>A-MAZE-ING</h1>
-<h3>Tell us your Name, Fish!</h3>
+<h3>Whats your Name, Hero?</h3>
 
 
-<form action="highscore.php" method="post">
-    Name: <input type="text" name="player" id="player">
+<form id="form" action="highscore.php" method="post">
+    Name <input type="text" name="player" id="player">
     <input type="hidden" name="score" id="score" value="">
     <input type="submit" onclick="myScore()">
 </form>
-
-
 
 </body>
 </html>

@@ -3,17 +3,22 @@
  */
 
 
+/**
+ * TODO: Randomisiert ausgesuchte Lab. (4 - 5) bauen und starten lassen
+ */
+
+
 // Player variables
-var pPosX = 55;
+var pPosX = 3;
 var pPosY = 3;
-var pW = 10;
-var pH = 10;
+var pW = 20;
+var pH = 20;
 var minPlayer = 5;
 var maxPlayer = 50;
 
 
 var playerSpeed = 5;
-var animSpeed = .5;
+var animSpeed = 2;
 var highscore = 100000;
 
 /**
@@ -36,21 +41,29 @@ window.onload = function () {
 
     // Draws all elements of the game every 30 milliseconds to the canvas
     setInterval(function () {
-        //drawBackground();
-        drawBlocks();
-        //drawRectangle(getBig);
-        //drawRectangle(winstone);
-        //drawRectangle(getSmall);
+        drawBackground();
+
+        //drawBlocks();
+
+        drawRectangle(winstone);
+        win(player, winstone);
+
         drawRectangle(player);
-        //grow(player, getBig);
-        //shrink(player, getSmall);
         movement();
-        //win(player, winstone);
+
+
     }, 30);
 
-    // Get and set canvas and context
+    /**
+    update function erstellen in die alle Dinge kommen die ein Update brauchen
+    der REST nicht!!
+    **/
+
+    /** Get and set canvas and context **/
     var canvas = document.getElementById("canvas");
     var context = canvas.getContext('2d');
+
+}; // End of onload
 
     /**
      *
@@ -67,7 +80,19 @@ window.onload = function () {
     }
 
 
-}; // End of onload
+
+
+
+/**
+ * Rect Objects
+ */
+var player = new rectangle(pPosX, pPosY, pW, pH, 'darkgrey');
+var block = new rectangle(0, 0, 50, 50, 'black');
+var wall = new rectangle(25, 0, 470, 440, 'black');
+var winstone = new rectangle(550, 200, 25, 25, 'silver');
+var getBig = new rectangle(50, 0, 400, 50, '#f5f5f5');
+var getSmall = new rectangle(0, 425, 25, 25, 'green');
+
 
 
 /**
@@ -81,20 +106,13 @@ function rectangle(x, y, width, height, fillColor) {
     this.fillColor = fillColor;
 }
 
+
 /**
- * Rect Objects
- */
-var player = new rectangle(pPosX, pPosY, pW, pH, 'darkgrey');
-var block = new rectangle(0, 0, 50, 50, 'black');
-var wall = new rectangle(50, 50, 10, 10, 'black');
-var winstone = new rectangle(125, 50, 25, 25, 'grey');
-var getBig = new rectangle(275, 350, 25, 25, 'grey');
-var getSmall = new rectangle(50, 125, 25, 25, 'grey');
-
-
+ Painting the background
+ **/
 function drawBackground() {
     var back = canvas.getContext('2d');
-    back.fillStyle = 'white';
+    back.fillStyle = '#f5f5f5';
     back.fillRect(0, 0, canvas.width, canvas.height);
 }
 
@@ -115,8 +133,10 @@ function drawRectangle(r, context) {
  * @param context
  */
 function drawWalls(r, startX, startY, context) {
-    var startX; //Math.round(Math.random() * canvas.width);
-    var startY; //Math.round(Math.random() * canvas.height);
+    var randX = 10; //Math.round(Math.random() * canvas.width);
+    var randY = 10; //Math.round(Math.random() * canvas.height);
+    var startX = randX;
+    var startY = randY;
     r.x = startX;
     r.y = startY;
     var context = canvas.getContext('2d');
@@ -140,13 +160,21 @@ function drawBlocks() {
  *
  * @param r: rect.
  * @param k: koordinates (x or y)
- * @param k: direction (width or heigth
+ * @param k: direction (width or heigth)
  */
 function animate(r, k, d) {
     r.k += animSpeed;
     if (r.k > canvas.d) {
         animSpeed *= -1;
     }
+
+  /* wall.x += animSpeed;
+     if (wall.x > 300) {
+     animSpeed *= -1;
+     }
+     else if (wall.x < 10){
+     animSpeed *= -1;
+     }*/
 }
 
 /**

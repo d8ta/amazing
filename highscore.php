@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="main.js"></script>
+
+        <link href='http://fonts.googleapis.com/css?family=Ceviche+One|Exo+2:400,200,600' rel='stylesheet' type='text/css'>
+        <link type="text/css" rel="stylesheet" href="main.css">
     <title>Highscore</title>
 </head>
 <body>
@@ -31,20 +34,20 @@ $player = $_POST['player'];
 mysqli_query($connect, "INSERT INTO Score (playername, highscore) VALUES ('$player', '$highscore')");
 
 
-$result = mysqli_query($connect, "SELECT DISTINCT * FROM Score ORDER BY highscore DESC LIMIT 0, 100");
+$result = mysqli_query($connect, "SELECT DISTINCT * FROM Score ORDER BY highscore DESC LIMIT 0, 10");
 
 
-echo "<table border='1'>
+echo "<table>
 <tr>
-<th>Playername</th>
-<th>Score</th>
+<th><h3>Playername</h3></th>
+<th><h3>Score</h3></th>
 </tr>";
 ?>
 
 
 <h1>HIGHSCORE</h1>
 
-<h3>...The Top Ten, Baby!</h3>
+<h2>Top Ten Highscores</h2>
 
 <?php
 while ($row = mysqli_fetch_array($result)) {
@@ -58,9 +61,8 @@ echo "</table>";
 mysqli_close($connect);
 ?>
 
-<br>
 
 <!--TODO: Links as Button-->
-<a href="game.html">Play Again!</a>
+<p><a href="game.html"><button type="button" id="button">Play Again</button></a></p>
 </body>
 </html>
