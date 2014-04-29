@@ -15,27 +15,18 @@
 <?php
 $pagetitle = "Highscore";
 
-
-//ToDo: von mysqli -> PDO wg. prepared statements
-
-$connect = mysqli_connect("localhost", "root", "root", "MMP");
-
-// Check connection
-if (mysqli_connect_errno()) {
-    echo "Failed to connect to MySQL: " . mysqli_connect_error();
-}
-
+include "functions.php";
 
 // gets the highscore from JS
-$highscore = $_POST['score'];
 $player = $_POST['player'];
+$highscore = $_POST['score'];
 
+// $sql = $dbh->query("INSERT INTO Score (playername, highscore) VALUES ('$player', '$highscore')");
+$sql = $dbh->prepare("INSERT INTO Score (playername, highscore) VALUES (?, ?)");
+$sql->execute(array($_POST['player'], $_POST['score']));
 
-mysqli_query($connect, "INSERT INTO Score (playername, highscore) VALUES ('$player', '$highscore')");
-
-
-$result = mysqli_query($connect, "SELECT DISTINCT * FROM Score ORDER BY highscore DESC LIMIT 0, 10");
-
+$sth = $dbh->query("SELECT * FROM Score ORDER BY highscore DESC LIMIT 0, 100");
+$results = $sth->fetchAll();
 
 echo "<table>
 <tr>
@@ -44,25 +35,22 @@ echo "<table>
 </tr>";
 ?>
 
-
 <h1>HIGHSCORE</h1>
 
 <h2>Top Ten Highscores</h2>
 
 <?php
-while ($row = mysqli_fetch_array($result)) {
+
+foreach ($results as $result)
+{
     echo "<tr>";
-    echo "<td>" . $row['playername'] . "</td>";
-    echo "<td>" . $row['highscore'] . "</td>";
+    echo "<td>$result->playername</td>";
+    echo "<td>$result->highscore</td>";
     echo "</tr>";
 }
-echo "</table>";
 
-mysqli_close($connect);
 ?>
 
-
-<!--TODO: Links as Button-->
 <p><a href="game.html"><button type="button" id="button">Play Again</button></a></p>
 </body>
 </html>

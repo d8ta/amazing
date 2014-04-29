@@ -11,13 +11,13 @@
 // Player variables
 var pPosX = 3;
 var pPosY = 3;
-var pW = 20;
-var pH = 20;
+var pW = 13;
+var pH = 13;
 var minPlayer = 5;
 var maxPlayer = 50;
 
 
-var playerSpeed = 5;
+var playerSpeed = 10;
 var animSpeed = 2;
 var highscore = 100000;
 
@@ -43,10 +43,15 @@ window.onload = function () {
     setInterval(function () {
         drawBackground();
 
-        //drawBlocks();
-
         drawRectangle(winstone);
         win(player, winstone);
+
+//        drawRectangle(verticBlock);
+//        drawRectangle(hoizBlock);
+//        die(player,hoizBlock);
+//        die(player,verticBlock);
+
+        drawText();
 
         drawRectangle(player);
         movement();
@@ -55,9 +60,9 @@ window.onload = function () {
     }, 30);
 
     /**
-    update function erstellen in die alle Dinge kommen die ein Update brauchen
-    der REST nicht!!
-    **/
+     update function erstellen in die alle Dinge kommen die ein Update brauchen
+     der REST nicht!!
+     **/
 
     /** Get and set canvas and context **/
     var canvas = document.getElementById("canvas");
@@ -65,34 +70,43 @@ window.onload = function () {
 
 }; // End of onload
 
-    /**
-     *
-     * @param p playerrect.
-     * @param r rect.
-     */
-    function win(p, r) {
-        if (collide(p, r)) {
-            if (confirm("You Win!")) {
-                document.location = "input.html";
-                myScore();
-            }
+/**
+ * write me a letter ^^
+ * @param p
+ * @param r
+ */
+function drawText() {
+    var context = canvas.getContext('2d');
+    context.font = '20px Georgia';
+    context.fillText("This is just a Work in Progress Movement Demo!", 50, 100);
+}
+
+
+/**
+ *
+ * @param p playerrect.
+ * @param r rect.
+ */
+function win(p, r) {
+    if (collide(p, r)) {
+        if (confirm("You Win!")) {
+            document.location = "input.html";
+            myScore();
         }
     }
-
-
-
+}
 
 
 /**
  * Rect Objects
  */
 var player = new rectangle(pPosX, pPosY, pW, pH, 'darkgrey');
-var block = new rectangle(0, 0, 50, 50, 'black');
+var hoizBlock = new rectangle(25, 25, 650, 25, 'grey');
+var verticBlock = new rectangle(25, 25, 25, 400, 'grey');
 var wall = new rectangle(25, 0, 470, 440, 'black');
-var winstone = new rectangle(550, 200, 25, 25, 'silver');
+var winstone = new rectangle(675, 425, 25, 25, 'silver');
 var getBig = new rectangle(50, 0, 400, 50, '#f5f5f5');
 var getSmall = new rectangle(0, 425, 25, 25, 'green');
-
 
 
 /**
@@ -150,8 +164,8 @@ function drawWalls(r, startX, startY, context) {
 function drawBlocks() {
     for (var i = 0; i < canvas.width; i += 75) {
         for (var j = 0; j < canvas.height; j += 75) {
-            drawWalls(block, i, j);
-            die(player, block);
+            drawWalls(verticBlock, i, j);
+            die(player, verticBlock);
         }
     }
 }
@@ -168,7 +182,7 @@ function animate(r, k, d) {
         animSpeed *= -1;
     }
 
-  /* wall.x += animSpeed;
+    /* wall.x += animSpeed;
      if (wall.x > 300) {
      animSpeed *= -1;
      }
