@@ -17,8 +17,8 @@ var minPlayer = 5;
 var maxPlayer = 50;
 
 
-var playerSpeed = 10;
-var animSpeed = 2;
+var playerSpeed = 5;
+var animSpeed = 15;
 var highscore = 100000;
 
 /**
@@ -42,19 +42,12 @@ window.onload = function () {
     // Draws all elements of the game every 30 milliseconds to the canvas
     setInterval(function () {
         drawBackground();
+        gameBasics();
 
-        drawRectangle(winstone);
-        win(player, winstone);
-
-//        drawRectangle(verticBlock);
-//        drawRectangle(hoizBlock);
-//        die(player,hoizBlock);
-//        die(player,verticBlock);
-
-        drawText();
-
-        drawRectangle(player);
-        movement();
+        //wallChaser();
+        //bottleneck();
+        //colorBarrier();
+        //beamer();
 
 
     }, 30);
@@ -70,6 +63,153 @@ window.onload = function () {
 
 }; // End of onload
 
+
+/**
+ * Basic game components
+ */
+function gameBasics() {
+    drawRectangle(winstone);
+    win(player, winstone);
+    drawRectangle(player);
+    movement();
+}
+
+/**
+ * player must get right color to pass
+ */
+function colorBarrier() {
+    drawRectangle(colorblock);
+    drawRectangle(colorblockBig);
+    drawRectangle(colorwall);
+    if (collide(player, colorwall)) {
+        player.fillColor = 'red';
+    }
+    if (player.fillColor !== 'red') {
+        die(player, colorblock);
+        die(player, colorblockBig);
+    }
+
+}
+
+/**
+ * shrink to get through the bottleneck
+ */
+function bottleneck() {
+    drawRectangle(shrinker);
+    drawRectangle(bottle1);
+    drawRectangle(bottle2);
+    shrink(player, shrinker);
+    die(player, bottle1);
+    die(player, bottle2);
+}
+
+
+/**
+ * slow chasing wall from left to right
+ */
+function wallChaser() {
+    drawRectangle(wall);
+    setInterval(function () {
+        wall.x += 0.1
+    }, 3000);
+    die(player, wall);
+}
+
+/**
+ * player have to beam through walls
+ */
+function beamer() {
+    drawRectangle(wall1);
+    drawRectangle(wall2);
+    drawRectangle(wall3);
+
+    die(player, wall1);
+    die(player, wall2);
+    die(player, wall3);
+    die(player, movingWall1);
+    die(player, movingWall2);
+
+    drawRectangle(beamer1);
+    drawRectangle(beamer2);
+    drawRectangle(beamer3);
+    drawRectangle(beamer4);
+    drawRectangle(beamer5);
+    drawRectangle(beamer6);
+    drawRectangle(movingWall1);
+    drawRectangle(movingWall2);
+    movingWall1.x += animSpeed;
+    movingWall2.x -= animSpeed;
+    if (movingWall1.x > 700) {
+        animSpeed *= -1
+    }
+    if (movingWall1.x < -600) {
+        animSpeed *= -1;
+    }
+
+    beamPlus(player, beamer1, 220);
+    beamPlus(player, beamer2, 400);
+
+    beamMinus(player, beamer3, 400);
+    beamMinusY(player, beamer4, 200);
+
+    beamPlus(player, beamer5, 200);
+
+    if (collide(player, beamer6)) {
+        playerSpeed += 2;
+        if(playerSpeed > 15) {
+            playerSpeed = 15;
+        }
+    }
+}
+
+/**
+ * Rect Objects
+ */
+/* basics */
+var player = new rectangle(pPosX, pPosY, pW, pH, 'darkgrey');
+var winstone = new rectangle(675, 425, 25, 25, 'silver');
+/* end */
+
+var hoizBlock = new rectangle(25, 25, 650, 25, 'grey');
+var verticBlock = new rectangle(25, 25, 25, 400, 'grey');
+
+/* for beamer */
+var wall1 = new rectangle(100, 0, 50, 450, 'black');
+var wall2 = new rectangle(300, 0, 50, 450, 'black');
+var wall3 = new rectangle(500, 0, 50, 450, 'black');
+var movingWall1 = new rectangle(-600, 100, 600, 50, 'black');
+var movingWall2 = new rectangle(700, 300, 600, 50, 'black');
+var beamer1 = new rectangle(30, 230, 25, 25, 'lightgrey');
+var beamer2 = new rectangle(30, 380, 25, 25, 'lightgrey');
+var beamer3 = new rectangle(200, 230, 25, 25, 'lightgrey');
+var beamer4 = new rectangle(200, 380, 25, 25, 'lightgrey');
+var beamer5 = new rectangle(400, 230, 25, 25, 'lightgrey');
+var beamer6 = new rectangle(400, 380, 25, 25, 'lightgrey');
+
+/* end */
+
+
+var colorblock = new rectangle(675, 375, 25, 50, 'red');
+var colorblockBig = new rectangle(625, 375, 50, 75, 'red');
+/* end */
+
+
+/* for colorbarrier */
+var colorwall = new rectangle(675, 0, 25, 25, 'red');
+var colorblock = new rectangle(675, 375, 25, 50, 'red');
+var colorblockBig = new rectangle(625, 375, 50, 75, 'red');
+/* end */
+
+/* for wallchaser */
+var wall = new rectangle(-700, 0, 700, 450, 'grey');
+/* end */
+
+/* for bottleneck */
+var shrinker = new rectangle(675, 0, 25, 25, 'darkgrey');
+var bottle1 = new rectangle(575, 420, 125, 5, 'black');
+var bottle2 = new rectangle(575, 435, 100, 20, 'black');
+/* end */
+
 /**
  * write me a letter ^^
  * @param p
@@ -84,6 +224,36 @@ function drawText() {
 
 /**
  *
+ * @param p: player
+ * @param r: rect.
+ * @param d: distance
+ */
+function beamPlus(p, r, d) {
+    if (collide(p, r)) {
+        p.x = p.x + d;
+        }
+}
+
+function beamMinus(p, r, d) {
+    if (collide(p, r)) {
+        p.x = p.x - d;
+    }
+}
+
+function beamMinusY(p, r, d) {
+    if (collide(p, r)) {
+        p.y = p.y - d;
+    }
+}
+
+function beamPlusY(p, r, d) {
+    if (collide(p, r)) {
+        p.y = p.y + d;
+    }
+}
+
+/**
+ *
  * @param p playerrect.
  * @param r rect.
  */
@@ -95,18 +265,6 @@ function win(p, r) {
         }
     }
 }
-
-
-/**
- * Rect Objects
- */
-var player = new rectangle(pPosX, pPosY, pW, pH, 'darkgrey');
-var hoizBlock = new rectangle(25, 25, 650, 25, 'grey');
-var verticBlock = new rectangle(25, 25, 25, 400, 'grey');
-var wall = new rectangle(25, 0, 470, 440, 'black');
-var winstone = new rectangle(675, 425, 25, 25, 'silver');
-var getBig = new rectangle(50, 0, 400, 50, '#f5f5f5');
-var getSmall = new rectangle(0, 425, 25, 25, 'green');
 
 
 /**
@@ -173,22 +331,15 @@ function drawBlocks() {
 /**
  *
  * @param r: rect.
- * @param k: koordinates (x or y)
- * @param k: direction (width or heigth)
  */
-function animate(r, k, d) {
-    r.k += animSpeed;
-    if (r.k > canvas.d) {
+function animateX(r, start, end) {
+    r.x += animSpeed;
+    if (r.x > start) {
+        animSpeed *= -1
+    }
+    if (r.x < end) {
         animSpeed *= -1;
     }
-
-    /* wall.x += animSpeed;
-     if (wall.x > 300) {
-     animSpeed *= -1;
-     }
-     else if (wall.x < 10){
-     animSpeed *= -1;
-     }*/
 }
 
 /**
