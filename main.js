@@ -44,6 +44,10 @@ function myScore() {
     document.getElementById("score").value = highscore;
 }
 
+var randomfunktion1 = Math.floor(Math.random() * 5);
+var randomfunktion2 = Math.floor(Math.random() * 5);
+
+
 window.onload = function () {
 
     // Draws all elements of the game every 30 milliseconds to the canvas
@@ -51,7 +55,8 @@ window.onload = function () {
 
         drawBackground();
         gameBasics();
-        mazeArray[0]();
+        mazeArray[randomfunktion1]();
+        mazeArray[randomfunktion2]();
         //wallChaser();
         //bottleneck();
         //colorBarrier();
