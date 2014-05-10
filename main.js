@@ -57,11 +57,6 @@ window.onload = function () {
         gameBasics();
         mazeArray[randomfunktion1]();
         mazeArray[randomfunktion2]();
-        //wallChaser();
-        //bottleneck();
-        //colorBarrier();
-        //beamer();
-        //rocks()
 
     }, 30);
 
