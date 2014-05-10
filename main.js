@@ -15,11 +15,19 @@ var pW = 13;
 var pH = 13;
 var minPlayer = 5;
 var maxPlayer = 50;
-
-
 var playerSpeed = 5;
-var animSpeed = 15;
+
+
+var animSpeed = 20;
 var highscore = 100000;
+
+var posY1 = Math.round(Math.random() * 400);
+var posY2 = Math.round(Math.random() * 400);
+var posY3 = Math.round(Math.random() * 400);
+var posY4 = Math.round(Math.random() * 400);
+var posY5 = Math.round(Math.random() * 400);
+var posY6 = Math.round(Math.random() * 400);
+
 
 /**
  * Highscore math
@@ -36,33 +44,27 @@ function myScore() {
     document.getElementById("score").value = highscore;
 }
 
-
 window.onload = function () {
 
     // Draws all elements of the game every 30 milliseconds to the canvas
     setInterval(function () {
+
         drawBackground();
         gameBasics();
-
+        mazeArray[0]();
         //wallChaser();
         //bottleneck();
         //colorBarrier();
         //beamer();
-
+        //rocks()
 
     }, 30);
-
-    /**
-     update function erstellen in die alle Dinge kommen die ein Update brauchen
-     der REST nicht!!
-     **/
 
     /** Get and set canvas and context **/
     var canvas = document.getElementById("canvas");
     var context = canvas.getContext('2d');
 
 }; // End of onload
-
 
 /**
  * Basic game components
@@ -75,92 +77,123 @@ function gameBasics() {
 }
 
 /**
- * player must get right color to pass
+ * Array for all Maze functions
  */
-function colorBarrier() {
-    drawRectangle(colorblock);
-    drawRectangle(colorblockBig);
-    drawRectangle(colorwall);
-    if (collide(player, colorwall)) {
-        player.fillColor = 'red';
-    }
-    if (player.fillColor !== 'red') {
-        die(player, colorblock);
-        die(player, colorblockBig);
-    }
+var mazeArray = [
 
-}
-
-/**
- * shrink to get through the bottleneck
- */
-function bottleneck() {
-    drawRectangle(shrinker);
-    drawRectangle(bottle1);
-    drawRectangle(bottle2);
-    shrink(player, shrinker);
-    die(player, bottle1);
-    die(player, bottle2);
-}
-
-
-/**
- * slow chasing wall from left to right
- */
-function wallChaser() {
-    drawRectangle(wall);
-    setInterval(function () {
-        wall.x += 0.1
-    }, 3000);
-    die(player, wall);
-}
-
-/**
- * player have to beam through walls
- */
-function beamer() {
-    drawRectangle(wall1);
-    drawRectangle(wall2);
-    drawRectangle(wall3);
-
-    die(player, wall1);
-    die(player, wall2);
-    die(player, wall3);
-    die(player, movingWall1);
-    die(player, movingWall2);
-
-    drawRectangle(beamer1);
-    drawRectangle(beamer2);
-    drawRectangle(beamer3);
-    drawRectangle(beamer4);
-    drawRectangle(beamer5);
-    drawRectangle(beamer6);
-    drawRectangle(movingWall1);
-    drawRectangle(movingWall2);
-    movingWall1.x += animSpeed;
-    movingWall2.x -= animSpeed;
-    if (movingWall1.x > 700) {
-        animSpeed *= -1
-    }
-    if (movingWall1.x < -600) {
-        animSpeed *= -1;
-    }
-
-    beamPlus(player, beamer1, 220);
-    beamPlus(player, beamer2, 400);
-
-    beamMinus(player, beamer3, 400);
-    beamMinusY(player, beamer4, 200);
-
-    beamPlus(player, beamer5, 200);
-
-    if (collide(player, beamer6)) {
-        playerSpeed += 2;
-        if(playerSpeed > 15) {
-            playerSpeed = 15;
+    /**
+     * player must get right color to pass
+     */
+        function colorBarrier() {
+        drawRectangle(colorblock);
+        drawRectangle(colorblockBig);
+        drawRectangle(colorwall);
+        if (collide(player, colorwall)) {
+            player.fillColor = 'red';
         }
+        if (player.fillColor !== 'red') {
+            die(player, colorblock);
+            die(player, colorblockBig);
+        }
+    },
+
+    /**
+     * shrink to get through the bottleneck
+     */
+        function bottleneck() {
+        drawRectangle(shrinker);
+        drawRectangle(bottle1);
+        drawRectangle(bottle2);
+        shrink(player, shrinker);
+        die(player, bottle1);
+        die(player, bottle2);
+    },
+
+    /**
+     * slow chasing wall from left to right
+     */
+        function wallChaser() {
+        drawRectangle(wall);
+        setInterval(function () {
+            wall.x += 0.1
+        }, 3000);
+        die(player, wall);
+    },
+
+    /**
+     * player have to beam through walls
+     */
+        function beamer() {
+        drawRectangle(wall1);
+        drawRectangle(wall2);
+        drawRectangle(wall3);
+
+        die(player, wall1);
+        die(player, wall2);
+        die(player, wall3);
+        die(player, movingWall1);
+        die(player, movingWall2);
+
+        drawRectangle(beamer1);
+        drawRectangle(beamer2);
+        drawRectangle(beamer3);
+        drawRectangle(beamer4);
+        drawRectangle(beamer5);
+        drawRectangle(beamer6);
+        drawRectangle(movingWall1);
+        drawRectangle(movingWall2);
+        movingWall1.x += animSpeed;
+        movingWall2.x -= animSpeed;
+        if (movingWall1.x > 700) {
+            animSpeed *= -1
+        }
+        if (movingWall1.x < -600) {
+            animSpeed *= -1;
+        }
+
+        beamPlus(player, beamer1, 220);
+        beamPlus(player, beamer2, 400);
+
+        beamMinus(player, beamer3, 400);
+        beamMinusY(player, beamer4, 200);
+
+        beamPlus(player, beamer5, 200);
+
+        if (collide(player, beamer6)) {
+            playerSpeed += 2;
+            if (playerSpeed > 15) {
+                playerSpeed = 15;
+            }
+        }
+    },
+
+    /**
+     * Rocks flying from right to left
+     */
+        function rocks() {
+        drawRectangle(rock1);
+        drawRectangle(rock2);
+        drawRectangle(rock3);
+        drawRectangle(rock4);
+        drawRectangle(rock5);
+        drawRectangle(rock6);
+
+        animateXMinus(rock1, 1000, -300);
+        animateXMinus(rock2, 1000, -300);
+        animateXMinus(rock3, 1000, -300);
+        animateXMinus(rock4, 1000, -300);
+        animateXMinus(rock5, 1000, -300);
+        animateXMinus(rock6, 1000, -300);
+
+
+        die(player, rock1);
+        die(player, rock2);
+        die(player, rock3);
+        die(player, rock4);
+        die(player, rock5);
+        die(player, rock6);
     }
-}
+];
 
 /**
  * Rect Objects
@@ -170,8 +203,14 @@ var player = new rectangle(pPosX, pPosY, pW, pH, 'darkgrey');
 var winstone = new rectangle(675, 425, 25, 25, 'silver');
 /* end */
 
-var hoizBlock = new rectangle(25, 25, 650, 25, 'grey');
-var verticBlock = new rectangle(25, 25, 25, 400, 'grey');
+/* bulletstones*/
+var rock1 = new rectangle(700, posY1, 25, 25, 'black');
+var rock2 = new rectangle(700, posY2, 25, 25, 'black');
+var rock3 = new rectangle(700, posY3, 25, 25, 'black');
+var rock4 = new rectangle(700, posY4, 25, 25, 'black');
+var rock5 = new rectangle(700, posY5, 25, 25, 'black');
+var rock6 = new rectangle(700, posY6, 25, 25, 'black');
+/* end */
 
 /* for beamer */
 var wall1 = new rectangle(100, 0, 50, 450, 'black');
@@ -231,7 +270,7 @@ function drawText() {
 function beamPlus(p, r, d) {
     if (collide(p, r)) {
         p.x = p.x + d;
-        }
+    }
 }
 
 function beamMinus(p, r, d) {
@@ -332,8 +371,8 @@ function drawBlocks() {
  *
  * @param r: rect.
  */
-function animateX(r, start, end) {
-    r.x += animSpeed;
+function animateXMinus(r, start, end) {
+    r.x -= animSpeed;
     if (r.x > start) {
         animSpeed *= -1
     }
