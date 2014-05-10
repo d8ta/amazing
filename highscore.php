@@ -25,7 +25,7 @@ $highscore = $_POST['score'];
 $sql = $dbh->prepare("INSERT INTO Score (playername, highscore) VALUES (?, ?)");
 $sql->execute(array($_POST['player'], $_POST['score']));
 
-$sth = $dbh->query("SELECT * FROM Score ORDER BY highscore DESC LIMIT 0, 100");
+$sth = $dbh->query("SELECT * FROM Score ORDER BY highscore DESC LIMIT 0, 10");
 $results = $sth->fetchAll();
 
 echo "<table>
