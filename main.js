@@ -4,7 +4,7 @@
 
 
 /**
- * TODO: Randomisiert ausgesuchte Lab. (4 - 5) bauen und starten lassen
+ * TODO: Codewiederholungen verändern
  */
 
 
@@ -14,13 +14,16 @@ var pPosY = 3;
 var pW = 13;
 var pH = 13;
 var minPlayer = 5;
-var maxPlayer = 50;
+//var maxPlayer = 50;
 var playerSpeed = 5;
 
-
+/* speed for animations*/
 var animSpeed = 20;
+
+/* starting score */
 var highscore = 100000;
 
+/* variables for animated rocks */
 var posY1 = Math.round(Math.random() * 400);
 var posY2 = Math.round(Math.random() * 400);
 var posY3 = Math.round(Math.random() * 400);
@@ -28,9 +31,22 @@ var posY4 = Math.round(Math.random() * 400);
 var posY5 = Math.round(Math.random() * 400);
 var posY6 = Math.round(Math.random() * 400);
 
+/* random block pos */
+var randomX = Math.floor(Math.random() * 700);
+var randomY = Math.floor(Math.random() * 400);
+
+var randomX1 = Math.floor(Math.random() * 700);
+var randomY1 = Math.floor(Math.random() * 400);
+
+var randomX2 = Math.floor(Math.random() * 700);
+var randomY2 = Math.floor(Math.random() * 400);
+
+var randomX3 = Math.floor(Math.random() * 700);
+var randomY3 = Math.floor(Math.random() * 400);
+
 
 /**
- * Highscore math
+ * Highscore math subtracts 10 from the startscore every second
  */
 setInterval(function () {
     highscore -= 10;
@@ -41,9 +57,10 @@ setInterval(function () {
  * server for PHP SQL queries
  */
 function myScore() {
-    document.getElementById("score").value = highscore;
+    document.querySelector("score").value = highscore;
 }
 
+/* select random funktions for the maze from the mazeArray */
 var randomfunktion1 = Math.floor(Math.random() * 5);
 var randomfunktion2 = Math.floor(Math.random() * 5);
 
@@ -55,13 +72,16 @@ window.onload = function () {
 
         drawBackground();
         gameBasics();
-        mazeArray[randomfunktion1]();
-        mazeArray[randomfunktion2]();
+        //mazeArray[randomfunktion1]();
+        //mazeArray[randomfunktion2]();
+        underlyingMaze();
+
+
 
     }, 30);
 
     /** Get and set canvas and context **/
-    var canvas = document.getElementById("canvas");
+    var canvas = document.querySelector("canvas");
     var context = canvas.getContext('2d');
 
 }; // End of onload
@@ -194,13 +214,63 @@ var mazeArray = [
         die(player, rock6);
     }
 ];
+/* end of array */
+
+function underlyingMaze() {
+    drawRectangle(horiBlock);
+    drawRectangle(vertBlock);
+    drawRectangle(vertBlock1);
+    drawRectangle(horiBlock1);
+    drawRectangle(vertBlock2);
+    drawRectangle(horiBlock2);
+    drawRectangle(vertBlock3);
+    drawRectangle(horiBlock3);
+
+    die(player, horiBlock);
+    die(player, horiBlock1);
+    die(player, horiBlock2);
+    die(player, horiBlock3);
+    die(player, vertBlock);
+    die(player, vertBlock1);
+    die(player, vertBlock2);
+    die(player, vertBlock3);
+
+    drawRectangle(playerStartForbidden);
+    drawRectangle(playerEndForbidden);
+
+    if(collide(playerStartForbidden, horiBlock) || collide(playerEndForbidden, vertBlock)) {
+        block.x = 200;
+        block.y = 200;
+    }
+
+}
 
 /**
- * Rect Objects
+ * Rectangle Objects
  */
 /* basics */
 var player = new rectangle(pPosX, pPosY, pW, pH, 'darkgrey');
 var winstone = new rectangle(675, 425, 25, 25, 'silver');
+/* end */
+
+/* random blocks in T form to spawn over the maze */
+// the 'T'
+
+var horiBlock = new rectangle(randomX, randomY, 100, 10, 'black');
+var vertBlock = new rectangle(randomX + 45, randomY, 10, 75, 'black');
+
+var horiBlock1 = new rectangle(randomX1 - 20, randomY1 + 35, 75, 10, 'black');
+var vertBlock1 = new rectangle(randomX1 + 45, randomY1, 10, 80, 'black');
+
+var horiBlock2 = new rectangle(randomX2, randomY2 + 70, 100, 10, 'black');
+var vertBlock2 = new rectangle(randomX2 + 45, randomY2, 10, 75, 'black');
+
+var horiBlock3 = new rectangle(randomX3 + 45, randomY3 + 35, 75, 10, 'black');
+var vertBlock3 = new rectangle(randomX3 + 45, randomY3, 10, 80, 'black');
+
+// constraining fields for start- and endpoints
+var playerStartForbidden = new rectangle(0, 0, 25, 25, 'red');
+var playerEndForbidden = new rectangle(675, 425, 25, 25, 'red');
 /* end */
 
 /* bulletstones*/
@@ -227,11 +297,9 @@ var beamer6 = new rectangle(400, 380, 25, 25, 'lightgrey');
 
 /* end */
 
-
 var colorblock = new rectangle(675, 375, 25, 50, 'red');
 var colorblockBig = new rectangle(625, 375, 50, 75, 'red');
 /* end */
-
 
 /* for colorbarrier */
 var colorwall = new rectangle(675, 0, 25, 25, 'red');
@@ -248,18 +316,6 @@ var shrinker = new rectangle(675, 0, 25, 25, 'darkgrey');
 var bottle1 = new rectangle(575, 420, 125, 5, 'black');
 var bottle2 = new rectangle(575, 435, 100, 20, 'black');
 /* end */
-
-/**
- * write me a letter ^^
- * @param p
- * @param r
- */
-function drawText() {
-    var context = canvas.getContext('2d');
-    context.font = '20px Georgia';
-    context.fillText("This is just a Work in Progress Movement Demo!", 50, 100);
-}
-
 
 /**
  *
@@ -336,36 +392,37 @@ function drawRectangle(r, context) {
     context.fillRect(r.x, r.y, r.width, r.height);
 }
 
-/**
- * Draw lines
- * @param r: rect
- * @param startX: startpos.
- * @param startY: startpos-
- * @param context
- */
-function drawWalls(r, startX, startY, context) {
-    var randX = 10; //Math.round(Math.random() * canvas.width);
-    var randY = 10; //Math.round(Math.random() * canvas.height);
-    var startX = randX;
-    var startY = randY;
-    r.x = startX;
-    r.y = startY;
-    var context = canvas.getContext('2d');
-    context.fillStyle = r.fillColor;
-    context.fillRect(r.x, r.y, r.width, r.height);
-}
 
-/**
- * Drawing drawBlocks over the canvas
- */
-function drawBlocks() {
-    for (var i = 0; i < canvas.width; i += 75) {
-        for (var j = 0; j < canvas.height; j += 75) {
-            drawWalls(verticBlock, i, j);
-            die(player, verticBlock);
-        }
-    }
-}
+///**
+// * Draw lines
+// * @param r: rect
+// * @param startX: startpos.
+// * @param startY: startpos-
+// * @param context
+// */
+//function drawWalls(r, startX, startY, context) {
+//    var randX = 50//Math.round(Math.random() * canvas.width);
+//    var randY = 50//Math.round(Math.random() * canvas.height);
+//    var startX = randX;
+//    var startY = randY;
+//    r.x = startX;
+//    r.y = startY;
+//    var context = canvas.getContext('2d');
+//    context.fillStyle = r.fillColor;
+//    context.fillRect(r.x, r.y, r.width, r.height);
+//}
+//
+///**
+// * Drawing drawBlocks over the canvas
+// */
+//function drawBlocks() {
+//    for (var i = 0; i < canvas.width; i += 75) {
+//        for (var j = 0; j < canvas.height; j += 75) {
+//            drawWalls(block, i, j);
+//           // die(player, block);
+//        }
+//    }
+//}
 
 /**
  *
@@ -384,7 +441,7 @@ function animateXMinus(r, start, end) {
 /**
  * @param p: playerrect.
  * @param r: rect. to collide with
- */
+ */ // TODO: Dont work properly richt now
 function objectCollison(p, r) {
     if (collide(p, r)) {
 
@@ -425,16 +482,16 @@ function collide(r1, r2) {
  * @param p = playerrect.
  * @param r = rect.
  */
-function grow(p, r) {
-    if (collide(p, r)) {
-        if (p.width > maxPlayer) {
-            p.width = maxPlayer;
-            p.height = maxPlayer;
-        }
-        player.width += .5;
-        player.height += .5;
-    }
-}
+//function grow(p, r) {
+//    if (collide(p, r)) {
+//        if (p.width > maxPlayer) {
+//            p.width = maxPlayer;
+//            p.height = maxPlayer;
+//        }
+//        player.width += .5;
+//        player.height += .5;
+//    }
+//}
 
 /**
  * Let Player shring till he is minPlayer
