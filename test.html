@@ -15,6 +15,8 @@
         }
         #myCanvas {
             border: 1px #CCC solid;
+            margin: 0 auto;
+            display: block;
         }
     </style>
 
@@ -30,8 +32,20 @@
 
 <script>
 
+    // Player variables
+    var pPosX = 15;
+    var pPosY = 10;
+    var pW = 13;
+    var pH = 13;
+    var minPlayer = 5;
+    var maxPlayer = 50;
+    var playerSpeed = 10;
+
+
+
+
     var mainCanvas = document.getElementById("myCanvas");
-    var mainContext = mainCanvas.getContext('2d');
+    var context = mainCanvas.getContext('2d');
 
     var circles = new Array();
 
@@ -47,46 +61,46 @@
         this.width = width;
         this.xPos = xPos;
         this.yPos = yPos;
-        this.opacity = .05 + Math.random() * .5;
+        //this.opacity = .05 + Math.random() * .5;
 
         this.counter = 0;
 
-        var signHelper = Math.floor(Math.random() * 2);
-
-        if (signHelper == 1) {
-            this.sign = -1;
-        } else {
-            this.sign = 1;
-        }
+//        var signHelper = Math.floor(Math.random() * 2);
+//
+//        if (signHelper == 1) {
+//            this.sign = -1;
+//        } else {
+//            this.sign = 1;
+//        }
     }
 
     Circle.prototype.update = function () {
 
-        this.counter += this.sign *  this.speed;
+        this.counter += /*this.sign */  this.speed;
 
-        mainContext.beginPath();
+        context.beginPath();
 
-        mainContext.arc(this.xPos + Math.cos(this.counter / 100) * this.radius,
+        context.arc(this.xPos + Math.cos(this.counter / 100) * this.radius,
                 this.yPos + Math.sin(this.counter / 100) * this.radius,
                 this.width,
                 0,
                 Math.PI * 2,
                 false);
 
-        mainContext.closePath();
+        context.closePath();
 
-        mainContext.fillStyle = 'rgba(185, 211, 238,' + this.opacity + ')';
-        mainContext.fill();
+        context.fillStyle = 'rgba(185, 211, 238,' + this.opacity + ')';
+        context.fill();
     };
 
     function drawCircles() {
-        for (var i = 0; i < 10; i++) {
+        for (var i = 0; i < 13; i++) {
             var randomX = Math.round(Math.random() * 600);
             var randomY = Math.round(Math.random() * 350);
-            var speed = .2 + Math.random() * 3;
-            var size = 5 + Math.random() * 100;
+            var speed = Math.random() * 2;
+            var size = Math.random() * 90;
 
-            var circle = new Circle(100, speed, size, randomX, randomY);
+            var circle = new Circle(150, speed, size, randomX, randomY);
             circles.push(circle);
         }
         draw();
@@ -94,7 +108,7 @@
     drawCircles();
 
     function draw() {
-        mainContext.clearRect(0, 0, 700, 450);
+        context.clearRect(0, 0, 700, 450);
 
         for (var i = 0; i < circles.length; i++) {
             var myCircle = circles[i];
@@ -102,6 +116,42 @@
         }
         requestAnimationFrame(draw);
     }
+
+
+    /**
+     * Rectangle Objects
+     */
+    /* basics */
+    var player = new rectangle(pPosX, pPosY, pW, pH, 'darkgrey');
+    var winstone = new rectangle(675, 425, 25, 25, 'silver');
+    /* end */
+
+
+    /**
+     * Draw rectangles
+     */
+    function drawRectangle(r, context) {
+        var context = canvas.getContext('2d');
+        context.fillStyle = r.fillColor;
+        context.fillRect(r.x, r.y, r.width, r.height);
+    }
+    drawRectangle(player);
+
+    /**
+     * Rectangle Object constructor
+     */
+    function rectangle(x, y, width, height, fillColor) {
+        this.x = x;
+        this.y = y;
+        this.width = width;
+        this.height = height;
+        this.fillColor = fillColor;
+    }
+
+
+
+
+
 </script>
 </body>
 
