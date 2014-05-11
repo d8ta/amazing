@@ -5,8 +5,8 @@
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="main.js"></script>
 
-        <link href='http://fonts.googleapis.com/css?family=Ceviche+One|Exo+2:400,200,600' rel='stylesheet' type='text/css'>
-        <link type="text/css" rel="stylesheet" href="main.css">
+    <link href='http://fonts.googleapis.com/css?family=Ceviche+One|Exo+2:400,200,600' rel='stylesheet' type='text/css'>
+    <link type="text/css" rel="stylesheet" href="main.css">
     <title>Highscore</title>
 </head>
 <body>
@@ -41,8 +41,7 @@ echo "<table>
 
 <?php
 
-foreach ($results as $result)
-{
+foreach ($results as $result) {
     echo "<tr>";
     echo "<td>$result->playername</td>";
     echo "<td>$result->highscore</td>";
@@ -51,6 +50,8 @@ foreach ($results as $result)
 
 ?>
 
-<p><a href="game.html"><button type="button" id="button">Play Again</button></a></p>
+<p><a href="game.html">
+        <button type="button" id="button">Play Again</button>
+    </a></p>
 </body>
 </html>

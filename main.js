@@ -14,7 +14,7 @@ requestAnimationFrame(updateGame);
 function updateGame() {
 
     /** Get and set canvas and context **/
-    var canvas = document.querySelector("canvas"); // referencing to Canvas element
+    var canvas = document.getElementById("canvas"); // referencing to Canvas element
     var context = canvas.getContext('2d'); // calling 2D API
 
     // clearing the whole canvas
@@ -35,7 +35,7 @@ setInterval(function () {
  * server for PHP SQL queries
  */
 function myScore() {
-    document.querySelector("score").value = highscore;
+    document.getElementById("score").value = highscore;
 }
 
 // Player variables
