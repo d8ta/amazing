@@ -67,24 +67,29 @@ var randomfunktion2 = Math.floor(Math.random() * 5);
 
 window.onload = function () {
 
-    // Draws all elements of the game every 30 milliseconds to the canvas
-    setInterval(function () {
-
         drawBackground();
         gameBasics();
-        //mazeArray[randomfunktion1]();
-        //mazeArray[randomfunktion2]();
-        underlyingMaze();
-
-
-
-    }, 30);
+        mazeArray[randomfunktion1]();
+        mazeArray[randomfunktion2]();
+        //underlyingMaze();
 
     /** Get and set canvas and context **/
-    var canvas = document.querySelector("canvas");
-    var context = canvas.getContext('2d');
+    var canvas = document.querySelector("canvas"); // referencing to Canvas element
+    var context = canvas.getContext('2d'); // calling 2D API
+
+    requestAnimationFrame(window.onload);
 
 }; // End of onload
+
+/*  Testing circles */
+var circles = new Array();  // storing all the circle objects
+
+// for using the requestAnimatonFrame in all browser....
+var requestAnimationFrame = window.requestAnimationFrame ||
+    window.mozRequestAnimationFrame ||
+    window.webkitRequestAnimationFrame ||
+    window.msRequestAnimationFrame;
+
 
 /**
  * Basic game components
@@ -238,7 +243,7 @@ function underlyingMaze() {
     drawRectangle(playerStartForbidden);
     drawRectangle(playerEndForbidden);
 
-    if(collide(playerStartForbidden, horiBlock) || collide(playerEndForbidden, vertBlock)) {
+    if (collide(playerStartForbidden, horiBlock) || collide(playerEndForbidden, vertBlock)) {
         block.x = 200;
         block.y = 200;
     }
