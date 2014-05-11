@@ -7,12 +7,11 @@ var requestAnimationFrame = window.requestAnimationFrame ||
     window.webkitRequestAnimationFrame ||
     window.msRequestAnimationFrame;
 
-// callback for drawGame because its always better to ask nicely...
-requestAnimationFrame(drawGame);
-
+// callback for drawGame because its allways better to ask nicely
+requestAnimationFrame(updateGame);
 
 /* this is where the game get drawn and updated */
-function drawGame() {
+function updateGame() {
 
     /** Get and set canvas and context **/
     var canvas = document.querySelector("canvas"); // referencing to Canvas element
@@ -21,8 +20,8 @@ function drawGame() {
     // clearing the whole canvas
     context.clearRect(0, 0, 700, 450);
     gameBasics();
-    requestAnimationFrame(drawGame);
 
+    requestAnimationFrame(updateGame);
 }
 
 /**
@@ -45,11 +44,8 @@ var pPosY = 10;
 var pW = 13;
 var pH = 13;
 var minPlayer = 5;
-var maxPlayer = 50;
-var playerSpeed = 10;
-
-/* speed for animations*/
-var animSpeed = 20;
+//var maxPlayer = 50;
+var playerSpeed = 5;
 
 /* starting score */
 var highscore = 100000;
@@ -109,7 +105,6 @@ function drawRectangle(r, context) {
 }
 
 
-
 /**
  * Collisonchek
  * @param r1: rect. 1
@@ -131,16 +126,16 @@ function collide(r1, r2) {
  * @param p = playerrect.
  * @param r = rect.
  */
-function grow(p, r) {
-    if (collide(p, r)) {
-        if (p.width > maxPlayer) {
-            p.width = maxPlayer;
-            p.height = maxPlayer;
-        }
-        player.width += .5;
-        player.height += .5;
-    }
-}
+//function grow(p, r) {
+//    if (collide(p, r)) {
+//        if (p.width > maxPlayer) {
+//            p.width = maxPlayer;
+//            p.height = maxPlayer;
+//        }
+//        player.width += .5;
+//        player.height += .5;
+//    }
+//}
 
 /**
  * Let Player shring till he is minPlayer
@@ -198,6 +193,7 @@ function movement() {
         /**
          * Wall detection and avoidance
          **/
+
         if (player.x < 0) {
             player.x = 0;
         }

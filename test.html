@@ -32,27 +32,19 @@
 
 <script>
 
-    // Player variables
-    var pPosX = 15;
-    var pPosY = 10;
-    var pW = 13;
-    var pH = 13;
-    var minPlayer = 5;
-    var maxPlayer = 50;
-    var playerSpeed = 10;
-
-
-
 
     var mainCanvas = document.getElementById("myCanvas");
     var context = mainCanvas.getContext('2d');
 
-    var circles = new Array();
 
     var requestAnimationFrame = window.requestAnimationFrame ||
             window.mozRequestAnimationFrame ||
             window.webkitRequestAnimationFrame ||
             window.msRequestAnimationFrame;
+
+
+
+    var circles = new Array();
 
 
     function Circle(radius, speed, width, xPos, yPos) {
@@ -61,17 +53,7 @@
         this.width = width;
         this.xPos = xPos;
         this.yPos = yPos;
-        //this.opacity = .05 + Math.random() * .5;
-
         this.counter = 0;
-
-//        var signHelper = Math.floor(Math.random() * 2);
-//
-//        if (signHelper == 1) {
-//            this.sign = -1;
-//        } else {
-//            this.sign = 1;
-//        }
     }
 
     Circle.prototype.update = function () {
@@ -116,38 +98,6 @@
         }
         requestAnimationFrame(draw);
     }
-
-
-    /**
-     * Rectangle Objects
-     */
-    /* basics */
-    var player = new rectangle(pPosX, pPosY, pW, pH, 'darkgrey');
-    var winstone = new rectangle(675, 425, 25, 25, 'silver');
-    /* end */
-
-
-    /**
-     * Draw rectangles
-     */
-    function drawRectangle(r, context) {
-        var context = canvas.getContext('2d');
-        context.fillStyle = r.fillColor;
-        context.fillRect(r.x, r.y, r.width, r.height);
-    }
-    drawRectangle(player);
-
-    /**
-     * Rectangle Object constructor
-     */
-    function rectangle(x, y, width, height, fillColor) {
-        this.x = x;
-        this.y = y;
-        this.width = width;
-        this.height = height;
-        this.fillColor = fillColor;
-    }
-
 
 
 
