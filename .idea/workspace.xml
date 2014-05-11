@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="12e2583c-76da-4cec-897f-2b40d828b225" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game.html" afterPath="$PROJECT_DIR$/game.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.js" afterPath="$PROJECT_DIR$/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.html" afterPath="$PROJECT_DIR$/test.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -29,7 +31,7 @@
       <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="0" selection-start="653" selection-end="653" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="3315">
+            <state line="46" column="0" selection-start="1198" selection-end="1198" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="3315">
               <folding />
             </state>
           </provider>
@@ -44,10 +46,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="test.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="0" selection-start="58" selection-end="58" vertical-scroll-proportion="0.10653409" vertical-offset="0" max-vertical-offset="1650">
+            <state line="89" column="40" selection-start="1967" selection-end="1967" vertical-scroll-proportion="-55.625" vertical-offset="0" max-vertical-offset="1650">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bubbles.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bubbles.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="66" column="0" selection-start="1484" selection-end="1484" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1080">
               <folding />
             </state>
           </provider>
@@ -70,16 +81,16 @@
       <file leaf-file-name="input.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/input.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="0" selection-start="793" selection-end="793" vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="510">
+            <state line="28" column="0" selection-start="793" selection-end="793" vertical-scroll-proportion="-17.5" vertical-offset="0" max-vertical-offset="510">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="game.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="game.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/game.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="7" selection-start="509" selection-end="509" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="315">
+            <state line="17" column="7" selection-start="512" selection-end="512" vertical-scroll-proportion="0.3622159" vertical-offset="0" max-vertical-offset="704">
               <folding />
             </state>
           </provider>
@@ -111,17 +122,18 @@
         <option value="$PROJECT_DIR$/backup.js" />
         <option value="$PROJECT_DIR$/testing.html" />
         <option value="$PROJECT_DIR$/test.js" />
-        <option value="$PROJECT_DIR$/game.html" />
         <option value="$PROJECT_DIR$/highscore.php" />
         <option value="$PROJECT_DIR$/main.js" />
         <option value="$PROJECT_DIR$/test.html" />
+        <option value="$PROJECT_DIR$/bubbles.js" />
+        <option value="$PROJECT_DIR$/game.html" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="Unnamed" />
   <component name="ProjectFrameBounds">
     <option name="y" value="22" />
-    <option name="width" value="710" />
+    <option name="width" value="969" />
     <option name="height" value="825" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -200,7 +212,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="710" height="825" extended-state="0" />
+    <frame x="0" y="22" width="969" height="825" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -241,13 +253,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/input.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="0" selection-start="793" selection-end="793" vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="510">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/game.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="7" selection-start="509" selection-end="509" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="315">
@@ -512,27 +517,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/input.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="0" selection-start="793" selection-end="793" vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="510">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="7" selection-start="509" selection-end="509" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="315">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="653" selection-end="653" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3315">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backup.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="0" selection-start="0" selection-end="14227" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="8850">
@@ -540,9 +524,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/input.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="0" selection-start="793" selection-end="793" vertical-scroll-proportion="-17.5" vertical-offset="0" max-vertical-offset="510">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="0" selection-start="1198" selection-end="1198" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="3315">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bubbles.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="0" selection-start="1484" selection-end="1484" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1080">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="58" selection-end="58" vertical-scroll-proportion="0.10653409" vertical-offset="0" max-vertical-offset="1650">
+        <state line="89" column="40" selection-start="1967" selection-end="1967" vertical-scroll-proportion="-55.625" vertical-offset="0" max-vertical-offset="1650">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="7" selection-start="512" selection-end="512" vertical-scroll-proportion="0.3622159" vertical-offset="0" max-vertical-offset="704">
           <folding />
         </state>
       </provider>

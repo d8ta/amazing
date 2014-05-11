@@ -55,7 +55,7 @@
 
     Circle.prototype.update = function () {
 
-        this.counter += /*this.sign */  this.speed;
+        this.counter += this.speed;
 
         context.beginPath();
 
@@ -68,7 +68,7 @@
 
         context.closePath();
 
-        context.fillStyle = 'rgba(185, 211, 238,' + this.opacity + ')';
+        context.fillStyle = 'black';
         context.fill();
     };
 

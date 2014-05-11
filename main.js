@@ -44,8 +44,8 @@ var pPosY = 10;
 var pW = 13;
 var pH = 13;
 var minPlayer = 5;
-//var maxPlayer = 50;
-var playerSpeed = 5;
+var maxPlayer = 50;
+var playerSpeed = 10;
 
 /* starting score */
 var highscore = 100000;
