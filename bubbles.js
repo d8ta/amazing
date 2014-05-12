@@ -1,5 +1,3 @@
-
-
 var mainCanvas = document.getElementById("myCanvas");
 var context = mainCanvas.getContext('2d');
 

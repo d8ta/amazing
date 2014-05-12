@@ -1,28 +1,73 @@
 /**
  * Created by danielraudschus on 12.04.14.
  */
+
+/** Get and set canvas and context **/
+var canvas = document.getElementById("canvas"); // referencing to Canvas element
+var context = canvas.getContext('2d'); // calling 2D API
+
 // for using the requestAnimatonFrame in all browser....
 var requestAnimationFrame = window.requestAnimationFrame ||
     window.mozRequestAnimationFrame ||
     window.webkitRequestAnimationFrame ||
     window.msRequestAnimationFrame;
 
-// callback for drawGame because its allways better to ask nicely
-requestAnimationFrame(updateGame);
 
-/* this is where the game get drawn and updated */
-function updateGame() {
+var circles = new Array();
 
-    /** Get and set canvas and context **/
-    var canvas = document.getElementById("canvas"); // referencing to Canvas element
-    var context = canvas.getContext('2d'); // calling 2D API
 
-    // clearing the whole canvas
-    context.clearRect(0, 0, 700, 450);
-    gameBasics();
-
-    requestAnimationFrame(updateGame);
+function Circle(radius, speed, width, xPos, yPos) {
+    this.radius = radius;
+    this.speed = speed;
+    this.width = width;
+    this.xPos = xPos;
+    this.yPos = yPos;
+    this.counter = 0;
 }
+
+Circle.prototype.update = function () {
+
+    this.counter += this.speed;
+
+    context.beginPath();
+
+    context.arc(this.xPos + Math.cos(this.counter / 100) * this.radius,
+        this.yPos + Math.sin(this.counter / 100) * this.radius,
+        this.width,
+        0,
+        Math.PI * 2,
+        false);
+
+    context.closePath();
+
+    context.fillStyle = 'black';
+    context.fill();
+};
+
+function drawCircles() {
+    for (var i = 0; i < 13; i++) {
+        var randomX = Math.round(Math.random() * 600);
+        var randomY = Math.round(Math.random() * 350);
+        var speed = Math.random() * 2;
+        var size = Math.random() * 90;
+
+        var circle = new Circle(150, speed, size, randomX, randomY);
+        circles.push(circle);
+    }
+    draw();
+}
+drawCircles();
+
+function draw() {
+    context.clearRect(0, 0, 700, 450);
+
+    for (var i = 0; i < circles.length; i++) {
+        var myCircle = circles[i];
+        myCircle.update();
+    }
+    requestAnimationFrame(draw);
+}
+
 
 /**
  * Highscore math subtracts 10 from the startscore every second
@@ -54,11 +99,14 @@ var highscore = 100000;
  * Basic game components
  */
 function gameBasics() {
-    drawRectangle(winstone);
+    requestAnimationFrame(gameBasics);
+   drawRectangle(winstone);
     win(player, winstone);
-    drawRectangle(player);
+   drawRectangle(player);
+    //die(player, circle);
     movement();
 }
+requestAnimationFrame(gameBasics);
 
 /**
  * Rectangle Objects
@@ -102,6 +150,8 @@ function drawRectangle(r, context) {
     var context = canvas.getContext('2d');
     context.fillStyle = r.fillColor;
     context.fillRect(r.x, r.y, r.width, r.height);
+    requestAnimationFrame(drawRectangle);
+
 }
 
 
@@ -126,16 +176,16 @@ function collide(r1, r2) {
  * @param p = playerrect.
  * @param r = rect.
  */
-//function grow(p, r) {
-//    if (collide(p, r)) {
-//        if (p.width > maxPlayer) {
-//            p.width = maxPlayer;
-//            p.height = maxPlayer;
-//        }
-//        player.width += .5;
-//        player.height += .5;
-//    }
-//}
+function grow(p, r) {
+    if (collide(p, r)) {
+        if (p.width > maxPlayer) {
+            p.width = maxPlayer;
+            p.height = maxPlayer;
+        }
+        player.width += .5;
+        player.height += .5;
+    }
+}
 
 /**
  * Let Player shring till he is minPlayer
