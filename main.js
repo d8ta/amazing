@@ -51,7 +51,7 @@ Circle.prototype.update = function () {
 
     context.closePath();
 
-    context.fillStyle = 'black';
+    context.fillStyle = 'rgba(255, 255, 255,' + this.opacity + ')';
     context.fill();
 };
 
