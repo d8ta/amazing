@@ -12,13 +12,25 @@ var requestAnimationFrame = window.requestAnimationFrame ||
     window.msRequestAnimationFrame;
 
 
+// array for all the random created circles
 var circles = new Array();
+// player variables
+var pPosX = 15;
+var pPosY = 10;
+var pW = 10;
+var pH = 10;
+var minPlayer = 5;
+var maxPlayer = 50;
+var playerSpeed = 9;
+/* starting score */
+var highscore = 100000;
+
 
 // circle construktor
 function Circle(radius, speed, width, xPos, yPos) {
     this.radius = radius;
     this.speed = speed;
-    this.width = width;
+    this.width = width; // from rotationpoint
     this.xPos = xPos;
     this.yPos = yPos;
 
@@ -29,9 +41,9 @@ function Circle(radius, speed, width, xPos, yPos) {
     var direction = Math.floor(Math.random() * 2);
 
     if (direction == 1) {
-        this.sign = -1;
+        this.sign = -1;     // clockwise
     } else {
-        this.sign = 1;
+        this.sign = 1;      // counterclockwise
     }
 }
 
@@ -58,10 +70,10 @@ function drawCircles() {
     for (var i = 0; i < 30; i++) {
         var randomX = Math.round(Math.random() * 700);
         var randomY = Math.round(Math.random() * 450);
-        var speed = Math.random() * 1;
-        var size = Math.random() * 90;
+        var speed = Math.random() * 2;
+        var distance = Math.random() * 100;     // from random rotation point
 
-        var circle = new Circle(150, speed, size, randomX, randomY);
+        var circle = new Circle(150, speed, distance, randomX, randomY);
         circles.push(circle);
     }
     draw();
@@ -70,7 +82,6 @@ drawCircles();
 
 function draw() {
     context.clearRect(0, 0, 700, 450);
-
     for (var i = 0; i < circles.length; i++) {
         var myCircle = circles[i];
         myCircle.update();
@@ -94,17 +105,6 @@ function myScore() {
 }
 
 
-// Player variables
-var pPosX = 15;
-var pPosY = 10;
-var pW = 10;
-var pH = 10;
-var minPlayer = 5;
-var maxPlayer = 50;
-var playerSpeed = 9;
-
-/* starting score */
-var highscore = 100000;
 
 /**
  * Basic game components
@@ -114,7 +114,7 @@ function gameBasics() {
     drawRectangle(winstone);
     win(player, winstone);
     drawRectangle(player);
-    die(player, circles);
+    //die(player, circles);
     movement();
 }
 requestAnimationFrame(gameBasics);
@@ -124,7 +124,7 @@ requestAnimationFrame(gameBasics);
  */
 /* basics */
 var player = new rectangle(pPosX, pPosY, pW, pH, 'darkgrey');
-var winstone = new rectangle(675, 425, 25, 25, 'silver');
+var winstone = new rectangle(675, 425, 25, 25, 'lightgrey');
 /* end */
 
 /**
@@ -153,16 +153,12 @@ function rectangle(x, y, width, height, fillColor) {
     this.fillColor = fillColor;
 }
 
-
 /**
  * Draw rectangles
  */
-function drawRectangle(r, context) {
-    var context = canvas.getContext('2d');
+function drawRectangle(r) {
     context.fillStyle = r.fillColor;
     context.fillRect(r.x, r.y, r.width, r.height);
-    requestAnimationFrame(drawRectangle);
-
 }
 
 
@@ -182,62 +178,9 @@ function collidRect(r1, r2) {
     return true;
 }
 
-// radius, speed, width, xPos, yPos
-// return true if the rectangle and circle are colliding
-function collideCircle(rect, circle) {
-    var distX = Math.abs(circle.xPos - rect.x - rect.width / 2);
-    var distY = Math.abs(circle.yPos - rect.y - rect.height / 2);
-
-    if (distX > (rect.width / 2 + circle.radius)) {
-        return false;
-    }
-    if (distY > (rect.height / 2 + circle.radius)) {
-        return false;
-    }
-
-    if (distX <= (rect.width / 2)) {
-        return true;
-    }
-    if (distY <= (rect.height / 2)) {
-        return true;
-    }
-
-    var dx = distX - rect.width / 2;
-    var dy = distY - rect.height / 2;
-    return (dx * dx + dy * dy <= (circle.radius * circle.radius));
-}
+function collidCircle(r, c) {
 
 
-/**
- * Let Player grow till he is maxPlayer
- * @param p = playerrect.
- * @param r = rect.
- */
-function grow(p, r) {
-    if (collide(p, r)) {
-        if (p.width > maxPlayer) {
-            p.width = maxPlayer;
-            p.height = maxPlayer;
-        }
-        player.width += .5;
-        player.height += .5;
-    }
-}
-
-/**
- * Let Player shring till he is minPlayer
- * @param p = playerrect.
- * @param r = rect.
- */
-function shrink(p, r) {
-    if (collideRect(p, r)) {
-        if (p.width < minPlayer) {
-            p.width = minPlayer;
-            p.height = minPlayer;
-        }
-        player.width -= .5;
-        player.height -= .5;
-    }
 }
 
 /**
@@ -245,10 +188,10 @@ function shrink(p, r) {
  * @param p = playerrect.
  * @param r = rect.
  */
-function die(p, r) {
-    if (collideCircle(p, r)) {
-        p.x = pPosX;
-        p.y = pPosY;
+function die(r, c) {
+    if (collideCircle(r, c)) {
+        r.x = pPosX;
+        r.y = pPosY;
         if (confirm('You just died! Try again.')) {
             window.location.reload();
         }
