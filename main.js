@@ -22,12 +22,23 @@ function Circle(radius, speed, width, xPos, yPos) {
     this.width = width;
     this.xPos = xPos;
     this.yPos = yPos;
+
+    this.opacity = .05 + Math.random() * .5;
+
     this.counter = 0;
+
+    var direction = Math.floor(Math.random() * 2);
+
+    if (direction == 1) {
+        this.sign = -1;
+    } else {
+        this.sign = 1;
+    }
 }
 
 Circle.prototype.update = function () {
 
-    this.counter += this.speed;
+    this.counter += this.sign * this.speed;
 
     context.beginPath();
 
@@ -48,7 +59,7 @@ function drawCircles() {
     for (var i = 0; i < 15; i++) {
         var randomX = Math.round(Math.random() * 700);
         var randomY = Math.round(Math.random() * 450);
-        var speed = Math.random() * 2;
+        var speed = Math.random() * 1;
         var size = Math.random() * 90;
 
         var circle = new Circle(150, speed, size, randomX, randomY);
