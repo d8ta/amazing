@@ -80,10 +80,9 @@ setInterval(function () {
  * server for PHP SQL queries
  */
 function myScore() {
-    requestAnimationFrame(myScore);
     document.getElementById("score").value = highscore;
 }
-requestAnimationFrame(myScore);
+
 
 // Player variables
 var pPosX = 15;
@@ -102,11 +101,12 @@ var highscore = 100000;
  */
 function gameBasics() {
     requestAnimationFrame(gameBasics);
-   drawRectangle(winstone);
+    drawRectangle(winstone);
     win(player, winstone);
-   drawRectangle(player);
-    //die(player, circle);
+    drawRectangle(player);
+    //die(player, circles);
     movement();
+    myScore();
 }
 requestAnimationFrame(gameBasics);
 
