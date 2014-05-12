@@ -1,7 +1,6 @@
 /**
  * Created by danielraudschus on 12.04.14.
  */
-
 /** Get and set canvas and context **/
 var canvas = document.getElementById("canvas"); // referencing to Canvas element
 var context = canvas.getContext('2d'); // calling 2D API
@@ -23,7 +22,7 @@ function Circle(radius, speed, width, xPos, yPos) {
     this.xPos = xPos;
     this.yPos = yPos;
 
-    this.opacity = .05 + Math.random() * .5;
+    this.opacity = Math.random() * .5;
 
     this.counter = 0;
 
@@ -91,7 +90,7 @@ setInterval(function () {
  * server for PHP SQL queries
  */
 function myScore() {
-    document.getElementById("score").value = highscore;
+    document.getElementById('score').value = highscore;
 }
 
 
@@ -115,7 +114,7 @@ function gameBasics() {
     drawRectangle(winstone);
     win(player, winstone);
     drawRectangle(player);
-    //die(player, circles);
+    die(player, circles);
     movement();
 }
 requestAnimationFrame(gameBasics);
@@ -134,7 +133,7 @@ var winstone = new rectangle(675, 425, 25, 25, 'silver');
  * @param r rect.
  */
 function win(p, r) {
-    if (collide(p, r)) {
+    if (collidRect(p, r)) {
         if (confirm("You Win!")) {
             document.location = "input.html";
             myScore();
@@ -169,11 +168,11 @@ function drawRectangle(r, context) {
 
 /**
  * Collisonchek
- * @param r1: rect. 1
- * @param r2: rect. 2
+ * @param r: rectangle 1
+ * @param c: rectangle 2
  * @returns {boolean} if colliding or not
  */
-function collide(r1, r2) {
+function collidRect(r1, r2) {
     if (r1.x > r2.x + r2.width ||
         r1.x + r1.width < r2.x ||
         r1.y > r2.y + r2.height ||
@@ -182,6 +181,32 @@ function collide(r1, r2) {
     }
     return true;
 }
+
+// radius, speed, width, xPos, yPos
+// return true if the rectangle and circle are colliding
+function collideCircle(rect, circle) {
+    var distX = Math.abs(circle.xPos - rect.x - rect.width / 2);
+    var distY = Math.abs(circle.yPos - rect.y - rect.height / 2);
+
+    if (distX > (rect.width / 2 + circle.radius)) {
+        return false;
+    }
+    if (distY > (rect.height / 2 + circle.radius)) {
+        return false;
+    }
+
+    if (distX <= (rect.width / 2)) {
+        return true;
+    }
+    if (distY <= (rect.height / 2)) {
+        return true;
+    }
+
+    var dx = distX - rect.width / 2;
+    var dy = distY - rect.height / 2;
+    return (dx * dx + dy * dy <= (circle.radius * circle.radius));
+}
+
 
 /**
  * Let Player grow till he is maxPlayer
@@ -205,7 +230,7 @@ function grow(p, r) {
  * @param r = rect.
  */
 function shrink(p, r) {
-    if (collide(p, r)) {
+    if (collideRect(p, r)) {
         if (p.width < minPlayer) {
             p.width = minPlayer;
             p.height = minPlayer;
@@ -221,7 +246,7 @@ function shrink(p, r) {
  * @param r = rect.
  */
 function die(p, r) {
-    if (collide(p, r)) {
+    if (collideCircle(p, r)) {
         p.x = pPosX;
         p.y = pPosY;
         if (confirm('You just died! Try again.')) {
