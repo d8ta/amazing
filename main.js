@@ -80,8 +80,10 @@ setInterval(function () {
  * server for PHP SQL queries
  */
 function myScore() {
+    requestAnimationFrame(myScore);
     document.getElementById("score").value = highscore;
 }
+requestAnimationFrame(myScore);
 
 // Player variables
 var pPosX = 15;
