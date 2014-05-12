@@ -15,7 +15,7 @@ var requestAnimationFrame = window.requestAnimationFrame ||
 
 var circles = new Array();
 
-
+// circle construktor
 function Circle(radius, speed, width, xPos, yPos) {
     this.radius = radius;
     this.speed = speed;
@@ -56,7 +56,7 @@ Circle.prototype.update = function () {
 };
 
 function drawCircles() {
-    for (var i = 0; i < 15; i++) {
+    for (var i = 0; i < 30; i++) {
         var randomX = Math.round(Math.random() * 700);
         var randomY = Math.round(Math.random() * 450);
         var speed = Math.random() * 1;
@@ -98,11 +98,11 @@ function myScore() {
 // Player variables
 var pPosX = 15;
 var pPosY = 10;
-var pW = 15;
-var pH = 15;
+var pW = 10;
+var pH = 10;
 var minPlayer = 5;
 var maxPlayer = 50;
-var playerSpeed = 10;
+var playerSpeed = 9;
 
 /* starting score */
 var highscore = 100000;
