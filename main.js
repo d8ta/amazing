@@ -72,9 +72,7 @@ function draw() {
 /**
  * Highscore math subtracts 10 from the startscore every second
  */
-setInterval(function () {
-    highscore -= 10;
-}, 10);
+
 /**
  * Gives highscore value to the form in input.html to send it to the
  * server for PHP SQL queries
@@ -106,6 +104,9 @@ function gameBasics() {
     drawRectangle(player);
     //die(player, circles);
     movement();
+    setInterval(function () {
+        highscore -= 10;
+    }, 10);
     myScore();
 }
 requestAnimationFrame(gameBasics);
