@@ -45,9 +45,9 @@ Circle.prototype.update = function () {
 };
 
 function drawCircles() {
-    for (var i = 0; i < 13; i++) {
-        var randomX = Math.round(Math.random() * 600);
-        var randomY = Math.round(Math.random() * 350);
+    for (var i = 0; i < 15; i++) {
+        var randomX = Math.round(Math.random() * 700);
+        var randomY = Math.round(Math.random() * 450);
         var speed = Math.random() * 2;
         var size = Math.random() * 90;
 
@@ -72,7 +72,9 @@ function draw() {
 /**
  * Highscore math subtracts 10 from the startscore every second
  */
-
+setInterval(function () {
+    highscore -= 10;
+}, 10);
 /**
  * Gives highscore value to the form in input.html to send it to the
  * server for PHP SQL queries
@@ -85,8 +87,8 @@ function myScore() {
 // Player variables
 var pPosX = 15;
 var pPosY = 10;
-var pW = 13;
-var pH = 13;
+var pW = 15;
+var pH = 15;
 var minPlayer = 5;
 var maxPlayer = 50;
 var playerSpeed = 10;
@@ -104,10 +106,6 @@ function gameBasics() {
     drawRectangle(player);
     //die(player, circles);
     movement();
-    setInterval(function () {
-        highscore -= 10;
-    }, 10);
-    myScore();
 }
 requestAnimationFrame(gameBasics);
 
