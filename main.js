@@ -19,14 +19,12 @@ var pPosX = 15;
 var pPosY = 10;
 var pW = 10;
 var pH = 10;
-var minPlayer = 5;
-var maxPlayer = 50;
 var playerSpeed = 9;
 /* starting score */
 var highscore = 100000;
 
 
-// circle construktor
+// circle construktor for random circles
 function Circle(radius, speed, width, xPos, yPos) {
     this.radius = radius;
     this.speed = speed;
@@ -47,6 +45,7 @@ function Circle(radius, speed, width, xPos, yPos) {
     }
 }
 
+
 Circle.prototype.update = function () {
 
     this.counter += this.sign * this.speed;
@@ -64,19 +63,22 @@ Circle.prototype.update = function () {
 
     context.fillStyle = 'rgba(255, 255, 255,' + this.opacity + ')';
     context.fill();
+
 };
 
 function drawCircles() {
     for (var i = 0; i < 30; i++) {
         var randomX = Math.round(Math.random() * 700);
         var randomY = Math.round(Math.random() * 450);
-        var speed = Math.random() * 2;
+        var speed = Math.random() * 1;
         var distance = Math.random() * 100;     // from random rotation point
 
         var circle = new Circle(150, speed, distance, randomX, randomY);
         circles.push(circle);
+
     }
     draw();
+
 }
 drawCircles();
 
@@ -104,8 +106,6 @@ function myScore() {
     document.getElementById('score').value = highscore;
 }
 
-
-
 /**
  * Basic game components
  */
@@ -114,7 +114,6 @@ function gameBasics() {
     drawRectangle(winstone);
     win(player, winstone);
     drawRectangle(player);
-    //die(player, circles);
     movement();
 }
 requestAnimationFrame(gameBasics);
@@ -123,7 +122,7 @@ requestAnimationFrame(gameBasics);
  * Rectangle Objects
  */
 /* basics */
-var player = new rectangle(pPosX, pPosY, pW, pH, 'darkgrey');
+var player = new rectangle(pPosX, pPosY, pW, pH, 'red');
 var winstone = new rectangle(675, 425, 25, 25, 'lightgrey');
 /* end */
 
@@ -134,10 +133,8 @@ var winstone = new rectangle(675, 425, 25, 25, 'lightgrey');
  */
 function win(p, r) {
     if (collidRect(p, r)) {
-        if (confirm("You Win!")) {
             document.location = "input.html";
             myScore();
-        }
     }
 }
 
@@ -154,11 +151,30 @@ function rectangle(x, y, width, height, fillColor) {
 }
 
 /**
+* circle Object constructor
+*/
+function circleConstructor(x, y, radius, fillColor) {
+    this.x = x;
+    this.y = y;
+    this.radius = radius;
+    this.fillColor = fillColor;
+}
+
+/**
  * Draw rectangles
  */
 function drawRectangle(r) {
     context.fillStyle = r.fillColor;
     context.fillRect(r.x, r.y, r.width, r.height);
+}
+
+/**
+ * Draw circle
+ */
+function drawCircle(c) {
+    context.beginPath();
+    context.fillStyle = c.fillColor;
+    context.fill();
 }
 
 
@@ -178,21 +194,17 @@ function collidRect(r1, r2) {
     return true;
 }
 
-function collidCircle(r, c) {
-
-
-}
 
 /**
  * Set Player back to startpoint
  * @param p = playerrect.
  * @param r = rect.
  */
-function die(r, c) {
-    if (collideCircle(r, c)) {
-        r.x = pPosX;
-        r.y = pPosY;
-        if (confirm('You just died! Try again.')) {
+function die() {
+    if (collidCircle(player, circles)) {
+        player.x = pPosX;
+        player.y = pPosY;
+        if (confirm('The Bubbles eat you! Try again.')) {
             window.location.reload();
         }
     }
