@@ -112,8 +112,10 @@ function myScore() {
 function gameBasics() {
     requestAnimationFrame(gameBasics);
     drawRectangle(winstone);
-    win(player, winstone);
     drawRectangle(player);
+    drawRectangle(diestone);
+    win();
+    die();
     movement();
 }
 requestAnimationFrame(gameBasics);
@@ -122,8 +124,9 @@ requestAnimationFrame(gameBasics);
  * Rectangle Objects
  */
 /* basics */
-var player = new rectangle(pPosX, pPosY, pW, pH, 'red');
-var winstone = new rectangle(675, 425, 25, 25, 'lightgrey');
+var player = new rectangle(pPosX, pPosY, pW, pH, 'orange');
+var winstone = new rectangle(675, 425, 25, 25, 'orange');
+var diestone = new rectangle(450, 225, 25, 25, 'black');
 /* end */
 
 /**
@@ -131,10 +134,23 @@ var winstone = new rectangle(675, 425, 25, 25, 'lightgrey');
  * @param p playerrect.
  * @param r rect.
  */
-function win(p, r) {
-    if (collidRect(p, r)) {
-            document.location = "input.html";
-            myScore();
+function win() {
+    if (collidRect(player, winstone)) {
+           document.location = "input.html";
+           myScore();
+    }
+}
+
+
+/**
+ * Set Player back to startpoint
+ * @param p = playerrect.
+ * @param r = rect.
+ */
+function die() {
+    if (collidRect(player, diestone)) {
+        if(confirm("The bubbles ate you, try again!"))
+        window.location.reload();
     }
 }
 
@@ -194,21 +210,6 @@ function collidRect(r1, r2) {
     return true;
 }
 
-
-/**
- * Set Player back to startpoint
- * @param p = playerrect.
- * @param r = rect.
- */
-function die() {
-    if (collidCircle(player, circles)) {
-        player.x = pPosX;
-        player.y = pPosY;
-        if (confirm('The Bubbles eat you! Try again.')) {
-            window.location.reload();
-        }
-    }
-}
 
 /**
  * Playermovement with arrowkeys
