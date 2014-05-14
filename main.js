@@ -17,7 +17,7 @@ var circles = new Array();
 // player variables
 var pPosX = 15;
 var pPosY = 10;
-var pW = 10;
+var pW = 5;
 var pH = 10;
 var playerSpeed = 9;
 /* starting score */
