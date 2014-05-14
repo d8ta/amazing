@@ -129,15 +129,16 @@ function myScore() {
  */
 function gameBasics() {
     requestAnimationFrame(gameBasics);
-    //drawRectangle(winstone);
-    //drawRectangle(diestone);
 
     drawCreateCirle(playerCircle);
-    movement(playerCircle);
+    drawCreateCirle(diestone);
 
+    movement(playerCircle);
 
     win();
     die();
+
+
 
 
 }
@@ -153,8 +154,8 @@ var diestone = new rectangle(450, 225, 25, 25, 'black');
 /**
  * circle Objects
  */
-var playerCircle = new createCircle(pPosX, pPosX, pW);
-
+var playerCircle = new createCircle(pPosX, pPosX, pW, 'orange');
+var diestone = new createCircle(200, 20, 25);
 
 /**
  *
@@ -162,7 +163,7 @@ var playerCircle = new createCircle(pPosX, pPosX, pW);
  * @param r rect.
  */
 function win() {
-    if (collidRect(player, winstone)) {
+    if (collidCircle(p, c)) {
         document.location = "input.html";
         myScore();
     }
@@ -175,7 +176,7 @@ function win() {
  * @param r = rect.
  */
 function die() {
-    if (collidRect(player, diestone)) {
+    if (collidCircle()) {
         if (confirm("The bubbles ate you, try again!"))
             window.location.reload();
     }
@@ -209,15 +210,16 @@ function drawRectangle(r) {
  * @param c: rectangle 2
  * @returns {boolean} if colliding or not
  */
-function collidRect(r1, r2) {
-    if (r1.x > r2.x + r2.width ||
-        r1.x + r1.width < r2.x ||
-        r1.y > r2.y + r2.height ||
-        r1.y + r1.height < r2.y) {
+function collidCircle() {
+    if (playerCircle.xPos > diestone.xPos + diestone.radius ||
+        playerCircle.xPos + playerCircle.radius < diestone.radius ||
+        playerCircle.yPos > diestone.yPos + diestone.radius ||
+        playerCircle.yPos + playerCircle.radius < diestone.yPos) {
         return false;
     }
     return true;
 }
+
 
 
 /**
