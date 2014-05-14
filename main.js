@@ -130,14 +130,15 @@ function myScore() {
 function gameBasics() {
     requestAnimationFrame(gameBasics);
     //drawRectangle(winstone);
-    //drawRectangle(player);
     //drawRectangle(diestone);
 
     drawCreateCirle(playerCircle);
+    movement(playerCircle);
+
 
     win();
     die();
-    movement(playerCircle);
+
 
 }
 requestAnimationFrame(gameBasics);
@@ -152,7 +153,7 @@ var diestone = new rectangle(450, 225, 25, 25, 'black');
 /**
  * circle Objects
  */
-var playerCircle = new createCircle(100, 100, 50);
+var playerCircle = new createCircle(pPosX, pPosX, pW);
 
 
 /**
@@ -220,42 +221,42 @@ function collidRect(r1, r2) {
 
 
 /**
- * Playermovement with arrowkeys
- */
-function movement(p) {
+* Playermovement with arrowkeys
+*/
+function movement() {
     function movePlayer(key) {
         // left
         if (key.keyCode == 39) {
-            p.x += playerSpeed;
+            playerCircle.xPos += playerSpeed;
         }
         // right
         if (key.keyCode == 37) {
-            p.x -= playerSpeed;
+            playerCircle.xPos -= playerSpeed;
         }
         // down
         if (key.keyCode == 40) {
-            p.y += playerSpeed;
+            playerCircle.yPos += playerSpeed;
         }
         // up
         if (key.keyCode == 38) {
-            p.y -= playerSpeed;
+            playerCircle.yPos -= playerSpeed;
         }
 
         /**
          * Wall detection and avoidance
          **/
 
-        if (player.x < 0) {
-            player.x = 0;
+        if (playerCircle.xPos < 0 + playerCircle.radius) {
+            playerCircle.xPos = 0 + playerCircle.radius;
         }
-        if (player.y < 0) {
-            player.y = 0;
+        if (playerCircle.yPos < 0 + playerCircle.radius) {
+            playerCircle.yPos = 0 + playerCircle.radius;
         }
-        if (player.x > canvas.width - player.width) {
-            player.x = canvas.width - player.width;
+        if (playerCircle.xPos > canvas.width - playerCircle.radius) {
+            playerCircle.xPos = canvas.width - playerCircle.radius;
         }
-        if (player.y > canvas.height - player.height) {
-            player.y = canvas.height - player.height;
+        if (playerCircle.yPos > canvas.height - playerCircle.radius) {
+            playerCircle.yPos = canvas.height - playerCircle.radius;
         }
     }
 
