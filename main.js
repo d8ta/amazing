@@ -24,6 +24,9 @@ var playerSpeed = 9;
 var highscore = 100000;
 
 
+
+
+
 // circle construktor for random circles
 function Circle(radius, speed, width, xPos, yPos) {
     this.radius = radius;
@@ -74,7 +77,7 @@ function drawCircles() {
         var distance = Math.random() * 100;     // from random rotation point
 
         var circle = new Circle(150, speed, distance, randomX, randomY);
-        circles.push(circle);
+        circles.push(circle);                   // stack it to the array
 
     }
     draw();
@@ -92,12 +95,27 @@ function draw() {
 }
 
 
+// circle constructor
+function createCircle(xPos, yPos, radius) {
+    this.xPos = xPos;
+    this.yPos = yPos;
+    this.radius = radius;
+}
+
+function drawCreateCirle(c) {
+    context.beginPath();
+    context.arc(c.xPos, c.yPos, c.radius, 0, Math.PI * 2, false);
+    context.stroke();
+}
+
+
 /**
  * Highscore math subtracts 10 from the startscore every second
  */
 setInterval(function () {
     highscore -= 10;
 }, 10);
+
 /**
  * Gives highscore value to the form in input.html to send it to the
  * server for PHP SQL queries
@@ -111,23 +129,31 @@ function myScore() {
  */
 function gameBasics() {
     requestAnimationFrame(gameBasics);
-    drawRectangle(winstone);
-    drawRectangle(player);
-    drawRectangle(diestone);
+    //drawRectangle(winstone);
+    //drawRectangle(player);
+    //drawRectangle(diestone);
+
+    drawCreateCirle(playerCircle);
+
     win();
     die();
-    movement();
+    movement(playerCircle);
+
 }
 requestAnimationFrame(gameBasics);
 
 /**
  * Rectangle Objects
  */
-/* basics */
 var player = new rectangle(pPosX, pPosY, pW, pH, 'orange');
 var winstone = new rectangle(675, 425, 25, 25, 'orange');
 var diestone = new rectangle(450, 225, 25, 25, 'black');
-/* end */
+
+/**
+ * circle Objects
+ */
+var playerCircle = new createCircle(100, 100, 50);
+
 
 /**
  *
@@ -136,8 +162,8 @@ var diestone = new rectangle(450, 225, 25, 25, 'black');
  */
 function win() {
     if (collidRect(player, winstone)) {
-           document.location = "input.html";
-           myScore();
+        document.location = "input.html";
+        myScore();
     }
 }
 
@@ -149,8 +175,8 @@ function win() {
  */
 function die() {
     if (collidRect(player, diestone)) {
-        if(confirm("The bubbles ate you, try again!"))
-        window.location.reload();
+        if (confirm("The bubbles ate you, try again!"))
+            window.location.reload();
     }
 }
 
@@ -166,15 +192,6 @@ function rectangle(x, y, width, height, fillColor) {
     this.fillColor = fillColor;
 }
 
-/**
-* circle Object constructor
-*/
-function circleConstructor(x, y, radius, fillColor) {
-    this.x = x;
-    this.y = y;
-    this.radius = radius;
-    this.fillColor = fillColor;
-}
 
 /**
  * Draw rectangles
@@ -182,15 +199,6 @@ function circleConstructor(x, y, radius, fillColor) {
 function drawRectangle(r) {
     context.fillStyle = r.fillColor;
     context.fillRect(r.x, r.y, r.width, r.height);
-}
-
-/**
- * Draw circle
- */
-function drawCircle(c) {
-    context.beginPath();
-    context.fillStyle = c.fillColor;
-    context.fill();
 }
 
 
@@ -214,23 +222,23 @@ function collidRect(r1, r2) {
 /**
  * Playermovement with arrowkeys
  */
-function movement() {
+function movement(p) {
     function movePlayer(key) {
         // left
         if (key.keyCode == 39) {
-            player.x += playerSpeed;
+            p.x += playerSpeed;
         }
         // right
         if (key.keyCode == 37) {
-            player.x -= playerSpeed;
+            p.x -= playerSpeed;
         }
         // down
         if (key.keyCode == 40) {
-            player.y += playerSpeed;
+            p.y += playerSpeed;
         }
         // up
         if (key.keyCode == 38) {
-            player.y -= playerSpeed;
+            p.y -= playerSpeed;
         }
 
         /**
