@@ -135,27 +135,18 @@ function gameBasics() {
 
     movement(playerCircle);
 
-    win();
+    //win();
     die();
-
-
-
 
 }
 requestAnimationFrame(gameBasics);
 
-/**
- * Rectangle Objects
- */
-var player = new rectangle(pPosX, pPosY, pW, pH, 'orange');
-var winstone = new rectangle(675, 425, 25, 25, 'orange');
-var diestone = new rectangle(450, 225, 25, 25, 'black');
 
 /**
  * circle Objects
  */
 var playerCircle = new createCircle(pPosX, pPosX, pW, 'orange');
-var diestone = new createCircle(200, 20, 25);
+var diestone = new createCircle(50, 220, 25);
 
 /**
  *
@@ -163,7 +154,7 @@ var diestone = new createCircle(200, 20, 25);
  * @param r rect.
  */
 function win() {
-    if (collidCircle(p, c)) {
+    if (collide()) {
         document.location = "input.html";
         myScore();
     }
@@ -176,31 +167,10 @@ function win() {
  * @param r = rect.
  */
 function die() {
-    if (collidCircle()) {
+    if (collide()) {
         if (confirm("The bubbles ate you, try again!"))
             window.location.reload();
     }
-}
-
-
-/**
- * Rectangle Object constructor
- */
-function rectangle(x, y, width, height, fillColor) {
-    this.x = x;
-    this.y = y;
-    this.width = width;
-    this.height = height;
-    this.fillColor = fillColor;
-}
-
-
-/**
- * Draw rectangles
- */
-function drawRectangle(r) {
-    context.fillStyle = r.fillColor;
-    context.fillRect(r.x, r.y, r.width, r.height);
 }
 
 
@@ -210,10 +180,10 @@ function drawRectangle(r) {
  * @param c: rectangle 2
  * @returns {boolean} if colliding or not
  */
-function collidCircle() {
-    if (playerCircle.xPos > diestone.xPos + diestone.radius ||
+function collide() {
+    if (playerCircle.xPos + playerCircle.radius > diestone.xPos + diestone.radius ||
         playerCircle.xPos + playerCircle.radius < diestone.radius ||
-        playerCircle.yPos > diestone.yPos + diestone.radius ||
+        playerCircle.yPos + playerCircle.radius > diestone.yPos + diestone.radius ||
         playerCircle.yPos + playerCircle.radius < diestone.yPos) {
         return false;
     }
