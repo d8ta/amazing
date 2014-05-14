@@ -146,7 +146,7 @@ requestAnimationFrame(gameBasics);
  * circle Objects
  */
 var playerCircle = new createCircle(pPosX, pPosX, pW, 'orange');
-var diestone = new createCircle(50, 220, 25);
+var diestone = new createCircle(200, 220, 25);
 
 /**
  *
@@ -181,13 +181,13 @@ function die() {
  * @returns {boolean} if colliding or not
  */
 function collide() {
-    if (playerCircle.xPos + playerCircle.radius > diestone.xPos + diestone.radius ||
-        playerCircle.xPos + playerCircle.radius < diestone.radius ||
-        playerCircle.yPos + playerCircle.radius > diestone.yPos + diestone.radius ||
-        playerCircle.yPos + playerCircle.radius < diestone.yPos) {
-        return false;
+    if (playerCircle.xPos + playerCircle.radius + diestone.radius > diestone.xPos
+        && playerCircle.xPos < diestone.xPos + playerCircle.radius + diestone.radius
+        && playerCircle.yPos + playerCircle.radius + diestone.radius > diestone.yPos
+        && playerCircle.yPos < diestone.yPos + playerCircle.radius + diestone.radius) {
+        return true;
     }
-    return true;
+    return false;
 }
 
 
