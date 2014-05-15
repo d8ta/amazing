@@ -68,11 +68,12 @@ function drawCircles() {
 
         var circle = new Circle(150, speed, distance, randomX, randomY);
         circles.push(circle);                   // stack it to the array
+
     }
 }
 drawCircles(); // dont call in rAF
 
-
+// updates the prototype of circles
 function draw() {
     for (var i = 0; i < circles.length; i++) {
         var myCircle = circles[i];
@@ -126,14 +127,18 @@ function gameBasics() {
     movement(playerCircle);
     win(playerCircle, winCircle);
     die(playerCircle, dieCircle);
+    draw();
     // console.log(highscore);
 
     /**
-     * ToDo: For Loop for collision
+     * ToDo: For Loop for collision with random bubbles
      */
-    draw();
-
-
+    for (var i = 0; i < circles.length; i++) {
+        var myCircle = circles[i];
+        if (collide(playerCircle, myCircle)) {
+            console.log("collide");
+        }
+    }
 }
 requestAnimationFrame(gameBasics);
 
