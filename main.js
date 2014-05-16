@@ -36,16 +36,16 @@ function Circle(radius, speed, width, xPos, yPos) {
     var direction = Math.floor(Math.random() * 2);
 
     if (direction == 1) {
-        this.sign = -1;     // counterclockwise
+        this.dir = -1;     // counterclockwise
     } else {
-        this.sign = 1;      // clockwise
+        this.dir = 1;      // clockwise
     }
 }
 
 
 Circle.prototype.update = function () {
 
-    this.counter += this.sign * this.speed; // defines rotation of the bubbles
+    this.counter += this.dir * this.speed; // defines rotation of the bubbles
 
     context.beginPath();
     context.arc(this.xPos + Math.cos(this.counter / 100) * this.radius, this.yPos + Math.sin(this.counter / 100) * this.radius, this.width, 0, 2 * Math.PI, false);
@@ -60,7 +60,7 @@ var circles = new Array();
 
 
 function drawCircles() {
-    for (var i = 0; i < 30; i++) {
+    for (var i = 0; i < 10; i++) {
         var randomX = Math.round(Math.random() * 700);
         var randomY = Math.round(Math.random() * 450);
         var speed = Math.random() * 1;

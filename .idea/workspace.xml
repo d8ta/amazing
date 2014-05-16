@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="12e2583c-76da-4cec-897f-2b40d828b225" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.js" afterPath="$PROJECT_DIR$/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.html" afterPath="$PROJECT_DIR$/test.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mmp1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,7 +30,7 @@
       <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="133" column="55" selection-start="3285" selection-end="3285" vertical-scroll-proportion="0.40247253" vertical-offset="1702" max-vertical-offset="3675">
+            <state line="69" column="8" selection-start="1951" selection-end="1951" vertical-scroll-proportion="0.8035714" vertical-offset="450" max-vertical-offset="3675">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -510,9 +512,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="33" selection-start="2298" selection-end="2298" vertical-scroll-proportion="-45.625" vertical-offset="255" max-vertical-offset="1710">
-          <folding />
-        </state>
+        <state line="90" column="33" selection-start="2298" selection-end="2298" vertical-scroll-proportion="-45.625" vertical-offset="255" max-vertical-offset="1710" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.css">
@@ -550,7 +550,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="133" column="55" selection-start="3285" selection-end="3285" vertical-scroll-proportion="0.40247253" vertical-offset="1702" max-vertical-offset="3675">
+        <state line="69" column="8" selection-start="1951" selection-end="1951" vertical-scroll-proportion="0.8035714" vertical-offset="450" max-vertical-offset="3675">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>

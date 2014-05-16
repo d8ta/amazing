@@ -55,15 +55,15 @@
         var signHelper = Math.floor(Math.random() * 2);
 
         if (signHelper == 1) {
-            this.sign = -1;
+            this.dir = -1;
         } else {
-            this.sign = 1;
+            this.dir = 1;
         }
     }
 
     Circle.prototype.update = function () {
 
-        this.counter += this.sign * this.speed;
+        this.counter += this.dir * this.speed;
 
         mainContext.beginPath();
 
