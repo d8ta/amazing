@@ -47,6 +47,8 @@ Circle.prototype.update = function () {
 
     this.counter += this.dir * this.speed; // defines rotation of the bubbles
 
+
+
     context.beginPath();
     context.arc(this.xPos + Math.cos(this.counter / 100) * this.radius, this.yPos + Math.sin(this.counter / 100) * this.radius, this.width, 0, 2 * Math.PI, false);
     context.closePath();
@@ -60,12 +62,12 @@ var circles = new Array();
 
 
 function drawCircles() {
-    for (var i = 0; i < 13; i++) {
-        var rad = Math.round(Math.random() * 100);       // from random rotation point! This is what should be checked about colliding with player
+    for (var i = 0; i < 1; i++) {
+        var rad = Math.round(Math.random() * 0);       // from random rotation point! This is what should be checked about colliding with player
         var randomX = Math.round(Math.random() * 700);
         var randomY = Math.round(Math.random() * 450);
-        var speed = Math.random() * 2;
-        var circleWidth = Math.random() * 10;              // width of the circles
+        var speed = Math.random() * 0;
+        var circleWidth = Math.random() * 100;              // width of the circles
 
         var circle = new Circle(rad, speed, circleWidth, randomX, randomY);
         circles.push(circle);                   // stack it to the array
@@ -127,7 +129,7 @@ function gameBasics() {
     movement(playerCircle);
     win(playerCircle, winCircle);
     draw();
-    // console.log(highscore);
+
 
     /**
      * ToDo: Collision wird für die gesamte Fläche vom rotationspkt bis zu circle überwacht!
@@ -136,8 +138,8 @@ function gameBasics() {
         var myCircle = circles[i];
         if (collideRandom(playerCircle, myCircle)) {
             console.log("collide");
-            if (confirm("The bubbles ate you, try again!"))
-                window.location.reload();
+//            if (confirm("The bubbles ate you, try again!"))
+//                window.location.reload();
         }
     }
 }
@@ -187,10 +189,10 @@ function die(r, c) {
  * @returns {boolean} if colliding or not
  */
 function collideRandom(p, c) {
-    if (p.xPos + p.radius + (c.width ) > c.xPos
-        && p.xPos < c.xPos + p.radius + (c.width)
-        && p.yPos + p.radius + (c.width) > c.yPos
-        && p.yPos < c.yPos + p.radius + (c.width)) {
+    if (p.xPos + p.radius + c.width > c.xPos
+        && p.xPos < c.xPos + p.radius + c.width
+        && p.yPos + p.radius + c.width > c.yPos
+        && p.yPos < c.yPos + p.radius + c.width) {
         return true;
     }
     return false;
