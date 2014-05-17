@@ -64,7 +64,7 @@ function drawCircles() {
         var rad = Math.round(Math.random() * 100);       // from random rotation point! This is what should be checked about colliding with player
         var randomX = Math.round(Math.random() * 700);
         var randomY = Math.round(Math.random() * 450);
-        var speed = Math.random() * 50;
+        var speed = Math.random() * 2;
         var circleWidth = Math.random() * 5;              // width of the circles
 
         var circle = new Circle(rad, speed, circleWidth, randomX, randomY);
@@ -124,10 +124,8 @@ function gameBasics() {
 
     drawCreateCirle(playerCircle);
     drawCreateCirle(winCircle);
-    drawCreateCirle(dieCircle);
     movement(playerCircle);
     win(playerCircle, winCircle);
-    die(playerCircle, dieCircle);
     draw();
     // console.log(highscore);
 
@@ -136,9 +134,9 @@ function gameBasics() {
      */
     for (var i = 0; i < circles.length; i++) {
         var myCircle = circles[i];
-        if (collide(playerCircle, myCircle)) {
+        if (collideRandom(playerCircle, myCircle)) {
             console.log("collide");
-            die(playerCircle, myCircle);
+            //die(playerCircle, myCircle);
         }
     }
 }
@@ -150,7 +148,6 @@ requestAnimationFrame(gameBasics);
  */
 var playerCircle = new createCircle(pPosX, pPosX, pW, 'orange');
 var winCircle = new createCircle(700, 450, 25);
-var dieCircle = new createCircle(350, 225, 50);
 
 
 /**
@@ -180,6 +177,25 @@ function die(r, c) {
             window.location.reload();
     }
 }
+
+
+/**
+ * Collisoncheck
+ * @param r: rectangle 1
+ * @param c: rectangle 2
+ * @returns {boolean} if colliding or not
+ */
+function collideRandom(p, c) {
+    if (p.xPos + p.radius + c.width > c.xPos
+        && p.xPos < c.xPos + p.radius + c.width
+        && p.yPos + p.radius + c.width > c.yPos
+        && p.yPos < c.yPos + p.radius + c.width) {
+        return true;
+    }
+    return false;
+}
+
+
 
 
 /**
