@@ -22,10 +22,10 @@ var highscore = 100000;
 
 
 // circle construktor for random circles
-function Circle(radius, speed, width, xPos, yPos) {
-    this.radius = radius;
+function Circle(rad, speed, circleWidth, xPos, yPos) {
+    this.radius = rad;      // from rotationpoint
     this.speed = speed;
-    this.width = width; // from rotationpoint
+    this.width = circleWidth;
     this.xPos = xPos;
     this.yPos = yPos;
 
@@ -50,7 +50,7 @@ Circle.prototype.update = function () {
     context.beginPath();
     context.arc(this.xPos + Math.cos(this.counter / 100) * this.radius, this.yPos + Math.sin(this.counter / 100) * this.radius, this.width, 0, 2 * Math.PI, false);
     context.closePath();
-    context.fillStyle = 'rgba(255, 255, 255,' + this.opacity + ')';
+    context.fillStyle = 'black'/*'rgba(255, 255, 255,' + this.opacity + ')'*/;
     context.fill();
 };
 
@@ -60,13 +60,14 @@ var circles = new Array();
 
 
 function drawCircles() {
-    for (var i = 0; i < 10; i++) {
+    for (var i = 0; i < 5; i++) {
+        var rad = Math.round(Math.random() * 100);       // from random rotation point! This is what should be checked about colliding with player
         var randomX = Math.round(Math.random() * 700);
         var randomY = Math.round(Math.random() * 450);
-        var speed = Math.random() * 1;
-        var distance = Math.random() * 100;     // from random rotation point
+        var speed = Math.random() * 50;
+        var circleWidth = Math.random() * 5;              // width of the circles
 
-        var circle = new Circle(150, speed, distance, randomX, randomY);
+        var circle = new Circle(rad, speed, circleWidth, randomX, randomY);
         circles.push(circle);                   // stack it to the array
 
     }
@@ -100,9 +101,9 @@ function drawCreateCirle(c) {
 /**
  * Highscore math subtracts 10 from the startscore every second
  */
-//setInterval(function () {
-//    highscore -= 10;
-//}, 10);
+setInterval(function () {
+    highscore -= 10;
+}, 10);
 
 
 /**
@@ -119,7 +120,7 @@ function myScore() {
  */
 function gameBasics() {
     requestAnimationFrame(gameBasics);
-    context.clearRect(0, 0, 700, 450);
+    //context.clearRect(0, 0, 700, 450);
 
     drawCreateCirle(playerCircle);
     drawCreateCirle(winCircle);
@@ -131,12 +132,13 @@ function gameBasics() {
     // console.log(highscore);
 
     /**
-     * ToDo: For Loop for collision with random bubbles
+     * ToDo: Collision wird für die gesamte Fläche vom rotationspkt bis zu circle überwacht!
      */
     for (var i = 0; i < circles.length; i++) {
         var myCircle = circles[i];
         if (collide(playerCircle, myCircle)) {
             console.log("collide");
+            die(playerCircle, myCircle);
         }
     }
 }
