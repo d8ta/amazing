@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="12e2583c-76da-4cec-897f-2b40d828b225" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game.html" afterPath="$PROJECT_DIR$/game.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.js" afterPath="$PROJECT_DIR$/main.js" />
     </list>
     <ignored path="mmp1.iws" />
@@ -29,7 +28,7 @@
       <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="194" column="20" selection-start="4674" selection-end="4674" vertical-scroll-proportion="0.3409091" vertical-offset="2685" max-vertical-offset="3990">
+            <state line="65" column="50" selection-start="1704" selection-end="1704" vertical-scroll-proportion="0.25" vertical-offset="810" max-vertical-offset="3990">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -517,7 +516,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="194" column="20" selection-start="4674" selection-end="4674" vertical-scroll-proportion="0.3409091" vertical-offset="2685" max-vertical-offset="3990">
+        <state line="65" column="50" selection-start="1704" selection-end="1704" vertical-scroll-proportion="0.25" vertical-offset="810" max-vertical-offset="3990">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>

@@ -63,14 +63,14 @@ var circles = new Array();
 
 function drawCircles() {
     for (var i = 0; i < 1; i++) {
-        var rad = Math.round(Math.random() * 0);       // from random rotation point! This is what should be checked about colliding with player
+        var rad = /*Math.round(Math.random() */ 100;       // from random rotation point! This is what should be checked about colliding with player
         var randomX = Math.round(Math.random() * 700);
         var randomY = Math.round(Math.random() * 450);
-        var speed = Math.random() * 0;
-        var circleWidth = Math.random() * 100;              // width of the circles
+        var speed = /*Math.random() */ 1;
+        var circleWidth = /*Math.random() */ 100;         // radius of the circles
 
         var circle = new Circle(rad, speed, circleWidth, randomX, randomY);
-        circles.push(circle);                   // stack it to the array
+        circles.push(circle);                             // stack it to the array
 
     }
 }
@@ -122,7 +122,7 @@ function myScore() {
  */
 function gameBasics() {
     requestAnimationFrame(gameBasics);
-    //context.clearRect(0, 0, 700, 450);
+    context.clearRect(0, 0, 700, 450);
 
     drawCreateCirle(playerCircle);
     drawCreateCirle(winCircle);
