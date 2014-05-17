@@ -18,7 +18,7 @@ var pPosY = 10;
 var pW = 5;
 var playerSpeed = 20;
 /* starting score */
-var highscore = 10000000;
+var highscore = 100000;
 
 
 // circle construktor for random circles
