@@ -16,7 +16,7 @@ var requestAnimationFrame = window.requestAnimationFrame ||
 var pPosX = 15;
 var pPosY = 10;
 var pW = 5;
-var playerSpeed = 9;
+var playerSpeed = 7;
 /* starting score */
 var highscore = 100000;
 
@@ -62,12 +62,12 @@ var circles = new Array();
 
 
 function drawCircles() {
-    for (var i = 0; i < 1; i++) {
-        var rad = /*Math.round(Math.random() */ 100;       // from random rotation point! This is what should be checked about colliding with player
+    for (var i = 0; i < 13; i++) {
+        var rad = /*Math.round(Math.random() */ 0;       // from random rotation point! This is what should be checked about colliding with player
         var randomX = Math.round(Math.random() * 700);
         var randomY = Math.round(Math.random() * 450);
-        var speed = /*Math.random() */ 1;
-        var circleWidth = /*Math.random() */ 100;         // radius of the circles
+        var speed = /*Math.random() */ 0;
+        var circleWidth = Math.random() * 100;         // radius of the circles
 
         var circle = new Circle(rad, speed, circleWidth, randomX, randomY);
         circles.push(circle);                             // stack it to the array
@@ -138,8 +138,8 @@ function gameBasics() {
         var myCircle = circles[i];
         if (collideRandom(playerCircle, myCircle)) {
             console.log("collide");
-//            if (confirm("The bubbles ate you, try again!"))
-//                window.location.reload();
+            if (confirm("The bubbles ate you, try again!"))
+                window.location.reload();
         }
     }
 }
@@ -161,10 +161,8 @@ var winCircle = new createCircle(700, 450, 25);
 function win(r, c) {
     if (collide(r, c)) {
         confirm("win");
-        //document.location = "input.html";
-        //myScore();
-        // temp. for testing
-        window.location.reload();
+        document.location = "input.html";
+        myScore();
     }
 }
 
