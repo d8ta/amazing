@@ -50,7 +50,7 @@ Circle.prototype.update = function () {
     context.beginPath();
     context.arc(this.xPos + Math.cos(this.counter / 100) * this.radius, this.yPos + Math.sin(this.counter / 100) * this.radius, this.width, 0, 2 * Math.PI, false);
     context.closePath();
-    context.fillStyle = 'black'/*'rgba(255, 255, 255,' + this.opacity + ')'*/;
+    context.fillStyle = 'rgba(255, 255, 255,' + this.opacity + ')';
     context.fill();
 };
 
@@ -60,12 +60,12 @@ var circles = new Array();
 
 
 function drawCircles() {
-    for (var i = 0; i < 5; i++) {
-        var rad = Math.round(Math.random() * 100);       // from random rotation point! This is what should be checked about colliding with player
+    for (var i = 0; i < 50; i++) {
+        var rad = Math.round(Math.random() * 0);       // from random rotation point! This is what should be checked about colliding with player
         var randomX = Math.round(Math.random() * 700);
         var randomY = Math.round(Math.random() * 450);
-        var speed = Math.random() * 2;
-        var circleWidth = Math.random() * 5;              // width of the circles
+        var speed = Math.random() * 0;
+        var circleWidth = Math.random() * 50;              // width of the circles
 
         var circle = new Circle(rad, speed, circleWidth, randomX, randomY);
         circles.push(circle);                   // stack it to the array
@@ -120,7 +120,7 @@ function myScore() {
  */
 function gameBasics() {
     requestAnimationFrame(gameBasics);
-    //context.clearRect(0, 0, 700, 450);
+    context.clearRect(0, 0, 700, 450);
 
     drawCreateCirle(playerCircle);
     drawCreateCirle(winCircle);
