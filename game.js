@@ -16,7 +16,7 @@ var requestAnimationFrame = window.requestAnimationFrame ||
 var pPosX = 15;
 var pPosY = 10;
 var pW = 5;
-var playerSpeed = 20;
+var playerSpeed = 7;
 /* starting score */
 var highscore = 100000;
 
@@ -65,7 +65,7 @@ function drawCircles() {
         var rad = /*Math.round(Math.random() */ 0;       // from random rotation point! This is what should be checked about colliding with player
         var randomX = Math.round(Math.random() * 700);
         var randomY = Math.round(Math.random() * 450);
-        var speed = /*Math.random() */ 0;
+        var speed = /*Math.random() */ 5;
         var circleWidth = Math.random() * 100;         // radius of the circles
 
         var circle = new Circle(rad, speed, circleWidth, randomX, randomY);
@@ -97,19 +97,7 @@ function drawCreateCirle(c) {
     context.arc(c.xPos, c.yPos, c.radius, 0, Math.PI * 2, false);
     context.stroke();
 }
-/**
- *
- * @param p playerrect.
- * @param r rect.
- */
-function win(r, c) {
-    if (collide(r, c)) {
-        if(confirm("you won!"))
-            localStorage.highscore = highscore;
 
-        document.location = "input.html";
-    }
-}
 
 /**
  * Highscore math subtracts 10 from the startscore every second
@@ -123,25 +111,24 @@ setInterval(function () {
  */
 function gameBasics() {
     requestAnimationFrame(gameBasics);
-    context.clearRect(0, 0, 700, 450);
+    //context.clearRect(0, 0, 700, 450);
 
-    drawCreateCirle(playerCircle);
+    drawCreateCirle(player);
     drawCreateCirle(winCircle);
-    movement(playerCircle);
-    win(playerCircle, winCircle);
-    draw();
-    console.log(highscore);
 
+    movement(player);
+    win(player, winCircle);
+    draw();
 
     /**
      * ToDo: Collision wird für die gesamte Fläche vom rotationspkt bis zu circle überwacht!
      */
     for (var i = 0; i < circles.length; i++) {
         var myCircle = circles[i];
-        if (collideRandom(playerCircle, myCircle)) {
+        if (collideBubbles(player, myCircle)) {
             console.log("collide");
-            if (confirm("The bubbles ate you, try again!"))
-                window.location.reload();
+            //if (confirm("The bubbles ate you, try again!"))
+                //window.location.reload();
         }
     }
 }
@@ -151,55 +138,42 @@ requestAnimationFrame(gameBasics);
 /**
  * circle Objects
  */
-var playerCircle = new createCircle(pPosX, pPosX, pW, 'orange');
+var player = new createCircle(pPosX, pPosX, pW, 'orange');
 var winCircle = new createCircle(700, 450, 25);
 
 
 /**
- * Set Player back to startpoint
- * @param p = playerrect.
- * @param r = rect.
+ *
+ * @param p playerrect.
+ * @param r rect.
  */
-function die(r, c) {
-    if (collide(r, c)) {
-        if (confirm("The bubbles ate you, try again!"))
-            window.location.reload();
+function win(p, c) {
+    if (collide(p, c)) {
+        if (confirm("you won!"))
+            localStorage.highscore = highscore;
+        document.location = "input.html";
     }
 }
 
+function collide(c1, c2) {
+    var dx = c1.xPos - c2.xPos;
+    var dy = c1.yPos - c2.yPos;
+    var distance = c1.radius + c2.radius;
 
-/**
- * Collisoncheck
- * @param r: rectangle 1
- * @param c: rectangle 2
- * @returns {boolean} if colliding or not
- */
-function collideRandom(p, c) {
-    if (p.xPos + p.radius + c.width > c.xPos
-        && p.xPos < c.xPos + p.radius + c.width
-        && p.yPos + p.radius + c.width > c.yPos
-        && p.yPos < c.yPos + p.radius + c.width) {
-        return true;
-    }
-    return false;
+    // Pytagorean Theorem
+    return (dx * dx + dy * dy <= distance * distance);
 }
 
 
-/**
- * Collisoncheck
- * @param r: rectangle 1
- * @param c: rectangle 2
- * @returns {boolean} if colliding or not
- */
-function collide(p, c) {
-    if (p.xPos + p.radius + c.radius > c.xPos
-        && p.xPos < c.xPos + p.radius + c.radius
-        && p.yPos + p.radius + c.radius > c.yPos
-        && p.yPos < c.yPos + p.radius + c.radius) {
-        return true;
-    }
-    return false;
+function collideBubbles(c1, c2) {
+    var dx = c1.xPos - (c2.xPos + c2.radius);
+    var dy = c1.yPos - (c2.yPos + c2.radius);
+    var distance = c1.radius + c2.width;
+
+    // Pytagorean Theorem
+    return (dx * dx + dy * dy <= distance * distance);
 }
+
 
 
 /**
@@ -209,35 +183,35 @@ function movement() {
     function movePlayer(key) {
         // left
         if (key.keyCode == 39) {
-            playerCircle.xPos += playerSpeed;
+            player.xPos += playerSpeed;
         }
         // right
         if (key.keyCode == 37) {
-            playerCircle.xPos -= playerSpeed;
+            player.xPos -= playerSpeed;
         }
         // down
         if (key.keyCode == 40) {
-            playerCircle.yPos += playerSpeed;
+            player.yPos += playerSpeed;
         }
         // up
         if (key.keyCode == 38) {
-            playerCircle.yPos -= playerSpeed;
+            player.yPos -= playerSpeed;
         }
 
         /**
          * Wall detection and avoidance
          **/
-        if (playerCircle.xPos < 0 + playerCircle.radius) {
-            playerCircle.xPos = 0 + playerCircle.radius;
+        if (player.xPos < 0 + player.radius) {
+            player.xPos = 0 + player.radius;
         }
-        if (playerCircle.yPos < 0 + playerCircle.radius) {
-            playerCircle.yPos = 0 + playerCircle.radius;
+        if (player.yPos < 0 + player.radius) {
+            player.yPos = 0 + player.radius;
         }
-        if (playerCircle.xPos > canvas.width - playerCircle.radius) {
-            playerCircle.xPos = canvas.width - playerCircle.radius;
+        if (player.xPos > canvas.width - player.radius) {
+            player.xPos = canvas.width - player.radius;
         }
-        if (playerCircle.yPos > canvas.height - playerCircle.radius) {
-            playerCircle.yPos = canvas.height - playerCircle.radius;
+        if (player.yPos > canvas.height - player.radius) {
+            player.yPos = canvas.height - player.radius;
         }
     }
 
