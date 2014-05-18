@@ -65,7 +65,7 @@ function drawCircles() {
         var rad = /*Math.round(Math.random() */ 100;       // from random rotation point! This is what should be checked about colliding with player
         var randomX = /*Math.round(Math.random() * 700 */ 350;
         var randomY = /*Math.round(Math.random() * 450 */ 225;
-        var speed = /*Math.random() */ 0;
+        var speed = /*Math.random() */ 1;
         var circleWidth = /*Math.random() */ 100;         // radius of the circles
 
         var circle = new Circle(rad, speed, circleWidth, randomX, randomY);
@@ -167,8 +167,8 @@ function collide(c1, c2) {
 
 function collideBubbles(c1, c2) {
 
-    var bubbleX = c2.xPos + c2.radius;
-    var bubbleY = c2.yPos + c2.radius;
+    var bubbleX = c2.xPos + c2.xPos + Math.cos(c2.counter / 100) * c2.radius;
+    var bubbleY = c2.yPos + c2.yPos + Math.cos(c2.counter / 100) * c2.radius;
 
     console.log('bubbleX:  ' + bubbleX);
     console.log('bubbleY:  ' + bubbleY);
