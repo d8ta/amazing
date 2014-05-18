@@ -62,11 +62,11 @@ var circles = new Array();
 
 function drawCircles() {
     for (var i = 0; i < 1; i++) {
-        var rad = /*Math.round(Math.random() */ 0;       // from random rotation point! This is what should be checked about colliding with player
-        var randomX = Math.round(Math.random() * 700);
-        var randomY = Math.round(Math.random() * 450);
-        var speed = /*Math.random() */ 5;
-        var circleWidth = Math.random() * 100;         // radius of the circles
+        var rad = /*Math.round(Math.random() */ 100;       // from random rotation point! This is what should be checked about colliding with player
+        var randomX = /*Math.round(Math.random() * 700 */ 350;
+        var randomY = /*Math.round(Math.random() * 450 */ 225;
+        var speed = /*Math.random() */ 0;
+        var circleWidth = /*Math.random() */ 100;         // radius of the circles
 
         var circle = new Circle(rad, speed, circleWidth, randomX, randomY);
         circles.push(circle);                             // stack it to the array
@@ -111,7 +111,7 @@ setInterval(function () {
  */
 function gameBasics() {
     requestAnimationFrame(gameBasics);
-    //context.clearRect(0, 0, 700, 450);
+    context.clearRect(0, 0, 700, 450);
 
     drawCreateCirle(player);
     drawCreateCirle(winCircle);
@@ -127,8 +127,8 @@ function gameBasics() {
         var myCircle = circles[i];
         if (collideBubbles(player, myCircle)) {
             console.log("collide");
-            //if (confirm("The bubbles ate you, try again!"))
-                //window.location.reload();
+            if (confirm("The bubbles ate you, try again!"))
+                window.location.reload();
         }
     }
 }
@@ -166,8 +166,15 @@ function collide(c1, c2) {
 
 
 function collideBubbles(c1, c2) {
-    var dx = c1.xPos - (c2.xPos + c2.radius);
-    var dy = c1.yPos - (c2.yPos + c2.radius);
+
+    var bubbleX = c2.xPos + c2.radius;
+    var bubbleY = c2.yPos + c2.radius;
+
+    console.log('bubbleX:  ' + bubbleX);
+    console.log('bubbleY:  ' + bubbleY);
+
+    var dx = c1.xPos - c2.xPos;
+    var dy = c1.yPos - c2.yPos;
     var distance = c1.radius + c2.width;
 
     // Pytagorean Theorem
@@ -178,6 +185,7 @@ function collideBubbles(c1, c2) {
 
 /**
  * Playermovement with arrowkeys
+ * ToDo: mit KeyDown arbeiten
  */
 function movement() {
     function movePlayer(key) {
