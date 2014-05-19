@@ -172,8 +172,8 @@ function collideBubbles(c1, c2) {
 
 
     // moving/rotation xPos and yPos
-    var bubbleX = c2.xPos + Math.cos(c2.counter / 100) * c2.radius; // actual x and y pos. from bubble!
-    var bubbleY = c2.yPos + Math.cos(c2.counter / 100) * c2.radius;
+    var bubbleX = c2.xPos + Math.cos(c2.counter / 100) * c2.radius; // see the actual collision with DebugMark in the canvas
+    var bubbleY = c2.yPos + Math.cos(c2.counter / 100) * c2.radius; // see the actual collision with DebugMark in the canvas
 
 
     var DebugMark = new createCircle(bubbleX, bubbleY, c2.bubbleRadius);
@@ -188,12 +188,10 @@ function collideBubbles(c1, c2) {
     var dy = c1.yPos - bubbleY; // change with pos from actual bubble!
     var distance = c1.radius + c2.bubbleRadius;
 
-
     //console.log('distance:  ' + distance);
     //console.log('player X:  ' + c1.xPos);
     //console.log('player Y:  ' + c1.yPos);
     //console.log('counter:  ' + c2.counter / 100) * c2.radius;
-
 
     // Pytagorean Theorem
     return (dx * dx + dy * dy <= distance * distance);
