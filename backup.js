@@ -381,7 +381,7 @@ function win(p, r) {
 function rectangle(x, y, width, height, fillColor) {
     this.x = x;
     this.y = y;
-    this.width = width;
+    this.bubbleRadius = width;
     this.height = height;
     this.fillColor = fillColor;
 }
@@ -393,7 +393,7 @@ function rectangle(x, y, width, height, fillColor) {
 function drawBackground() {
     var back = canvas.getContext('2d');
     back.fillStyle = '#f5f5f5';
-    back.fillRect(0, 0, canvas.width, canvas.height);
+    back.fillRect(0, 0, canvas.bubbleRadius, canvas.height);
 }
 
 /**
@@ -402,7 +402,7 @@ function drawBackground() {
 function drawRectangle(r, context) {
     var context = canvas.getContext('2d');
     context.fillStyle = r.fillColor;
-    context.fillRect(r.x, r.y, r.width, r.height);
+    context.fillRect(r.x, r.y, r.bubbleRadius, r.height);
 }
 
 
@@ -458,11 +458,11 @@ function animateXMinus(r, start, end) {
 function objectCollison(p, r) {
     if (collide(p, r)) {
 
-        if (p.x + p.width > r.x) {
-            p.x = r.x - p.width;
+        if (p.x + p.bubbleRadius > r.x) {
+            p.x = r.x - p.bubbleRadius;
         }
-        else if (p.x < r.x + r.width) {
-            p.x = r.x + r.width;
+        else if (p.x < r.x + r.bubbleRadius) {
+            p.x = r.x + r.bubbleRadius;
         }
         else if (p.y + p.height > r.y) {
             p.y = r.y - p.height;
@@ -481,8 +481,8 @@ function objectCollison(p, r) {
  * @returns {boolean} if colliding or not
  */
 function collide(r1, r2) {
-    if (r1.x > r2.x + r2.width ||
-        r1.x + r1.width < r2.x ||
+    if (r1.x > r2.x + r2.bubbleRadius ||
+        r1.x + r1.bubbleRadius < r2.x ||
         r1.y > r2.y + r2.height ||
         r1.y + r1.height < r2.y) {
         return false;
@@ -513,11 +513,11 @@ function collide(r1, r2) {
  */
 function shrink(p, r) {
     if (collide(p, r)) {
-        if (p.width < minPlayer) {
-            p.width = minPlayer;
+        if (p.bubbleRadius < minPlayer) {
+            p.bubbleRadius = minPlayer;
             p.height = minPlayer;
         }
-        player.width -= .5;
+        player.bubbleRadius -= .5;
         player.height -= .5;
     }
 }
@@ -569,8 +569,8 @@ function movement() {
         if (player.y < 0) {
             player.y = 0;
         }
-        if (player.x > canvas.width - player.width) {
-            player.x = canvas.width - player.width;
+        if (player.x > canvas.bubbleRadius - player.bubbleRadius) {
+            player.x = canvas.bubbleRadius - player.bubbleRadius;
         }
         if (player.y > canvas.height - player.height) {
             player.y = canvas.height - player.height;

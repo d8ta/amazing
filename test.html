@@ -45,7 +45,7 @@
     function Circle(radius, speed, width, xPos, yPos) {
         this.radius = radius;
         this.speed = speed;
-        this.width = width;
+        this.bubbleRadius = width;
         this.xPos = xPos;
         this.yPos = yPos;
         this.opacity = .05 + Math.random() * .5;
@@ -69,7 +69,7 @@
 
         mainContext.arc(this.xPos + Math.cos(this.counter / 100) * this.radius,
                 this.yPos + Math.sin(this.counter / 100) * this.radius,
-                this.width,
+                this.bubbleRadius,
                 0,
                 Math.PI * 2,
                 false);
