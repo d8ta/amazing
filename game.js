@@ -21,6 +21,8 @@ var playerSpeed = 7;
 var highscore = 100000;
 
 
+
+
 // circle construktor for random circles
 function Circle(rad, speed, circleWidth, xPos, yPos) {
     this.radius = rad;      // from rotationpoint
@@ -63,9 +65,9 @@ var circles = new Array();
 function drawCircles() {
     for (var i = 0; i < 1; i++) {
         var rad = /*Math.round(Math.random() */ 100;       // from random rotation point! This is what should be checked about colliding with player
-        var randomX = /*Math.round(Math.random() * 700 */ 350;
-        var randomY = /*Math.round(Math.random() * 450 */ 225;
-        var speed = /*Math.random() */ 0.25;
+        var randomX = /*Math.round(Math.random() * 700 */ 200;
+        var randomY = /*Math.round(Math.random() * 450 */ 200;
+        var speed = /*Math.random() */ 0.5;
         var circleWidth = /*Math.random() */ 50;         // radius of the circles
 
         var circle = new Circle(rad, speed, circleWidth, randomX, randomY);
@@ -111,7 +113,7 @@ setInterval(function () {
  */
 function gameBasics() {
     requestAnimationFrame(gameBasics);
-    //context.clearRect(0, 0, 700, 450);
+    context.clearRect(0, 0, 700, 450);
 
     drawCreateCirle(player);
     drawCreateCirle(winCircle);
@@ -142,6 +144,7 @@ var player = new createCircle(pPosX, pPosX, pW);
 var winCircle = new createCircle(700, 450, 25);
 
 
+
 /**
  *
  * @param p playerrect.
@@ -169,22 +172,27 @@ function collideBubbles(c1, c2) {
 
 
     // moving/rotation xPos and yPos
-    var bubbleX = c2.xPos + Math.cos(c2.counter / 100) * c2.radius;
+    var bubbleX = c2.xPos + Math.cos(c2.counter / 100) * c2.radius; // actual x and y pos. from bubble!
     var bubbleY = c2.yPos + Math.cos(c2.counter / 100) * c2.radius;
+
+
+    var DebugMark = new createCircle(bubbleX, bubbleY, c2.bubbleRadius);
+    drawCreateCirle(DebugMark);
+
 
     //console.log('bubbleX:  ' + bubbleX);
     //console.log('bubbleY:  ' + bubbleY);
 
 
-    var dx = c1.xPos - c2.xPos; // change with pos from actual bubble!
-    var dy = c1.yPos - c2.yPos;
+    var dx = c1.xPos - bubbleX; // change with pos from actual bubble!
+    var dy = c1.yPos - bubbleY; // change with pos from actual bubble!
     var distance = c1.radius + c2.bubbleRadius;
 
 
     //console.log('distance:  ' + distance);
     //console.log('player X:  ' + c1.xPos);
     //console.log('player Y:  ' + c1.yPos);
-    console.log('counter:  ' + c2.counter);
+    //console.log('counter:  ' + c2.counter / 100) * c2.radius;
 
 
     // Pytagorean Theorem
