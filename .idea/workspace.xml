@@ -26,10 +26,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="49" selection-start="177" selection-end="177" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="input.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/input.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="0" selection-start="771" selection-end="771" vertical-scroll-proportion="-13.75" vertical-offset="0" max-vertical-offset="465">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="game.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/game.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="174" column="66" selection-start="4275" selection-end="4275" vertical-scroll-proportion="0.5174825" vertical-offset="2240" max-vertical-offset="3720">
+            <state line="136" column="16" selection-start="3605" selection-end="3605" vertical-scroll-proportion="0.7944056" vertical-offset="1472" max-vertical-offset="3675">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -93,7 +111,7 @@
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="Unnamed" />
   <component name="ProjectFrameBounds">
     <option name="y" value="22" />
-    <option name="width" value="748" />
+    <option name="width" value="755" />
     <option name="height" value="825" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -173,7 +191,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="748" height="825" extended-state="0" />
+    <frame x="0" y="22" width="755" height="825" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -475,23 +493,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/input.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="771" selection-end="771" vertical-scroll-proportion="0.46875" vertical-offset="0" max-vertical-offset="704">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="0" selection-start="430" selection-end="430" vertical-scroll-proportion="0.2556818" vertical-offset="0" max-vertical-offset="704">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="107" selection-end="107" vertical-scroll-proportion="0.082417585" vertical-offset="0" max-vertical-offset="728">
           <folding />
         </state>
       </provider>
@@ -503,13 +507,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/game.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="2" selection-start="42" selection-end="42" vertical-scroll-proportion="-1.875" vertical-offset="0" max-vertical-offset="345">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="38" column="23" selection-start="536" selection-end="536" vertical-scroll-proportion="0.0" vertical-offset="277" max-vertical-offset="1005">
@@ -517,9 +514,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/input.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="0" selection-start="771" selection-end="771" vertical-scroll-proportion="-13.75" vertical-offset="0" max-vertical-offset="465">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="49" selection-start="177" selection-end="177" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="2" selection-start="42" selection-end="42" vertical-scroll-proportion="-1.875" vertical-offset="0" max-vertical-offset="345">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/game.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="174" column="66" selection-start="4275" selection-end="4275" vertical-scroll-proportion="0.5174825" vertical-offset="2240" max-vertical-offset="3720">
+        <state line="136" column="16" selection-start="3605" selection-end="3605" vertical-scroll-proportion="0.7944056" vertical-offset="1472" max-vertical-offset="3675">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>

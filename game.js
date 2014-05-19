@@ -2,6 +2,10 @@
  * Created by danielraudschus on 12.04.14.
  */
 /** Get and set canvas and context **/
+
+
+var amazing = amazing || {};
+
 var canvas = document.getElementById("canvas"); // referencing to Canvas element
 var context = canvas.getContext('2d'); // calling 2D API
 
@@ -21,8 +25,6 @@ var playerSpeed = 7;
 var highscore = 100000;
 
 
-
-
 // circle construktor for random circles
 function Circle(rad, speed, circleWidth, xPos, yPos) {
     this.radius = rad;      // from rotationpoint
@@ -31,7 +33,7 @@ function Circle(rad, speed, circleWidth, xPos, yPos) {
     this.xPos = xPos;
     this.yPos = yPos;
 
-    this.opacity = Math.random() * .5;
+    this.opacity = Math.random() * .1;
 
     this.counter = 0;
 
@@ -63,12 +65,12 @@ var circles = new Array();
 
 
 function drawCircles() {
-    for (var i = 0; i < 1; i++) {
-        var rad = /*Math.round(Math.random() */ 100;       // from random rotation point! This is what should be checked about colliding with player
-        var randomX = /*Math.round(Math.random() * 700 */ 200;
-        var randomY = /*Math.round(Math.random() * 450 */ 200;
-        var speed = /*Math.random() */ 0.5;
-        var circleWidth = /*Math.random() */ 50;         // radius of the circles
+    for (var i = 0; i < 30; i++) {
+        var rad = Math.round(Math.random() * 200);       // from random rotation point! This is what should be checked about colliding with player
+        var randomX = Math.round(Math.random() * (canvas.width + 200));
+        var randomY = Math.round(Math.random() * (canvas.height + 200));
+        var speed = Math.random() * 1;
+        var circleWidth = Math.random() * 50;         // radius of the circles
 
         var circle = new Circle(rad, speed, circleWidth, randomX, randomY);
         circles.push(circle);                             // stack it to the array
@@ -87,10 +89,12 @@ function draw() {
 
 
 // circle constructor
-function createCircle(xPos, yPos, radius) {
+function createCircle(xPos, yPos, radius, fillColor, strokeColor) {
     this.xPos = xPos;
     this.yPos = yPos;
     this.radius = radius;
+    this.fillStyle = fillColor;
+    this.fillColor = strokeColor;
 }
 
 
@@ -129,8 +133,8 @@ function gameBasics() {
         var myCircle = circles[i];
         if (collideBubbles(player, myCircle)) {
             console.log("collide");
-            //if (confirm("The bubbles ate you, try again!"))
-              //  window.location.reload();
+            if (confirm("The bubbles ate you, try again!"))
+                window.location.reload();
         }
     }
 }
@@ -140,9 +144,8 @@ requestAnimationFrame(gameBasics);
 /**
  * circle Objects
  */
-var player = new createCircle(pPosX, pPosX, pW);
+var player = new createCircle(pPosX, pPosX, pW, 'red', 'orange');
 var winCircle = new createCircle(700, 450, 25);
-
 
 
 /**
@@ -176,8 +179,8 @@ function collideBubbles(c1, c2) {
     var bubbleY = c2.yPos + Math.cos(c2.counter / 100) * c2.radius; // see the actual collision with DebugMark in the canvas
 
 
-    var DebugMark = new createCircle(bubbleX, bubbleY, c2.bubbleRadius);
-    drawCreateCirle(DebugMark);
+    var whiteBubble = new createCircle(bubbleX, bubbleY, c2.bubbleRadius);
+    drawCreateCirle(whiteBubble);
 
 
     //console.log('bubbleX:  ' + bubbleX);
@@ -188,15 +191,9 @@ function collideBubbles(c1, c2) {
     var dy = c1.yPos - bubbleY; // change with pos from actual bubble!
     var distance = c1.radius + c2.bubbleRadius;
 
-    //console.log('distance:  ' + distance);
-    //console.log('player X:  ' + c1.xPos);
-    //console.log('player Y:  ' + c1.yPos);
-    //console.log('counter:  ' + c2.counter / 100) * c2.radius;
-
     // Pytagorean Theorem
     return (dx * dx + dy * dy <= distance * distance);
 }
-
 
 
 /**
