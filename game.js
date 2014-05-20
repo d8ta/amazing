@@ -96,13 +96,16 @@ function createCircle(xPos, yPos, radius, color, border, borderwidth) {
     this.fillStyle = color;
     this.strokeStyle = border;
     this.lineWidth = borderwidth;
+
+    this.opacity = .1;
 }
 
 
 function drawCreateCirle(c) {
     context.beginPath();
     context.arc(c.xPos, c.yPos, c.radius, 0, Math.PI * 2, false);
-    context.fillStyle = c.fillStyle;
+    context.fillStyle = c.fillStyle
+
     context.fill();
     context.strokeStyle = c.strokeStyle;
     context.lineWidth = c.lineWidth;
@@ -125,20 +128,11 @@ function gameBasics() {
     context.clearRect(0, 0, canvas.width, canvas.height);
    // context.drawImage(backgroundImage, 0, 0);
     draw();
-
     drawCreateCirle(player);
     drawCreateCirle(winCircle);
-
     movement(player);
     win(player, winCircle);
     die();
-
-    /**
-     * ToDo: Collision wird für die gesamte Fläche vom rotationspkt bis zu circle überwacht!
-     */
-
-
-
 }
 requestAnimationFrame(gameBasics);
 
@@ -146,8 +140,8 @@ requestAnimationFrame(gameBasics);
 /**
  * circle Objects
  */
-var player = new createCircle(pPosX, pPosX, pW, 'orange', 'red', 2);
-var winCircle = new createCircle(canvas.width - 50, canvas.height - 50, 25, 'red', 'orange', 10);
+var player = new createCircle(pPosX, pPosX, pW, 'rgba(255, 122, 0, 1)', 'red', .5);
+var winCircle = new createCircle(canvas.width - 30, canvas.height - 30, 25, 'rgba(255, 122, 0, 1)', 'rgba(255, 122, 0, .5)', 10);
 
 
 function die() {
@@ -190,7 +184,7 @@ function collideBubbles(c1, c2) {
     var bubbleX = c2.xPos + Math.cos(c2.counter / 100) * c2.radius;
     var bubbleY = c2.yPos + Math.cos(c2.counter / 100) * c2.radius;
 
-    var destroyerBubble = new createCircle(bubbleX, bubbleY, c2.bubbleRadius, 'lightgrey', 'grey', 1);
+    var destroyerBubble = new createCircle(bubbleX, bubbleY, c2.bubbleRadius, 'rgba(245, 214, 204, 0.7)', 'white', 0.1);
     drawCreateCirle(destroyerBubble);
 
     var dx = c1.xPos - bubbleX;

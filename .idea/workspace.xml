@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="12e2583c-76da-4cec-897f-2b40d828b225" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backup.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bilder/spacex.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game.html" afterPath="$PROJECT_DIR$/game.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game.js" afterPath="$PROJECT_DIR$/game.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.css" afterPath="$PROJECT_DIR$/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mmp1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -52,7 +47,7 @@
       <file leaf-file-name="game.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/game.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="125" column="5" selection-start="3372" selection-end="3372" vertical-scroll-proportion="1.993007" vertical-offset="450" max-vertical-offset="3765">
+            <state line="35" column="39" selection-start="976" selection-end="976" vertical-scroll-proportion="0.22377622" vertical-offset="365" max-vertical-offset="3675">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -72,7 +67,7 @@
       <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="16" selection-start="792" selection-end="792" vertical-scroll-proportion="0.0" vertical-offset="442" max-vertical-offset="1170">
+            <state line="51" column="16" selection-start="792" selection-end="792" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1170">
               <folding />
             </state>
           </provider>
@@ -108,8 +103,8 @@
         <option value="$PROJECT_DIR$/input.html" />
         <option value="$PROJECT_DIR$/main.js" />
         <option value="$PROJECT_DIR$/game.html" />
-        <option value="$PROJECT_DIR$/game.js" />
         <option value="$PROJECT_DIR$/main.css" />
+        <option value="$PROJECT_DIR$/game.js" />
       </list>
     </option>
   </component>
@@ -523,14 +518,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="16" selection-start="792" selection-end="792" vertical-scroll-proportion="0.0" vertical-offset="442" max-vertical-offset="1170">
+        <state line="51" column="16" selection-start="792" selection-end="792" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1170">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/game.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="125" column="5" selection-start="3372" selection-end="3372" vertical-scroll-proportion="1.993007" vertical-offset="450" max-vertical-offset="3765">
+        <state line="35" column="39" selection-start="976" selection-end="976" vertical-scroll-proportion="0.22377622" vertical-offset="365" max-vertical-offset="3675">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
