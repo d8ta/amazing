@@ -151,7 +151,8 @@ function die() {
     for (var i = 0; i < circles.length; i++) {
         var myCircle = circles[i];
         if (collideBubbles(player, myCircle)) {
-            window.location.reload();
+            if(confirm("You died, try again")){window.location.reload();}
+
         }
     }
 }
@@ -163,7 +164,8 @@ function die() {
 function win(c1, c2) {
     if (collide(c1, c2)) {
         localStorage.highscore = highscore;
-        window.location.href = "input.html";
+        if(confirm("congratulations")) {window.location.href = "input.html";}
+
     }
 }
 
