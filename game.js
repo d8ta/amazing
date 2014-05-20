@@ -68,7 +68,7 @@ var circles = new Array();
 
 
 function drawCircles() {
-    for (var i = 0; i < 50; i++) {
+    for (var i = 0; i < 75; i++) {
         var rad = Math.round(Math.random() * 200);       // from random rotation point! This is what should be checked about colliding with player
         var randomX = Math.round(Math.random() * (canvas.width + 200));
         var randomY = Math.round(Math.random() * (canvas.height + 200));
@@ -134,7 +134,7 @@ function gameBasics() {
     drawCreateCirle(player);
     drawCreateCirle(winCircle);
     movement(player);
-    win(player, winCircle);
+    win(winCircle, player);
     die();
 }
 requestAnimationFrame(gameBasics);
@@ -160,10 +160,10 @@ function die() {
  * @param p playerrect.
  * @param r rect.
  */
-function win(p, c) {
-    if (collideBubbles(p, c)) {
+function win(c1, c2) {
+    if (collide(c1, c2)) {
         localStorage.highscore = highscore;
-        window.location = "input.html";
+        window.location.href = "input.html";
     }
 }
 
