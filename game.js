@@ -151,8 +151,7 @@ function die() {
     for (var i = 0; i < circles.length; i++) {
         var myCircle = circles[i];
         if (collideBubbles(player, myCircle)) {
-            if(confirm("You died, try again")){window.location.reload();}
-
+                window.location.reload();
         }
     }
 }
@@ -164,8 +163,7 @@ function die() {
 function win(c1, c2) {
     if (collide(c1, c2)) {
         localStorage.highscore = highscore;
-        if(confirm("congratulations")) {window.location.href = "input.html";}
-
+        window.location.href = "http://multimediatechnology.at/~fhs36118/mmp1/input.html";
     }
 }
 
