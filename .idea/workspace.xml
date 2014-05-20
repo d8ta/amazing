@@ -46,7 +46,7 @@
       <file leaf-file-name="game.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/game.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="70" column="26" selection-start="1818" selection-end="1818" vertical-scroll-proportion="0.72649574" vertical-offset="540" max-vertical-offset="3675">
+            <state line="163" column="23" selection-start="4228" selection-end="4228" vertical-scroll-proportion="0.7222222" vertical-offset="1938" max-vertical-offset="3675">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -533,7 +533,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/game.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="26" selection-start="1818" selection-end="1818" vertical-scroll-proportion="0.72649574" vertical-offset="540" max-vertical-offset="3675">
+        <state line="163" column="23" selection-start="4228" selection-end="4228" vertical-scroll-proportion="0.7222222" vertical-offset="1938" max-vertical-offset="3675">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>

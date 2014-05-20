@@ -161,7 +161,7 @@ function die() {
  * @param r rect.
  */
 function win(p, c) {
-    if (collide(p, c)) {
+    if (collideBubbles(p, c)) {
         localStorage.highscore = highscore;
         window.location = "input.html";
     }
