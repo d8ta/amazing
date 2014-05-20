@@ -39,6 +39,17 @@ canvas {
     margin-top: -100px;
     margin: 0 auto;
     display: block;
+    z-index: 2;
+    position: absolute;
+}
+
+#background {
+    border: 1px #CCC solid;
+    margin-top: -100px;
+    margin: 0 auto;
+    display: block;
+    background-image: url('bilder/bg_blood.JPG');
+    opacity: 0.4;
 }
 
 table {
