@@ -36,17 +36,18 @@ a:hover {
 /*canvasposition*/
 canvas {
     border: 1px #CCC solid;
-    margin-top: -100px;
-    margin: 0 auto;
+    margin-top: 50px;
+    margin-left: 100px;
     display: block;
     z-index: 2;
     position: absolute;
+
 }
 
 #background {
     border: 1px #CCC solid;
-    margin-top: -100px;
-    margin: 0 auto;
+    margin-top: 50px;
+    margin-left: 100px;
     display: block;
     background-image: url('bilder/bg_blood.JPG');
     opacity: 0.5;

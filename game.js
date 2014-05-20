@@ -9,6 +9,9 @@
 var canvas = document.getElementById("canvas"); // referencing to Canvas element
 var context = canvas.getContext('2d'); // calling 2D API
 
+context.width = window.innerWidth;
+context.height = window.innerHeight;
+
 // for using the requestAnimatonFrame in all browser....
 var requestAnimationFrame = window.requestAnimationFrame ||
     window.mozRequestAnimationFrame ||
@@ -65,7 +68,7 @@ var circles = new Array();
 
 
 function drawCircles() {
-    for (var i = 0; i < 50; i++) {
+    for (var i = 0; i < 100; i++) {
         var rad = Math.round(Math.random() * 200);       // from random rotation point! This is what should be checked about colliding with player
         var randomX = Math.round(Math.random() * (canvas.width + 200));
         var randomY = Math.round(Math.random() * (canvas.height + 200));
@@ -126,7 +129,7 @@ setInterval(function () {
 function gameBasics() {
     requestAnimationFrame(gameBasics);
     context.clearRect(0, 0, canvas.width, canvas.height);
-   // context.drawImage(backgroundImage, 0, 0);
+    // context.drawImage(backgroundImage, 0, 0);
     draw();
     drawCreateCirle(player);
     drawCreateCirle(winCircle);
@@ -148,9 +151,7 @@ function die() {
     for (var i = 0; i < circles.length; i++) {
         var myCircle = circles[i];
         if (collideBubbles(player, myCircle)) {
-            console.log("collide");
-            if (confirm("The bubbles ate you, try again!"))
-                window.location.reload();
+            window.location.reload();
         }
     }
 }
@@ -161,8 +162,7 @@ function die() {
  */
 function win(p, c) {
     if (collide(p, c)) {
-        if (confirm("you won!"))
-            localStorage.highscore = highscore;
+        localStorage.highscore = highscore;
         document.location = "input.html";
     }
 }
