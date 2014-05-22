@@ -3,14 +3,9 @@
  */
 /** Get and set canvas and context **/
 
-//var backgroundImage = new Image();
-//backgroundImage.src = 'bilder/bloodcells.png';
-
 var canvas = document.getElementById("canvas"); // referencing to Canvas element
 var context = canvas.getContext('2d'); // calling 2D API
 
-context.width = window.innerWidth;
-context.height = window.innerHeight;
 
 // for using the requestAnimatonFrame in all browser....
 var requestAnimationFrame = window.requestAnimationFrame ||
@@ -36,7 +31,7 @@ function Circle(rad, speed, circleWidth, xPos, yPos) {
     this.xPos = xPos;
     this.yPos = yPos;
 
-    this.opacity = Math.random() * .125;
+    this.opacity = Math.random() * .25;
 
     this.counter = 0;
 
@@ -58,7 +53,7 @@ Circle.prototype.update = function () {
     context.beginPath();
     context.arc(this.xPos + Math.cos(this.counter / 100) * this.radius, this.yPos + Math.sin(this.counter / 100) * this.radius, this.bubbleRadius, 0, 2 * Math.PI, false);
     context.closePath();
-    context.fillStyle = 'rgba(204, 0, 0,' + this.opacity + ')';
+    context.fillStyle = 'rgba(255, 0, 0,' + this.opacity + ')';
     context.fill();
 };
 
@@ -109,6 +104,9 @@ function drawCreateCirle(c) {
     context.arc(c.xPos, c.yPos, c.radius, 0, Math.PI * 2, false);
     context.fillStyle = c.fillStyle
 
+    context.shadowColor = 'red';
+    context.shadowBlur = 0;
+
     context.fill();
     context.strokeStyle = c.strokeStyle;
     context.lineWidth = c.lineWidth;
@@ -129,7 +127,6 @@ setInterval(function () {
 function gameBasics() {
     requestAnimationFrame(gameBasics);
     context.clearRect(0, 0, canvas.width, canvas.height);
-    // context.drawImage(backgroundImage, 0, 0);
     draw();
     drawCreateCirle(player);
     drawCreateCirle(winCircle);
@@ -143,8 +140,8 @@ requestAnimationFrame(gameBasics);
 /**
  * circle Objects
  */
-var player = new createCircle(pPosX, pPosX, pW, 'rgba(255, 122, 0, 1)', 'red', .5);
-var winCircle = new createCircle(canvas.width - 30, canvas.height - 30, 25, 'rgba(255, 122, 0, 1)', 'rgba(255, 122, 0, .5)', 10);
+var player = new createCircle(pPosX, pPosX, pW, 'rgba(255, 122, 0, .75)', 'red', 2)
+var winCircle = new createCircle(canvas.width - 30, canvas.height - 30, 25, 'rgba(255, 122, 0, .75)', 'rgba(255, 122, 0, .5)', 20);
 
 
 function die() {
@@ -163,7 +160,7 @@ function die() {
 function win(c1, c2) {
     if (collide(c1, c2)) {
         localStorage.highscore = highscore;
-        window.location.href = "http://multimediatechnology.at/~fhs36118/mmp1/input.html";
+        window.location.href = "input.html";
     }
 }
 
@@ -184,7 +181,7 @@ function collideBubbles(c1, c2) {
     var bubbleX = c2.xPos + Math.cos(c2.counter / 100) * c2.radius;
     var bubbleY = c2.yPos + Math.cos(c2.counter / 100) * c2.radius;
 
-    var destroyerBubble = new createCircle(bubbleX, bubbleY, c2.bubbleRadius, 'rgba(245, 214, 204, 0.7)', 'white', 0.1);
+    var destroyerBubble = new createCircle(bubbleX, bubbleY, c2.bubbleRadius, 'rgba(255, 255, 255, .25)', 'rgba(151, 151, 170, .125)', 20);
     drawCreateCirle(destroyerBubble);
 
     var dx = c1.xPos - bubbleX;
