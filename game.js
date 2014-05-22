@@ -141,7 +141,7 @@ requestAnimationFrame(gameBasics);
  * circle Objects
  */
 var player = new createCircle(pPosX, pPosX, pW, 'rgba(255, 122, 0, .75)', 'yellow',1)
-var winCircle = new createCircle(canvas.width - 30, canvas.height - 30, 25, 'rgba(255, 122, 0, .75)', 'rgba(255, 255, 0, .5)', 20);
+var winCircle = new createCircle(canvas.width - 50, canvas.height - 50, 25, 'rgba(255, 122, 0, .75)', 'rgba(255, 255, 0, .5)', 20);
 
 
 function die() {
@@ -165,6 +165,7 @@ function win(c1, c2) {
         player.xPos = -300;
         player.yPos = -300;
         localStorage.highscore = highscore;
+        alert("your Score is: " +highscore);
         window.location.href = "input.html";
     }
 }
