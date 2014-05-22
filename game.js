@@ -47,7 +47,7 @@ function Circle(rad, speed, circleWidth, xPos, yPos) {
 
 Circle.prototype.update = function () {
 
-    this.counter += this.dir * this.speed; // defines rotation of the bubbles
+    this.counter += this.dir * this.speed; // defines rotation, direction and speed of the bubbles
 
 
     context.beginPath();
@@ -64,14 +64,14 @@ var circles = new Array();
 
 function drawCircles() {
     for (var i = 0; i < 75; i++) {
-        var rad = Math.round(Math.random() * 200);       // from random rotation point! This is what should be checked about colliding with player
+        var rad = Math.round(Math.random() * 200);     // from random rotation point! This is what should be checked about colliding with player
         var randomX = Math.round(Math.random() * (canvas.width + 200));
         var randomY = Math.round(Math.random() * (canvas.height + 200));
         var speed = Math.random() * 1;
         var circleWidth = Math.random() * 75;         // radius of the circles
 
         var circle = new Circle(rad, speed, circleWidth, randomX, randomY);
-        circles.push(circle);                             // stack it to the array
+        circles.push(circle);                         // stack it to the array
 
     }
 }
@@ -104,8 +104,8 @@ function drawCreateCirle(c) {
     context.arc(c.xPos, c.yPos, c.radius, 0, Math.PI * 2, false);
     context.fillStyle = c.fillStyle
 
-    context.shadowColor = 'red';
-    context.shadowBlur = 0;
+    context.shadowColor = 'black';
+    context.shadowBlur = 50;
 
     context.fill();
     context.strokeStyle = c.strokeStyle;
@@ -148,7 +148,10 @@ function die() {
     for (var i = 0; i < circles.length; i++) {
         var myCircle = circles[i];
         if (collideBubbles(player, myCircle)) {
-                window.location.reload();
+                //window.location.reload();
+            player.xPos = 15;
+            player.yPos = 10;
+
         }
     }
 }
@@ -159,7 +162,8 @@ function die() {
  */
 function win(c1, c2) {
     if (collide(c1, c2)) {
-        pPosX -= 15;
+        player.xPos = -300;
+        player.yPos = -300;
         localStorage.highscore = highscore;
         window.location.href = "input.html";
     }
