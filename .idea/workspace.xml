@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="12e2583c-76da-4cec-897f-2b40d828b225" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bilder/Brain-Synapse.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bilder/bg_blood.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bilder/bg_zell.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bilder/blood.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bilder/brain_cell.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bilder/cell_division.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bilder/whitecells.jpg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game.js" afterPath="$PROJECT_DIR$/game.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input.html" afterPath="$PROJECT_DIR$/input.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.css" afterPath="$PROJECT_DIR$/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mmp1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -65,7 +55,7 @@
       <file leaf-file-name="game.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/game.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="106" column="32" selection-start="2945" selection-end="2945" vertical-scroll-proportion="0.62237763" vertical-offset="1115" max-vertical-offset="3675">
+            <state line="107" column="26" selection-start="2972" selection-end="2972" vertical-scroll-proportion="0.6433566" vertical-offset="1115" max-vertical-offset="3675">
               <folding />
             </state>
           </provider>
@@ -547,13 +537,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="193" selection-end="193" vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="540">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="65" column="21" selection-start="967" selection-end="967" vertical-scroll-proportion="0.0" vertical-offset="465" max-vertical-offset="1470">
@@ -568,9 +551,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="193" selection-end="193" vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="540">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/game.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="106" column="32" selection-start="2945" selection-end="2945" vertical-scroll-proportion="0.62237763" vertical-offset="1115" max-vertical-offset="3675">
+        <state line="107" column="26" selection-start="2972" selection-end="2972" vertical-scroll-proportion="0.6433566" vertical-offset="1115" max-vertical-offset="3675">
           <folding />
         </state>
       </provider>

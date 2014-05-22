@@ -104,8 +104,8 @@ function drawCreateCirle(c) {
     context.arc(c.xPos, c.yPos, c.radius, 0, Math.PI * 2, false);
     context.fillStyle = c.fillStyle
 
-    context.shadowColor = 'black';
-    context.shadowBlur = 50;
+    context.shadowColor = 'red';
+    context.shadowBlur = 5;
 
     context.fill();
     context.strokeStyle = c.strokeStyle;
