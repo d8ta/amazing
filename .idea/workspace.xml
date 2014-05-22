@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="12e2583c-76da-4cec-897f-2b40d828b225" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game.js" afterPath="$PROJECT_DIR$/game.js" />
     </list>
     <ignored path="mmp1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,10 +25,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="game.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="game.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/game.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="66" selection-start="133" selection-end="133" vertical-scroll-proportion="0.08522727" vertical-offset="0" max-vertical-offset="704">
+            <state line="18" column="7" selection-start="648" selection-end="648" vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="360">
               <folding />
             </state>
           </provider>
@@ -52,10 +52,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="game.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="game.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/game.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="107" column="26" selection-start="2972" selection-end="2972" vertical-scroll-proportion="0.0" vertical-offset="1115" max-vertical-offset="3675">
+            <state line="142" column="81" selection-start="3661" selection-end="3661" vertical-scroll-proportion="0.7062937" vertical-offset="1595" max-vertical-offset="3675">
               <folding />
             </state>
           </provider>
@@ -551,16 +551,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/game.js">
+    <entry file="file://$PROJECT_DIR$/game.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="107" column="26" selection-start="2972" selection-end="2972" vertical-scroll-proportion="0.0" vertical-offset="1115" max-vertical-offset="3675">
+        <state line="18" column="7" selection-start="648" selection-end="648" vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="360">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/game.html">
+    <entry file="file://$PROJECT_DIR$/game.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="66" selection-start="133" selection-end="133" vertical-scroll-proportion="0.08522727" vertical-offset="0" max-vertical-offset="704">
+        <state line="142" column="81" selection-start="3661" selection-end="3661" vertical-scroll-proportion="0.7062937" vertical-offset="1595" max-vertical-offset="3675">
           <folding />
         </state>
       </provider>
