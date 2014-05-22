@@ -159,6 +159,7 @@ function die() {
  */
 function win(c1, c2) {
     if (collide(c1, c2)) {
+        pPosX -= 15;
         localStorage.highscore = highscore;
         window.location.href = "input.html";
     }
