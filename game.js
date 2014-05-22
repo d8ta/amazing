@@ -18,7 +18,7 @@ var requestAnimationFrame = window.requestAnimationFrame ||
 var pPosX = 15;
 var pPosY = 10;
 var pW = 5;
-var playerSpeed = 7;
+var playerSpeed = 4;
 /* starting score */
 var highscore = 100000;
 
@@ -124,13 +124,14 @@ setInterval(function () {
 /**
  * Basic game components
  */
+var movePlayer = movement(player);
 function gameBasics() {
     requestAnimationFrame(gameBasics);
     context.clearRect(0, 0, canvas.width, canvas.height);
     draw();
     drawCreateCirle(player);
     drawCreateCirle(winCircle);
-    movement(player);
+    movePlayer();
     win(winCircle, player);
     die();
 }
@@ -204,21 +205,67 @@ function collideBubbles(c1, c2) {
  * ToDo: mit KeyDown arbeiten
  */
 function movement() {
-    function movePlayer(key) {
+    var up = down = left = right = false;
+
+
+    function keysUp(key) {
         // left
         if (key.keyCode == 39) {
-            player.xPos += playerSpeed;
+            left = false;
         }
         // right
         if (key.keyCode == 37) {
-            player.xPos -= playerSpeed;
+            right = false;
         }
         // down
         if (key.keyCode == 40) {
-            player.yPos += playerSpeed;
+            down = false;
         }
         // up
         if (key.keyCode == 38) {
+            up = false;
+        }
+    }
+
+
+    function keysDown(key) {
+
+        // left
+        if (key.keyCode == 39) {
+            left = true;
+        }
+        // right
+        if (key.keyCode == 37) {
+            right = true;
+        }
+        // down
+        if (key.keyCode == 40) {
+            down = true;
+        }
+        // up
+        if (key.keyCode == 38) {
+            up = true
+        }
+    }
+
+    document.onkeyup = keysUp;
+    document.onkeydown = keysDown;
+
+    return function movePlayer() {
+        // left
+        if (left) {
+            player.xPos += playerSpeed;
+        }
+        // right
+        if (right) {
+            player.xPos -= playerSpeed;
+        }
+        // down
+        if (down) {
+            player.yPos += playerSpeed;
+        }
+        // up
+        if (up) {
             player.yPos -= playerSpeed;
         }
 
@@ -238,6 +285,4 @@ function movement() {
             player.yPos = canvas.height - player.radius;
         }
     }
-
-    document.onkeydown = movePlayer;
 }
