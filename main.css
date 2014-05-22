@@ -17,6 +17,18 @@ h3, h2, p {
     text-align: center;
 }
 
+
+ul {
+    font-family: 'Exo 2', 'sans-serif';
+    /*font-family: 'Audiowide';*/
+    text-align: left;
+    margin-left: 40%;
+}
+
+
+
+
+
 .main {
     margin-top: 200px;
 }

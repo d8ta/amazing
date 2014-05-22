@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="12e2583c-76da-4cec-897f-2b40d828b225" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bilder/bloodcells.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game.html" afterPath="$PROJECT_DIR$/game.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game.js" afterPath="$PROJECT_DIR$/game.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/highscore.php" afterPath="$PROJECT_DIR$/highscore.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input.html" afterPath="$PROJECT_DIR$/input.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.css" afterPath="$PROJECT_DIR$/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mmp1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -70,8 +66,22 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="6" selection-start="530" selection-end="530" vertical-scroll-proportion="0.27698863" vertical-offset="0" max-vertical-offset="704">
+            <state line="21" column="44" selection-start="709" selection-end="709" vertical-scroll-proportion="0.4474432" vertical-offset="0" max-vertical-offset="704">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="highscore.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/highscore.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="59" selection-start="473" selection-end="473" vertical-scroll-proportion="-2.5" vertical-offset="75" max-vertical-offset="945">
+              <folding>
+                <marker date="1400747720000" expanded="true" signature="791:846" placeholder="INSERT INTO ..." />
+                <marker date="1400747720000" expanded="true" signature="928:983" placeholder="SELECT * FRO..Score..." />
+                <marker date="1400747720000" expanded="true" signature="1029:1093" placeholder="..." />
+                <marker date="1400747720000" expanded="true" signature="1034:1093" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -79,7 +89,7 @@
       <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="23" selection-start="891" selection-end="891" vertical-scroll-proportion="0.0" vertical-offset="367" max-vertical-offset="1260">
+            <state line="24" column="19" selection-start="453" selection-end="453" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1440">
               <folding />
             </state>
           </provider>
@@ -110,13 +120,13 @@
         <option value="$PROJECT_DIR$/test.js" />
         <option value="$PROJECT_DIR$/bubbles.js" />
         <option value="$PROJECT_DIR$/test.html" />
-        <option value="$PROJECT_DIR$/highscore.php" />
         <option value="$PROJECT_DIR$/main.js" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/main.css" />
         <option value="$PROJECT_DIR$/input.html" />
         <option value="$PROJECT_DIR$/game.html" />
         <option value="$PROJECT_DIR$/game.js" />
+        <option value="$PROJECT_DIR$/highscore.php" />
+        <option value="$PROJECT_DIR$/main.css" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -503,28 +513,9 @@
         <state line="70" column="7" selection-start="1125" selection-end="1125" vertical-scroll-proportion="0.32624114" vertical-offset="820" max-vertical-offset="2865" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/highscore.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="193" selection-end="193" vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="930" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="49" selection-start="177" selection-end="177" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="23" selection-start="891" selection-end="891" vertical-scroll-proportion="0.0" vertical-offset="367" max-vertical-offset="1260">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/input.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="135" selection-end="414" vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="480">
           <folding />
         </state>
       </provider>
@@ -536,6 +527,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/highscore.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="59" selection-start="473" selection-end="473" vertical-scroll-proportion="-2.5" vertical-offset="75" max-vertical-offset="945">
+          <folding>
+            <marker date="1400747720000" expanded="true" signature="791:846" placeholder="INSERT INTO ..." />
+            <marker date="1400747720000" expanded="true" signature="928:983" placeholder="SELECT * FRO..Score..." />
+            <marker date="1400747720000" expanded="true" signature="1029:1093" placeholder="..." />
+            <marker date="1400747720000" expanded="true" signature="1034:1093" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="19" selection-start="453" selection-end="453" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1440">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/game.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="0" selection-start="460" selection-end="460" vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="360">
@@ -543,9 +553,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/input.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="135" selection-end="414" vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="480">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="6" selection-start="530" selection-end="530" vertical-scroll-proportion="0.27698863" vertical-offset="0" max-vertical-offset="704">
+        <state line="21" column="44" selection-start="709" selection-end="709" vertical-scroll-proportion="0.4474432" vertical-offset="0" max-vertical-offset="704">
           <folding />
         </state>
       </provider>
