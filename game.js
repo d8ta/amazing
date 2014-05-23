@@ -65,7 +65,7 @@ var circles = new Array();
 
 
 function drawCircles() {
-    for (var i = 0; i < 5; i++) {
+    for (var i = 0; i < 75; i++) {
         var rad = Math.round(Math.random() * 200);     // from random rotation point! This is what should be checked about colliding with player
         var randomX = Math.round(Math.random() * (canvas.width + 200));
         var randomY = Math.round(Math.random() * (canvas.height + 200));
