@@ -18,9 +18,16 @@ var requestAnimationFrame = window.requestAnimationFrame ||
 var pPosX = 15;
 var pPosY = 10;
 var pW = 5;
-var playerSpeed = 4;
+var playerSpeed = 3;
 /* starting score */
 var highscore = 100000;
+
+if (highscore > 100000) {
+    highscore = 0;
+}
+else if (highscore < 0) {
+    highscore = 0;
+}
 
 
 // circle construktor for random circles
@@ -63,7 +70,7 @@ var circles = new Array();
 
 
 function drawCircles() {
-    for (var i = 0; i < 75; i++) {
+    for (var i = 0; i < 100; i++) {
         var rad = Math.round(Math.random() * 200);     // from random rotation point! This is what should be checked about colliding with player
         var randomX = Math.round(Math.random() * (canvas.width + 200));
         var randomY = Math.round(Math.random() * (canvas.height + 200));
@@ -105,7 +112,7 @@ function drawCreateCirle(c) {
     context.fillStyle = c.fillStyle
 
     context.shadowColor = 'red';
-    context.shadowBlur = 5;
+    context.shadowBlur = 0;
 
     context.fill();
     context.strokeStyle = c.strokeStyle;
@@ -141,7 +148,7 @@ requestAnimationFrame(gameBasics);
 /**
  * circle Objects
  */
-var player = new createCircle(pPosX, pPosX, pW, 'rgba(255, 122, 0, .75)', 'yellow',1)
+var player = new createCircle(pPosX, pPosX, pW, 'rgba(255, 122, 0, .75)', 'yellow', 1)
 var winCircle = new createCircle(canvas.width - 50, canvas.height - 50, 25, 'rgba(255, 122, 0, .75)', 'rgba(255, 255, 0, .5)', 20);
 
 
@@ -149,7 +156,7 @@ function die() {
     for (var i = 0; i < circles.length; i++) {
         var myCircle = circles[i];
         if (collideBubbles(player, myCircle)) {
-                //window.location.reload();
+            //window.location.reload();
             player.xPos = 15;
             player.yPos = 10;
 
@@ -166,7 +173,7 @@ function win(c1, c2) {
         player.xPos = -300;
         player.yPos = -300;
         localStorage.highscore = highscore;
-        alert("your Score is: " +highscore);
+        alert("your Score is: " + highscore);
         window.location.href = "input.html";
     }
 }
@@ -202,7 +209,6 @@ function collideBubbles(c1, c2) {
 
 /**
  * Playermovement with arrowkeys
- * ToDo: mit KeyDown arbeiten
  */
 function movement() {
     var up = down = left = right = false;
