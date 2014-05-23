@@ -22,12 +22,7 @@ var playerSpeed = 3;
 /* starting score */
 var highscore = 100000;
 
-if (highscore > 100000) {
-    highscore = 0;
-}
-else if (highscore < 0) {
-    highscore = 0;
-}
+
 
 
 // circle construktor for random circles
@@ -70,7 +65,7 @@ var circles = new Array();
 
 
 function drawCircles() {
-    for (var i = 0; i < 100; i++) {
+    for (var i = 0; i < 5; i++) {
         var rad = Math.round(Math.random() * 200);     // from random rotation point! This is what should be checked about colliding with player
         var randomX = Math.round(Math.random() * (canvas.width + 200));
         var randomY = Math.round(Math.random() * (canvas.height + 200));
@@ -141,6 +136,14 @@ function gameBasics() {
     movePlayer();
     win(winCircle, player);
     die();
+
+
+    if (highscore > 100000) {
+        highscore = 0;
+    }
+    else if (highscore < 0) {
+        highscore = 0;
+    }
 }
 requestAnimationFrame(gameBasics);
 
@@ -148,7 +151,7 @@ requestAnimationFrame(gameBasics);
 /**
  * circle Objects
  */
-var player = new createCircle(pPosX, pPosX, pW, 'rgba(255, 122, 0, .75)', 'yellow', 1)
+var player = new createCircle(pPosX, pPosX, pW, 'rgba(255, 122, 0, 1)', 'yellow', 1)
 var winCircle = new createCircle(canvas.width - 50, canvas.height - 50, 25, 'rgba(255, 122, 0, .75)', 'rgba(255, 255, 0, .5)', 20);
 
 
@@ -156,7 +159,6 @@ function die() {
     for (var i = 0; i < circles.length; i++) {
         var myCircle = circles[i];
         if (collideBubbles(player, myCircle)) {
-            //window.location.reload();
             player.xPos = 15;
             player.yPos = 10;
 
