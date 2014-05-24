@@ -14,58 +14,51 @@
 
 <div>
 
-<?php
-$pagetitle = "Highscore";
+    <?php
+    $pagetitle = "Highscore";
 
-include "functions.php";
+    include "functions.php";
 
-// gets the highscore from JS
-$player = $_POST['player'];
-$highscore = $_POST['score'];
+    // gets the highscore from JS
+    $player = $_POST['player'];
+    $highscore = $_POST['score'];
 
-// $sql = $dbh->query("INSERT INTO Score (playername, highscore) VALUES ('$player', '$highscore')");
-$sql = $dbh->prepare("INSERT INTO Score (playername, highscore) VALUES (?, ?)");
-$sql->execute(array($_POST['player'], $_POST['score']));
+    // $sql = $dbh->query("INSERT INTO Score (playername, highscore) VALUES ('$player', '$highscore')");
+    $sql = $dbh->prepare("INSERT INTO Score (playername, highscore) VALUES (?, ?)");
+    $sql->execute(array($_POST['player'], $_POST['score']));
 
-$sth = $dbh->query("SELECT * FROM Score ORDER BY highscore DESC LIMIT 0, 10");
-$results = $sth->fetchAll();
+    $sth = $dbh->query("SELECT * FROM Score ORDER BY highscore DESC LIMIT 0, 10");
+    $results = $sth->fetchAll();
 
-echo "<table>
+    echo "<table>
 <tr>
 <th><h3>Playername</h3></th>
 <th><h3>Score</h3></th>
 </tr>
 
 ";
-?>
+    ?>
 
 
-<h1>HIGHSCORE</h1>
+    <h1>HIGHSCORE</h1>
 
-<h2>Top Ten Highscores</h2>
+    <h2>Top Ten Highscores</h2>
 
-<?php
+    <?php
 
-foreach ($results as $result) {
-    echo "<tr>";
-    echo "<td>$result->playername</td>";
-    echo "<td>$result->highscore</td>";
-    echo "</tr>";
-}
-?>
+    foreach ($results as $result) {
+        echo "<tr>";
+        echo "<td>$result->playername</td>";
+        echo "<td>$result->highscore</td>";
+        echo "</tr>";
+    }
+    ?>
 
-<p><a href="game.html">
-        <button type="button" id="button">Play Again</button>
-    </a></p>
+    <p><a href="game.html">
+            <button type="button" id="button">Play Again</button>
+        </a></p>
 
 </div>
-
-<footer>
-    <a href='impressum.html'>Impressum</a>
-</footer>
-
-
-
 
 
 </body>
