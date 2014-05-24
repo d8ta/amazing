@@ -22,7 +22,36 @@ var playerSpeed = 3;
 /* starting score */
 var highscore = 100000;
 
+/**
+ * circle Objects
+ */
+var player = new createCircle(pPosX, pPosX, pW, 'rgba(255, 122, 0, 1)', 'yellow', 1)
+var winCircle = new createCircle(canvas.width - 50, canvas.height - 50, 25, 'rgba(255, 122, 0, .75)', 'rgba(255, 255, 0, .5)', 20);
 
+
+/**
+ * Basic game components
+ */
+var movePlayer = movement(player);
+function gameBasics() {
+    requestAnimationFrame(gameBasics);
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    draw();
+    drawCreateCirle(player);
+    drawCreateCirle(winCircle);
+    movePlayer();
+    win(winCircle, player);
+    die();
+
+
+    if (highscore > 100000) {
+        highscore = 0;
+    }
+    else if (highscore < 0) {
+        highscore = 0;
+    }
+}
+requestAnimationFrame(gameBasics);
 
 
 // circle construktor for random circles
@@ -65,7 +94,7 @@ var circles = new Array();
 
 
 function drawCircles() {
-    for (var i = 0; i < 75; i++) {
+    for (var i = 0; i < 125; i++) {
         var rad = Math.round(Math.random() * 200);     // from random rotation point! This is what should be checked about colliding with player
         var randomX = Math.round(Math.random() * (canvas.width + 200));
         var randomY = Math.round(Math.random() * (canvas.height + 200));
@@ -123,36 +152,7 @@ setInterval(function () {
     highscore -= 10;
 }, 10);
 
-/**
- * Basic game components
- */
-var movePlayer = movement(player);
-function gameBasics() {
-    requestAnimationFrame(gameBasics);
-    context.clearRect(0, 0, canvas.width, canvas.height);
-    draw();
-    drawCreateCirle(player);
-    drawCreateCirle(winCircle);
-    movePlayer();
-    win(winCircle, player);
-    die();
 
-
-    if (highscore > 100000) {
-        highscore = 0;
-    }
-    else if (highscore < 0) {
-        highscore = 0;
-    }
-}
-requestAnimationFrame(gameBasics);
-
-
-/**
- * circle Objects
- */
-var player = new createCircle(pPosX, pPosX, pW, 'rgba(255, 122, 0, 1)', 'yellow', 1)
-var winCircle = new createCircle(canvas.width - 50, canvas.height - 50, 25, 'rgba(255, 122, 0, .75)', 'rgba(255, 255, 0, .5)', 20);
 
 
 function die() {
@@ -192,11 +192,11 @@ function collide(c1, c2) {
 
 function collideBubbles(c1, c2) {
 
-
     // moving/rotation xPos and yPos
     var bubbleX = c2.xPos + Math.cos(c2.counter / 100) * c2.radius;
     var bubbleY = c2.yPos + Math.cos(c2.counter / 100) * c2.radius;
 
+    // white bloodcells
     var destroyerBubble = new createCircle(bubbleX, bubbleY, c2.bubbleRadius, 'rgba(255, 255, 255, .25)', 'rgba(151, 151, 170, .125)', 20);
     drawCreateCirle(destroyerBubble);
 
@@ -204,7 +204,7 @@ function collideBubbles(c1, c2) {
     var dy = c1.yPos - bubbleY;
     var distance = c1.radius + c2.bubbleRadius;
 
-    // Pytagorean Theorem
+    // Pytagorean Theorem for rot.
     return (dx * dx + dy * dy <= distance * distance);
 }
 
