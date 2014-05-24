@@ -21,6 +21,8 @@ var pW = 5;
 var playerSpeed = 3;
 /* starting score */
 var highscore = 100000;
+/* defaul with normal setting (75) */
+var difficulty = 75;
 
 /**
  * circle Objects
@@ -52,6 +54,7 @@ function gameBasics() {
     }
 }
 requestAnimationFrame(gameBasics);
+
 
 
 // circle construktor for random circles
@@ -94,7 +97,7 @@ var circles = new Array();
 
 
 function drawCircles() {
-    for (var i = 0; i < 125; i++) {
+    for (var i = 0; i < difficulty; i++) {
         var rad = Math.round(Math.random() * 200);     // from random rotation point! This is what should be checked about colliding with player
         var randomX = Math.round(Math.random() * (canvas.width + 200));
         var randomY = Math.round(Math.random() * (canvas.height + 200));
