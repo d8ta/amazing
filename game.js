@@ -85,7 +85,9 @@ Circle.prototype.update = function () {
 
 
     context.beginPath();
-    context.arc(this.xPos + Math.cos(this.counter / 100) * this.radius, this.yPos + Math.sin(this.counter / 100) * this.radius, this.bubbleRadius, 0, 2 * Math.PI, false);
+    context.arc(this.xPos + Math.cos(this.counter / 100) *
+        this.radius, this.yPos + Math.sin(this.counter / 100) *
+        this.radius, this.bubbleRadius, 0, 2 * Math.PI, false);
     context.closePath();
     context.fillStyle = 'rgba(255, 0, 0,' + this.opacity + ')';
     context.fill();
