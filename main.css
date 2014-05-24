@@ -23,6 +23,14 @@ h3, h2, p {
     margin: 0 auto;
 }
 
+footer {
+    text-align: center;
+    font-family: 'Exo 2', 'sans-serif';
+    margin-top: 40px;
+    list-style-type: none;
+}
+
+
 img {
     width: 75%;
     height: 75%;
@@ -34,9 +42,16 @@ img {
     border-radius: 15px;
 }
 
-button {
 
 
+ul {
+    font-family: 'Exo 2', 'sans-serif';
+    text-decoration: none;
+    text-align: left;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
 }
 
 
@@ -63,29 +78,21 @@ a:hover {
 canvas {
     border: 1px dimgrey solid;
     border-radius: 15px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
     display: block;
-    z-index: 2;
-    position: absolute;
-    max-width: 90%;
-    max-height: 90%;
-    margin: 5%;
+    width: 1000px;
 
-}
-
-#background {
-    border: 1px #CCC solid;
-    border-radius: 15px;
-    max-width: 90%;
-    max-height: 90%;
-    margin: 5%;
-    position: absolute;
-    display: block;
     background-image: url('bilder/blurybloodcell.jpg');
     background-size: 2000px;
     background-repeat: no-repeat;
     opacity: .70;
 
+
 }
+
 
 table {
     font-family: 'Exo 2', 'sans-serif';

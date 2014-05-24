@@ -12,6 +12,7 @@
 </head>
 <body>
 
+<div>
 
 <?php
 $pagetitle = "Highscore";
@@ -33,8 +34,11 @@ echo "<table>
 <tr>
 <th><h3>Playername</h3></th>
 <th><h3>Score</h3></th>
-</tr>";
+</tr>
+
+";
 ?>
+
 
 <h1>HIGHSCORE</h1>
 
@@ -48,11 +52,21 @@ foreach ($results as $result) {
     echo "<td>$result->highscore</td>";
     echo "</tr>";
 }
-
 ?>
 
 <p><a href="game.html">
         <button type="button" id="button">Play Again</button>
     </a></p>
+
+</div>
+
+<footer>
+    <a href='impressum.html'>Impressum</a>
+</footer>
+
+
+
+
+
 </body>
 </html>
