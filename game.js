@@ -22,7 +22,7 @@ var playerSpeed = 3;
 /* starting score */
 var highscore = 100000;
 /* defaul with normal setting (75) */
-var difficulty = 50;
+var difficulty = 100;
 
 /**
  * circle Objects
