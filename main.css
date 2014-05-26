@@ -75,24 +75,29 @@ a:hover {
 }
 
 /*canvasposition*/
-canvas {
+canvas, #background {
     border: 1px dimgrey solid;
     border-radius: 15px;
     padding-left: 0;
     padding-right: 0;
-    margin-left: auto;
+    margin-left: 10%;
     margin-right: auto;
+    margin-top: 40px;
+    position: absolute;
     display: block;
     width: 1000px;
 
-    background-image: url('bilder/blurybloodcell.jpg');
-    background-size: 2000px;
-    background-repeat: no-repeat;
-    opacity: .70;
+
 
 
 }
 
+#background {
+    background-image: url('bilder/blurybloodcell.jpg');
+    background-size: 2000px;
+    background-repeat: no-repeat;
+    opacity: .70;
+}
 
 table {
     font-family: 'Exo 2', 'sans-serif';
