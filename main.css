@@ -23,7 +23,7 @@ h3, h2, p {
     margin: 0 auto;
 }
 
-footer, li{
+footer{
     text-align: center;
     font-family: 'Exo 2', 'sans-serif';
     margin-top: 40px;
@@ -86,10 +86,6 @@ canvas, #background {
     position: absolute;
     display: block;
     width: 1000px;
-
-
-
-
 }
 
 #background {
@@ -114,6 +110,3 @@ form {
     text-align: center;
 }
 
-button {
-    
-}
