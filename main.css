@@ -23,7 +23,7 @@ h3, h2, p {
     margin: 0 auto;
 }
 
-footer{
+footer, li{
     text-align: center;
     font-family: 'Exo 2', 'sans-serif';
     margin-top: 40px;
