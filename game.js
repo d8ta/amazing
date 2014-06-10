@@ -221,6 +221,25 @@ Circle.prototype.update = function () {
 
 
 /**
+ *
+ * @param c Circle der gezeichnet wird
+ */
+function drawCreateCirle(c) {
+    context.beginPath();
+    context.arc(c.xPos, c.yPos, c.radius, 0, Math.PI * 2, false);
+    context.fillStyle = c.fillStyle
+
+    context.shadowColor = 'red';
+    context.shadowBlur = 0;
+
+    context.fill();
+    context.strokeStyle = c.strokeStyle;
+    context.lineWidth = c.lineWidth;
+    context.stroke();
+}
+
+
+/**
  * Array zum Speichern aller erstellten circle (rote Blutzellen)
  */
 var circles = new Array();
@@ -246,23 +265,6 @@ function drawCircles() {
  */
 drawCircles();
 
-/**
- *
- * @param c Circle der gezeichnet wird
- */
-function drawCreateCirle(c) {
-    context.beginPath();
-    context.arc(c.xPos, c.yPos, c.radius, 0, Math.PI * 2, false);
-    context.fillStyle = c.fillStyle
-
-    context.shadowColor = 'red';
-    context.shadowBlur = 0;
-
-    context.fill();
-    context.strokeStyle = c.strokeStyle;
-    context.lineWidth = c.lineWidth;
-    context.stroke();
-}
 
 /**
  *
