@@ -1,13 +1,12 @@
 /**
- * Created by danielraudschus on 12.04.14.
- */
-/** Get and set canvas and context **/
+ * Canvas Einbidung und 2d Kontext
+ * **/
+var canvas = document.getElementById("canvas");
+var context = canvas.getContext('2d');
 
-var canvas = document.getElementById("canvas"); // referencing to Canvas element
-var context = canvas.getContext('2d'); // calling 2D API
-
-
-// for using the requestAnimatonFrame in all browser....
+/**
+ * Webkit für Animation Frame
+ * **/
 var requestAnimationFrame = window.requestAnimationFrame ||
     window.mozRequestAnimationFrame ||
     window.webkitRequestAnimationFrame ||
@@ -22,13 +21,13 @@ var playerSpeed = 3;
 /* starting score */
 var highscore = 100000;
 /* defaul with normal setting (75) */
-var difficulty = 100;
+var difficulty = 50;
 
 /**
  * circle Objects
  */
-var player = new createCircle(pPosX, pPosX, pW, 'rgba(255, 122, 0, 1)', 'yellow', 1)
-var winCircle = new createCircle(canvas.width - 50, canvas.height - 50, 25, 'rgba(255, 122, 0, .75)', 'rgba(255, 255, 0, .5)', 20);
+var player = new Circle(pPosX, pPosX, pW, 'rgba(255, 122, 0, 1)', 'yellow', 1)
+var winCircle = new Circle(canvas.width - 50, canvas.height - 50, 25, 'rgba(255, 122, 0, .75)', 'rgba(255, 255, 0, .5)', 20);
 
 
 /**
@@ -58,7 +57,7 @@ requestAnimationFrame(gameBasics);
 
 
 // circle construktor for random circles
-function Circle(rad, speed, circleWidth, xPos, yPos) {
+function whiteCells(rad, speed, circleWidth, xPos, yPos) {
     this.radius = rad;      // from rotationpoint
     this.speed = speed;
     this.bubbleRadius = circleWidth;
@@ -79,15 +78,16 @@ function Circle(rad, speed, circleWidth, xPos, yPos) {
 }
 
 
-Circle.prototype.update = function () {
+whiteCells.prototype.update = function () {
 
     this.counter += this.dir * this.speed; // defines rotation, direction and speed of the bubbles
 
 
     context.beginPath();
-    context.arc(this.xPos + Math.cos(this.counter / 100) *
-        this.radius, this.yPos + Math.sin(this.counter / 100) *
-        this.radius, this.bubbleRadius, 0, 2 * Math.PI, false);
+    context.arc(
+            this.xPos + Math.cos(this.counter / 100) *
+            this.radius, this.yPos + Math.sin(this.counter / 100) *
+            this.radius, this.bubbleRadius, 0, 2 * Math.PI, false);
     context.closePath();
     context.fillStyle = 'rgba(255, 0, 0,' + this.opacity + ')';
     context.fill();
@@ -106,7 +106,7 @@ function drawCircles() {
         var speed = Math.random() * 1;
         var circleWidth = Math.random() * 75;         // radius of the circles
 
-        var circle = new Circle(rad, speed, circleWidth, randomX, randomY);
+        var circle = new whiteCells(rad, speed, circleWidth, randomX, randomY);
         circles.push(circle);                         // stack it to the array
 
     }
@@ -122,8 +122,8 @@ function draw() {
 }
 
 
-// circle constructor
-function createCircle(xPos, yPos, radius, color, border, borderwidth) {
+
+function Circle(xPos, yPos, radius, color, border, borderwidth) {
     this.xPos = xPos;
     this.yPos = yPos;
     this.radius = radius;
@@ -202,7 +202,7 @@ function collideBubbles(c1, c2) {
     var bubbleY = c2.yPos + Math.cos(c2.counter / 100) * c2.radius;
 
     // white bloodcells
-    var destroyerBubble = new createCircle(bubbleX, bubbleY, c2.bubbleRadius, 'rgba(255, 255, 255, .25)', 'rgba(151, 151, 170, .125)', 20);
+    var destroyerBubble = new Circle(bubbleX, bubbleY, c2.bubbleRadius, 'rgba(255, 255, 255, .25)', 'rgba(151, 151, 170, .125)', 20);
     drawCreateCirle(destroyerBubble);
 
     var dx = c1.xPos - bubbleX;
@@ -215,8 +215,8 @@ function collideBubbles(c1, c2) {
 
 
 /**
- * Playermovement with arrowkeys
- */
+ * Separate Spielsteuerung ausserhalt des rAF
+ **/
 function movement() {
     var up = down = left = right = false;
 
@@ -283,7 +283,7 @@ function movement() {
         }
 
         /**
-         * Wall detection and avoidance
+         * Setzt Spieler wieder auf maximale Canvaswerte zurück, falls er aus dem Canvas steuert (Wandkollision)
          **/
         if (player.xPos < 0 + player.radius) {
             player.xPos = 0 + player.radius;
