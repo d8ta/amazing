@@ -1,49 +1,33 @@
 /**
- * Canvas Einbidung und 2d Kontext
- * **/
+ * Einbindung des Canvas und festlegen des Kontext
+ * @type {HTMLElement}
+ */
 var canvas = document.getElementById("canvas");
 var context = canvas.getContext('2d');
 
+
 /**
- * Webkit für Animation Frame
- * **/
+ * Webkit einbindung für gängige Browser
+ * @type {Function}
+ */
 var requestAnimationFrame = window.requestAnimationFrame ||
     window.mozRequestAnimationFrame ||
     window.webkitRequestAnimationFrame ||
     window.msRequestAnimationFrame;
 
 
-// player variables
-var pPosX = 15;
-var pPosY = 10;
-var pW = 5;
-var playerSpeed = 3;
-/* starting score */
-var highscore = 100000;
-/* defaul with normal setting (75) */
-var difficulty = 50;
-
 /**
- * circle Objects
+ * Spielaufruf in Animation Frame
  */
-var player = new Circle(pPosX, pPosX, pW, 'rgba(255, 122, 0, 1)', 'yellow', 1)
-var winCircle = new Circle(canvas.width - 50, canvas.height - 50, 25, 'rgba(255, 122, 0, .75)', 'rgba(255, 255, 0, .5)', 20);
-
-
-/**
- * Basic game components
- */
-var movePlayer = movement(player);
-function gameBasics() {
-    requestAnimationFrame(gameBasics);
+function game() {
+    requestAnimationFrame(game);
     context.clearRect(0, 0, canvas.width, canvas.height);
-    draw();
+    drawCanvas();
     drawCreateCirle(player);
-    drawCreateCirle(winCircle);
-    movePlayer();
-    win(winCircle, player);
-    die();
-
+    drawCreateCirle(motherCell);
+    playerMovement();
+    happyEnd(motherCell, player);
+    playerDeath();
 
     if (highscore > 100000) {
         highscore = 0;
@@ -52,69 +36,25 @@ function gameBasics() {
         highscore = 0;
     }
 }
-requestAnimationFrame(gameBasics);
+requestAnimationFrame(game);
 
 
-
-// circle construktor for random circles
-function whiteCells(rad, speed, circleWidth, xPos, yPos) {
-    this.radius = rad;      // from rotationpoint
-    this.speed = speed;
-    this.bubbleRadius = circleWidth;
-    this.xPos = xPos;
-    this.yPos = yPos;
-
-    this.opacity = Math.random() * .25;
-
-    this.counter = 0;
-
-    var direction = Math.floor(Math.random() * 2);
-
-    if (direction == 1) {
-        this.dir = -1;     // counterclockwise
-    } else {
-        this.dir = 1;      // clockwise
-    }
-}
+/**
+ * * Variablen für Spielerposition, -geschwindigkeit, sowie Highscorestartwert und Schwieirgkeit (Integer für Anzahl der weissen Blutzellen)
+ * @type {number}
+ */
+var playerStartposX = 15;
+var playerStartposY = 10;
+var playerWidth = 5;
+var playerSpeed = 3;
+var highscore = 100000;
+var difficulty = 50;
 
 
-whiteCells.prototype.update = function () {
-
-    this.counter += this.dir * this.speed; // defines rotation, direction and speed of the bubbles
-
-
-    context.beginPath();
-    context.arc(
-            this.xPos + Math.cos(this.counter / 100) *
-            this.radius, this.yPos + Math.sin(this.counter / 100) *
-            this.radius, this.bubbleRadius, 0, 2 * Math.PI, false);
-    context.closePath();
-    context.fillStyle = 'rgba(255, 0, 0,' + this.opacity + ')';
-    context.fill();
-};
-
-
-// array for all the random created circles
-var circles = new Array();
-
-
-function drawCircles() {
-    for (var i = 0; i < difficulty; i++) {
-        var rad = Math.round(Math.random() * 200);     // from random rotation point! This is what should be checked about colliding with player
-        var randomX = Math.round(Math.random() * (canvas.width + 200));
-        var randomY = Math.round(Math.random() * (canvas.height + 200));
-        var speed = Math.random() * 1;
-        var circleWidth = Math.random() * 75;         // radius of the circles
-
-        var circle = new whiteCells(rad, speed, circleWidth, randomX, randomY);
-        circles.push(circle);                         // stack it to the array
-
-    }
-}
-drawCircles(); // dont call in rAF
-
-// updates the prototype of circles
-function draw() {
+/**
+ * Update des Canvas und Zeichnen aller Circle (Zellen)
+ */
+function drawCanvas() {
     for (var i = 0; i < circles.length; i++) {
         var myCircle = circles[i];
         myCircle.update();
@@ -122,119 +62,41 @@ function draw() {
 }
 
 
-
-function Circle(xPos, yPos, radius, color, border, borderwidth) {
-    this.xPos = xPos;
-    this.yPos = yPos;
-    this.radius = radius;
-    this.fillStyle = color;
-    this.strokeStyle = border;
-    this.lineWidth = borderwidth;
-
-    this.opacity = .1;
-}
-
-
-function drawCreateCirle(c) {
-    context.beginPath();
-    context.arc(c.xPos, c.yPos, c.radius, 0, Math.PI * 2, false);
-    context.fillStyle = c.fillStyle
-
-    context.shadowColor = 'red';
-    context.shadowBlur = 0;
-
-    context.fill();
-    context.strokeStyle = c.strokeStyle;
-    context.lineWidth = c.lineWidth;
-    context.stroke();
-}
-
-
 /**
- * Highscore math subtracts 10 from the startscore every second
+ * Spieler- und Zielzelle
  */
-setInterval(function () {
-    highscore -= 10;
-}, 10);
+var player = new Cells(playerStartposX, playerStartposX, playerWidth, 'rgba(255, 122, 0, 1)', 'yellow', 1)
+var motherCell = new Cells(canvas.width - 50, canvas.height - 50, 25, 'rgba(255, 122, 0, .75)', 'rgba(255, 255, 0, .5)', 20);
 
 
-
-
-function die() {
-    for (var i = 0; i < circles.length; i++) {
-        var myCircle = circles[i];
-        if (collideBubbles(player, myCircle)) {
-            player.xPos = 15;
-            player.yPos = 10;
-
-        }
-    }
-}
 /**
- *
- * @param p playerrect.
- * @param r rect.
+ * Aufruf der Steuerung für die Spielerzelle
  */
-function win(c1, c2) {
-    if (collide(c1, c2)) {
-        player.xPos = -300;
-        player.yPos = -300;
-        localStorage.highscore = highscore;
-        alert("your Score is: " + highscore);
-        window.location.href = "input.html";
-    }
-}
-
-function collide(c1, c2) {
-    var dx = c1.xPos - c2.xPos;
-    var dy = c1.yPos - c2.yPos;
-    var distance = c1.radius + c2.radius;
-
-    // Pytagorean Theorem
-    return (dx * dx + dy * dy <= distance * distance);
-}
-
-
-function collideBubbles(c1, c2) {
-
-    // moving/rotation xPos and yPos
-    var bubbleX = c2.xPos + Math.cos(c2.counter / 100) * c2.radius;
-    var bubbleY = c2.yPos + Math.cos(c2.counter / 100) * c2.radius;
-
-    // white bloodcells
-    var destroyerBubble = new Circle(bubbleX, bubbleY, c2.bubbleRadius, 'rgba(255, 255, 255, .25)', 'rgba(151, 151, 170, .125)', 20);
-    drawCreateCirle(destroyerBubble);
-
-    var dx = c1.xPos - bubbleX;
-    var dy = c1.yPos - bubbleY;
-    var distance = c1.radius + c2.bubbleRadius;
-
-    // Pytagorean Theorem for rot.
-    return (dx * dx + dy * dy <= distance * distance);
-}
+var playerMovement = movement(player);
 
 
 /**
- * Separate Spielsteuerung ausserhalt des rAF
- **/
+ * Spielsteuerung
+ * @returns {movePlayer}
+ */
 function movement() {
     var up = down = left = right = false;
 
 
     function keysUp(key) {
-        // left
+        // links
         if (key.keyCode == 39) {
             left = false;
         }
-        // right
+        // rechts
         if (key.keyCode == 37) {
             right = false;
         }
-        // down
+        // runter
         if (key.keyCode == 40) {
             down = false;
         }
-        // up
+        // hoch
         if (key.keyCode == 38) {
             up = false;
         }
@@ -243,19 +105,19 @@ function movement() {
 
     function keysDown(key) {
 
-        // left
+        // links
         if (key.keyCode == 39) {
             left = true;
         }
-        // right
+        // rechts
         if (key.keyCode == 37) {
             right = true;
         }
-        // down
+        // runter
         if (key.keyCode == 40) {
             down = true;
         }
-        // up
+        // hoch
         if (key.keyCode == 38) {
             up = true
         }
@@ -265,26 +127,26 @@ function movement() {
     document.onkeydown = keysDown;
 
     return function movePlayer() {
-        // left
+        // links
         if (left) {
             player.xPos += playerSpeed;
         }
-        // right
+        // rechts
         if (right) {
             player.xPos -= playerSpeed;
         }
-        // down
+        // runter
         if (down) {
             player.yPos += playerSpeed;
         }
-        // up
+        // hoch
         if (up) {
             player.yPos -= playerSpeed;
         }
 
         /**
          * Setzt Spieler wieder auf maximale Canvaswerte zurück, falls er aus dem Canvas steuert (Wandkollision)
-         **/
+         */
         if (player.xPos < 0 + player.radius) {
             player.xPos = 0 + player.radius;
         }
@@ -299,3 +161,206 @@ function movement() {
         }
     }
 }
+
+
+/**
+ * Konstruktor für Circles (Blutzellen)
+ * @param rad
+ * @param speed
+ * @param circleWidth
+ * @param xPos
+ * @param yPos
+ * @constructor
+ */
+function Circle(rad, speed, circleWidth, xPos, yPos) {
+    this.radius = rad;
+    this.speed = speed;
+    this.bubbleRadius = circleWidth;
+    this.xPos = xPos;
+    this.yPos = yPos;
+
+    this.opacity = Math.random() * .25;
+
+    /**
+     * Zähler der nach + oder - zählt und somit 360° Bewegung der Zellen ermöglicht
+     */
+    this.counter = 0;
+
+    /**
+     * Zufallserstellung einer Bewegung gegen oder mit dem Uhrzeigersinn
+     */
+    var direction = Math.floor(Math.random() * 2);
+
+    if (direction == 1) {
+        this.dir = -1;
+    } else {
+        this.dir = 1;
+    }
+}
+
+
+/**
+ * Update Methode für Circle Objekte (rote Blutzellen)
+ */
+Circle.prototype.update = function () {
+
+    this.counter += this.dir * this.speed;
+
+    context.beginPath();
+    context.arc(
+            this.xPos + Math.cos(this.counter / 100) *
+            this.radius, this.yPos + Math.sin(this.counter / 100) *
+            this.radius, this.bubbleRadius, 0, 2 * Math.PI, false);
+    context.closePath();
+    context.fillStyle = 'rgba(255, 0, 0,' + this.opacity + ')';
+    context.fill();
+};
+
+
+/**
+ * Array zum Speichern aller erstellten circle (rote Blutzellen)
+ */
+var circles = new Array();
+
+
+/**
+ * Zeichnen der roten Blutzellen
+ */
+function drawCircles() {
+    for (var i = 0; i < difficulty; i++) {
+        var rad = Math.round(Math.random() * 200);
+        var randomX = Math.round(Math.random() * (canvas.width + 200));
+        var randomY = Math.round(Math.random() * (canvas.height + 200));
+        var speed = Math.random() * 1;
+        var circleWidth = Math.random() * 75;
+        var circle = new Circle(rad, speed, circleWidth, randomX, randomY);
+        circles.push(circle);
+    }
+}
+
+/**
+ * Aufruf ausserhalb des rAF, da sonst ständig neugezeichnet wird (mit jeweils neuen randomisierten Positionen)
+ */
+drawCircles();
+
+/**
+ *
+ * @param c Circle der gezeichnet wird
+ */
+function drawCreateCirle(c) {
+    context.beginPath();
+    context.arc(c.xPos, c.yPos, c.radius, 0, Math.PI * 2, false);
+    context.fillStyle = c.fillStyle
+
+    context.shadowColor = 'red';
+    context.shadowBlur = 0;
+
+    context.fill();
+    context.strokeStyle = c.strokeStyle;
+    context.lineWidth = c.lineWidth;
+    context.stroke();
+}
+
+/**
+ *
+ * @param xPos
+ * @param yPos
+ * @param radius
+ * @param color
+ * @param border
+ * @param borderwidth
+ * @constructor
+ */
+function Cells(xPos, yPos, radius, color, border, borderwidth) {
+    this.xPos = xPos;
+    this.yPos = yPos;
+    this.radius = radius;
+    this.fillStyle = color;
+    this.strokeStyle = border;
+    this.lineWidth = borderwidth;
+
+    this.opacity = .1;
+}
+
+/**
+ * Punkteabzug über Zeit
+ */
+setInterval(function () {
+    highscore -= 10;
+}, 10);
+
+
+/**
+ * Spieler wird zurück auf Startposition gesetzt, wenn er mit weißen Zellen kollidiert
+ */
+function playerDeath() {
+    for (var i = 0; i < circles.length; i++) {
+        var myCircle = circles[i];
+        if (whiteCellCollision(player, myCircle)) {
+            player.xPos = 15;
+            player.yPos = 10;
+
+        }
+    }
+}
+
+/**
+ * Spielende und Gewinn
+ * @param c1 Spieler (circle)
+ * @param c2 Mutterzelle (circle)
+ */
+function happyEnd(c1, c2) {
+    if (collide(c1, c2)) {
+        player.xPos = -300;
+        player.yPos = -300;
+        localStorage.highscore = highscore;
+        alert("your Score is: " + highscore);
+        window.location.href = "input.html";
+    }
+}
+
+/**
+ *
+ * @param c1 Circle
+ * @param c2 Circle
+ * @returns {boolean}
+ */
+function collide(c1, c2) {
+    var dx = c1.xPos - c2.xPos;
+    var dy = c1.yPos - c2.yPos;
+    var distance = c1.radius + c2.radius;
+
+    return (dx * dx + dy * dy <= distance * distance);
+}
+
+/**
+ *
+ * @param c1 Spieler (circle)
+ * @param c2 Weiße Zellen (circle)
+ * @returns {boolean}
+ */
+function whiteCellCollision(c1, c2) {
+
+    /**
+     * Animation der roten Blutzellen im Hintergrund
+     */
+    var bubbleX = c2.xPos + Math.cos(c2.counter / 100) * c2.radius;
+    var bubbleY = c2.yPos + Math.cos(c2.counter / 100) * c2.radius;
+
+    /**
+     * Erstellen und zeichnen der weißen Blutzellen (in direkter Abhängigkeit zu den roten Zellen im Hintergrund
+     */
+    var whiteCells = new Cells(bubbleX, bubbleY, c2.bubbleRadius, 'rgba(255, 255, 255, .25)', 'rgba(151, 151, 170, .125)', 20);
+    drawCreateCirle(whiteCells);
+
+    var dx = c1.xPos - bubbleX;
+    var dy = c1.yPos - bubbleY;
+    var distance = c1.radius + c2.bubbleRadius;
+
+    /**
+     * Distanz von einem Circlemidpoint zum anderen (incl. Radius des Circle)
+     */
+    return (dx * dx + dy * dy <= distance * distance);
+}
+
+
