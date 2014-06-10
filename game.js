@@ -40,7 +40,9 @@ requestAnimationFrame(game);
 
 
 /**
- * * Variablen für Spielerposition, -geschwindigkeit, sowie Highscorestartwert und Schwieirgkeit (Integer für Anzahl der weissen Blutzellen)
+ * Variablen für Spielerposition, -geschwindigkeit,
+ * Highscorestartwert sowie Schwiergkeit (Integer für Anzahl der weissen Blutzellen)
+ * und Lebensanzahle (counter)
  * @type {number}
  */
 var playerStartposX = 15;
@@ -49,6 +51,7 @@ var playerWidth = 5;
 var playerSpeed = 3;
 var highscore = 100000;
 var difficulty = 50;
+var counter = 5;
 
 
 /**
@@ -291,18 +294,24 @@ setInterval(function () {
 
 
 /**
- * Spieler wird zurück auf Startposition gesetzt, wenn er mit weißen Zellen kollidiert
+ * Spieler wird zurück auf Startposition gesetzt und es wird ein Sound abgespielt, wenn er mit weißen Zellen kollidiert.
  */
 function playerDeath() {
     for (var i = 0; i < circles.length; i++) {
         var myCircle = circles[i];
         if (whiteCellCollision(player, myCircle)) {
+            document.getElementById('pop').play();
+            counter -= 1;
+            if (counter == 0) {
+                window.location.href = "gameover.html";
+            }
             player.xPos = 15;
             player.yPos = 10;
-
+            console.log(counter);
         }
     }
 }
+
 
 /**
  * Spielende und Gewinn
