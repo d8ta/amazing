@@ -23,8 +23,8 @@ function game() {
     requestAnimationFrame(game);
     context.clearRect(0, 0, canvas.width, canvas.height);
     drawCanvas();
-    drawCreateCirle(player);
-    drawCreateCirle(motherCell);
+    player.draw();
+    motherCell.draw();
     playerMovement();
     happyEnd(motherCell, player);
     playerDeath();
@@ -224,19 +224,33 @@ Circle.prototype.update = function () {
  *
  * @param c Circle der gezeichnet wird
  */
-function drawCreateCirle(c) {
+Cells.prototype.draw = function () {
     context.beginPath();
-    context.arc(c.xPos, c.yPos, c.radius, 0, Math.PI * 2, false);
-    context.fillStyle = c.fillStyle
+    context.arc(this.xPos, this.yPos, this.radius, 0, Math.PI * 2, false);
+    context.fillStyle = this.fillStyle
 
     context.shadowColor = 'red';
     context.shadowBlur = 0;
 
     context.fill();
-    context.strokeStyle = c.strokeStyle;
-    context.lineWidth = c.lineWidth;
+    context.strokeStyle = this.strokeStyle;
+    context.lineWidth = this.lineWidth;
     context.stroke();
-}
+};
+
+//function drawCreateCirle(c) {
+//    context.beginPath();
+//    context.arc(c.xPos, c.yPos, c.radius, 0, Math.PI * 2, false);
+//    context.fillStyle = c.fillStyle
+//
+//    context.shadowColor = 'red';
+//    context.shadowBlur = 0;
+//
+//    context.fill();
+//    context.strokeStyle = c.strokeStyle;
+//    context.lineWidth = c.lineWidth;
+//    context.stroke();
+//}
 
 
 /**
@@ -362,7 +376,7 @@ function whiteCellCollision(c1, c2) {
      * Erstellen und zeichnen der weißen Blutzellen (in direkter Abhängigkeit zu den roten Zellen im Hintergrund
      */
     var whiteCells = new Cells(bubbleX, bubbleY, c2.bubbleRadius, 'rgba(255, 255, 255, .25)', 'rgba(151, 151, 170, .125)', 20);
-    drawCreateCirle(whiteCells);
+    whiteCells.draw();
 
     var dx = c1.xPos - bubbleX;
     var dy = c1.yPos - bubbleY;
