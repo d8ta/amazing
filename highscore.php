@@ -58,6 +58,10 @@
             <button type="button" id="button">Play Again</button>
         </a></p>
 
+            <audio loop autoplay>
+                <source src="sound/groove.wav" type="audio/mpeg">
+            </audio>
+
 </div>
 
 
