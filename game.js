@@ -238,20 +238,6 @@ Cells.prototype.draw = function () {
     context.stroke();
 };
 
-//function drawCreateCirle(c) {
-//    context.beginPath();
-//    context.arc(c.xPos, c.yPos, c.radius, 0, Math.PI * 2, false);
-//    context.fillStyle = c.fillStyle
-//
-//    context.shadowColor = 'red';
-//    context.shadowBlur = 0;
-//
-//    context.fill();
-//    context.strokeStyle = c.strokeStyle;
-//    context.lineWidth = c.lineWidth;
-//    context.stroke();
-//}
-
 
 /**
  * Array zum Speichern aller erstellten circle (rote Blutzellen)

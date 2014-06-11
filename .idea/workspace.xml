@@ -2,6 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="12e2583c-76da-4cec-897f-2b40d828b225" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game.html" afterPath="$PROJECT_DIR$/game.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game.js" afterPath="$PROJECT_DIR$/game.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.css" afterPath="$PROJECT_DIR$/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mmp1.iws" />
@@ -28,16 +32,34 @@
       <file leaf-file-name="game.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/game.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="8" selection-start="625" selection-end="625" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="585">
+            <state line="14" column="0" selection-start="470" selection-end="470" vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="585">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="6" selection-start="591" selection-end="591" vertical-scroll-proportion="0.30567685" vertical-offset="0" max-vertical-offset="690">
+            <state line="18" column="0" selection-start="751" selection-end="751" vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="825">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.css" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="26" selection-start="451" selection-end="451" vertical-scroll-proportion="0.6502242" vertical-offset="0" max-vertical-offset="2715">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mobilegame.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mobilegame.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="40" column="0" selection-start="1151" selection-end="1151" vertical-scroll-proportion="-12.916667" vertical-offset="290" max-vertical-offset="1035">
               <folding />
             </state>
           </provider>
@@ -46,7 +68,7 @@
       <file leaf-file-name="functions.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="0" selection-start="696" selection-end="696" vertical-scroll-proportion="0.0" vertical-offset="375" max-vertical-offset="465">
+            <state line="25" column="0" selection-start="696" selection-end="696" vertical-scroll-proportion="-12.5" vertical-offset="0" max-vertical-offset="390">
               <folding />
             </state>
           </provider>
@@ -55,7 +77,27 @@
       <file leaf-file-name="game.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/game.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="16" selection-start="1206" selection-end="1206" vertical-scroll-proportion="0.0" vertical-offset="795" max-vertical-offset="5955">
+            <state line="84" column="21" selection-start="1851" selection-end="1851" vertical-scroll-proportion="-11.538462" vertical-offset="915" max-vertical-offset="4275">
+              <folding>
+                <element signature="e#1342#1411#0" expanded="false" />
+                <element signature="n#!!block;n#Circle#0" expanded="false" />
+                <element signature="e#4533#4923#0" expanded="false" />
+                <element signature="e#5012#5343#0" expanded="false" />
+                <element signature="e#5556#5950#0" expanded="false" />
+                <element signature="n#!!block;n#Cells#0" expanded="false" />
+                <element signature="e#6532#6556#0" expanded="false" />
+                <element signature="n#!!block;n#playerDeath#0" expanded="false" />
+                <element signature="n#!!block;n#happyEnd#0" expanded="false" />
+                <element signature="n#!!block;n#collide#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="testpage.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/testpage.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="0" selection-start="145" selection-end="368" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="375">
               <folding />
             </state>
           </provider>
@@ -66,11 +108,10 @@
           <provider selected="true" editor-type-id="text-editor">
             <state line="60" column="23" selection-start="1547" selection-end="1547" vertical-scroll-proportion="-37.5" vertical-offset="0" max-vertical-offset="1110">
               <folding>
-                <marker date="1402422232000" expanded="true" signature="829:884" placeholder="INSERT INTO ..." />
-                <marker date="1402422232000" expanded="true" signature="974:1029" placeholder="SELECT * FRO..Score..." />
-                <marker date="1402422232000" expanded="true" signature="1083:1149" placeholder="..." />
-                <marker date="1402422232000" expanded="true" signature="1088:1147" placeholder="..." />
-                <marker date="1402422232000" expanded="true" signature="1159:1219" placeholder="..." />
+                <marker date="1402488077000" expanded="true" signature="829:884" placeholder="INSERT INTO ..." />
+                <marker date="1402488077000" expanded="true" signature="974:1029" placeholder="SELECT * FRO..Score..." />
+                <marker date="1402488077000" expanded="true" signature="1083:1149" placeholder="..." />
+                <marker date="1402488077000" expanded="true" signature="1088:1147" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -104,21 +145,24 @@
         <option value="$PROJECT_DIR$/main.js" />
         <option value="$PROJECT_DIR$/.idea/tutorial.html" />
         <option value="$PROJECT_DIR$/impressum.html" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/input.html" />
         <option value="$PROJECT_DIR$/tutorial.html" />
         <option value="$PROJECT_DIR$/footer.php" />
-        <option value="$PROJECT_DIR$/game.html" />
-        <option value="$PROJECT_DIR$/main.css" />
-        <option value="$PROJECT_DIR$/game.js" />
         <option value="$PROJECT_DIR$/highscore.php" />
+        <option value="$PROJECT_DIR$/game.html" />
+        <option value="$PROJECT_DIR$/testpage.html" />
+        <option value="$PROJECT_DIR$/game.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/mobilegame.html" />
+        <option value="$PROJECT_DIR$/main.css" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="Unnamed" />
   <component name="ProjectFrameBounds">
-    <option name="y" value="26" />
-    <option name="width" value="1166" />
+    <option name="x" value="392" />
+    <option name="y" value="27" />
+    <option name="width" value="1035" />
     <option name="height" value="821" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -199,7 +243,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="26" width="1166" height="821" extended-state="0" />
+    <frame x="392" y="27" width="1035" height="821" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -242,11 +286,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="10" selection-start="422" selection-end="422" vertical-scroll-proportion="0.0" vertical-offset="375" max-vertical-offset="1800" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/game.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="0" selection-start="335" selection-end="335" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="330">
@@ -417,31 +456,6 @@
         <state line="9" column="27" selection-start="205" selection-end="205" vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="1215" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../maze_testalgo/mazegenerator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="37" selection-start="1158" selection-end="1158" vertical-scroll-proportion="0.63873625" vertical-offset="0" max-vertical-offset="960" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../maze_testalgo/example.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="6" selection-start="6" selection-end="6" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../deepfirstalgo/mazegenerator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="37" selection-start="782" selection-end="782" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1860" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../deepfirstalgo/mazegenerator.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="5" selection-start="1251" selection-end="1251" vertical-scroll-proportion="0.63920456" vertical-offset="0" max-vertical-offset="1230" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../deepfirstalgo/maze.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="5" selection-start="0" selection-end="2206" vertical-scroll-proportion="0.24725275" vertical-offset="0" max-vertical-offset="1020" />
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript5.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="70" column="7" selection-start="1125" selection-end="1125" vertical-scroll-proportion="0.32624114" vertical-offset="820" max-vertical-offset="2865" />
@@ -477,48 +491,74 @@
         <state line="23" column="12" selection-start="815" selection-end="815" vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="540" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.css">
+    <entry file="file://$PROJECT_DIR$/highscore.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="0" selection-start="729" selection-end="729" vertical-scroll-proportion="0.0" vertical-offset="176" max-vertical-offset="1770" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="8" selection-start="625" selection-end="625" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="585">
-          <folding />
+        <state line="60" column="23" selection-start="1547" selection-end="1547" vertical-scroll-proportion="-37.5" vertical-offset="0" max-vertical-offset="1110">
+          <folding>
+            <marker date="1402488077000" expanded="true" signature="829:884" placeholder="INSERT INTO ..." />
+            <marker date="1402488077000" expanded="true" signature="974:1029" placeholder="SELECT * FRO..Score..." />
+            <marker date="1402488077000" expanded="true" signature="1083:1149" placeholder="..." />
+            <marker date="1402488077000" expanded="true" signature="1088:1147" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="0" selection-start="696" selection-end="696" vertical-scroll-proportion="0.0" vertical-offset="375" max-vertical-offset="465">
+        <state line="25" column="0" selection-start="696" selection-end="696" vertical-scroll-proportion="-12.5" vertical-offset="0" max-vertical-offset="390">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="0" selection-start="470" selection-end="470" vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="585">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testpage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="145" selection-end="368" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="375">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/game.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="16" selection-start="1206" selection-end="1206" vertical-scroll-proportion="0.0" vertical-offset="795" max-vertical-offset="5955">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/highscore.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="23" selection-start="1547" selection-end="1547" vertical-scroll-proportion="-37.5" vertical-offset="0" max-vertical-offset="1110">
+        <state line="84" column="21" selection-start="1851" selection-end="1851" vertical-scroll-proportion="-11.538462" vertical-offset="915" max-vertical-offset="4275">
           <folding>
-            <marker date="1402422232000" expanded="true" signature="829:884" placeholder="INSERT INTO ..." />
-            <marker date="1402422232000" expanded="true" signature="974:1029" placeholder="SELECT * FRO..Score..." />
-            <marker date="1402422232000" expanded="true" signature="1083:1149" placeholder="..." />
-            <marker date="1402422232000" expanded="true" signature="1088:1147" placeholder="..." />
-            <marker date="1402422232000" expanded="true" signature="1159:1219" placeholder="..." />
+            <element signature="e#1342#1411#0" expanded="false" />
+            <element signature="n#!!block;n#Circle#0" expanded="false" />
+            <element signature="e#4533#4923#0" expanded="false" />
+            <element signature="e#5012#5343#0" expanded="false" />
+            <element signature="e#5556#5950#0" expanded="false" />
+            <element signature="n#!!block;n#Cells#0" expanded="false" />
+            <element signature="e#6532#6556#0" expanded="false" />
+            <element signature="n#!!block;n#playerDeath#0" expanded="false" />
+            <element signature="n#!!block;n#happyEnd#0" expanded="false" />
+            <element signature="n#!!block;n#collide#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="6" selection-start="591" selection-end="591" vertical-scroll-proportion="0.30567685" vertical-offset="0" max-vertical-offset="690">
+        <state line="18" column="0" selection-start="751" selection-end="751" vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="825">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mobilegame.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="0" selection-start="1151" selection-end="1151" vertical-scroll-proportion="-12.916667" vertical-offset="290" max-vertical-offset="1035">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="26" selection-start="451" selection-end="451" vertical-scroll-proportion="0.6502242" vertical-offset="0" max-vertical-offset="2715">
           <folding />
         </state>
       </provider>

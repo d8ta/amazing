@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+
+    <link href='http://fonts.googleapis.com/css?family=Ceviche+One|Exo+2:400,200,600' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
+    <link type="text/css" rel="stylesheet" href="main.css">
+    <title>A-MAZE-ING</title>
+</head>
+<body>
+
+<audio id="pop">
+    <source src="sound/pop.mp3" type="audio/mpeg">
+</audio>
+
+<audio loop autoplay>
+    <!--<source src="sound/universe.wav" type="audio/mpeg">-->
+</audio>
+
+<div>
+    <canvas id="background" width="480" height="320"></canvas>
+    <canvas id="canvas" width="480" height="320"></canvas>
+</div>
+
+<script type="text/javascript" src="game.js"></script>
+<script src="hammer.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+<button id="left">left</button>
+<button id="right">right</button>
+<button id="up">up</button>
+<button id="down">down</button>
+
+<script type="text/javascript">
+
+    var touchLeft = document.getElementById('left');
+    Hammer(touchLeft).on("tap", function() {
+        alert("left!!");
+    });
+
+    var touchRight = document.getElementById('right');
+    Hammer(touchRight).on("tap", function() {
+        alert("right!!");
+    });
+
+    var touchUp = document.getElementById('up');
+    Hammer(touchUp).on("tap", function() {
+        alert("up!!");
+    });
+
+    var touchDown = document.getElementById('down');
+    Hammer(touchDown).on("tap", function() {
+        alert("down!!");
+    });
+
+</script>
+
+<footer>
+    <!--<a href="impressum.html">Impressum</a>-->
+</footer>
+
+</body>
+</html>
