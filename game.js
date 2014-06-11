@@ -68,7 +68,7 @@ function drawCanvas() {
 /**
  * Spieler- und Zielzelle
  */
-var player = new Cells(playerStartposX, playerStartposX, playerWidth, 'rgba(255, 122, 0, 1)', 'yellow', 1)
+var player = new Cells(playerStartposX, playerStartposX, playerWidth, 'rgba(255, 122, 0, 1)', 'yellow', 1);
 var motherCell = new Cells(canvas.width - 50, canvas.height - 50, 25, 'rgba(255, 122, 0, .75)', 'rgba(255, 255, 0, .5)', 20);
 
 
@@ -227,7 +227,7 @@ Circle.prototype.update = function () {
 Cells.prototype.draw = function () {
     context.beginPath();
     context.arc(this.xPos, this.yPos, this.radius, 0, Math.PI * 2, false);
-    context.fillStyle = this.fillStyle
+    context.fillStyle = this.fillStyle;
 
     context.shadowColor = 'red';
     context.shadowBlur = 0;
@@ -253,7 +253,7 @@ function drawCircles() {
         var rad = Math.round(Math.random() * 200);
         var randomX = Math.round(Math.random() * (canvas.width + 200));
         var randomY = Math.round(Math.random() * (canvas.height + 200));
-        var speed = Math.random() * 1;
+        var speed = Math.random();
         var circleWidth = Math.random() * 75;
         var circle = new Circle(rad, speed, circleWidth, randomX, randomY);
         circles.push(circle);

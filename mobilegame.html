@@ -23,35 +23,38 @@
     <canvas id="canvas" width="480" height="320"></canvas>
 </div>
 
-<script type="text/javascript" src="game.js"></script>
-<script src="hammer.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-
 <button id="left">left</button>
 <button id="right">right</button>
 <button id="up">up</button>
 <button id="down">down</button>
 
+<script type="text/javascript" src="game.js"></script>
+<script type="text/javascript" src="touch.js"></script>
+<script type="text/javascript" src="hammer.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+
+
 <script type="text/javascript">
 
     var touchLeft = document.getElementById('left');
     Hammer(touchLeft).on("tap", function() {
-        alert("left!!");
+        player.xPos -= playerSpeed;
     });
 
     var touchRight = document.getElementById('right');
     Hammer(touchRight).on("tap", function() {
-        alert("right!!");
+        player.xPos += playerSpeed;
     });
 
     var touchUp = document.getElementById('up');
     Hammer(touchUp).on("tap", function() {
-        alert("up!!");
+        player.yPos -= playerSpeed;
     });
 
     var touchDown = document.getElementById('down');
     Hammer(touchDown).on("tap", function() {
-        alert("down!!");
+        player.yPos += playerSpeed;
     });
 
 </script>
