@@ -53,6 +53,27 @@ var highscore = 100000;
 var difficulty = 50;
 var counter = 5;
 
+//
+//var touchLeft = document.getElementById('left');
+//Hammer(touchLeft).on("tap", function() {
+//    player.xPos -= playerSpeed;
+//});
+//
+//var touchRight = document.getElementById('right');
+//Hammer(touchRight).on("tap", function() {
+//    player.xPos += playerSpeed;
+//});
+//
+//var touchUp = document.getElementById('up');
+//Hammer(touchUp).on("tap", function() {
+//    player.yPos -= playerSpeed;
+//});
+//
+//var touchDown = document.getElementById('down');
+//Hammer(touchDown).on("tap", function() {
+//    player.yPos += playerSpeed;
+//});
+
 
 /**
  * Update des Canvas und Zeichnen aller Circle (Zellen)
