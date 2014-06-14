@@ -113,18 +113,22 @@ function movement() {
         // links
         if (key.keyCode == 39 || touchLeft) {
             left = touchLeft = false;
+            console.log("release");
         }
         // rechts
         if (key.keyCode == 37 || touchRight) {
             right = touchRight = false;
+            console.log("release");
         }
         // runter
         if (key.keyCode == 40 || touchDown) {
             down = touchDown = false;
+            console.log("release");
         }
         // hoch
         if (key.keyCode == 38  || touchUp) {
             up = touchUp = false;
+            console.log("release");
         }
     }
 
@@ -151,6 +155,7 @@ function movement() {
 
     document.onkeyup = keysUp;
     document.onkeydown = keysDown;
+
 
     return function movePlayer() {
         // links
