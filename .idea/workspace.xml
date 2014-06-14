@@ -4,11 +4,7 @@
     <option name="ANALYSIS_IN_BACKGROUND" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12e2583c-76da-4cec-897f-2b40d828b225" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.css" afterPath="$PROJECT_DIR$/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="12e2583c-76da-4cec-897f-2b40d828b225" name="Default" comment="" />
     <ignored path="mmp1.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -59,10 +55,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="main.css" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/main.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="136" column="0" selection-start="2066" selection-end="2185" vertical-scroll-proportion="0.5991441" vertical-offset="1620" max-vertical-offset="2820">
+                <state line="135" column="0" selection-start="2065" selection-end="2065" vertical-scroll-proportion="0.5777461" vertical-offset="1620" max-vertical-offset="2820">
                   <folding />
                 </state>
               </provider>
@@ -117,10 +113,10 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="game.js" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="game.js" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/game.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="126" column="5" selection-start="2954" selection-end="2954" vertical-scroll-proportion="1.2025317" vertical-offset="1035" max-vertical-offset="6075">
+                <state line="94" column="26" selection-start="2205" selection-end="2205" vertical-scroll-proportion="0.37974682" vertical-offset="1140" max-vertical-offset="6075">
                   <folding />
                 </state>
               </provider>
@@ -546,13 +542,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/game.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="6" selection-start="692" selection-end="692" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="6075">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mobilegame.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="16" selection-start="39" selection-end="39" vertical-scroll-proportion="-0.0" vertical-offset="30" max-vertical-offset="735">
@@ -590,7 +579,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="136" column="0" selection-start="2066" selection-end="2185" vertical-scroll-proportion="0.5991441" vertical-offset="1620" max-vertical-offset="2820">
+        <state line="135" column="0" selection-start="2065" selection-end="2065" vertical-scroll-proportion="0.5777461" vertical-offset="1620" max-vertical-offset="2820">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="94" column="26" selection-start="2205" selection-end="2205" vertical-scroll-proportion="0.37974682" vertical-offset="1140" max-vertical-offset="6075">
           <folding />
         </state>
       </provider>
