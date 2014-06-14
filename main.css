@@ -26,7 +26,7 @@ h3, h2, p {
 }
 
 #browser {
-    display: none;
+    /*display: none;*/
 }
 
 #teaser {
@@ -134,13 +134,13 @@ form {
         font-size: 100%;
     }
 
-    #browser {
-        display: inline;
-    }
-    
-    #mobile {
-        display: none;
-    }
+    /*#browser {*/
+        /*display: inline;*/
+    /*}*/
+    /**/
+    /*#mobile {*/
+        /*display: none;*/
+    /*}*/
 
     #teaser {
         font-family: 'Exo 2', 'sans-serif';
