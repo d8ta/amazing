@@ -83,32 +83,30 @@ var playerMovement = movement();
  * @returns {movePlayer}
  */
 function movement() {
-    var up = down = left = right = touchLeft = touchRight = touchUp = touchDown = false;
-
+    var up = down = left = right = false;
 
     var touchLeft = document.getElementById('left');
-    Hammer(touchLeft).on("tap", function() {
-        //player.xPos -= playerSpeed;
+    Hammer(touchLeft).on("touch", function() {
         touchLeft = true;
     });
 
     var touchRight = document.getElementById('right');
-    Hammer(touchRight).on("tap", function() {
-       // player.xPos += playerSpeed;
+    Hammer(touchRight).on("touch", function() {
         touchRight = true;
     });
 
     var touchUp = document.getElementById('up');
-    Hammer(touchUp).on("tap", function() {
-        //player.yPos -= playerSpeed;
+    Hammer(touchUp).on("touch", function() {
         touchUp = true;
     });
 
     var touchDown = document.getElementById('down');
-    Hammer(touchDown).on("tap", function() {
-//        player.yPos += playerSpeed;
+    Hammer(touchDown).on("touch", function() {
         touchDown = true;
     });
+
+
+
 
 
     function keysUp(key) {
@@ -147,7 +145,7 @@ function movement() {
         }
         // hoch
         if (key.keyCode == 38 || touchUp) {
-            up = touchUp =  true
+            up = touchUp = true;
         }
     }
 
