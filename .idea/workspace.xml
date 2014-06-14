@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="12e2583c-76da-4cec-897f-2b40d828b225" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game.js" afterPath="$PROJECT_DIR$/game.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mobilegame.html" afterPath="$PROJECT_DIR$/mobilegame.html" />
     </list>
     <ignored path="mmp1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -70,7 +69,7 @@
           <file leaf-file-name="mobilegame.html" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/mobilegame.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="12" column="0" selection-start="486" selection-end="486" vertical-scroll-proportion="0.16415663" vertical-offset="71" max-vertical-offset="735">
+                <state line="28" column="3" selection-start="865" selection-end="865" vertical-scroll-proportion="0.5256024" vertical-offset="71" max-vertical-offset="735">
                   <folding />
                 </state>
               </provider>
@@ -88,7 +87,7 @@
           <file leaf-file-name="game.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/game.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="29" column="6" selection-start="692" selection-end="692" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="6060">
+                <state line="29" column="6" selection-start="692" selection-end="692" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="6120">
                   <folding />
                 </state>
               </provider>
@@ -124,7 +123,7 @@
           <file leaf-file-name="game.js" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/game.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="106" column="7" selection-start="2509" selection-end="2509" vertical-scroll-proportion="0.57383966" vertical-offset="1182" max-vertical-offset="6060">
+                <state line="107" column="29" selection-start="2533" selection-end="2533" vertical-scroll-proportion="0.8902954" vertical-offset="972" max-vertical-offset="6120">
                   <folding />
                 </state>
               </provider>
@@ -179,8 +178,8 @@
         <option value="$PROJECT_DIR$/tutorial.html" />
         <option value="$PROJECT_DIR$/gameover.html" />
         <option value="$PROJECT_DIR$/main.css" />
-        <option value="$PROJECT_DIR$/game.js" />
         <option value="$PROJECT_DIR$/mobilegame.html" />
+        <option value="$PROJECT_DIR$/game.js" />
       </list>
     </option>
   </component>
@@ -597,14 +596,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mobilegame.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="486" selection-end="486" vertical-scroll-proportion="0.16415663" vertical-offset="71" max-vertical-offset="735">
+        <state line="28" column="3" selection-start="865" selection-end="865" vertical-scroll-proportion="0.5256024" vertical-offset="71" max-vertical-offset="735">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/game.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="106" column="7" selection-start="2509" selection-end="2509" vertical-scroll-proportion="0.57383966" vertical-offset="1182" max-vertical-offset="6060">
+        <state line="107" column="29" selection-start="2533" selection-end="2533" vertical-scroll-proportion="0.8902954" vertical-offset="972" max-vertical-offset="6120">
           <folding />
         </state>
       </provider>

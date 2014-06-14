@@ -83,45 +83,49 @@ var playerMovement = movement();
  * @returns {movePlayer}
  */
 function movement() {
-    var up = down = left = right = touchDown = touchLeft = touchRight = touchUp = false;
+    var up = down = left = right = touchLeft = touchRight = touchUp = touchDown = false;
 
 
     var touchLeft = document.getElementById('left');
     Hammer(touchLeft).on("tap", function() {
-        player.xPos -= playerSpeed;
+        //player.xPos -= playerSpeed;
+        touchLeft = true;
     });
 
     var touchRight = document.getElementById('right');
     Hammer(touchRight).on("tap", function() {
-        player.xPos += playerSpeed;
+       // player.xPos += playerSpeed;
+        touchRight = true;
     });
 
     var touchUp = document.getElementById('up');
     Hammer(touchUp).on("tap", function() {
-        player.yPos -= playerSpeed;
+        //player.yPos -= playerSpeed;
+        touchUp = true;
     });
 
     var touchDown = document.getElementById('down');
     Hammer(touchDown).on("tap", function() {
-        player.yPos += playerSpeed;
+//        player.yPos += playerSpeed;
+        touchDown = true;
     });
 
 
     function keysUp(key) {
         // links
-        if (key.keyCode == 39 && touchLeft) {
+        if (key.keyCode == 39 || touchLeft) {
             left = touchLeft = false;
         }
         // rechts
-        if (key.keyCode == 37 && touchRight) {
+        if (key.keyCode == 37 || touchRight) {
             right = touchRight = false;
         }
         // runter
-        if (key.keyCode == 40 && touchDown) {
+        if (key.keyCode == 40 || touchDown) {
             down = touchDown = false;
         }
         // hoch
-        if (key.keyCode == 38  && touchUp) {
+        if (key.keyCode == 38  || touchUp) {
             up = touchUp = false;
         }
     }
@@ -130,19 +134,19 @@ function movement() {
     function keysDown(key) {
 
         // links
-        if (key.keyCode == 39 && touchLeft) {
+        if (key.keyCode == 39 || touchLeft) {
             left = touchLeft = true;
         }
         // rechts
-        if (key.keyCode == 37 && touchRight) {
+        if (key.keyCode == 37 || touchRight) {
             right = touchRight = true;
         }
         // runter
-        if (key.keyCode == 40 && touchDown) {
+        if (key.keyCode == 40 || touchDown) {
             down = touchDown = true;
         }
         // hoch
-        if (key.keyCode == 38 && touchUp) {
+        if (key.keyCode == 38 || touchUp) {
             up = touchUp =  true
         }
     }
@@ -152,19 +156,19 @@ function movement() {
 
     return function movePlayer() {
         // links
-        if (left) {
+        if (left || touchLeft) {
             player.xPos += playerSpeed;
         }
         // rechts
-        if (right) {
+        if (right || touchRight) {
             player.xPos -= playerSpeed;
         }
         // runter
-        if (down) {
+        if (down || touchDown) {
             player.yPos += playerSpeed;
         }
         // hoch
-        if (up) {
+        if (up || touchUp) {
             player.yPos -= playerSpeed;
         }
 
