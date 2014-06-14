@@ -40,22 +40,26 @@
 
     var touchLeft = document.getElementById('left');
     Hammer(touchLeft).on("tap", function() {
-        player.xPos -= playerSpeed;
+        player.xPos -= playerSpeed * 4;
+        return true;
     });
 
     var touchRight = document.getElementById('right');
     Hammer(touchRight).on("tap", function() {
-        player.xPos += playerSpeed;
+        player.xPos += playerSpeed * 4;
+        return true;
     });
 
     var touchUp = document.getElementById('up');
     Hammer(touchUp).on("tap", function() {
-        player.yPos -= playerSpeed;
+        player.yPos -= playerSpeed * 4;
+        return true;
     });
 
     var touchDown = document.getElementById('down');
     Hammer(touchDown).on("tap", function() {
-        player.yPos += playerSpeed;
+        player.yPos += playerSpeed * 4;
+        return true;
     });
 
 </script>
