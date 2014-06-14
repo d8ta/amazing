@@ -54,29 +54,6 @@ var difficulty = 50;
 var counter = 5;
 
 
-
-//
-//var touchLeft = document.getElementById('left');
-//Hammer(touchLeft).on("tap", function() {
-//    player.xPos -= playerSpeed;
-//});
-//
-//var touchRight = document.getElementById('right');
-//Hammer(touchRight).on("tap", function() {
-//    player.xPos += playerSpeed;
-//});
-//
-//var touchUp = document.getElementById('up');
-//Hammer(touchUp).on("tap", function() {
-//    player.yPos -= playerSpeed;
-//});
-//
-//var touchDown = document.getElementById('down');
-//Hammer(touchDown).on("tap", function() {
-//    player.yPos += playerSpeed;
-//});
-
-
 /**
  * Update des Canvas und Zeichnen aller Circle (Zellen)
  */
@@ -106,25 +83,46 @@ var playerMovement = movement();
  * @returns {movePlayer}
  */
 function movement() {
-    var up = down = left = right = false;
+    var up = down = left = right = touchDown = touchLeft = touchRight = touchUp = false;
+
+
+    var touchLeft = document.getElementById('left');
+    Hammer(touchLeft).on("tap", function() {
+        player.xPos -= playerSpeed;
+    });
+
+    var touchRight = document.getElementById('right');
+    Hammer(touchRight).on("tap", function() {
+        player.xPos += playerSpeed;
+    });
+
+    var touchUp = document.getElementById('up');
+    Hammer(touchUp).on("tap", function() {
+        player.yPos -= playerSpeed;
+    });
+
+    var touchDown = document.getElementById('down');
+    Hammer(touchDown).on("tap", function() {
+        player.yPos += playerSpeed;
+    });
 
 
     function keysUp(key) {
         // links
-        if (key.keyCode == 39) {
-            left = false;
+        if (key.keyCode == 39 && touchLeft) {
+            left = touchLeft = false;
         }
         // rechts
-        if (key.keyCode == 37) {
-            right = false;
+        if (key.keyCode == 37 && touchRight) {
+            right = touchRight = false;
         }
         // runter
-        if (key.keyCode == 40) {
-            down = false;
+        if (key.keyCode == 40 && touchDown) {
+            down = touchDown = false;
         }
         // hoch
-        if (key.keyCode == 38) {
-            up = false;
+        if (key.keyCode == 38  && touchUp) {
+            up = touchUp = false;
         }
     }
 
@@ -132,20 +130,20 @@ function movement() {
     function keysDown(key) {
 
         // links
-        if (key.keyCode == 39) {
-            left = true;
+        if (key.keyCode == 39 && touchLeft) {
+            left = touchLeft = true;
         }
         // rechts
-        if (key.keyCode == 37) {
-            right = true;
+        if (key.keyCode == 37 && touchRight) {
+            right = touchRight = true;
         }
         // runter
-        if (key.keyCode == 40) {
-            down = true;
+        if (key.keyCode == 40 && touchDown) {
+            down = touchDown = true;
         }
         // hoch
-        if (key.keyCode == 38) {
-            up = true
+        if (key.keyCode == 38 && touchUp) {
+            up = touchUp =  true
         }
     }
 

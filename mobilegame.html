@@ -29,40 +29,12 @@
 <button id="up">up</button>
 <button id="down">down</button>
 
+
 <script type="text/javascript" src="hammer.min.js"></script>
 <script type="text/javascript" src="game.js"></script>
 <script type="text/javascript" src="touch.js"></script>
 <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 
-
-
-<script type="text/javascript">
-
-    var touchLeft = document.getElementById('left');
-    Hammer(touchLeft).on("tap", function() {
-        player.xPos -= playerSpeed * 4;
-        return true;
-    });
-
-    var touchRight = document.getElementById('right');
-    Hammer(touchRight).on("tap", function() {
-        player.xPos += playerSpeed * 4;
-        return true;
-    });
-
-    var touchUp = document.getElementById('up');
-    Hammer(touchUp).on("tap", function() {
-        player.yPos -= playerSpeed * 4;
-        return true;
-    });
-
-    var touchDown = document.getElementById('down');
-    Hammer(touchDown).on("tap", function() {
-        player.yPos += playerSpeed * 4;
-        return true;
-    });
-
-</script>
 
 <footer>
     <!--<a href="impressum.html">Impressum</a>-->
