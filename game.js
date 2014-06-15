@@ -85,16 +85,26 @@ var playerMovement = movement();
 function movement() {
 
 
+    /**
+     * Touchsteuerung aktivieren
+     * @type {HTMLElement}
+     */
     var touchLeft = document.getElementById('left');
     Hammer(touchLeft).on("touch", function() {
+        touchLeft = true;
+        player.xPos -= playerSpeed;
     });
 
     var touchRight = document.getElementById('right');
     Hammer(touchRight).on("touch", function() {
+        touchRight = true;
+        player.xPos += playerSpeed;
     });
 
     var touchUp = document.getElementById('up');
     Hammer(touchUp).on("touch", function() {
+        touchUp = true;
+        player.yPos -= playerSpeed;
     });
 
     var touchDown = document.getElementById('down');
@@ -103,7 +113,22 @@ function movement() {
         player.yPos += playerSpeed;
     });
 
-   Hammer(touchDown).on("release", function() {
+    /**
+     * Touchsteuerung deaktiviren bei loslassen
+     */
+    Hammer(touchLeft).on("release", function() {
+        touchLeft = false;
+    });
+
+    Hammer(touchRight).on("release", function() {
+        touchRight = false;
+    });
+
+    Hammer(touchUp).on("release", function() {
+        touchUp = false;
+    });
+
+    Hammer(touchDown).on("release", function() {
         touchDown = false;
     });
 
