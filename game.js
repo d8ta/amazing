@@ -159,20 +159,20 @@ function movement() {
     function keysDown(key) {
 
         // links
-        if (key.keyCode == 39 || touchLeft) {
-            left = touchLeft = true;
+        if (key.keyCode == 39) {
+            left = true;
         }
         // rechts
-        if (key.keyCode == 37 || touchRight) {
-            right = touchRight = true;
+        if (key.keyCode == 37) {
+            right = true;
         }
         // runter
-        if (key.keyCode == 40 || touchDown) {
-            down = touchDown = true;
+        if (key.keyCode == 40) {
+            down = true;
         }
         // hoch
-        if (key.keyCode == 38 || touchUp) {
-            up = touchUp = true;
+        if (key.keyCode == 38) {
+            up = true;
         }
     }
 
