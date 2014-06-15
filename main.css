@@ -1,8 +1,119 @@
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+    /* Styles */
+    body {
+        color: orangered;
+        background-image: url('bilder/blurybloodcell640.jpg');
+        background-repeat: no-repeat;
+    }
+
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen
+and (min-width : 321px) {
+    /* Styles */
+    body {
+        background-image: url('bilder/blurybloodcell640.jpg');
+        background-repeat: no-repeat;
+    }
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen
+and (max-width : 320px) {
+    /* Styles */
+    body {
+        color: blue;
+        background-image: url('bilder/blurybloodcell640.jpg');
+        background-repeat: no-repeat;
+    }
+}
+
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+    /* Styles */
+    body {
+        color: black;
+        background-image: url('bilder/blurybloodcell640.jpg');
+        background-repeat: no-repeat;
+    }
+}
+
+/* iPads (landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+    /* Styles */
+    body {
+        color: greenyellow;
+        background-image: url('bilder/blurybloodcell640.jpg');
+        background-repeat: no-repeat;
+    }
+}
+
+/* iPads (portrait) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+    /* Styles */
+    body {
+        color: saddlebrown;
+    }
+}
+
+/* Desktops and laptops ----------- */
+@media only screen
+and (min-width : 1224px) {
+    /* Styles */
+    body {
+        color: hotpink;
+    }
+}
+
+/* Large screens ----------- */
+@media only screen
+and (min-width : 1824px) {
+    /* Styles */
+    body {
+        color: yellow;
+    }
+}
+
+/* iPhone 4 ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+    /* Styles */
+    body {
+        color: mediumaquamarine;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/*
 
 body {
     background-image: url("bilder/bg_grey.png");
     color: #f5f5f5;
 }
+*/
+
 
 h1 {
     font-family: 'Audiowide', cursive;
@@ -114,6 +225,7 @@ form {
 
 
 
+/*
 
 @media only screen and (min-width: 768px) {
 
@@ -134,13 +246,27 @@ form {
         font-size: 100%;
     }
 
-    /*#browser {*/
-        /*display: inline;*/
-    /*}*/
-    /**/
-    /*#mobile {*/
-        /*display: none;*/
-    /*}*/
+    */
+/*#browser {*//*
+
+        */
+/*display: inline;*//*
+
+    */
+/*}*//*
+
+    */
+/**//*
+
+    */
+/*#mobile {*//*
+
+        */
+/*display: none;*//*
+
+    */
+/*}*//*
+
 
     #teaser {
         font-family: 'Exo 2', 'sans-serif';
@@ -180,3 +306,4 @@ form {
     }
 
 }
+*/
