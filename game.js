@@ -84,10 +84,6 @@ var playerMovement = movement();
  */
 function movement() {
 
-    var up = down = left = right = false;
-
-
-
     /**
      * Touchsteuerung aktivieren
      * @type {HTMLElement}

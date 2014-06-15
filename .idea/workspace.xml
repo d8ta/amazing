@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="12e2583c-76da-4cec-897f-2b40d828b225" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game.js" afterPath="$PROJECT_DIR$/game.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mmp1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,10 +29,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="game.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="game.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/game.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="194" column="24" selection-start="4342" selection-end="4342" vertical-scroll-proportion="0.6104651" vertical-offset="2490" max-vertical-offset="6540">
+            <state line="85" column="0" selection-start="1851" selection-end="1851" vertical-scroll-proportion="0.0" vertical-offset="1202" max-vertical-offset="6480">
               <folding />
             </state>
           </provider>
@@ -73,10 +74,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mobilegame.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="mobilegame.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mobilegame.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="26" selection-start="66" selection-end="66" vertical-scroll-proportion="-0.625" vertical-offset="30" max-vertical-offset="735">
+            <state line="11" column="6" selection-start="485" selection-end="485" vertical-scroll-proportion="0.14156626" vertical-offset="71" max-vertical-offset="735">
               <folding />
             </state>
           </provider>
@@ -532,13 +533,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mobilegame.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="26" selection-start="66" selection-end="66" vertical-scroll-proportion="-0.625" vertical-offset="30" max-vertical-offset="735">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/functions.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="0" selection-start="696" selection-end="696" vertical-scroll-proportion="-15.625" vertical-offset="0" max-vertical-offset="465">
@@ -562,7 +556,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/game.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="194" column="24" selection-start="4342" selection-end="4342" vertical-scroll-proportion="0.6104651" vertical-offset="2490" max-vertical-offset="6540">
+        <state line="85" column="0" selection-start="1851" selection-end="1851" vertical-scroll-proportion="0.0" vertical-offset="1202" max-vertical-offset="6480">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mobilegame.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="6" selection-start="485" selection-end="485" vertical-scroll-proportion="0.14156626" vertical-offset="71" max-vertical-offset="735">
           <folding />
         </state>
       </provider>
