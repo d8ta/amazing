@@ -83,67 +83,70 @@ var playerMovement = movement();
  * @returns {movePlayer}
  */
 function movement() {
-    var up = down = left = right = touchLeft = touchDown = touchRight = touchUp = false;
+
 
     var touchLeft = document.getElementById('left');
     Hammer(touchLeft).on("touch", function() {
-        touchLeft = true;
     });
 
     var touchRight = document.getElementById('right');
     Hammer(touchRight).on("touch", function() {
-        touchRight = true;
     });
 
     var touchUp = document.getElementById('up');
     Hammer(touchUp).on("touch", function() {
-        touchUp = true;
     });
 
     var touchDown = document.getElementById('down');
     Hammer(touchDown).on("touch", function() {
         touchDown = true;
+        player.yPos += playerSpeed;
+    });
+
+   Hammer(touchDown).on("release", function() {
+        touchDown = false;
     });
 
 
 
-    function keysUp(key) {
+
+    function keysUp() {
         // links
-        if (key.keyCode == 39 || touchLeft) {
-            left = touchLeft = false;
+        if (touchLeft) {
+            touchLeft = false;
         }
         // rechts
-        if (key.keyCode == 37 || touchRight) {
-            right = touchRight = false;
+        if (touchRight) {
+            touchRight = false;
         }
         // runter
-        if (key.keyCode == 40 || touchDown) {
-            down = touchDown = false;
+        if (touchDown) {
+            touchDown = false;
         }
         // hoch
-        if (key.keyCode == 38  || touchUp) {
-            up = touchUp = false;
+        if (touchUp) {
+            touchUp = false;
         }
     }
 
 
-    function keysDown(key) {
+    function keysDown() {
 
         // links
-        if (key.keyCode == 39 || touchLeft) {
-            left = touchLeft = true;
+        if (touchLeft) {
+            touchLeft = true;
         }
         // rechts
-        if (key.keyCode == 37 || touchRight) {
-            right = touchRight = true;
+        if (touchRight) {
+            touchRight  = true;
         }
         // runter
-        if (key.keyCode == 40 || touchDown) {
-            down = touchDown = true;
+        if (touchDown) {
+            touchDown = true;
         }
         // hoch
-        if (key.keyCode == 38 || touchUp) {
-            up = touchUp = true;
+        if (touchUp) {
+            touchUp = true;
         }
     }
 
@@ -153,19 +156,19 @@ function movement() {
 
     return function movePlayer() {
         // links
-        if (left || touchLeft) {
+        if (touchLeft) {
             player.xPos += playerSpeed;
         }
         // rechts
-        if (right || touchRight) {
+        if (touchRight) {
             player.xPos -= playerSpeed;
         }
         // runter
-        if (down || touchDown) {
+        if (touchDown) {
             player.yPos += playerSpeed;
         }
         // hoch
-        if (up || touchUp) {
+        if (touchUp) {
             player.yPos -= playerSpeed;
         }
 
