@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12e2583c-76da-4cec-897f-2b40d828b225" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.css" afterPath="$PROJECT_DIR$/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mobilegame.html" afterPath="$PROJECT_DIR$/mobilegame.html" />
     </list>
     <ignored path="mmp1.iws" />
@@ -64,19 +65,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="main.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="0" selection-start="352" selection-end="352" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5100">
+            <state line="225" column="19" selection-start="4186" selection-end="4186" vertical-scroll-proportion="0.78296703" vertical-offset="2805" max-vertical-offset="5130">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mobilegame.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="mobilegame.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mobilegame.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="50" selection-start="732" selection-end="732" vertical-scroll-proportion="0.4474432" vertical-offset="0" max-vertical-offset="720">
+            <state line="6" column="0" selection-start="304" selection-end="304" vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="720">
               <folding />
             </state>
           </provider>
@@ -139,10 +140,10 @@
         <option value="$PROJECT_DIR$/tutorial.html" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/game.js" />
-        <option value="$PROJECT_DIR$/main.css" />
         <option value="$PROJECT_DIR$/gameover.html" />
         <option value="$PROJECT_DIR$/highscore.php" />
         <option value="$PROJECT_DIR$/mobilegame.html" />
+        <option value="$PROJECT_DIR$/main.css" />
       </list>
     </option>
   </component>
@@ -516,13 +517,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="352" selection-end="352" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5100">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/game.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="279" column="27" selection-start="6428" selection-end="6428" vertical-scroll-proportion="0.0" vertical-offset="4050" max-vertical-offset="6450">
@@ -563,7 +557,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mobilegame.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="50" selection-start="732" selection-end="732" vertical-scroll-proportion="0.4474432" vertical-offset="0" max-vertical-offset="720">
+        <state line="6" column="0" selection-start="304" selection-end="304" vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="720">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="225" column="19" selection-start="4186" selection-end="4186" vertical-scroll-proportion="0.78296703" vertical-offset="2805" max-vertical-offset="5130">
           <folding />
         </state>
       </provider>

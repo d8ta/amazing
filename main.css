@@ -151,7 +151,7 @@ h3, h2, p {
 
 #left, #right, #up, #down, #release {
     float: left;
-    margin-top: 0px;
+    margin-top: 220px;
     width: 100px;
     height: 50px;
     position: relative;
@@ -222,6 +222,8 @@ canvas {
     max-height: 100%;
     max-width: 100%;
     z-index: 1;
+    margin-top: -40px;
+    margin-left: -10px;
 }
 
 #background {
