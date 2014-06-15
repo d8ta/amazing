@@ -93,25 +93,21 @@ function movement() {
     var touchLeft = document.getElementById('left');
     Hammer(touchLeft).on("touch", function() {
         touchLeft = true;
-        player.xPos -= playerSpeed;
     });
 
     var touchRight = document.getElementById('right');
     Hammer(touchRight).on("touch", function() {
         touchRight = true;
-        player.xPos += playerSpeed;
     });
 
     var touchUp = document.getElementById('up');
     Hammer(touchUp).on("touch", function() {
         touchUp = true;
-        player.yPos -= playerSpeed;
     });
 
     var touchDown = document.getElementById('down');
     Hammer(touchDown).on("touch", function() {
         touchDown = true;
-        player.yPos += playerSpeed;
     });
 
     /**
@@ -182,19 +178,19 @@ function movement() {
 
     return function movePlayer() {
         // links
-        if (touchLeft) {
+        if (touchLeft || left) {
             player.xPos += playerSpeed;
         }
         // rechts
-        if (touchRight) {
+        if (touchRight || right) {
             player.xPos -= playerSpeed;
         }
         // runter
-        if (touchDown) {
+        if (touchDown || down) {
             player.yPos += playerSpeed;
         }
         // hoch
-        if (touchUp) {
+        if (touchUp || up) {
             player.yPos -= playerSpeed;
         }
 
