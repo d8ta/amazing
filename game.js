@@ -84,6 +84,9 @@ var playerMovement = movement();
  */
 function movement() {
 
+    var up = down = left = right = false;
+
+
 
     /**
      * Touchsteuerung aktivieren
@@ -135,43 +138,43 @@ function movement() {
 
 
 
-    function keysUp() {
+    function keysUp(key) {
         // links
-        if (touchLeft) {
-            touchLeft = false;
+        if (key.keyCode == 39 || touchLeft) {
+            left = touchLeft = false;
         }
         // rechts
-        if (touchRight) {
-            touchRight = false;
+        if (key.keyCode == 37 || touchRight) {
+            right = touchRight = false;
         }
         // runter
-        if (touchDown) {
-            touchDown = false;
+        if (key.keyCode == 40 || touchDown) {
+            down = touchDown = false;
         }
         // hoch
-        if (touchUp) {
-            touchUp = false;
+        if (key.keyCode == 38  || touchUp) {
+            up = touchUp = false;
         }
     }
 
 
-    function keysDown() {
+    function keysDown(key) {
 
         // links
-        if (touchLeft) {
-            touchLeft = true;
+        if (key.keyCode == 39 || touchLeft) {
+            left = touchLeft = true;
         }
         // rechts
-        if (touchRight) {
-            touchRight  = true;
+        if (key.keyCode == 37 || touchRight) {
+            right = touchRight = true;
         }
         // runter
-        if (touchDown) {
-            touchDown = true;
+        if (key.keyCode == 40 || touchDown) {
+            down = touchDown = true;
         }
         // hoch
-        if (touchUp) {
-            touchUp = true;
+        if (key.keyCode == 38 || touchUp) {
+            up = touchUp = true;
         }
     }
 
