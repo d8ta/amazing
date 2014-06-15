@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12e2583c-76da-4cec-897f-2b40d828b225" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game.js" afterPath="$PROJECT_DIR$/game.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.css" afterPath="$PROJECT_DIR$/main.css" />
     </list>
     <ignored path="mmp1.iws" />
@@ -28,10 +29,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="game.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="game.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/game.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="185" column="25" selection-start="4095" selection-end="4095" vertical-scroll-proportion="0.0" vertical-offset="1607" max-vertical-offset="6450">
+            <state line="180" column="22" selection-start="3956" selection-end="3956" vertical-scroll-proportion="0.2445055" vertical-offset="2522" max-vertical-offset="6450">
               <folding />
             </state>
           </provider>
@@ -64,10 +65,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="230" column="20" selection-start="4279" selection-end="4279" vertical-scroll-proportion="0.4680535" vertical-offset="3135" max-vertical-offset="5070">
+            <state line="24" column="0" selection-start="593" selection-end="593" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5100">
               <folding />
             </state>
           </provider>
@@ -140,9 +141,9 @@
         <option value="$PROJECT_DIR$/tutorial.html" />
         <option value="$PROJECT_DIR$/gameover.html" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/game.js" />
         <option value="$PROJECT_DIR$/mobilegame.html" />
         <option value="$PROJECT_DIR$/main.css" />
+        <option value="$PROJECT_DIR$/game.js" />
       </list>
     </option>
   </component>
@@ -530,13 +531,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/game.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="185" column="25" selection-start="4095" selection-end="4095" vertical-scroll-proportion="0.0" vertical-offset="1607" max-vertical-offset="6450">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="0" selection-start="812" selection-end="812" vertical-scroll-proportion="-11.875" vertical-offset="15" max-vertical-offset="810">
@@ -563,7 +557,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="230" column="20" selection-start="4279" selection-end="4279" vertical-scroll-proportion="0.4680535" vertical-offset="3135" max-vertical-offset="5070">
+        <state line="24" column="0" selection-start="593" selection-end="593" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5100">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="180" column="22" selection-start="3956" selection-end="3956" vertical-scroll-proportion="0.2445055" vertical-offset="2522" max-vertical-offset="6450">
           <folding />
         </state>
       </provider>
