@@ -222,8 +222,6 @@ canvas {
     max-height: 100%;
     max-width: 100%;
     z-index: 1;
-    margin-top: -40px;
-    margin-left: -10px;
 }
 
 #background {

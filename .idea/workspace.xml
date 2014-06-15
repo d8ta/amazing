@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="12e2583c-76da-4cec-897f-2b40d828b225" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.css" afterPath="$PROJECT_DIR$/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mobilegame.html" afterPath="$PROJECT_DIR$/mobilegame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mmp1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -68,7 +68,7 @@
       <file leaf-file-name="main.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="225" column="19" selection-start="4186" selection-end="4186" vertical-scroll-proportion="0.78296703" vertical-offset="2805" max-vertical-offset="5130">
+            <state line="223" column="0" selection-start="4128" selection-end="4143" vertical-scroll-proportion="0.4532967" vertical-offset="3015" max-vertical-offset="5100">
               <folding />
             </state>
           </provider>
@@ -77,7 +77,7 @@
       <file leaf-file-name="mobilegame.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mobilegame.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="0" selection-start="304" selection-end="304" vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="720">
+            <state line="22" column="38" selection-start="783" selection-end="783" vertical-scroll-proportion="-13.75" vertical-offset="0" max-vertical-offset="720">
               <folding />
             </state>
           </provider>
@@ -557,14 +557,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mobilegame.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="304" selection-end="304" vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="720">
+        <state line="22" column="38" selection-start="783" selection-end="783" vertical-scroll-proportion="-13.75" vertical-offset="0" max-vertical-offset="720">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="225" column="19" selection-start="4186" selection-end="4186" vertical-scroll-proportion="0.78296703" vertical-offset="2805" max-vertical-offset="5130">
+        <state line="223" column="0" selection-start="4128" selection-end="4143" vertical-scroll-proportion="0.4532967" vertical-offset="3015" max-vertical-offset="5100">
           <folding />
         </state>
       </provider>
