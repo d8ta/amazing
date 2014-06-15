@@ -27,7 +27,7 @@ function game() {
     motherCell.draw();
     playerMovement();
     happyEnd(motherCell, player);
-    //playerDeath();
+    playerDeath();
 
     if (highscore > 100000) {
         highscore = 0;
@@ -301,7 +301,7 @@ function drawCircles() {
         var randomX = Math.round(Math.random() * (canvas.width + 200));
         var randomY = Math.round(Math.random() * (canvas.height + 200));
         var speed = Math.random();
-        var circleWidth = Math.random() * 75;
+        var circleWidth = Math.random() * 25;
         var circle = new Circle(rad, speed, circleWidth, randomX, randomY);
         circles.push(circle);
     }
