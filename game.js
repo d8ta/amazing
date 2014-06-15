@@ -179,11 +179,11 @@ function movement() {
     return function movePlayer() {
         // links
         if (touchLeft || left) {
-            player.xPos += playerSpeed;
+            player.xPos -= playerSpeed;
         }
         // rechts
         if (touchRight || right) {
-            player.xPos -= playerSpeed;
+            player.xPos += playerSpeed;
         }
         // runter
         if (touchDown || down) {

@@ -4,9 +4,9 @@ and (min-device-width : 320px)
 and (max-device-width : 480px) {
     /* Styles */
     body {
-        color: orangered;
         background-image: url('bilder/blurybloodcell640.jpg');
         background-repeat: no-repeat;
+        color: #f5f5f5;
     }
 
 }
@@ -18,6 +18,8 @@ and (min-width : 321px) {
     body {
         background-image: url('bilder/blurybloodcell640.jpg');
         background-repeat: no-repeat;
+        color: #f5f5f5;
+
     }
 }
 
@@ -26,9 +28,10 @@ and (min-width : 321px) {
 and (max-width : 320px) {
     /* Styles */
     body {
-        color: blue;
         background-image: url('bilder/blurybloodcell640.jpg');
         background-repeat: no-repeat;
+        color: #f5f5f5;
+
     }
 }
 
@@ -42,6 +45,8 @@ and (max-device-width : 1024px) {
         color: black;
         background-image: url('bilder/blurybloodcell640.jpg');
         background-repeat: no-repeat;
+        color: #f5f5f5;
+
     }
 }
 
@@ -52,9 +57,11 @@ and (max-device-width : 1024px)
 and (orientation : landscape) {
     /* Styles */
     body {
-        color: greenyellow;
         background-image: url('bilder/blurybloodcell640.jpg');
         background-repeat: no-repeat;
+        color: #f5f5f5;
+        background-color: #F72C1F;
+
     }
 }
 
@@ -65,7 +72,10 @@ and (max-device-width : 1024px)
 and (orientation : portrait) {
     /* Styles */
     body {
-        color: saddlebrown;
+        background-image: url('bilder/blurybloodcell640.jpg');
+        background-repeat: no-repeat;
+        color: #f5f5f5;
+        background-color: #F72C1F;
     }
 }
 
@@ -74,7 +84,10 @@ and (orientation : portrait) {
 and (min-width : 1224px) {
     /* Styles */
     body {
-        color: hotpink;
+        background-image: url('bilder/blurybloodcell640.jpg');
+        background-repeat: no-repeat;
+        color: #f5f5f5;
+        background-color: #F72C1F;
     }
 }
 
@@ -83,7 +96,10 @@ and (min-width : 1224px) {
 and (min-width : 1824px) {
     /* Styles */
     body {
-        color: yellow;
+        background-image: url('bilder/blurybloodcell640.jpg');
+        background-repeat: no-repeat;
+        color: #f5f5f5;
+        background-color: #F72C1F;
     }
 }
 
@@ -93,7 +109,10 @@ only screen and (-webkit-min-device-pixel-ratio : 1.5),
 only screen and (min-device-pixel-ratio : 1.5) {
     /* Styles */
     body {
-        color: mediumaquamarine;
+        background-image: url('bilder/blurybloodcell640.jpg');
+        background-repeat: no-repeat;
+        color: #f5f5f5;
+        background-color: #F72C1F;
     }
 }
 
@@ -129,11 +148,12 @@ h3, h2, p {
 
 #left, #right, #up, #down, #release {
     float: left;
-    margin-top: 320px;
-    z-index: 100;
+    margin-top: 0px;
     width: 100px;
     height: 50px;
-    
+    position: relative;
+    z-index: 100;
+    opacity: 0.3;
 }
 
 #browser {
