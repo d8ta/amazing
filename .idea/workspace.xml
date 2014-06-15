@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12e2583c-76da-4cec-897f-2b40d828b225" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gameover.html" afterPath="$PROJECT_DIR$/gameover.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/highscore.php" afterPath="$PROJECT_DIR$/highscore.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mobilegame.html" afterPath="$PROJECT_DIR$/mobilegame.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mmp1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -76,10 +73,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mobilegame.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="mobilegame.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mobilegame.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="55" selection-start="665" selection-end="665" vertical-scroll-proportion="-10.625" vertical-offset="0" max-vertical-offset="720">
+            <state line="21" column="50" selection-start="732" selection-end="732" vertical-scroll-proportion="0.4474432" vertical-offset="0" max-vertical-offset="720">
               <folding />
             </state>
           </provider>
@@ -94,10 +91,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="highscore.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="highscore.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/highscore.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="0" selection-start="1161" selection-end="1161" vertical-scroll-proportion="0.23295455" vertical-offset="451" max-vertical-offset="1155">
+            <state line="41" column="0" selection-start="1161" selection-end="1161" vertical-scroll-proportion="-6.8333335" vertical-offset="451" max-vertical-offset="1155">
               <folding>
                 <marker date="1402861405000" expanded="true" signature="1083:1149" placeholder="..." />
                 <marker date="1402861405000" expanded="true" signature="1088:1147" placeholder="..." />
@@ -143,9 +140,9 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/game.js" />
         <option value="$PROJECT_DIR$/main.css" />
-        <option value="$PROJECT_DIR$/mobilegame.html" />
         <option value="$PROJECT_DIR$/gameover.html" />
         <option value="$PROJECT_DIR$/highscore.php" />
+        <option value="$PROJECT_DIR$/mobilegame.html" />
       </list>
     </option>
   </component>
@@ -519,13 +516,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mobilegame.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="55" selection-start="665" selection-end="665" vertical-scroll-proportion="-10.625" vertical-offset="0" max-vertical-offset="720">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="0" selection-start="352" selection-end="352" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5100">
@@ -536,13 +526,6 @@
     <entry file="file://$PROJECT_DIR$/game.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="279" column="27" selection-start="6428" selection-end="6428" vertical-scroll-proportion="0.0" vertical-offset="4050" max-vertical-offset="6450">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="66" selection-start="940" selection-end="940" vertical-scroll-proportion="-16.25" vertical-offset="0" max-vertical-offset="600">
           <folding />
         </state>
       </provider>
@@ -563,11 +546,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/highscore.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="0" selection-start="1161" selection-end="1161" vertical-scroll-proportion="0.23295455" vertical-offset="451" max-vertical-offset="1155">
+        <state line="41" column="0" selection-start="1161" selection-end="1161" vertical-scroll-proportion="-6.8333335" vertical-offset="451" max-vertical-offset="1155">
           <folding>
             <marker date="1402861405000" expanded="true" signature="1083:1149" placeholder="..." />
             <marker date="1402861405000" expanded="true" signature="1088:1147" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="66" selection-start="940" selection-end="940" vertical-scroll-proportion="-16.25" vertical-offset="0" max-vertical-offset="600">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mobilegame.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="50" selection-start="732" selection-end="732" vertical-scroll-proportion="0.4474432" vertical-offset="0" max-vertical-offset="720">
+          <folding />
         </state>
       </provider>
     </entry>
