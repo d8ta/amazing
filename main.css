@@ -472,7 +472,35 @@ and (orientation : landscape) {
 @media only screen
 and (min-device-width : 768px)
 and (max-device-width : 1024px) {
-    /* Styles */
+
+    #left {
+        margin-top: 330px;
+        margin-left: 70px;
+    }
+
+    #right {
+        margin-top: 330px;
+        margin-left: 20px;
+    }
+    #up {
+        margin-top: 285px;
+        margin-left: -115px;
+    }
+
+    #down {
+        margin-top: 375px;
+        margin-left: -115px;
+    }
+
+    canvas {
+        position: absolute;
+        width: 535px;
+        height: 225px;
+        margin-top: 25px;
+        z-index: 1;
+        margin-left: -8px;
+    }
+
 }
 
 /* iPads (landscape) ----------- */
@@ -501,6 +529,15 @@ and (min-width : 1224px) {
     #mobile {
         display: none;
     }
+
+    canvas {
+        position: absolute;
+        width: 1000px;
+        height: 600px;
+        margin-top: -40px;
+        z-index: 1;
+        margin-left: 38px;
+    }
 }
 
 /* Large screens ----------- */
@@ -512,6 +549,23 @@ and (min-width : 1824px) {
 
     #mobile {
         display: none;
+    }
+
+    canvas {
+        position: absolute;
+        width: 1000px;
+        height: 600px;
+        margin-top: -40px;
+        z-index: 1;
+        margin-left: 38px;
+    }
+
+    #background {
+        background-image: url('bilder/blurybloodcellgross.jpg');
+        background-repeat: no-repeat;
+        z-index: -1;
+        max-height: 100%;
+        max-width: 100%;
     }
 }
 
