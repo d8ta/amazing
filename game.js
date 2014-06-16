@@ -27,7 +27,7 @@ function game() {
     motherCell.draw();
     playerMovement();
     happyEnd(motherCell, player);
-    //playerDeath();
+    playerDeath();
 
     if (highscore > 100000) {
         highscore = 0;
