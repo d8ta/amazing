@@ -4,11 +4,133 @@ and (min-device-width : 320px)
 and (max-device-width : 480px) {
     /* Styles */
     body {
-        background-image: url('bilder/blurybloodcell640.jpg');
-        background-repeat: no-repeat;
+        background-image: url("bilder/bg_grey.png");
         color: #f5f5f5;
-        min-height: 100%;
-        min-width: 100%;
+    }
+
+
+    h1 {
+        font-family: 'Audiowide', cursive;
+        font-size: 200%;
+        text-align: center;
+    }
+
+    h3, h2, p {
+        font-family: 'Exo 2', 'sans-serif';
+        text-align: center;
+        font-size: 80%;
+    }
+
+    h3 > li {
+        font-family: 'Exo 2', 'sans-serif';
+        text-align: center;
+        font-size: 80%;
+    }
+
+
+
+    #left, #right, #up, #down, #release {
+        float: left;
+        margin-top: 220px;
+        width: 100px;
+        height: 50px;
+        position: relative;
+        z-index: 100;
+        opacity: 0.3;
+    }
+
+    #browser {
+        /*display: none;*/
+    }
+
+    #teaser {
+        font-family: 'Exo 2', 'sans-serif';
+        text-decoration: none;
+        text-align: justify;
+        display: block;
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    footer, li {
+        text-align: center;
+        font-family: 'Exo 2', 'sans-serif';
+        font-size: 80%;
+        margin-top: 40px;
+        list-style-type: none;
+    }
+
+
+    ul {
+        font-family: 'Exo 2','sans-serif';
+        text-decoration: none;
+        text-align: center;
+        display: inline;
+        margin-left: auto;
+        margin-right: auto;
+        width: 400px;
+    }
+
+    img {
+        max-height: 100%;
+        max-width: 100%;
+        margin-top: -95px;
+    }
+
+    .main {
+        margin-top: 100px;
+    }
+
+    /*links*/
+    a:link {
+        color: #f5f5f5;
+        text-decoration: none;
+    }
+
+    a:visited {
+        color: #f5f5f5;
+    }
+
+    a:hover {
+        color: #f5f5f5;
+        text-decoration: underline;
+    }
+
+    canvas {
+        position: absolute;
+        max-height: 100%;
+        max-width: 100%;
+        width: 480px;
+        height: 320px;
+        margin-top: -40px;
+        z-index: 1;
+        margin-left: -8px;
+    }
+
+    #background {
+        background-image: url('bilder/blurybloodcell.jpg');
+        background-repeat: no-repeat;
+        opacity: 0.9;
+        z-index: -1;
+        max-height: 100%;
+        max-width: 100%;
+    }
+
+    table {
+        font-family: 'Exo 2', 'sans-serif';
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    th, td {
+        padding-left: 40px;
+    }
+
+    form {
+        font-family: 'Exo 2', 'sans-serif';
+        text-align: center;
+    }
+
 
     }
 
@@ -18,24 +140,14 @@ and (max-device-width : 480px) {
 @media only screen
 and (min-width : 321px) {
     /* Styles */
-    body {
-        background-image: url('bilder/blurybloodcell640.jpg');
-        background-repeat: no-repeat;
-        color: #f5f5f5;
 
-    }
 }
 
 /* Smartphones (portrait) ----------- */
 @media only screen
 and (max-width : 320px) {
     /* Styles */
-    body {
-        background-image: url('bilder/blurybloodcell640.jpg');
-        background-repeat: no-repeat;
-        color: #f5f5f5;
 
-    }
 }
 
 
@@ -44,13 +156,79 @@ and (max-width : 320px) {
 and (min-device-width : 768px)
 and (max-device-width : 1024px) {
     /* Styles */
-    body {
-        color: black;
-        background-image: url('bilder/blurybloodcell640.jpg');
-        background-repeat: no-repeat;
-        color: #f5f5f5;
+        body {
+            background-image: url("bilder/bg_grey.png");
+            color: #f5f5f5;
+        }
+
+        h1 {
+            font-family: 'Audiowide', cursive;
+            font-size: 600%;
+            text-align: center;
+        }
+
+        h3, h2, p {
+            font-family: 'Exo 2', 'sans-serif';
+            text-align: center;
+            font-size: 100%;
+        }
+
+
+   #browser {
+
+
+    display: inline;
+
 
     }
+
+
+    #mobile {
+
+    display: none;
+
+     }
+
+
+        #teaser {
+            font-family: 'Exo 2', 'sans-serif';
+            text-decoration: none;
+            text-align: left;
+            display: block;
+            max-width: 60%;
+            margin: 0 auto;
+        }
+
+        footer, li {
+            text-align: center;
+            font-family: 'Exo 2', 'sans-serif';
+            margin-top: 40px;
+            list-style-type: none;
+        }
+
+        img {
+            width: 75%;
+            height: 75%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: -140px;
+            display: block;
+            border: 1px dimgrey solid;
+            border-radius: 15px;
+        }
+
+        ul {
+            font-family: 'Exo 2', 'sans-serif';
+            text-decoration: none;
+            text-align: left;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 400px;
+        }
+
+    }
+
 }
 
 /* iPads (landscape) ----------- */
@@ -59,13 +237,6 @@ and (min-device-width : 768px)
 and (max-device-width : 1024px)
 and (orientation : landscape) {
     /* Styles */
-    body {
-        background-image: url('bilder/blurybloodcell640.jpg');
-        background-repeat: no-repeat;
-        color: #f5f5f5;
-        background-color: #F72C1F;
-
-    }
 }
 
 /* iPads (portrait) ----------- */
@@ -74,36 +245,18 @@ and (min-device-width : 768px)
 and (max-device-width : 1024px)
 and (orientation : portrait) {
     /* Styles */
-    body {
-        background-image: url('bilder/blurybloodcell640.jpg');
-        background-repeat: no-repeat;
-        color: #f5f5f5;
-        background-color: #F72C1F;
-    }
 }
 
 /* Desktops and laptops ----------- */
 @media only screen
 and (min-width : 1224px) {
     /* Styles */
-    body {
-        background-image: url('bilder/blurybloodcell640.jpg');
-        background-repeat: no-repeat;
-        color: #f5f5f5;
-        background-color: #F72C1F;
-    }
 }
 
 /* Large screens ----------- */
 @media only screen
 and (min-width : 1824px) {
     /* Styles */
-    body {
-        background-image: url('bilder/blurybloodcell640.jpg');
-        background-repeat: no-repeat;
-        color: #f5f5f5;
-        background-color: #F72C1F;
-    }
 }
 
 /* iPhone 4 ----------- */
@@ -111,224 +264,5 @@ and (min-width : 1824px) {
 only screen and (-webkit-min-device-pixel-ratio : 1.5),
 only screen and (min-device-pixel-ratio : 1.5) {
     /* Styles */
-    body {
-        background-image: url('bilder/blurybloodcell640.jpg');
-        background-repeat: no-repeat;
-        color: #f5f5f5;
-        background-color: #F72C1F;
-    }
 }
 
-
-
-
-
-
-
-
-
-
-/*
-
-body {
-    background-image: url("bilder/bg_grey.png");
-    color: #f5f5f5;
-}
-*/
-
-
-h1 {
-    font-family: 'Audiowide', cursive;
-    font-size: 200%;
-    text-align: center;
-}
-
-h3, h2, p {
-    font-family: 'Exo 2', 'sans-serif';
-    text-align: center;
-    font-size: 80%;
-}
-
-#left, #right, #up, #down, #release {
-    float: left;
-    margin-top: 220px;
-    width: 100px;
-    height: 50px;
-    position: relative;
-    z-index: 100;
-    opacity: 0.3;
-}
-
-#browser {
-    /*display: none;*/
-}
-
-#teaser {
-    font-family: 'Exo 2', 'sans-serif';
-    text-decoration: none;
-    text-align: justify;
-    display: block;
-    max-width: 80%;
-    margin: 0 auto;
-}
-
-footer, li {
-    text-align: center;
-    font-family: 'Exo 2', 'sans-serif';
-    font-size: 80%;
-    margin-top: 40px;
-    list-style-type: none;
-}
-
-
-ul {
-    font-family: 'Exo 2', 'sans-serif';
-    text-decoration: none;
-    text-align: left;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 400px;
-}
-
-img {
-    max-height: 100%;
-    max-width: 100%;
-    margin-top: -95px;
-}
-
-.main {
-    margin-top: 100px;
-}
-
-/*links*/
-a:link {
-    color: #f5f5f5;
-    text-decoration: none;
-}
-
-a:visited {
-    color: #f5f5f5;
-}
-
-a:hover {
-    color: #f5f5f5;
-    text-decoration: underline;
-}
-
-/*canvasposition*/
-canvas {
-    position: absolute;
-    max-height: 100%;
-    max-width: 100%;
-    z-index: 1;
-}
-
-#background {
-    /*background-image: url('bilder/blurybloodcell.jpg');*/
-    background-repeat: no-repeat;
-    opacity: .70;
-    z-index: -1;
-    max-height: 100%;
-    max-width: 100%;
-}
-
-table {
-    font-family: 'Exo 2', 'sans-serif';
-    margin-left: auto;
-    margin-right: auto;
-}
-
-th, td {
-    padding-left: 40px;
-}
-
-form {
-    font-family: 'Exo 2', 'sans-serif';
-    text-align: center;
-}
-
-
-
-/*
-
-@media only screen and (min-width: 768px) {
-
-    body {
-        background-image: url("bilder/bg_grey.png");
-        color: #f5f5f5;
-    }
-
-    h1 {
-        font-family: 'Audiowide', cursive;
-        font-size: 600%;
-        text-align: center;
-    }
-
-    h3, h2, p {
-        font-family: 'Exo 2', 'sans-serif';
-        text-align: center;
-        font-size: 100%;
-    }
-
-    */
-/*#browser {*//*
-
-        */
-/*display: inline;*//*
-
-    */
-/*}*//*
-
-    */
-/**//*
-
-    */
-/*#mobile {*//*
-
-        */
-/*display: none;*//*
-
-    */
-/*}*//*
-
-
-    #teaser {
-        font-family: 'Exo 2', 'sans-serif';
-        text-decoration: none;
-        text-align: left;
-        display: block;
-        max-width: 60%;
-        margin: 0 auto;
-    }
-
-    footer, li {
-        text-align: center;
-        font-family: 'Exo 2', 'sans-serif';
-        margin-top: 40px;
-        list-style-type: none;
-    }
-
-    img {
-        width: 75%;
-        height: 75%;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: -140px;
-        display: block;
-        border: 1px dimgrey solid;
-        border-radius: 15px;
-    }
-
-    ul {
-        font-family: 'Exo 2', 'sans-serif';
-        text-decoration: none;
-        text-align: left;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 400px;
-    }
-
-}
-*/
