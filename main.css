@@ -31,9 +31,9 @@ and (max-device-width : 480px) {
 
     #left, #right, #up, #down, #release {
         float: left;
-        margin-top: 220px;
-        width: 100px;
-        height: 50px;
+        margin-top: 165px;
+        width: 80px;
+        height: 40px;
         position: relative;
         z-index: 100;
         opacity: 0.3;
