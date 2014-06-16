@@ -28,16 +28,33 @@ and (max-device-width : 480px) {
     }
 
 
-
-    #left, #right, #up, #down, #release {
+    #left, #right, #up, #down {
         float: left;
-        margin-top: 165px;
-        width: 80px;
-        height: 40px;
         position: relative;
         z-index: 100;
-        opacity: 0.3;
+        opacity: 0.5;
+        width: 70px;
+        height: 70px;
+        cursor: pointer;
     }
+
+    #left {
+        margin-top: 157px;
+    }
+
+    #right {
+        margin-top: 157px;
+        margin-left: 20px;
+    }
+    #up {
+        margin-top: 110px;
+        margin-left: -115px;    }
+    #down {
+        margin-top: 205px;
+        margin-left: -115px;    }
+
+
+
 
     #browser {
         /*display: none;*/
