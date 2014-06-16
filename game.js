@@ -84,25 +84,70 @@ var playerMovement = movement();
  */
 function movement() {
 
-    var left = right = up = down = false;
+    var left = right = up = down = touchDown = touchLeft = touchRight = touchUp = false;
+
+    /**
+     * Touchsteuerung aktivieren
+     * @type {HTMLElement}
+     */
+    var touchLeft = document.getElementById('left');
+    Hammer(touchLeft).on("touch", function() {
+        touchLeft = true;
+    });
+
+    var touchRight = document.getElementById('right');
+    Hammer(touchRight).on("touch", function() {
+        touchRight = true;
+    });
+
+    var touchUp = document.getElementById('up');
+    Hammer(touchUp).on("touch", function() {
+        touchUp = true;
+    });
+
+    var touchDown = document.getElementById('down');
+    Hammer(touchDown).on("touch", function() {
+        touchDown = true;
+    });
+
+    /**
+     * Touchsteuerung deaktiviren bei loslassen
+     */
+    Hammer(touchLeft).on("release", function() {
+        touchLeft = false;
+    });
+
+    Hammer(touchRight).on("release", function() {
+        touchRight = false;
+    });
+
+    Hammer(touchUp).on("release", function() {
+        touchUp = false;
+    });
+
+    Hammer(touchDown).on("release", function() {
+        touchDown = false;
+    });
+
+
 
 
     function keysUp(key) {
         // links
-        if (key.keyCode == 39) {
-            left = false;
+        if (key.keyCode == 39 || touchLeft) {
+            left = touchLeft = false;
         }
         // rechts
-        if (key.keyCode == 37) {
-            right = false;
+        if (key.keyCode == 37 || touchRight) {
+            right = touchRight = false;
         }
         // runter
-        if (key.keyCode == 40) {
-            down = false;
+        if (key.keyCode == 40 || touchDown) {
+            down = touchDown = false;
         }
         // hoch
-        if (key.keyCode == 38) {
-            up = false;
+        if (key.keyCode == 38  || touchUp) {
+            up = touchUp = false;
         }
     }
 
@@ -133,19 +178,19 @@ function movement() {
 
     return function movePlayer() {
         // links
-        if (left) {
+        if (touchRight || left) {
             player.xPos += playerSpeed;
         }
         // rechts
-        if (right) {
+        if (touchLeft || right) {
             player.xPos -= playerSpeed;
         }
         // runter
-        if (down) {
+        if (touchDown || down) {
             player.yPos += playerSpeed;
         }
         // hoch
-        if (up) {
+        if (touchUp || up) {
             player.yPos -= playerSpeed;
         }
 
