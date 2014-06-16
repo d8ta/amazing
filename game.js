@@ -50,7 +50,7 @@ var playerStartposX = 15;
 var playerWidth = 5;
 var playerSpeed = 3;
 var highscore = 100000;
-var difficulty = 50;
+var difficulty = 75;
 var counter = 5;
 
 
