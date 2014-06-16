@@ -46,7 +46,7 @@ requestAnimationFrame(game);
  * @type {number}
  */
 var playerStartposX = 15;
-//var playerStartposY = 10;
+var playerStartposY = 10;
 var playerWidth = 5;
 var playerSpeed = 3;
 var highscore = 100000;
