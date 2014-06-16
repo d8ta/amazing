@@ -93,22 +93,22 @@ and (max-device-width : 480px) {
 
     canvas {
         position: absolute;
-        /*max-height: 100%;*/
-        /*max-width: 100%;*/
+        max-height: 100%;
+        max-width: 100%;
         width: 480px;
         height: 320px;
-        /*margin-top: -40px;*/
+        margin-top: -40px;
         z-index: 1;
-        /*margin-left: -8px;*/
+        margin-left: -8px;
     }
 
     #background {
         background-image: url('bilder/blurybloodcell.jpg');
-        /*background-repeat: no-repeat;*/
-        /*opacity: 0.9;*/
-        /*z-index: -1;*/
-        /*max-height: 100%;*/
-        /*max-width: 100%;*/
+        background-repeat: no-repeat;
+        opacity: 0.9;
+        z-index: -1;
+        max-height: 100%;
+        max-width: 100%;
     }
 
     table {
@@ -151,79 +151,6 @@ and (max-width : 320px) {
 and (min-device-width : 768px)
 and (max-device-width : 1024px) {
     /* Styles */
-        body {
-            background-image: url("bilder/bg_grey.png");
-            color: #f5f5f5;
-        }
-
-        h1 {
-            font-family: 'Audiowide', cursive;
-            font-size: 600%;
-            text-align: center;
-        }
-
-        h3, h2, p {
-            font-family: 'Exo 2', 'sans-serif';
-            text-align: center;
-            font-size: 100%;
-        }
-
-
-   #browser {
-
-
-    display: inline;
-
-
-    }
-
-
-    #mobile {
-
-    display: none;
-
-     }
-
-
-        #teaser {
-            font-family: 'Exo 2', 'sans-serif';
-            text-decoration: none;
-            text-align: left;
-            display: block;
-            max-width: 60%;
-            margin: 0 auto;
-        }
-
-        footer, li {
-            text-align: center;
-            font-family: 'Exo 2', 'sans-serif';
-            margin-top: 40px;
-            list-style-type: none;
-        }
-
-        img {
-            width: 75%;
-            height: 75%;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: -140px;
-            display: block;
-            border: 1px dimgrey solid;
-            border-radius: 15px;
-        }
-
-        ul {
-            font-family: 'Exo 2', 'sans-serif';
-            text-decoration: none;
-            text-align: left;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 400px;
-        }
-
-    }
-
 }
 
 /* iPads (landscape) ----------- */

@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12e2583c-76da-4cec-897f-2b40d828b225" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/impressum.html" afterPath="$PROJECT_DIR$/impressum.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.css" afterPath="$PROJECT_DIR$/main.css" />
     </list>
     <ignored path="mmp1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -56,10 +55,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="impressum.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="impressum.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/impressum.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="0" selection-start="294" selection-end="294" vertical-scroll-proportion="0.11627907" vertical-offset="0" max-vertical-offset="645">
+            <state line="5" column="0" selection-start="294" selection-end="294" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="585">
               <folding />
             </state>
           </provider>
@@ -74,10 +73,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="main.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="93" column="12" selection-start="1734" selection-end="1734" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4035">
+            <state line="152" column="16" selection-start="2789" selection-end="2789" vertical-scroll-proportion="0.5058651" vertical-offset="1935" max-vertical-offset="2940">
               <folding />
             </state>
           </provider>
@@ -162,8 +161,8 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/tutorial.html" />
         <option value="$PROJECT_DIR$/highscore.php" />
-        <option value="$PROJECT_DIR$/main.css" />
         <option value="$PROJECT_DIR$/impressum.html" />
+        <option value="$PROJECT_DIR$/main.css" />
       </list>
     </option>
   </component>
@@ -574,9 +573,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.css">
+    <entry file="file://$PROJECT_DIR$/impressum.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="93" column="12" selection-start="1734" selection-end="1734" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4035">
+        <state line="5" column="0" selection-start="294" selection-end="294" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="585">
           <folding />
         </state>
       </provider>
@@ -588,9 +587,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/impressum.html">
+    <entry file="file://$PROJECT_DIR$/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="294" selection-end="294" vertical-scroll-proportion="0.11627907" vertical-offset="0" max-vertical-offset="645">
+        <state line="152" column="16" selection-start="2789" selection-end="2789" vertical-scroll-proportion="0.5058651" vertical-offset="1935" max-vertical-offset="2940">
           <folding />
         </state>
       </provider>
