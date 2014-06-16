@@ -448,7 +448,7 @@ and (orientation : landscape) {
         position: absolute;
         width: 568px;
         height: 350px;
-        margin-top: -40px;
+        margin-top: -35px;
         z-index: 1;
         margin-left: -8px;
     }
