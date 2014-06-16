@@ -399,7 +399,7 @@ and (orientation : landscape) {
         float: left;
         position: relative;
         z-index: 100;
-        opacity: 0.5;
+        opacity: 0.125;
         width: 70px;
         height: 70px;
         cursor: pointer;
