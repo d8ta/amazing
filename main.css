@@ -389,7 +389,7 @@ and (max-device-width : 568px) {
 and (min-device-width : 320px)
 and (max-device-width : 568px)
 and (orientation : landscape) {
-  
+
 
     #left, #right, #up, #down {
         float: left;
@@ -446,11 +446,11 @@ and (orientation : landscape) {
 
     canvas {
         position: absolute;
-        width: 480px;
-        height: 320px;
+        width: 568px;
+        height: 350px;
         margin-top: -40px;
         z-index: 1;
-        margin-left: 38px;
+        margin-left: -8px;
     }
 
     #background {
