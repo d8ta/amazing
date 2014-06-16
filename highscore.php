@@ -56,9 +56,9 @@
     }
     ?>
 
-<!--    <p><a href="game.html">-->
-<!--            <button type="button" id="browser">Lets Play</button>-->
-<!--        </a></p>-->
+    <p><a href="game.html">
+            <button type="button" id="browser">Lets Play</button>
+        </a></p>
 
     <p><a href="mobilegame.html">
             <button type="button" id="mobile">Lets Play</button>

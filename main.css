@@ -494,13 +494,25 @@ and (orientation : portrait) {
 /* Desktops and laptops ----------- */
 @media only screen
 and (min-width : 1224px) {
-    /* Styles */
+    #browser {
+        display: inline;
+    }
+
+    #mobile {
+        display: none;
+    }
 }
 
 /* Large screens ----------- */
 @media only screen
 and (min-width : 1824px) {
-    /* Styles */
+    #browser {
+        display: inline;
+    }
+
+    #mobile {
+        display: none;
+    }
 }
 
 /* iPhone 4 ----------- */
