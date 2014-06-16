@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12e2583c-76da-4cec-897f-2b40d828b225" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bilder/tutorial.png" afterPath="$PROJECT_DIR$/bilder/tutorial.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game.js" afterPath="$PROJECT_DIR$/game.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/highscore.php" afterPath="$PROJECT_DIR$/highscore.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/impressum.html" afterPath="$PROJECT_DIR$/impressum.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.css" afterPath="$PROJECT_DIR$/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mobilegame.html" afterPath="$PROJECT_DIR$/mobilegame.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tutorial.html" afterPath="$PROJECT_DIR$/tutorial.html" />
     </list>
     <ignored path="mmp1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -80,10 +73,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="main.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="116" column="5" selection-start="2249" selection-end="2249" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4110">
+            <state line="100" column="16" selection-start="1898" selection-end="1918" vertical-scroll-proportion="0.46187684" vertical-offset="1185" max-vertical-offset="4035">
               <folding />
             </state>
           </provider>
@@ -116,10 +109,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="highscore.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="highscore.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/highscore.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="226" selection-start="293" selection-end="293" vertical-scroll-proportion="0.093023255" vertical-offset="0" max-vertical-offset="1185">
+            <state line="4" column="226" selection-start="293" selection-end="293" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="1185">
               <folding>
                 <marker date="1402897661000" expanded="true" signature="1057:1112" placeholder="INSERT INTO ..." />
                 <marker date="1402897661000" expanded="true" signature="1202:1257" placeholder="SELECT * FRO..Score..." />
@@ -164,12 +157,12 @@
         <option value="$PROJECT_DIR$/game.html" />
         <option value="$PROJECT_DIR$/gameover.html" />
         <option value="$PROJECT_DIR$/game.js" />
-        <option value="$PROJECT_DIR$/main.css" />
         <option value="$PROJECT_DIR$/mobilegame.html" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/tutorial.html" />
         <option value="$PROJECT_DIR$/impressum.html" />
         <option value="$PROJECT_DIR$/highscore.php" />
+        <option value="$PROJECT_DIR$/main.css" />
       </list>
     </option>
   </component>
@@ -547,13 +540,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="116" column="5" selection-start="2249" selection-end="2249" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4110">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mobilegame.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="39" selection-start="67" selection-end="294" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="705">
@@ -591,13 +577,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/highscore.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="226" selection-start="293" selection-end="293" vertical-scroll-proportion="0.093023255" vertical-offset="0" max-vertical-offset="1185">
+        <state line="4" column="226" selection-start="293" selection-end="293" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="1185">
           <folding>
             <marker date="1402897661000" expanded="true" signature="1057:1112" placeholder="INSERT INTO ..." />
             <marker date="1402897661000" expanded="true" signature="1202:1257" placeholder="SELECT * FRO..Score..." />
             <marker date="1402897661000" expanded="true" signature="1311:1377" placeholder="..." />
             <marker date="1402897661000" expanded="true" signature="1316:1375" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="100" column="16" selection-start="1898" selection-end="1918" vertical-scroll-proportion="0.46187684" vertical-offset="1185" max-vertical-offset="4035">
+          <folding />
         </state>
       </provider>
     </entry>
