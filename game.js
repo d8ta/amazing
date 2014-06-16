@@ -27,7 +27,7 @@ function game() {
     motherCell.draw();
     playerMovement();
     happyEnd(motherCell, player);
-    //playerDeath();
+    playerDeath();
 
     if (highscore > 100000) {
         highscore = 0;
@@ -46,11 +46,11 @@ requestAnimationFrame(game);
  * @type {number}
  */
 var playerStartposX = 15;
-var playerStartposY = 10;
+//var playerStartposY = 10;
 var playerWidth = 5;
 var playerSpeed = 3;
 var highscore = 100000;
-var difficulty = 75;
+var difficulty = 50;
 var counter = 5;
 
 
