@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12e2583c-76da-4cec-897f-2b40d828b225" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bilder/blurybloodcellgross.jpg" afterPath="$PROJECT_DIR$/bilder/blurybloodcellgross.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.css" afterPath="$PROJECT_DIR$/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mmp1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,7 +27,7 @@
     <favorites_list name="mmp1" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
+    <splitter split-orientation="horizontal" split-proportion="0.72121894">
       <split-first>
         <leaf>
           <file leaf-file-name="game.js" pinned="false" current="false" current-in-tab="false">
@@ -62,9 +60,11 @@
           <file leaf-file-name="main.css" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/main.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="345" column="0" selection-start="6300" selection-end="6300" vertical-scroll-proportion="0.7052117" vertical-offset="2597" max-vertical-offset="3840">
+                <state line="400" column="22" selection-start="7171" selection-end="7171" vertical-scroll-proportion="0.6923077" vertical-offset="495" max-vertical-offset="1890">
                   <folding>
                     <element signature="e#55#2706#0" expanded="false" />
+                    <element signature="e#2750#5328#0" expanded="false" />
+                    <element signature="e#5371#6329#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -104,7 +104,7 @@
           <file leaf-file-name="mobilegame.html" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/mobilegame.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="21" column="47" selection-start="782" selection-end="782" vertical-scroll-proportion="0.45586106" vertical-offset="0" max-vertical-offset="720">
+                <state line="21" column="47" selection-start="782" selection-end="782" vertical-scroll-proportion="0.47155687" vertical-offset="0" max-vertical-offset="720">
                   <folding />
                 </state>
               </provider>
@@ -591,9 +591,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="345" column="0" selection-start="6300" selection-end="6300" vertical-scroll-proportion="0.7052117" vertical-offset="2597" max-vertical-offset="3840">
+        <state line="400" column="22" selection-start="7171" selection-end="7171" vertical-scroll-proportion="0.6923077" vertical-offset="495" max-vertical-offset="1890">
           <folding>
             <element signature="e#55#2706#0" expanded="false" />
+            <element signature="e#2750#5328#0" expanded="false" />
+            <element signature="e#5371#6329#0" expanded="false" />
           </folding>
         </state>
       </provider>

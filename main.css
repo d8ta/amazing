@@ -349,6 +349,70 @@ and (max-width : 320px) {
 }
 
 
+
+/* iphone 5 */
+@media screen
+and (device-width: 320px)
+and (device-height: 568px)
+and (-webkit-device-pixel-ratio: 2){
+
+
+    #left, #right, #up, #down {
+        float: left;
+        position: relative;
+        z-index: 100;
+        opacity: 0.5;
+        width: 70px;
+        height: 70px;
+        cursor: pointer;
+    }
+
+    #left {
+        margin-top: 315px;
+        margin-left: 70px;
+    }
+
+    #right {
+        margin-top: 315px;
+        margin-left: 20px;
+    }
+    #up {
+        margin-top: 270px;
+        margin-left: -115px;    }
+    #down {
+        margin-top: 360px;
+        margin-left: -115px;    }
+
+    #browser {
+        display: none;
+    }
+
+    #mobile {
+        display: inline;
+    }
+
+
+
+    canvas {
+        position: absolute;
+        width: 320px;
+        height: 568px;
+        margin-top: 0px;
+        margin-left: 0px;
+        z-index: 1;
+    }
+
+    #background {
+        background-image: url('bilder/blurybloodcell.jpg');
+        background-repeat: no-repeat;
+        z-index: -1;
+    }
+
+}
+
+}
+
+
 /* iPads (portrait and landscape) ----------- */
 @media only screen
 and (min-device-width : 768px)
