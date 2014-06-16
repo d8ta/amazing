@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="12e2583c-76da-4cec-897f-2b40d828b225" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.css" afterPath="$PROJECT_DIR$/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mmp1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -61,7 +60,7 @@
           <file leaf-file-name="main.css" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/main.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="359" column="22" selection-start="6533" selection-end="6533" vertical-scroll-proportion="0.1923077" vertical-offset="2305" max-vertical-offset="4800">
+                <state line="359" column="23" selection-start="6534" selection-end="6534" vertical-scroll-proportion="0.1923077" vertical-offset="2305" max-vertical-offset="4800">
                   <folding>
                     <element signature="e#55#2706#0" expanded="false" />
                     <element signature="e#5404#6362#0" expanded="false" />
@@ -591,7 +590,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="359" column="22" selection-start="6533" selection-end="6533" vertical-scroll-proportion="0.1923077" vertical-offset="2305" max-vertical-offset="4800">
+        <state line="359" column="23" selection-start="6534" selection-end="6534" vertical-scroll-proportion="0.1923077" vertical-offset="2305" max-vertical-offset="4800">
           <folding>
             <element signature="e#55#2706#0" expanded="false" />
             <element signature="e#5404#6362#0" expanded="false" />
