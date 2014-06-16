@@ -349,28 +349,26 @@ and (max-width : 320px) {
 
 }
 
+/* iphone5 portrait */
 @media only screen
 and (min-device-width : 320px)
 and (max-device-width : 568px) {
-    body {
-        color: greenyellow;
-    }
 
 
     #left {
-        margin-top: 345px;
+        margin-top: 330px;
         margin-left: 70px;
     }
 
     #right {
-        margin-top: 345px;
+        margin-top: 330px;
         margin-left: 20px;
     }
     #up {
-        margin-top: 300px;
+        margin-top: 285px;
         margin-left: -115px;    }
     #down {
-        margin-top: 390px;
+        margin-top: 375px;
         margin-left: -115px;    }
 
 
@@ -385,14 +383,14 @@ and (max-device-width : 568px) {
     }
 }
 
-/* iphone5 */
+/* iphone5 landscape */
 @media only screen
 and (min-device-width : 320px)
 and (max-device-width : 568px)
 and (orientation : landscape) {
 
     body {
-        background-image: url("bilder/blurybloodcell2000.png");
+        background-image: url("bilder/");
         background-color: black;
         color: #f5f5f5;
     }
