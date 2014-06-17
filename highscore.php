@@ -2,7 +2,8 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">    <link href='http://fonts.googleapis.com/css?family=Ceviche+One|Exo+2:400,200,600' rel='stylesheet' type='text/css'>
+
     <script type="text/javascript" src="main.js"></script>
 
     <link href='http://fonts.googleapis.com/css?family=Ceviche+One|Exo+2:400,200,600' rel='stylesheet' type='text/css'>
@@ -55,9 +56,12 @@
     ?>
 
     <p><a href="game.html">
-            <button type="button" id="button">Play Again</button>
+            <button type="button" id="browser">Lets Play</button>
         </a></p>
 
+    <p><a href="mobilegame.html">
+            <button type="button" id="mobile">Lets Play</button>
+        </a></p>
             <audio loop autoplay>
                 <source src="sound/groove.wav" type="audio/mpeg">
             </audio>
