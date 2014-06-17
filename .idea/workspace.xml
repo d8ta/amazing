@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12e2583c-76da-4cec-897f-2b40d828b225" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.css" afterPath="$PROJECT_DIR$/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input.html" afterPath="$PROJECT_DIR$/input.html" />
     </list>
     <ignored path="mmp1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -58,10 +57,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="main.css" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/main.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="449" column="3" selection-start="6982" selection-end="8368" vertical-scroll-proportion="0.7446808" vertical-offset="6210" max-vertical-offset="8475">
+                <state line="449" column="3" selection-start="6982" selection-end="8368" vertical-scroll-proportion="0.0" vertical-offset="6210" max-vertical-offset="8475">
                   <folding />
                 </state>
               </provider>
@@ -85,10 +84,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="input.html" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="input.html" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/input.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="4" column="0" selection-start="67" selection-end="67" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="525">
+                <state line="4" column="226" selection-start="293" selection-end="293" vertical-scroll-proportion="0.08982036" vertical-offset="0" max-vertical-offset="668">
                   <folding />
                 </state>
               </provider>
@@ -97,7 +96,7 @@
           <file leaf-file-name="tutorial.html" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/tutorial.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="11" column="42" selection-start="583" selection-end="583" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="630">
+                <state line="5" column="18" selection-start="68" selection-end="295" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="630">
                   <folding />
                 </state>
               </provider>
@@ -172,12 +171,12 @@
         <option value="$PROJECT_DIR$/mobilegame.html" />
         <option value="$PROJECT_DIR$/gameover.html" />
         <option value="$PROJECT_DIR$/impressum.html" />
-        <option value="$PROJECT_DIR$/input.html" />
         <option value="$PROJECT_DIR$/tutorial.html" />
         <option value="$PROJECT_DIR$/game.html" />
         <option value="$PROJECT_DIR$/.idea/browsergame.js" />
         <option value="$PROJECT_DIR$/browsergame.js" />
         <option value="$PROJECT_DIR$/main.css" />
+        <option value="$PROJECT_DIR$/input.html" />
       </list>
     </option>
   </component>
@@ -555,20 +554,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/input.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="67" selection-end="67" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="525">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tutorial.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="42" selection-start="583" selection-end="583" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="630">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/game.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="0" selection-start="417" selection-end="417" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="6450">
@@ -604,7 +589,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="449" column="3" selection-start="6982" selection-end="8368" vertical-scroll-proportion="0.7446808" vertical-offset="6210" max-vertical-offset="8475">
+        <state line="449" column="3" selection-start="6982" selection-end="8368" vertical-scroll-proportion="0.0" vertical-offset="6210" max-vertical-offset="8475">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tutorial.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="18" selection-start="68" selection-end="295" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="630">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="226" selection-start="293" selection-end="293" vertical-scroll-proportion="0.08982036" vertical-offset="0" max-vertical-offset="668">
           <folding />
         </state>
       </provider>
