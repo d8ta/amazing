@@ -46,13 +46,17 @@ and (max-device-width : 480px) {
     #right {
         margin-top: 157px;
         margin-left: 20px;
+
     }
     #up {
         margin-top: 110px;
-        margin-left: -115px;    }
+        margin-left: -115px;
+    }
+
     #down {
         margin-top: 205px;
-        margin-left: -115px;    }
+        margin-left: -115px;
+    }
 
     #browser {
         display: none;
