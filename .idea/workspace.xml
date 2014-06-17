@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12e2583c-76da-4cec-897f-2b40d828b225" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.css" afterPath="$PROJECT_DIR$/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mobilegame.html" afterPath="$PROJECT_DIR$/mobilegame.html" />
     </list>
     <ignored path="mmp1.iws" />
@@ -34,7 +33,7 @@
           <file leaf-file-name="mobilegame.html" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/mobilegame.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="33" column="22" selection-start="1098" selection-end="1098" vertical-scroll-proportion="0.6961078" vertical-offset="30" max-vertical-offset="795">
+                <state line="25" column="0" selection-start="803" selection-end="952" vertical-scroll-proportion="0.5164671" vertical-offset="30" max-vertical-offset="795">
                   <folding />
                 </state>
               </provider>
@@ -606,7 +605,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mobilegame.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="22" selection-start="1098" selection-end="1098" vertical-scroll-proportion="0.6961078" vertical-offset="30" max-vertical-offset="795">
+        <state line="25" column="0" selection-start="803" selection-end="952" vertical-scroll-proportion="0.5164671" vertical-offset="30" max-vertical-offset="795">
           <folding />
         </state>
       </provider>
