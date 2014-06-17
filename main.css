@@ -350,7 +350,7 @@ and (max-width : 320px) {
 
 }
 
-/* iphone5 portrait
+/* iphone5 portrait */
 @media only screen
 and (min-device-width : 320px)
 and (max-device-width : 568px) {
@@ -383,71 +383,89 @@ and (max-device-width : 568px) {
 
     }
 }
-*/
 
 /* iphone5 landscape */
-/*@media only screen*/
-/*and (min-device-width : 320px)*/
-/*and (max-device-width : 568px)*/
-/*and (orientation : landscape) {*/
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px)
+and (orientation : landscape) {
 
-    /*body {*/
-        /*background-image: url("bilder/blurybloodcell2000.jpg");*/
-        /*background-color: black;*/
-        /*color: #f5f5f5;*/
-    /*}*/
+    body {
+        background-image: url("bilder/blurybloodcell2000.jpg");
+        background-color: black;
+        color: #f5f5f5;
+    }
 
-    /*#left, #right, #up, #down {*/
-        /*float: left;*/
-        /*position: relative;*/
-        /*z-index: 100;*/
-        /*opacity: 0.125;*/
-        /*width: 70px;*/
-        /*height: 70px;*/
-        /*cursor: pointer;*/
-    /*}*/
+    #left, #right, #up, #down {
+        float: left;
+        position: relative;
+        z-index: 100;
+        opacity: 0.125;
+        width: 70px;
+        height: 70px;
+        cursor: pointer;
+    }
 
-    /*#left {*/
-        /*margin-top: 157px;*/
-    /*}*/
+    #left {
+        margin-top: 157px;
+    }
 
-    /*#right {*/
-        /*margin-top: 157px;*/
-        /*margin-left: 20px;*/
-    /*}*/
-    /*#up {*/
-        /*margin-top: 110px;*/
-        /*margin-left: -115px;    }*/
-    /*#down {*/
-        /*margin-top: 205px;*/
-        /*margin-left: -115px;    }*/
+    #right {
+        margin-top: 157px;
+        margin-left: 20px;
+    }
+    #up {
+        margin-top: 110px;
+        margin-left: -115px;    }
+    #down {
+        margin-top: 205px;
+        margin-left: -115px;    }
 
-    /*#browser {*/
-        /*display: none;*/
-    /*}*/
+    #browser {
+        display: none;
+    }
 
-    /*#mobile {*/
-        /*display: inline;*/
-    /*}*/
+    #mobile {
+        display: inline;
+    }
 
 
-    /*canvas {*/
-        /*position: absolute;*/
-        /*width: 480px;*/
-        /*height: 320px;*/
-        /*margin-top: -40px;*/
-        /*z-index: 1;*/
-        /*margin-left: 38px;*/
-    /*}*/
+    .main {
+        margin-top: 100px;
+    }
 
-    /*#background {*/
-        /*background-image: url('bilder/blurybloodcellgross.jpg');*/
-        /*background-repeat: no-repeat;*/
-        /*z-index: -1;*/
-        /*max-height: 100%;*/
-        /*max-width: 100%;*/
-    /*}*/
-/*}*/
+    /*links*/
+    a:link {
+        color: #f5f5f5;
+        text-decoration: none;
+    }
+
+    a:visited {
+        color: #f5f5f5;
+    }
+
+    a:hover {
+        color: #f5f5f5;
+        text-decoration: underline;
+    }
+
+    canvas {
+        position: absolute;
+        width: 480px;
+        height: 320px;
+        margin-top: -40px;
+        z-index: 1;
+        margin-left: 38px;
+    }
+
+    #background {
+        background-image: url('bilder/blurybloodcellgross.jpg');
+        background-repeat: no-repeat;
+        z-index: -1;
+        max-height: 100%;
+        max-width: 100%;
+    }
+}
 
 
 /* iPads (portrait and landscape) ----------- */
