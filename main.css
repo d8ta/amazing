@@ -357,19 +357,19 @@ and (max-device-width : 568px) {
 
 
     #left {
-        margin-top: 330px;
+        margin-top: 305px;
         margin-left: 70px;
     }
 
     #right {
-        margin-top: 330px;
+        margin-top: 305px;
         margin-left: 20px;
     }
     #up {
-        margin-top: 285px;
+        margin-top: 260px;
         margin-left: -115px;    }
     #down {
-        margin-top: 375px;
+        margin-top: 352px;
         margin-left: -115px;    }
 
 

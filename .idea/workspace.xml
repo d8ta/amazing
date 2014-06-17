@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12e2583c-76da-4cec-897f-2b40d828b225" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/impressum.html" afterPath="$PROJECT_DIR$/impressum.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.css" afterPath="$PROJECT_DIR$/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mobilegame.html" afterPath="$PROJECT_DIR$/mobilegame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mmp1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,115 +30,98 @@
     <favorites_list name="mmp1" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.49427918">
-      <split-first>
-        <leaf>
-          <file leaf-file-name="game.js" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/game.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="16" column="0" selection-start="417" selection-end="417" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="6450">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="game.html" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/game.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="23" column="47" selection-start="737" selection-end="737" vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="555">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="browsergame.js" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/browsergame.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="199" column="25" selection-start="4364" selection-end="4364" vertical-scroll-proportion="0.0" vertical-offset="2826" max-vertical-offset="5790">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="main.css" pinned="false" current="true" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/main.css">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="352" column="20" selection-start="6407" selection-end="6409" vertical-scroll-proportion="0.021276595" vertical-offset="5265" max-vertical-offset="8745">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="gameover.html" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/gameover.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="6" column="0" selection-start="161" selection-end="161" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="795">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="impressum.html" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/impressum.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="8" column="0" selection-start="419" selection-end="419" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="540">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="input.html" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/input.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="4" column="226" selection-start="293" selection-end="293" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="540">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="tutorial.html" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/tutorial.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="5" column="18" selection-start="68" selection-end="295" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="630">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="mobilegame.html" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/mobilegame.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="33" column="0" selection-start="1071" selection-end="1071" vertical-scroll-proportion="0.0" vertical-offset="495" max-vertical-offset="690">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="mobilegame.html" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/mobilegame.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="21" column="47" selection-start="782" selection-end="782" vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="690">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/index.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="19" column="0" selection-start="801" selection-end="801" vertical-scroll-proportion="0.30535457" vertical-offset="74" max-vertical-offset="765">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file leaf-file-name="mobilegame.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mobilegame.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="33" column="43" selection-start="1017" selection-end="1072" vertical-scroll-proportion="-20.625" vertical-offset="0" max-vertical-offset="705">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="0" selection-start="801" selection-end="801" vertical-scroll-proportion="0.34008682" vertical-offset="50" max-vertical-offset="765">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="game.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/game.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="75" column="40" selection-start="1732" selection-end="1732" vertical-scroll-proportion="0.0" vertical-offset="622" max-vertical-offset="6450">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="game.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/game.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="47" selection-start="737" selection-end="737" vertical-scroll-proportion="-14.375" vertical-offset="0" max-vertical-offset="555">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="browsergame.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/browsergame.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="86" column="31" selection-start="1850" selection-end="1892" vertical-scroll-proportion="0.0" vertical-offset="990" max-vertical-offset="5790">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="368" column="23" selection-start="6674" selection-end="6674" vertical-scroll-proportion="0.0" vertical-offset="5100" max-vertical-offset="8745">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gameover.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gameover.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="0" selection-start="161" selection-end="161" vertical-scroll-proportion="-0.0" vertical-offset="90" max-vertical-offset="795">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="impressum.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/impressum.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="119" selection-start="295" selection-end="295" vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="555">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="input.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/input.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="226" selection-start="293" selection-end="293" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="540">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tutorial.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tutorial.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="18" selection-start="68" selection-end="295" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="630">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -166,17 +152,17 @@
         <option value="$PROJECT_DIR$/testpage.html" />
         <option value="$PROJECT_DIR$/.idea/touch.js" />
         <option value="$PROJECT_DIR$/highscore.php" />
-        <option value="$PROJECT_DIR$/game.js" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/mobilegame.html" />
         <option value="$PROJECT_DIR$/gameover.html" />
-        <option value="$PROJECT_DIR$/impressum.html" />
         <option value="$PROJECT_DIR$/tutorial.html" />
         <option value="$PROJECT_DIR$/game.html" />
         <option value="$PROJECT_DIR$/.idea/browsergame.js" />
-        <option value="$PROJECT_DIR$/browsergame.js" />
         <option value="$PROJECT_DIR$/input.html" />
+        <option value="$PROJECT_DIR$/impressum.html" />
         <option value="$PROJECT_DIR$/main.css" />
+        <option value="$PROJECT_DIR$/browsergame.js" />
+        <option value="$PROJECT_DIR$/mobilegame.html" />
+        <option value="$PROJECT_DIR$/game.js" />
       </list>
     </option>
   </component>
@@ -530,40 +516,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/highscore.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="727" selection-end="727" vertical-scroll-proportion="0.41244572" vertical-offset="0" max-vertical-offset="1170" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mobilegame.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="1071" selection-end="1071" vertical-scroll-proportion="0.0" vertical-offset="495" max-vertical-offset="690">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gameover.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="161" selection-end="161" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="795">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/impressum.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="419" selection-end="419" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="540">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="417" selection-end="417" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="6450">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="47" selection-start="737" selection-end="737" vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="555">
+        <state line="19" column="0" selection-start="727" selection-end="727" vertical-scroll-proportion="0.41244572" vertical-offset="0" max-vertical-offset="1170">
           <folding />
         </state>
       </provider>
@@ -573,23 +526,9 @@
         <state line="3" column="3" selection-start="0" selection-end="8646" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5790" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/browsergame.js">
+    <entry file="file://$PROJECT_DIR$/gameover.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="199" column="25" selection-start="4364" selection-end="4364" vertical-scroll-proportion="0.0" vertical-offset="2826" max-vertical-offset="5790">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="801" selection-end="801" vertical-scroll-proportion="0.30535457" vertical-offset="74" max-vertical-offset="765">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tutorial.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="18" selection-start="68" selection-end="295" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="630">
+        <state line="6" column="0" selection-start="161" selection-end="161" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="795">
           <folding />
         </state>
       </provider>
@@ -601,9 +540,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tutorial.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="18" selection-start="68" selection-end="295" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="630">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/impressum.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="119" selection-start="295" selection-end="295" vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="555">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="352" column="20" selection-start="6407" selection-end="6409" vertical-scroll-proportion="0.021276595" vertical-offset="5265" max-vertical-offset="8745">
+        <state line="368" column="23" selection-start="6674" selection-end="6674" vertical-scroll-proportion="0.0" vertical-offset="5100" max-vertical-offset="8745">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/browsergame.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="86" column="31" selection-start="1850" selection-end="1892" vertical-scroll-proportion="0.0" vertical-offset="990" max-vertical-offset="5790">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mobilegame.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="43" selection-start="1017" selection-end="1072" vertical-scroll-proportion="-20.625" vertical-offset="0" max-vertical-offset="705">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="75" column="40" selection-start="1732" selection-end="1732" vertical-scroll-proportion="0.0" vertical-offset="622" max-vertical-offset="6450">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="47" selection-start="737" selection-end="737" vertical-scroll-proportion="-14.375" vertical-offset="0" max-vertical-offset="555">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="0" selection-start="801" selection-end="801" vertical-scroll-proportion="0.34008682" vertical-offset="50" max-vertical-offset="765">
           <folding />
         </state>
       </provider>
