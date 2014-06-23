@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="12e2583c-76da-4cec-897f-2b40d828b225" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game.js" afterPath="$PROJECT_DIR$/game.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.css" afterPath="$PROJECT_DIR$/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mmp1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,10 +28,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="611" column="28" selection-start="11025" selection-end="11025" vertical-scroll-proportion="0.64972526" vertical-offset="8692" max-vertical-offset="9420">
+            <state line="611" column="28" selection-start="11025" selection-end="11025" vertical-scroll-proportion="0.0" vertical-offset="8692" max-vertical-offset="9420">
               <folding />
             </state>
           </provider>
@@ -57,10 +55,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="game.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="game.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/game.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="20" selection-start="1146" selection-end="1146" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6450">
+            <state line="52" column="18" selection-start="1189" selection-end="1189" vertical-scroll-proportion="0.4739011" vertical-offset="435" max-vertical-offset="6450">
               <folding />
             </state>
           </provider>
@@ -160,8 +158,8 @@
         <option value="$PROJECT_DIR$/browsergame.js" />
         <option value="$PROJECT_DIR$/mobilegame.html" />
         <option value="$PROJECT_DIR$/game.html" />
-        <option value="$PROJECT_DIR$/game.js" />
         <option value="$PROJECT_DIR$/main.css" />
+        <option value="$PROJECT_DIR$/game.js" />
       </list>
     </option>
   </component>
@@ -561,13 +559,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/game.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="20" selection-start="1146" selection-end="1146" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6450">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="39" column="0" selection-start="1312" selection-end="1312" vertical-scroll-proportion="-24.375" vertical-offset="0" max-vertical-offset="765">
@@ -577,7 +568,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="611" column="28" selection-start="11025" selection-end="11025" vertical-scroll-proportion="0.64972526" vertical-offset="8692" max-vertical-offset="9420">
+        <state line="611" column="28" selection-start="11025" selection-end="11025" vertical-scroll-proportion="0.0" vertical-offset="8692" max-vertical-offset="9420">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="18" selection-start="1189" selection-end="1189" vertical-scroll-proportion="0.4739011" vertical-offset="435" max-vertical-offset="6450">
           <folding />
         </state>
       </provider>
