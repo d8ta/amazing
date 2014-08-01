@@ -10,10 +10,11 @@ module.exports = function(grunt) {
         concat: {
             dist: {
                 src: [
-                    'js/*.js', // All JS Files of the project
-                    'js/hammer.js'  // Specific file
+                    'js/hammer.min.js',
+                    'js/game.js',
+                    'js/main.js'
                 ],
-                dest: 'js/build/release.js'
+                dest: 'js/release.js'
             }
         }
 

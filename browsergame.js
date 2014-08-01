@@ -308,7 +308,7 @@ function playerDeath() {
             document.getElementById('pop').play();
             counter -= 1;
             if (counter == 0) {
-                window.location.href = "../gameover.html";
+                window.location.href = "gameover.html";
             }
             player.xPos = 15;
             player.yPos = 10;
@@ -329,7 +329,7 @@ function happyEnd(c1, c2) {
         player.yPos = -300;
         localStorage.highscore = highscore;
         alert("your Score is: " + highscore);
-        window.location.href = "../input.html";
+        window.location.href = "input.html";
     }
 }
 
