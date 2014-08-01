@@ -55,12 +55,8 @@
     }
     ?>
 
-    <p><a href="game.html">
-            <button type="button" id="browser">Lets Play</button>
-        </a></p>
-
     <p><a href="mobilegame.html">
-            <button type="button" id="mobile">Lets Play</button>
+            <button type="button">Lets Play</button>
         </a></p>
             <audio loop autoplay>
                 <source src="sound/groove.wav" type="audio/mpeg">
