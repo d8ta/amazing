@@ -4,7 +4,7 @@ and (min-device-width : 320px)
 and (max-device-width : 480px) {
     /* Styles */
     body {
-        background-image: url("bilder/bg_grey.png");
+        background-image: url("bilder/build/bg_grey.png");
         color: #f5f5f5;
     }
 
@@ -120,7 +120,7 @@ and (max-device-width : 480px) {
     }
 
     #background {
-        background-image: url('bilder/blurybloodcell.jpg');
+        background-image: url('bilder/build/blurybloodcell.jpg');
         background-repeat: no-repeat;
         opacity: 0.9;
         z-index: -1;
@@ -150,7 +150,7 @@ and (max-device-width : 480px) {
 @media only screen
 and (min-width : 321px) {
     body {
-        background-image: url("bilder/bg_grey.png");
+        background-image: url("bilder/build/bg_grey.png");
         background-color: black;
         color: #f5f5f5;
     }
@@ -262,7 +262,7 @@ and (min-width : 321px) {
     }
 
     #background {
-        background-image: url('bilder/blurybloodcellgross.jpg');
+        background-image: url('bilder/build/blurybloodcellgross.jpg');
         background-repeat: no-repeat;
         z-index: -1;
         max-height: 100%;
@@ -329,7 +329,7 @@ and (max-width : 320px) {
     }
 
     #background {
-        background-image: url('bilder/blurybloodcell.jpg');
+        background-image: url('bilder/build/blurybloodcell.jpg');
         background-repeat: no-repeat;
         z-index: -1;
         border-radius: 15px;
@@ -379,7 +379,7 @@ and (max-device-width : 568px)
 and (orientation : landscape) {
 
     body {
-        background-image: url("bilder/bg_grey.png");
+        background-image: url("bilder/build/bg_grey.png");
         background-color: black;
         color: #f5f5f5;
     }
@@ -440,7 +440,7 @@ and (orientation : landscape) {
     }
 
     #background {
-        background-image: url('bilder/blurybloodcellgross.jpg');
+        background-image: url('bilder/build/blurybloodcellgross.jpg');
         background-repeat: no-repeat;
         z-index: -1;
         max-height: 100%;
@@ -560,7 +560,7 @@ and (min-width : 1824px) {
     }
 
     #background {
-        background-image: url('bilder/blurybloodcellgross.jpg');
+        background-image: url('bilder/build/blurybloodcellgross.jpg');
         background-repeat: no-repeat;
         z-index: -1;
         max-height: 100%;
