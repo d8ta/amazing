@@ -38,11 +38,33 @@ module.exports = function(grunt) {
         },
 
         watch: {
+            options: {
+                livereload: true
+            },
             scripts: {
                 files: ['js/*.js'],
-                tasks: ['concat', 'uglify'],
+                tasks: ['concat', 'uglify', 'watch'],
                 options: {
                     spawn: false
+                }
+            },
+
+            css: {
+                files: ['*.scss'],
+                tasks: ['sass'],
+                options: {
+                    spawn: false
+                }
+            }
+        },
+
+        sass: {
+            dist: {
+                options: {
+                    style: 'compressed'
+                },
+                files: {
+                    'main.css': 'main.scss'
                 }
             }
         }
@@ -53,12 +75,13 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
+    grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
 
 
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('default', ['concat', 'uglify', 'imagemin', 'watch']);
+    grunt.registerTask('default', ['concat', 'uglify','sass', 'watch']);
 
 };

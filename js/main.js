@@ -1,5 +1,5 @@
 /**
- * Gives highscore value to the form in input.html to send it to the
+ * Gives the highscore value to the input.html form to send it to the
  * server for PHP SQL queries
  */
 function myScore() {
