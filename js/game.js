@@ -5,6 +5,9 @@
 var canvas = document.getElementById("canvas");
 var context = canvas.getContext('2d');
 
+context.canvas.height = window.innerHeight;
+context.canvas.width = window.innerWidth;
+
 
 /**
  * Webkit einbindung für gängige Browser
