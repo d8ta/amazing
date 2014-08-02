@@ -62,8 +62,8 @@ var playerStartposX = 15;
 var playerWidth = 5;
 var playerSpeed = 3;
 var highscore = 100000;
-var difficulty = 0;
-var counter = 5;
+var difficulty = 10;
+var counter = 3;
 
 
 /**
@@ -363,12 +363,20 @@ function playerDeath() {
         if (whiteCellCollision(player, myCircle)) {
             document.getElementById('pop').play();
             counter -= 1;
+            if (counter == 2) {
+                document.getElementById("heart1").src = "bilder/heart_black.png";
+                }
+            if (counter == 1) {
+                document.getElementById("heart2").src = "bilder/heart_black.png";
+                }
             if (counter == 0) {
+                document.getElementById("heart3").src = "bilder/heart_black.png";
+                }
+            if (counter == -1) {
                 window.location.href = "gameover.html";
             }
             player.xPos = 15;
             player.yPos = 10;
-            console.log(counter);
         }
     }
 }
