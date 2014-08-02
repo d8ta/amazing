@@ -27,6 +27,13 @@ var requestAnimationFrame = window.requestAnimationFrame ||
     window.webkitRequestAnimationFrame ||
     window.msRequestAnimationFrame;
 
+$(window).bind('resize', function () {
+
+    alert('Die Grösse des Browserfensters wurde geändert und die seite wird neu geladen, um das Spiel an die neue Grösse anzupassen!');
+    window.location.href = "game.html";
+
+});
+
 
 /**
  * Spielaufruf in Animation Frame
@@ -363,6 +370,7 @@ function playerDeath() {
         if (whiteCellCollision(player, myCircle)) {
             document.getElementById('pop').play();
             counter -= 1;
+            /*livecounter*/
             if (counter == 2) {
                 document.getElementById("heart1").src = "bilder/heart_black.png";
                 }
