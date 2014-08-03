@@ -18,12 +18,24 @@ var requestAnimationFrame = window.requestAnimationFrame ||
     window.webkitRequestAnimationFrame ||
     window.msRequestAnimationFrame;
 
+
+/**
+ * Automatischer reload der Site, wenn Browsergrösse verändert wird
+ */
 $(window).bind('resize', function () {
 
     alert('Die Grösse des Browserfensters wurde geändert und die seite wird neu geladen, um das Spiel an die neue Grösse anzupassen!');
     window.location.href = "game.html";
-
 });
+
+/**
+ * Slider für Schwierigkeit (anzahl Bubbles)
+ * @param newValue
+ */
+function showValue(newValue)
+{
+    document.getElementById("range").innerHTML=newValue;
+}
 
 
 /**
@@ -60,7 +72,7 @@ var playerStartposX = 15;
 var playerWidth = 5;
 var playerSpeed = 3;
 var highscore = 100000;
-var difficulty = 10;
+var difficulty = 50;
 var counter = 3;
 
 
@@ -79,7 +91,7 @@ function drawCanvas() {
  * Spieler- und Zielzelle
  */
 var player = new Cells(playerStartposX, playerStartposX, playerWidth, 'rgba(255, 122, 0, 1)', 'yellow', 1);
-var motherCell = new Cells(canvas.width - 50, canvas.height - 50, 25, 'rgba(255, 122, 0, .75)', 'rgba(255, 255, 0, .5)', 20);
+var motherCell = new Cells(canvas.width - 50, canvas.height - 50, 25, 'rgba(255, 122, 0, 1)', 'rgba(255, 255, 0, .5)', 20);
 
 
 /**
@@ -286,7 +298,7 @@ Cells.prototype.draw = function () {
     context.arc(this.xPos, this.yPos, this.radius, 0, Math.PI * 2, false);
     context.fillStyle = this.fillStyle;
 
-    context.shadowColor = 'red';
+    context.shadowColor = 'white';
     context.shadowBlur = 0;
 
     context.fill();
@@ -311,7 +323,7 @@ function drawCircles() {
         var randomX = Math.round(Math.random() * (canvas.width + 200));
         var randomY = Math.round(Math.random() * (canvas.height + 200));
         var speed = Math.random();
-        var circleWidth = Math.random() * 25;
+        var circleWidth = Math.random() * 30;
         var circle = new Circle(rad, speed, circleWidth, randomX, randomY);
         circles.push(circle);
     }
@@ -341,7 +353,7 @@ function Cells(xPos, yPos, radius, color, border, borderwidth) {
     this.strokeStyle = border;
     this.lineWidth = borderwidth;
 
-    this.opacity = .1;
+    this.opacity = .2;
 }
 
 /**
@@ -361,7 +373,8 @@ function playerDeath() {
         if (whiteCellCollision(player, myCircle)) {
             document.getElementById('pop').play();
             counter -= 1;
-            /*livecounter*/
+
+            /* Lifecounter zählt runter*/
             if (counter == 2) {
                 document.getElementById("heart1").src = "bilder/heart_black.png";
                 }

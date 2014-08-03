@@ -18,23 +18,32 @@
 <div class="main">
     <h1>A-MAZE-ING</h1>
 
-    <h2>Amazing is a fast paced Mazegame, navigate your way through dangerous white Bloodcells and reach the Mothercell to survive. Move fast and beat the Highscore</h2>
+<!--
+    <h2>Navigate through the white cells and reach the Mothercell. If you are fast enough the Highscore is yours</h2>
+-->
 
     <br>
     <br>
 
     <p><a href="game.html">
-        <button type="button">Play</button>
+        <button type="button" class="grow">Play</button>
     </a></p>
 
     <p><a href="tutorial.html">
-        <button type="button">How to Play</button>
+        <button type="button" class="grow">How to Play</button>
     </a></p>
+
+    <input type="range" min="0" max="150" value="25" step="5" onchange="showValue(this.value)" />
+    <span id="range">25</span>
+
+
 
 </div>
 
 <footer>
+<!--
     <a href="impressum.html">Impressum</a>
+-->
 </footer>
 
 </body>

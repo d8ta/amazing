@@ -2,9 +2,10 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">    <link href='http://fonts.googleapis.com/css?family=Ceviche+One|Exo+2:400,200,600' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Ceviche+One|Exo+2:400,200,600' rel='stylesheet' type='text/css'>
 
-    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="release.min.js"></script>
 
     <link href='http://fonts.googleapis.com/css?family=Ceviche+One|Exo+2:400,200,600' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
@@ -43,7 +44,7 @@
 
     <h1>HIGHSCORE</h1>
 
-    <h2>Top Ten Highscores</h2>
+
 
     <?php
 
@@ -55,10 +56,10 @@
     }
     ?>
 
-    <p><a href="mobilegame.html">
-            <button type="button">Lets Play</button>
+    <p><a href="game.html">
+            <button type="button" class="grow">Play again</button>
         </a></p>
-            <audio loop autoplay>
+            <audio autoplay>
                 <source src="sound/groove.wav" type="audio/mpeg">
             </audio>
 
