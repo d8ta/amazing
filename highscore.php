@@ -59,8 +59,8 @@
     <p><a href="game.html">
             <button type="button" class="grow">Play again</button>
         </a></p>
-            <audio autoplay>
-                <source src="sound/groove.wav" type="audio/mpeg">
+            <audio loop autoplay>
+                <source src="sound/marchtowar.wav" type="audio/mpeg">
             </audio>
 
 </div>
