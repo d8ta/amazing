@@ -28,14 +28,6 @@ $(window).bind('resize', function () {
     window.location.href = "game.html";
 });
 
-/**
- * Slider für Schwierigkeit (anzahl Bubbles)
- * @param newValue
- */
-function showValue(newValue)
-{
-    document.getElementById("range").innerHTML=newValue;
-}
 
 
 /**
@@ -69,12 +61,11 @@ requestAnimationFrame(game);
  */
 var playerStartposX = 15;
 //var playerStartposY = 10;
-var playerWidth = 5;
-var playerSpeed = 3;
+var playerWidth = 10;
+var playerSpeed = 1;
 var highscore = 100000;
 var difficulty = 50;
 var counter = 3;
-
 
 /**
  * Update des Canvas und Zeichnen aller Circle (Zellen)
