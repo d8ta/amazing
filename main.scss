@@ -9,6 +9,10 @@ body {
   margin: 0px;
 }
 
+#touchwebkit {
+  -webkit-touch-callout: none;
+}
+
 h1 {
   font-family: 'Audiowide', cursive;
   font-size: 250%;
