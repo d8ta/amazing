@@ -20,10 +20,8 @@ $(window).resize(function() {
  * Adressbar verstecken
  */
 window.addEventListener("load",function() {
-    setTimeout(function(){
         // Hide address bar!
         window.scrollTo(0, 1);
-    }, 0);
 });
 
 
