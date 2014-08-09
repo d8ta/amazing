@@ -9,6 +9,16 @@ context.canvas.height = window.innerHeight;
 context.canvas.width = window.innerWidth;
 
 
+// When ready...
+window.addEventListener("load",function() {
+    // Set a timeout...
+    setTimeout(function(){
+        // Hide the address bar!
+        window.scrollTo(0, 1);
+    }, 0);
+});
+
+
 /**
  * Webkit einbindung für gängige Browser
  * @type {Function}
@@ -96,7 +106,6 @@ var playerMovement = movement();
  */
 function movement() {
 
-    var left = right = up = down = touchDown = touchLeft = touchRight = touchUp = false;
 
     /**
      * Touchsteuerung aktivieren
