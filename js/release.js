@@ -114,6 +114,7 @@ var playerMovement = movement();
  */
 function movement() {
 
+    var left = right = up = down = touchLeft = touchRight = touchDown = touchUp = false;
 
     /**
      * Touchsteuerung aktivieren
