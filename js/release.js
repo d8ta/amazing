@@ -18,14 +18,17 @@ context.canvas.height = window.innerHeight;
 context.canvas.width = window.innerWidth;
 
 
-// When ready...
-window.addEventListener("load",function() {
-    // Set a timeout...
-    setTimeout(function(){
-        // Hide the address bar!
-        window.scrollTo(0, 1);
-    }, 0);
-});
+if((Browser.Platform.ios) || (Browser.Platform.webos) || (Browser.Platform.android)) {
+    //For iPhone and Andriod To remove Address bar when viewing website on Safari Mobile
+    // When ready...
+    window.addEventListener("load",function() {
+        // Set a timeout...
+        setTimeout(function(){
+            // Hide the address bar!
+            window.scrollTo(0, 1);
+        }, 0);
+    });
+}
 
 
 /**
