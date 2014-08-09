@@ -34,7 +34,9 @@ var requestAnimationFrame = window.requestAnimationFrame ||
  */
 $(window).bind('resize', function () {
 
+/*
     alert('Die Grösse des Browserfensters wurde geändert und die seite wird neu geladen, um das Spiel an die neue Grösse anzupassen!');
+*/
     window.location.href = "game.html";
 });
 
