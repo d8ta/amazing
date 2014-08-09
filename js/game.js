@@ -14,7 +14,7 @@ window.addEventListener("load",function() {
     // Set a timeout...
     setTimeout(function(){
         // Hide the address bar!
-        window.scrollTo(0, 1);
+        window.scrollTo(0, 0);
     }, 0);
 });
 
@@ -34,9 +34,6 @@ var requestAnimationFrame = window.requestAnimationFrame ||
  */
 $(window).bind('resize', function () {
 
-/*
-    alert('Die Grösse des Browserfensters wurde geändert und die seite wird neu geladen, um das Spiel an die neue Grösse anzupassen!');
-*/
     location.reload();
 });
 
