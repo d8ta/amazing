@@ -87,7 +87,7 @@ var playerStartposX = 15;
 var playerWidth = 10;
 var playerSpeed = 1;
 var highscore = 100000;
-var difficulty = 50;
+var difficulty = 0;
 var counter = 3;
 
 /**
@@ -113,8 +113,6 @@ var motherCell = new Cells(canvas.width - 50, canvas.height - 50, 25, 'rgba(255,
  */
 var playerMovement = movement();
 
-// TODO: bei <Play> klicken kurzfristig Steuerung aktivieren damit diese gleich funktioniert
-
 
 /**
  * Spielsteuerung
@@ -123,6 +121,11 @@ var playerMovement = movement();
 function movement() {
 
 
+    /**
+     * Beim antippen des Up-arrow wird das Spiel gestartet, vorher funktioniert die Steuerung nicht
+     * Todo: auf OnWindowLoad setzten!!!
+     * @type {HTMLElement}
+     */
     var gamestart  = document.getElementById('up');
     Hammer(gamestart).on("touch", function() {
         left = right = up = down = touchLeft = touchRight = touchDown = touchUp = false;

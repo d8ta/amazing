@@ -9,15 +9,6 @@ body {
   margin: 0px;
 }
 
-#start {
-    background: silver;
-    height: 100px;
-    width: 100px;
-    text-align: center;
-    font: 30px/300px Helvetica, Arial, sans-serif;
-    z-index: 1;
-}
-
 #touchwebkit {
   -webkit-touch-callout: none;
 }
@@ -111,7 +102,7 @@ canvas {
   float: left;
   position: relative;
   z-index: 100;
-  opacity: 0.1;
+  opacity: 0.25;
   width: 70px;
   height: 70px;
   cursor: pointer;
@@ -119,6 +110,7 @@ canvas {
 
 #left {
   margin-top: 157px;
+
 }
 
 #right {
