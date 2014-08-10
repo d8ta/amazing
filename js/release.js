@@ -125,11 +125,16 @@ function movement() {
      * Todo: auf OnWindowLoad setzten!!!
      * @type {HTMLElement}
      */
-    var gamestart  = document.getElementById('up');
+
+    $(document).ready(function(){
+        left = right = up = down = touchLeft = touchRight = touchDown = touchUp = false;
+
+    });
+    /*var gamestart  = document.getElementById('up');
     Hammer(gamestart).on("touch", function() {
         left = right = up = down = touchLeft = touchRight = touchDown = touchUp = false;
     });
-
+*/
     /**
      * Touchsteuerung aktivieren
      * @type {HTMLElement}
