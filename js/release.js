@@ -17,12 +17,11 @@ var context = canvas.getContext('2d');
 context.canvas.height = window.innerHeight;
 context.canvas.width = window.innerWidth;
 
-/*
 var $c = $('canvas'), c = $c[0];
 $(window).resize(function() {
     c.width = $c.width();
     c.height = $c.height();
-});*/
+});
 
 
 /**
