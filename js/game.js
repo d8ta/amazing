@@ -104,6 +104,8 @@ var motherCell = new Cells(canvas.width - 50, canvas.height - 50, 25, 'rgba(255,
  */
 var playerMovement = movement();
 
+// TODO: bei <Play> klicken kurzfristig Steuerung aktivieren damit diese gleich funktioniert
+
 
 /**
  * Spielsteuerung
@@ -111,7 +113,11 @@ var playerMovement = movement();
  */
 function movement() {
 
-    var left = right = up = down = touchLeft = touchRight = touchDown = touchUp = false;
+
+    var gamestart  = document.getElementById('heart1');
+    Hammer(gamestart).on("touch", function() {
+        left = right = up = down = touchLeft = touchRight = touchDown = touchUp = false;
+    });
 
     /**
      * Touchsteuerung aktivieren

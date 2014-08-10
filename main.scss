@@ -9,6 +9,15 @@ body {
   margin: 0px;
 }
 
+#start {
+    background: silver;
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    font: 30px/300px Helvetica, Arial, sans-serif;
+    z-index: 1;
+}
+
 #touchwebkit {
   -webkit-touch-callout: none;
 }
