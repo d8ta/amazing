@@ -123,7 +123,7 @@ var playerMovement = movement();
 function movement() {
 
 
-    var gamestart  = document.getElementById('heart1');
+    var gamestart  = document.getElementById('up');
     Hammer(gamestart).on("touch", function() {
         left = right = up = down = touchLeft = touchRight = touchDown = touchUp = false;
     });
