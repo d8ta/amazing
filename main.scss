@@ -1,10 +1,10 @@
 body {
   background-image: url("bilder/bg_plasma.jpg");
-/*
-  background-color: firebrick;
-*/
+  /*
+    background-color: firebrick;
+  */
   color: #f5f5f5;
-  width:  100%;
+  width: 100%;
   height: 100%;
   margin: 0px;
 }
@@ -22,7 +22,7 @@ h1 {
   opacity: .5;
 }
 
-h3, h2, p, form, td{
+h3, h2, p, form, td {
   font-family: 'Exo 2', 'sans-serif';
   text-align: center;
   font-size: 100%;
@@ -116,27 +116,28 @@ canvas {
   width: 30px;
   height: 30px;
   cursor: pointer;
-  background-color: #f5f5f5;
 }
 
-
 #sw {
-  margin-left: 180px;
+  margin-left: -50px;
   margin-top: 240px;
+  transform: rotate(90deg);
 }
 
 #se {
-  margin-left: 70px;
+  margin-left: -140px;
   margin-top: 240px;
+  transform: rotate(180deg);
 }
 
 #ne {
-  margin-left: 70px;
+  margin-left: -140px;
   margin-top: 140px;
+  transform: rotate(-90deg);
 }
 
 #nw {
-  margin-left: 180px;
+  margin-left: -50px;
   margin-top: 140px;
 }
 
@@ -145,12 +146,12 @@ canvas {
   margin-top: 170px;
 }
 
-
 #right {
   margin-top: 170px;
   margin-left: 20px;
 
 }
+
 #up {
   margin-top: 125px;
   margin-left: -115px;
@@ -173,25 +174,25 @@ canvas {
 
 /*links*/
 
-  a:link {
-    text-decoration: none;
-    text-shadow: 0 0 1px #000;
-    color: transparent;
-    opacity: .5;
-  }
+a:link {
+  text-decoration: none;
+  text-shadow: 0 0 1px #000;
+  color: transparent;
+  opacity: .5;
+}
 
-  a:visited {
-    text-shadow: 0 0 1px #000;
-    color: transparent;
-    opacity: .5;
-  }
+a:visited {
+  text-shadow: 0 0 1px #000;
+  color: transparent;
+  opacity: .5;
+}
 
-  a:hover {
-    text-decoration: underline;
-    text-shadow: 0 0 1px #000;
-    color: transparent;
-    opacity: .5;
-  }
+a:hover {
+  text-decoration: underline;
+  text-shadow: 0 0 1px #000;
+  color: transparent;
+  opacity: .5;
+}
 
 table {
   font-family: 'Exo 2', 'sans-serif';
