@@ -108,7 +108,7 @@ canvas {
   cursor: pointer;
 }
 
-#sw {
+#sw, #se, #ne, #nw {
   float: left;
   position: absolute;
   z-index: 100;
@@ -120,15 +120,31 @@ canvas {
 }
 
 
+#sw {
+  margin-left: 180px;
+  margin-top: 240px;
+}
+
+#se {
+  margin-left: 70px;
+  margin-top: 240px;
+}
+
+#ne {
+  margin-left: 70px;
+  margin-top: 140px;
+}
+
+#nw {
+  margin-left: 180px;
+  margin-top: 140px;
+}
+
 #left {
   margin-left: 60px;
   margin-top: 170px;
 }
 
-#sw {
-  margin-left: 180px;
-  margin-top: 240px;
-}
 
 #right {
   margin-top: 170px;

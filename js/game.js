@@ -131,12 +131,6 @@ function movement() {
         touchLeft = true;
     });
 
-    var sw = document.getElementById('sw');
-    Hammer(sw).on("touch", function() {
-        touchRight = true;
-        touchDown = true;
-    });
-
     var touchRight = document.getElementById('right');
     Hammer(touchRight).on("touch", function() {
         touchRight = true;
@@ -152,16 +146,34 @@ function movement() {
         touchDown = true;
     });
 
+
+    // zwischensteuerung (südwest usw.)
+    Hammer(sw).on("touch", function() {
+        touchRight = true;
+        touchDown = true;
+    });
+
+    Hammer(se).on("touch", function() {
+        touchLeft = true;
+        touchDown = true;
+    });
+
+    Hammer(ne).on("touch", function() {
+        touchLeft = true;
+        touchUp = true;
+    });
+
+    Hammer(nw).on("touch", function() {
+        touchRight = true;
+        touchUp = true;
+    });
+
+
     /**
      * Touchsteuerung deaktiviren bei loslassen
      */
     Hammer(touchLeft).on("release", function() {
         touchLeft = false;
-    });
-
-    Hammer(sw).on("release", function() {
-        touchRight = false;
-        touchDown = false;
     });
 
     Hammer(touchRight).on("release", function() {
@@ -174,6 +186,27 @@ function movement() {
 
     Hammer(touchDown).on("release", function() {
         touchDown = false;
+    });
+
+    // zwischensteuerung (südwest usw.)
+    Hammer(sw).on("release", function() {
+        touchRight = false;
+        touchDown = false;
+    });
+
+    Hammer(se).on("release", function() {
+        touchLeft = false;
+        touchDown = false;
+    });
+
+    Hammer(ne).on("release", function() {
+        touchLeft = false;
+        touchUp = false;
+    });
+
+    Hammer(nw).on("release", function() {
+        touchRight = false;
+        touchUp = false;
     });
 
 
