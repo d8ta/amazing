@@ -131,6 +131,12 @@ function movement() {
         touchLeft = true;
     });
 
+    var sw = document.getElementById('sw');
+    Hammer(sw).on("touch", function() {
+        touchRight = true;
+        touchDown = true;
+    });
+
     var touchRight = document.getElementById('right');
     Hammer(touchRight).on("touch", function() {
         touchRight = true;
@@ -151,6 +157,11 @@ function movement() {
      */
     Hammer(touchLeft).on("release", function() {
         touchLeft = false;
+    });
+
+    Hammer(sw).on("release", function() {
+        touchRight = false;
+        touchDown = false;
     });
 
     Hammer(touchRight).on("release", function() {

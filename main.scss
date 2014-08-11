@@ -108,9 +108,26 @@ canvas {
   cursor: pointer;
 }
 
+#sw {
+  float: left;
+  position: absolute;
+  z-index: 100;
+  opacity: 0.25;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  background-color: #f5f5f5;
+}
+
+
 #left {
-  margin-left: 20px;
+  margin-left: 60px;
   margin-top: 170px;
+}
+
+#sw {
+  margin-left: 180px;
+  margin-top: 240px;
 }
 
 #right {
@@ -128,7 +145,7 @@ canvas {
   margin-left: -115px;
 }
 
-/*little hearts for live*/
+/* Lebensanzeige*/
 #heart1, #heart2, #heart3 {
   float: right;
   width: 15px;
