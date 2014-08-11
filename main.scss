@@ -98,75 +98,69 @@ canvas {
   bottom: 0px;
 }
 
-#left, #right, #up, #down {
-  float: left;
-  position: relative;
+#left, #right, #up, #down, #sw, #se, #ne, #nw, #middle {
   z-index: 100;
-  opacity: 0.25;
-  width: 70px;
-  height: 70px;
   cursor: pointer;
-}
-
-#sw, #se, #ne, #nw {
-  float: left;
+  width: 33%;
+  height: 33%;
   position: absolute;
-  z-index: 100;
-  opacity: 0.25;
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
+  padding: 0%;
 }
 
-#sw {
-  margin-left: -50px;
-  margin-top: 240px;
-  transform: rotate(90deg);
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-}
 
-#se {
-  margin-left: -140px;
-  margin-top: 240px;
-  transform: rotate(180deg);
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-}
 
 #ne {
-  margin-left: -140px;
-  margin-top: 140px;
-  transform: rotate(-90deg);
-  -webkit-transform: rotate(-90deg);
-  -ms-transform: rotate(-90deg);
-}
-
-#nw {
-  margin-left: -50px;
-  margin-top: 140px;
-}
-
-#left {
-  margin-left: 60px;
-  margin-top: 170px;
-}
-
-#right {
-  margin-top: 170px;
-  margin-left: 20px;
-
+  left: 0%;
+  top: 0%;
 }
 
 #up {
-  margin-top: 125px;
-  margin-left: -115px;
+  top: 0%;
+  left: 33%;
+}
+
+#nw {
+  top: 0%;
+  left: 66%;
+}
+
+
+
+
+#left {
+  left: 0%;
+  top: 33%;
+}
+
+#middle {
+  left: 33%;
+  top: 33%;
+  cursor: auto;
+}
+
+#right {
+  top: 33%;
+  left: 66%;
+}
+
+
+
+#se {
+  left: 0%;
+  top: 66%;
+
 }
 
 #down {
-  margin-top: 215px;
-  margin-left: -115px;
+  top: 66%;
+  left: 33%;
 }
+
+#sw {
+  left: 66%;
+  top: 66%;
+}
+
 
 /* Lebensanzeige*/
 #heart1, #heart2, #heart3 {
