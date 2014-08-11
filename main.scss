@@ -122,18 +122,24 @@ canvas {
   margin-left: -50px;
   margin-top: 240px;
   transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
 }
 
 #se {
   margin-left: -140px;
   margin-top: 240px;
   transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
 }
 
 #ne {
   margin-left: -140px;
   margin-top: 140px;
   transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
 }
 
 #nw {
