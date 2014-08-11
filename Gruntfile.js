@@ -1,7 +1,7 @@
 /**
  * Created by danielraudschus on 01.08.14.
  */
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 
     // 1. All configuration goes here
     grunt.initConfig({
@@ -28,12 +28,14 @@ module.exports = function(grunt) {
 
         imagemin: {
             dynamic: {
-                files: [{
-                    expand: true,
-                    cwd: 'bilder/',
-                    src: ['**/*.{png,jpg,gif}'],
-                    dest: 'bilder/build/'
-                }]
+                files: [
+                    {
+                        expand: true,
+                        cwd: 'bilder/',
+                        src: ['**/*.{png,jpg,gif}'],
+                        dest: 'bilder/build/'
+                    }
+                ]
             }
         },
 
@@ -77,8 +79,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
-
-
 
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.

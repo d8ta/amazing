@@ -9,7 +9,7 @@ context.canvas.height = window.innerHeight;
 context.canvas.width = window.innerWidth;
 
 var $c = $('canvas'), c = $c[0];
-$(window).resize(function() {
+$(window).resize(function () {
     c.width = $c.width();
     c.height = $c.height();
 });
@@ -18,9 +18,9 @@ $(window).resize(function() {
 /**
  * Adressbar verstecken
  */
-window.addEventListener("load",function() {
-        // Adressbar verstecken
-        window.scrollTo(0, 1);
+window.addEventListener("load", function () {
+    // Adressbar verstecken
+    window.scrollTo(0, 1);
 });
 
 
@@ -41,7 +41,6 @@ $(window).bind('resize', function () {
 
     location.reload();
 });
-
 
 
 /**
@@ -117,7 +116,7 @@ function movement() {
      * @type {HTMLElement}
      */
 
-    $(document).ready(function(){
+    $(document).ready(function () {
         left = right = up = down = touchLeft = touchRight = touchDown = touchUp = false;
 
     });
@@ -127,43 +126,43 @@ function movement() {
      * @type {HTMLElement}
      */
     var touchLeft = document.getElementById('left');
-    Hammer(touchLeft).on("touch", function() {
+    Hammer(touchLeft).on("touch", function () {
         touchLeft = true;
     });
 
     var touchRight = document.getElementById('right');
-    Hammer(touchRight).on("touch", function() {
+    Hammer(touchRight).on("touch", function () {
         touchRight = true;
     });
 
     var touchUp = document.getElementById('up');
-    Hammer(touchUp).on("touch", function() {
+    Hammer(touchUp).on("touch", function () {
         touchUp = true;
     });
 
     var touchDown = document.getElementById('down');
-    Hammer(touchDown).on("touch", function() {
+    Hammer(touchDown).on("touch", function () {
         touchDown = true;
     });
 
 
     // zwischensteuerung (südwest usw.)
-    Hammer(sw).on("touch", function() {
+    Hammer(sw).on("touch", function () {
         touchRight = true;
         touchDown = true;
     });
 
-    Hammer(se).on("touch", function() {
+    Hammer(se).on("touch", function () {
         touchLeft = true;
         touchDown = true;
     });
 
-    Hammer(ne).on("touch", function() {
+    Hammer(ne).on("touch", function () {
         touchLeft = true;
         touchUp = true;
     });
 
-    Hammer(nw).on("touch", function() {
+    Hammer(nw).on("touch", function () {
         touchRight = true;
         touchUp = true;
     });
@@ -172,44 +171,42 @@ function movement() {
     /**
      * Touchsteuerung deaktiviren bei loslassen
      */
-    Hammer(touchLeft).on("release", function() {
+    Hammer(touchLeft).on("release", function () {
         touchLeft = false;
     });
 
-    Hammer(touchRight).on("release", function() {
+    Hammer(touchRight).on("release", function () {
         touchRight = false;
     });
 
-    Hammer(touchUp).on("release", function() {
+    Hammer(touchUp).on("release", function () {
         touchUp = false;
     });
 
-    Hammer(touchDown).on("release", function() {
+    Hammer(touchDown).on("release", function () {
         touchDown = false;
     });
 
     // zwischensteuerung (südwest usw.)
-    Hammer(sw).on("release", function() {
+    Hammer(sw).on("release", function () {
         touchRight = false;
         touchDown = false;
     });
 
-    Hammer(se).on("release", function() {
+    Hammer(se).on("release", function () {
         touchLeft = false;
         touchDown = false;
     });
 
-    Hammer(ne).on("release", function() {
+    Hammer(ne).on("release", function () {
         touchLeft = false;
         touchUp = false;
     });
 
-    Hammer(nw).on("release", function() {
+    Hammer(nw).on("release", function () {
         touchRight = false;
         touchUp = false;
     });
-
-
 
 
     function keysUp(key) {
@@ -226,7 +223,7 @@ function movement() {
             down = touchDown = false;
         }
         // hoch
-        if (key.keyCode == 38  || touchUp) {
+        if (key.keyCode == 38 || touchUp) {
             up = touchUp = false;
         }
     }
@@ -435,13 +432,13 @@ function playerDeath() {
             /* Lifecounter zählt runter*/
             if (counter == 2) {
                 document.getElementById("heart1").src = "bilder/heart_black.png";
-                }
+            }
             if (counter == 1) {
                 document.getElementById("heart2").src = "bilder/heart_black.png";
-                }
+            }
             if (counter == 0) {
                 document.getElementById("heart3").src = "bilder/heart_black.png";
-                }
+            }
             if (counter == -1) {
                 window.location.href = "gameover.html";
             }
