@@ -19,7 +19,7 @@ $(window).resize(function() {
  * Adressbar verstecken
  */
 window.addEventListener("load",function() {
-        // Hide address bar!
+        // Adressbar verstecken
         window.scrollTo(0, 1);
 });
 
@@ -75,7 +75,7 @@ requestAnimationFrame(game);
  */
 var playerStartposX = 15;
 var playerWidth = 10;
-var playerSpeed = 1;
+var playerSpeed = 2;
 var highscore = 100000;
 var difficulty = 50;
 var counter = 3;
@@ -121,11 +121,7 @@ function movement() {
         left = right = up = down = touchLeft = touchRight = touchDown = touchUp = false;
 
     });
-    /*var gamestart  = document.getElementById('up');
-    Hammer(gamestart).on("touch", function() {
-        left = right = up = down = touchLeft = touchRight = touchDown = touchUp = false;
-    });
-*/
+
     /**
      * Touchsteuerung aktivieren
      * @type {HTMLElement}
