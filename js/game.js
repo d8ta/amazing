@@ -14,7 +14,6 @@ $(window).resize(function () {
     c.height = $c.height();
 });
 
-
 /**
  * Webkit einbindung für gängige Browser
  * @type {Function}

@@ -13,6 +13,16 @@ body {
   -webkit-touch-callout: none;
 }
 
+.text {
+  text-align: left;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  text-shadow: 0 0 .75px #000;
+  color: transparent;
+  opacity: .75;
+}
+
 h1 {
   font-family: 'Audiowide', cursive;
   font-size: 250%;
