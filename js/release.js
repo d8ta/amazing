@@ -73,7 +73,7 @@ requestAnimationFrame(game);
  */
 var playerStartposX = 15;
 var playerWidth = 10;
-var playerSpeed = 2;
+var playerSpeed = 5;
 var highscore = 100000;
 var difficulty = 50;
 var counter = 3;
