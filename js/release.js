@@ -25,15 +25,6 @@ $(window).resize(function () {
 
 
 /**
- * Adressbar verstecken
- */
-window.addEventListener("load", function () {
-    // Adressbar verstecken
-    window.scrollTo(0, 1);
-});
-
-
-/**
  * Webkit einbindung für gängige Browser
  * @type {Function}
  */
