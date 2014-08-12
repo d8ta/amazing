@@ -6,21 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="12e2583c-76da-4cec-897f-2b40d828b225" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/bilder/build/bg_plasma.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bilder/build/down.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bilder/build/heart.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/bilder/build/heart_black.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bilder/build/left.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bilder/build/right.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bilder/build/sw.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/bilder/build/tutorial.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bilder/build/up.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bilder/down.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bilder/heart.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bilder/left.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bilder/right.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bilder/sw.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bilder/up.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game.html" afterPath="$PROJECT_DIR$/game.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gruntfile.js" afterPath="$PROJECT_DIR$/Gruntfile.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mmp1.iws" />
@@ -44,11 +32,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="840">
-              <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.044510387" vertical-offset="0" max-vertical-offset="840">
+              <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -89,11 +77,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gruntfile.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Gruntfile.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gruntfile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6791444" vertical-offset="1006" max-vertical-offset="1395">
-              <caret line="84" column="62" selection-start-line="84" selection-start-column="62" selection-end-line="84" selection-end-column="62" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1006" max-vertical-offset="1395">
+              <caret line="84" column="74" selection-start-line="84" selection-start-column="74" selection-end-line="84" selection-end-column="74" />
               <folding />
             </state>
           </provider>
@@ -112,8 +100,8 @@
       <file leaf-file-name="game.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/game.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.375" vertical-offset="390" max-vertical-offset="870">
-              <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+            <state vertical-scroll-proportion="-5.9166665" vertical-offset="533" max-vertical-offset="870">
+              <caret line="45" column="34" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -244,6 +232,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="mmp1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mmp1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mmp1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bilder" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -728,14 +730,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="840">
-          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gameover.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.375" vertical-offset="0" max-vertical-offset="720">
@@ -762,16 +756,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/game.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.375" vertical-offset="390" max-vertical-offset="870">
-          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+        <state vertical-scroll-proportion="-5.9166665" vertical-offset="533" max-vertical-offset="870">
+          <caret line="45" column="34" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Gruntfile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6791444" vertical-offset="1006" max-vertical-offset="1395">
-          <caret line="84" column="62" selection-start-line="84" selection-start-column="62" selection-end-line="84" selection-end-column="62" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1006" max-vertical-offset="1395">
+          <caret line="84" column="74" selection-start-line="84" selection-start-column="74" selection-end-line="84" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.044510387" vertical-offset="0" max-vertical-offset="840">
+          <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
           <folding />
         </state>
       </provider>
