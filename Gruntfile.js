@@ -78,24 +78,24 @@ module.exports = function (grunt) {
                     collapseWhitespace: true
                 },
                 files: {                                   // Dictionary of files
-                    'dist/index.html': 'index.html',     // 'destination': 'source'
-                    'dist/game.html': 'game.html',
-                    'dist/gameover.html': 'gameover.html',
-                    'dist/howtoplay.html': 'howtoplay.html',
-                    'dist/impressum.html': 'impressum.html',
-                    'dist/input.html': 'input.html',
-                    'dist/webapp.html': 'webapp.html'
+                    'html/index.html': 'index.html',     // 'destination': 'source'
+                    'html/game.html': 'game.html',
+                    'html/gameover.html': 'gameover.html',
+                    'html/howtoplay.html': 'howtoplay.html',
+                    'html/impressum.html': 'impressum.html',
+                    'html/input.html': 'input.html',
+                    'html/webapp.html': 'webapp.html'
                 }
             },
             dev: {                                       // Another target
                 files: {
-                    'dist/index.html': 'index.html',     // 'destination': 'source'
-                    'dist/game.html': 'game.html',
-                    'dist/gameover.html': 'gameover.html',
-                    'dist/howtoplay.html': 'howtoplay.html',
-                    'dist/impressum.html': 'impressum.html',
-                    'dist/input.html': 'input.html',
-                    'dist/webapp.html': 'webapp.html'
+                    'html/index.html': 'index.html',     // 'destination': 'source'
+                    'html/game.html': 'game.html',
+                    'html/gameover.html': 'gameover.html',
+                    'html/howtoplay.html': 'howtoplay.html',
+                    'html/impressum.html': 'impressum.html',
+                    'html/input.html': 'input.html',
+                    'html/webapp.html': 'webapp.html'
                 }
             }
         }

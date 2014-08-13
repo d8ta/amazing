@@ -56,7 +56,7 @@
     }
     ?>
 
-    <p><a href="game.html">
+    <p><a href="html/game.html">
             <button type="button" class="grow">Play again</button>
         </a></p>
             <audio loop autoplay>
