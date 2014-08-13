@@ -69,6 +69,35 @@ module.exports = function (grunt) {
                     'main.css': 'main.scss'
                 }
             }
+        },
+
+        htmlmin: {                                     // Task
+            dist: {                                      // Target
+                options: {                                 // Target options
+                    removeComments: true,
+                    collapseWhitespace: true
+                },
+                files: {                                   // Dictionary of files
+                    'dist/index.html': 'index.html',     // 'destination': 'source'
+                    'dist/game.html': 'game.html',
+                    'dist/gameover.html': 'gameover.html',
+                    'dist/howtoplay.html': 'howtoplay.html',
+                    'dist/impressum.html': 'impressum.html',
+                    'dist/input.html': 'input.html',
+                    'dist/webapp.html': 'webapp.html'
+                }
+            },
+            dev: {                                       // Another target
+                files: {
+                    'dist/index.html': 'index.html',     // 'destination': 'source'
+                    'dist/game.html': 'game.html',
+                    'dist/gameover.html': 'gameover.html',
+                    'dist/howtoplay.html': 'howtoplay.html',
+                    'dist/impressum.html': 'impressum.html',
+                    'dist/input.html': 'input.html',
+                    'dist/webapp.html': 'webapp.html'
+                }
+            }
         }
 
     });
@@ -78,10 +107,11 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('default', ['concat', 'uglify', 'sass', 'watch']);
+    grunt.registerTask('default', ['concat', 'uglify', 'sass', 'htmlmin', /*'imagemin',*/ 'watch']);
 
 };
