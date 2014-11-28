@@ -46,6 +46,7 @@ function game() {
     happyEnd(motherCell, player);
     playerDeath();
 
+
     if (highscore > 100000) {
         highscore = 0;
     }
@@ -66,7 +67,7 @@ var playerStartposX = 15;
 var playerWidth = 10;
 var playerSpeed = 2;
 var highscore = 100000;
-var difficulty = 50;
+var difficulty = 500;
 var counter = 3;
 
 /**
@@ -156,6 +157,7 @@ function movement() {
         touchRight = true;
         touchUp = true;
     });
+
 
 
     /**
